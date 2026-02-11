@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.uv/
+
+# Environment
+.env
+.env.local
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Models cache (sentence-transformers)
+.cache/
+models/
