@@ -1,0 +1,23 @@
+[
+    {
+        "german": "das NotebookLM",
+        "english": "the NotebookLM",
+        "gender": "neutral",
+        "example": "Ich benutze NotebookLM zum Lernen.",
+        "pronunciation_tip": "notebook-el-em"
+    },
+    {
+        "german": "die Quelle",
+        "english": "source",
+        "gender": "feminine",
+        "example": "Die Quelle ist zuverlässig.",
+        "pronunciation_tip": "kvel-uh"
+    },
+    {
+        "german": "die Wortliste",
+        "english": "word list",
+        "gender": "feminine",
+        "example": "Ich habe eine Wortliste erstellt.",
+        "pronunciation_tip": "vort-lis-tuh"
+    }
+]

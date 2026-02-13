@@ -1,0 +1,7042 @@
+[
+  {
+    "german": "ab",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ab morgen muss ich arbeiten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aber",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin oft im Büro, aber nur für wenige Stunden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "abfahren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir fahren um zwölf Uhr ab.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Abfahrt",
+    "english": "",
+    "gender": "feminine",
+    "example": "Vor der Abfahrt rufe ich an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "abgeben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich muss meine Schlüssel abgeben.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "abholen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wann kann ich den Schrank bei dir abholen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "müssen noch meinen Bruder abholen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Absender",
+    "english": "",
+    "gender": "masculine",
+    "example": "Da ist ein Brief für dich ohne Absender.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Achtung",
+    "english": "",
+    "gender": "unknown",
+    "example": "Achtung! Das dürfen Sie nicht tun.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Adresse",
+    "english": "",
+    "gender": "feminine",
+    "example": "Können Sie mir seine Adresse sagen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "all",
+    "english": "",
+    "gender": "unknown",
+    "example": "Alles Gute!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist alles.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sind",
+    "english": "",
+    "gender": "unknown",
+    "example": "alle da?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Alle",
+    "english": "",
+    "gender": "unknown",
+    "example": "Freunde kommen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hast",
+    "english": "",
+    "gender": "unknown",
+    "example": "du alles?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "allein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er kommt allein.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "also",
+    "english": "",
+    "gender": "unknown",
+    "example": "Also, es ist so: ...",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "hat Zeit, also muss er uns helfen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "alt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie alt sind Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sie",
+    "english": "",
+    "gender": "unknown",
+    "example": "sehen aber nicht so alt aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Mein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Auto ist schon sehr alt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "wohnen in einem sehr alten Haus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Köln",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist eine alte Stadt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Alter",
+    "english": "",
+    "gender": "neutral",
+    "example": "Alter: 26 Jahre.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "an",
+    "english": "",
+    "gender": "unknown",
+    "example": "Fahren Sie an der nächsten Straße nach rechts.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "treffen uns am Bahnhof.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Am",
+    "english": "",
+    "gender": "unknown",
+    "example": "nächsten Montag geht es leider nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "anbieten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was darf ich dir anbieten?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Angebot",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Heute sind Sportschuhe im Angebot.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ander",
+    "english": "",
+    "gender": "unknown",
+    "example": "WiIlst du diese Jacke?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "anfangen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hier fängt die Bahnhofstraße an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Der",
+    "english": "",
+    "gender": "unknown",
+    "example": "Unterricht fängt gleich an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Anfang",
+    "english": "",
+    "gender": "masculine",
+    "example": "Sie wohnt am Anfang der Straße.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "machen Anfang Juli Urlaub.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "anklicken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Da musst du dieses Wort anklicken.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ankommen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wann kommt dieser Zug in Hamburg an?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Ankunft",
+    "english": "",
+    "gender": "feminine",
+    "example": "Auf diesem Plan steht nur die Ankunft(-szeit) der",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ankreuzen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Auf dem Formular müssen Sie an mehreren Stellen",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "etwas",
+    "english": "",
+    "gender": "unknown",
+    "example": "ankreuzen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "anmachen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mach bitte das Licht an!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "anmelden Wo kann ich mich anmelden?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Anmeldung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Eine Anmeldung für diesen Kurs ist nicht mehr möglich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Anrede",
+    "english": "",
+    "gender": "feminine",
+    "example": "Schreiben Sie auch eine Anrede und einen Gruß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "anrufen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kann man Sie anrufen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Peter",
+    "english": "",
+    "gender": "unknown",
+    "example": "ruft kurz seine Freundin an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Anruf",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Sie bekommt viele Anrufe auf ihrem Handy.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Anruf",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wir sind im Moment nicht da. Sprechen Sie bitte auf",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "beantworter",
+    "english": "",
+    "gender": "unknown",
+    "example": "den Anrufbeantworter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Ansage",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Hören Sie die Ansagen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Anschluss",
+    "english": "",
+    "gender": "masculine",
+    "example": "In Mannheim haben Sie Anschluss nach Saarbrücken.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "das die Anmeldung für einen Telefonanschluss?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "an",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Heute Nacht war das Licht an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "antworten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er antwortet nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Antwort",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Er gibt leider keine Antwort.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Anzeige",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe Ihre Anzeige in der Zeitung gelesen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "anziehen Ich muss mich noch anziehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Apartment",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Wir haben ein Apartment gemietet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Apfel",
+    "english": "",
+    "gender": "masculine",
+    "example": "-Ä Ein Pfund Äpfel bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Appetit",
+    "english": "",
+    "gender": "masculine",
+    "example": "Guten Appetit!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "arbeiten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo arbeiten Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Arbeit",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Mein Bruder sucht Arbeit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "arbeitslos",
+    "english": "",
+    "gender": "unknown",
+    "example": "Es gibt bei uns viele Leute, die schon lange arbeitslos",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Arbeitsplatz",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e An meinem Arbeitsplatz fehlt ein Drucker.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Arm",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Mein Arm tut weh.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Arzt",
+    "english": "",
+    "gender": "masculine",
+    "example": "-Ä, e Morgen habe ich einen Termin bei meiner Ärztin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "auch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin auch Spanier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Kinder spielen auf der Straße.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wiedersehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "heißt das auf Deutsch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Aufgabe",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Das ist eine schwere Aufgabe.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aufhören",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Kurs hört in einer Woche auf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "hört die Bahnhofstraße auf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Du brauchst den Schlüssel nicht. Die Wohnung ist auf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aufstehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich muss immer um vier Uhr aufstehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Soll",
+    "english": "",
+    "gender": "unknown",
+    "example": "ich aufstehen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Aufzug",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ü, e In diesem Haus gibt es keinen Aufzug.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Auge",
+    "english": "",
+    "gender": "neutral",
+    "example": "-n Er hat blaue Augen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aus",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er kommt aus Brasilien.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ausflug",
+    "english": "",
+    "gender": "masculine",
+    "example": "Morgen machen wir einen Ausflug nach Heidelberg.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ausfüllen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Füllen Sie bitte dieses Formular aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ausgang",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wo ist der Ausgang?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Auskunft",
+    "english": "",
+    "gender": "feminine",
+    "example": "-ü, e Können Sie mir eine Auskunft geben?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Ausland",
+    "english": "",
+    "gender": "neutral",
+    "example": "Fahren Sie ins Ausland?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ausländer",
+    "english": "",
+    "gender": "masculine",
+    "example": "- SInd Sie Ausländerin?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ausländisch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Leider habe ich nur ausländisches Geld.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ausmachen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mach bitte das Licht aus!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Aussage",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ist die Aussage richtig oder falsch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aussehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das sieht schön aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aus",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Das Licht ist aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schule ist aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aussteigen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo muss ich aussteigen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ausweis",
+    "english": "",
+    "gender": "masculine",
+    "example": "Hier ist mein Ausweis.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "ausziehen Zieh die Schuhe aus, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Auto",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Er kommt mit dem Auto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Autobahn",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Wo geht‘s hier bitte zur Autobahn?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Automat",
+    "english": "",
+    "gender": "masculine",
+    "example": "Die Fahrkarten gibt es nur am Automaten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "automatisch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Du musst nichts machen. Das geht automatisch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Baby",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Mein Kind ist noch ein Baby.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Bäckerei",
+    "english": "",
+    "gender": "feminine",
+    "example": "Ich geh mal schnell zur Bäckerei.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Bad",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wir haben kein großes Bad.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "baden",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bade nicht so gern, ich dusche lieber.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Bahn",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wir fahren lieber mit der Bahn.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "nehme die nächste Bahn.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bahnhof",
+    "english": "",
+    "gender": "masculine",
+    "example": "Komme ich hier zum Bahnhof?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bahnsteig",
+    "english": "",
+    "gender": "masculine",
+    "example": "Auf welchem Bahnsteig fährt der Zug?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bald",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich komme bald.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Balkon",
+    "english": "",
+    "gender": "masculine",
+    "example": "Die Wohnung hat auch einen kleinen Balkon.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Banane",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Drei Bananen, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Bank",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Bank schließt schon um vier Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "sitzt im Park auf einer Bank und liest.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bar",
+    "english": "",
+    "gender": "unknown",
+    "example": "Muss ich bar zahlen oder geht‘s auch mit Karte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bauch",
+    "english": "",
+    "gender": "masculine",
+    "example": "Seit gestern tut mir der Bauch weh.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Baum",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Vorsicht, fahr nicht an den Baum!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Beamte",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Fragen Sie die Beamtin an Schalter acht!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bedeuten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was bedeutet das Wort?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "beginnen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das Spiel beginnt um 15.30 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bei",
+    "english": "",
+    "gender": "unknown",
+    "example": "Offenbach liegt bei Frankfurt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "wohne bei meinen Eltern.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Bei",
+    "english": "",
+    "gender": "unknown",
+    "example": "uns regnet es heute.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "arbeitet bei der Polizei.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "beide",
+    "english": "",
+    "gender": "unknown",
+    "example": "Beide Eltern arbeiten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "kommen beide.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Bein",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Mein rechtes Bein tut weh.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Beispiel",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Kannst du mir ein Beispiel sagen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zum",
+    "english": "",
+    "gender": "unknown",
+    "example": "Beispiel/z. B. Viele meiner Verwandten, z. B. meine beiden",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Brüder",
+    "english": "",
+    "gender": "unknown",
+    "example": "arbeiten auch hier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bekannt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Picasso ist sehr bekannt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der/die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bekannte, -n Ein Bekannter von mir heißt Klaus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bekommen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Haben Sie meinen Brief bekommen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "bekommen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Dieses",
+    "english": "",
+    "gender": "unknown",
+    "example": "Medikament bekommen Sie in der Apotheke.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "benutzen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Aufzüge bitte nicht benutzen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Beruf",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Was sind Sie von Beruf?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist Ihr Beruf?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "besetzt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Nummer ist immer besetzt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Der",
+    "english": "",
+    "gender": "unknown",
+    "example": "Platz ist besetzt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "besichtigen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich möchte gern den Dom besichtigen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "besser",
+    "english": "",
+    "gender": "unknown",
+    "example": "Es geht mir schon besser.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "best",
+    "english": "",
+    "gender": "unknown",
+    "example": "Am besten treffen wir uns morgen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bestellen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir möchten bestellen, bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Dieses",
+    "english": "",
+    "gender": "unknown",
+    "example": "Buch haben wir nicht – sollen wir es für Sie",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "besuchen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Darf ich dich besuchen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Bett",
+    "english": "",
+    "gender": "neutral",
+    "example": "-en Wir brauchen noch ein Kinderbett.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bezahlen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo muss ich bezahlen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Bier",
+    "english": "",
+    "gender": "neutral",
+    "example": "Noch ein Bier bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Bild",
+    "english": "",
+    "gender": "neutral",
+    "example": "-er Hast du ein Bild von deinem Sohn?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "billig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Jacke kostet nur 10 Euro! Die ist aber billig!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Birne",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ein Kilo Birnen, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bis",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich fahre nur bis Stuttgart.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "warte bis morgen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bisschen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich spreche Englisch, Französisch und ein bisschen",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bitte",
+    "english": "",
+    "gender": "unknown",
+    "example": "Eine Tasse Kaffee, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sprechen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie bitte leise!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Bitte",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe noch eine Bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bitten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Darf ich Sie um etwas bitten?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bitter",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Kaffee schmeckt bitter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bleiben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bleibe heute zu Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "bleiben nur bis morgen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bleistift",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Hast du einen Bleistift?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Blick",
+    "english": "",
+    "gender": "masculine",
+    "example": "Von diesem Hotel hat man einen guten Blick auf den",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Blume",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Gefallen dir die Blumen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bogen",
+    "english": "",
+    "gender": "masculine",
+    "example": "Schreiben Sie Ihre Lösungen bitte auf den Antwortbogen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "böse",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie ist böse auf mich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "brauchen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Brauchst du die Zeitung noch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "breit",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie breit ist der Schrank?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Brief",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Haben Sie einen Brief für mich?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Briefmarke",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Kaufst du bitte Briefmarken bei der Post.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "bringen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bringen Sie mir bitte noch einen Kaffee!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "müssen ihn zum Arzt bringen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Brot",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Haben Sie auch Weißbrot?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Nimm",
+    "english": "",
+    "gender": "unknown",
+    "example": "noch ein paar Brote für die Fahrt mit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Brötchen",
+    "english": "",
+    "gender": "neutral",
+    "example": "– Möchtest du Brötchen zum Frühstück?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bruder",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ü Sein Bruder arbeitet auch hier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Buch",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ü, er Gute Bücher sind oft sehr teuer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "In",
+    "english": "",
+    "gender": "unknown",
+    "example": "diesem Wörterbuch finden Sie mehr als 20.000 Wörter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Buchstabe",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Diesen Buchstaben gibt es in meiner Sprache nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "buchstabieren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bitte buchstabieren Sie Ihren Namen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Bus",
+    "english": "",
+    "gender": "masculine",
+    "example": "-se Wann kommt der nächste Bus?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Butter",
+    "english": "",
+    "gender": "feminine",
+    "example": "Für mich bitte ein Brötchen mit Butter und Käse.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Café",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Sollen wir uns im Café treffen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die CD",
+    "english": "",
+    "gender": "feminine",
+    "example": "-s Bring bitte deine Lieblings-CD mit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Chef",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wir haben eine neue Chefin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "circa/ca.",
+    "english": "",
+    "gender": "unknown",
+    "example": "Von Mainz nach Frankfurt sind es circa fünfzig",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Computer",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Wann bekommst du deinen neuen Computer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "da",
+    "english": "",
+    "gender": "unknown",
+    "example": "Da hinten ist er ja.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "sprechen gerade über Paul. Da kommt er ja gerade.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "nehme das da.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herr Klein schon da?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Dame",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Damen (an der Toilette)",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sehr",
+    "english": "",
+    "gender": "unknown",
+    "example": "geehrte Damen und Herren!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "daneben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Du kennst doch die Post. Daneben ist die Bank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "danken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich danke Ihnen für die Einladung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Dank",
+    "english": "",
+    "gender": "masculine",
+    "example": "Vielen Dank!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Herzlichen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dank!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "danke",
+    "english": "",
+    "gender": "unknown",
+    "example": "Soll ich Ihnen helfen? - Nein, danke!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dann",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich muss noch schnell zur Post, dann komme ich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Datum",
+    "english": "",
+    "gender": "neutral",
+    "example": "Bitte schreiben Sie noch das Datum auf das Formular.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dauern",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie lange dauert der Film?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ist das dein Auto?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "das deins?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "denn",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich kann nicht kommen, denn ich bin krank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der",
+    "english": "",
+    "gender": "unknown",
+    "example": "die, das Ich nehme das da.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist der Brief, den du suchst.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Fahrkarte bekommst du am Bahnhof.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Blumen sind für dich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dies",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich nehme lieber diesen Kuchen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dir",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gefallen dir die Blumen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Disco",
+    "english": "",
+    "gender": "feminine",
+    "example": "Heute abend gehen wir in die Disco tanzen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Doktor",
+    "english": "",
+    "gender": "masculine",
+    "example": "Meine Tochter ist krank. Wir gehen zum Doktor.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Doppelzimmer",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wollen Sie ein Doppelzimmer oder ein Einzelzimmer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Dorf",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ö, er Meine Familie lebt in einem Dorf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dort",
+    "english": "",
+    "gender": "unknown",
+    "example": "-her, -hin Deine Tasche kannst du dorthin stellen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Dort",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist unser Haus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "draußen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wollen wir draußen sitzen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "drucken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bitte drucke das Formular für mich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Drucker",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Mein Drucker ist kaputt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "drücken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Drück hier, dann geht der Computer an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "durch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Am besten gehen Sie durch die Breite Straße.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Durchsage",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe die Durchsage nicht verstanden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dürfen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie dürfen hier nicht rauchen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Darf",
+    "english": "",
+    "gender": "unknown",
+    "example": "ich Sie zu einem Kaffee einladen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Es",
+    "english": "",
+    "gender": "unknown",
+    "example": "darf nicht mehr als 15 Euro kosten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Durst",
+    "english": "",
+    "gender": "masculine",
+    "example": "Hast du etwas zu trinken? Ich habe großen Durst.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "duschen Ich bade nicht so gern, ich dusche lieber.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Dusche",
+    "english": "",
+    "gender": "feminine",
+    "example": "Unsere Wohnung hat nur eine Dusche.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Ecke",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n An der nächsten Ecke links.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Ehefrau",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en/",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ehemann",
+    "english": "",
+    "gender": "masculine",
+    "example": "ä, er Das ist mein (Ehe-) Mann/meine (Ehe-) Frau.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Ei",
+    "english": "",
+    "gender": "neutral",
+    "example": "-er Möchtest du ein Ei zum Frühstück?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "eilig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hast du es eilig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich nehme ein Bier. Willst du auch eins?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "hier einer, der das kann?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "einfach",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Prüfung ist ganz einfach.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hin",
+    "english": "",
+    "gender": "unknown",
+    "example": "und zurück? – Nein, bitte nur einfach.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "brauche nur ein einfaches Zimmer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Eingang",
+    "english": "",
+    "gender": "masculine",
+    "example": "Der Eingang ist um die Ecke.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "einkaufen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich muss noch für morgen einkaufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "einladen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Darf ich Sie zu einem Kaffee einladen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Einladung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Danke für die Einladung!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "einmal",
+    "english": "",
+    "gender": "unknown",
+    "example": "Diese Prüfung mache ich nicht noch einmal.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "einsteigen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schnell, steig ein, der Zug fährt gleich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Eintritt",
+    "english": "",
+    "gender": "masculine",
+    "example": "Der Preis für den Eintritt ist 5 Euro.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Einzelzimmer",
+    "english": "",
+    "gender": "neutral",
+    "example": "Haben Sie noch ein Einzelzimmer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Eltern",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) Meine Eltern leben in Spanien.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die EMail",
+    "english": "",
+    "gender": "feminine",
+    "example": "-s Ich habe Ihre E-Mail nicht bekommen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Empfänger",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Auf dem Brief steht dein Name, also bist du der",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "empfehlen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Welchen Wein können Sie mir empfehlen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "enden",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Straße endet hier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Ende",
+    "english": "",
+    "gender": "neutral",
+    "example": "Sie wohnt am Ende der Straße.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "bekommt sein Geld am Ende des Monats.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "entschuldigen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Entschuldigen Sie bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Entschuldigung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Entschuldigung! – Bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "er",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er heißt Ali.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Ergebnis",
+    "english": "",
+    "gender": "neutral",
+    "example": "-se Das Ergebnis des Tests bekommen Sie in zwei Wochen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "erklären",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kannst du mir das erklären?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "erlauben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Rauchen ist hier nicht erlaubt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Erwachsene",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Dieser Film ist nur für Erwachsene.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "erzählen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir müssen euch etwas erzählen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "es",
+    "english": "",
+    "gender": "unknown",
+    "example": "Es regnet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "essen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was gibt es zu essen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Essen",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Essen ist heute sehr gut.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "euer",
+    "english": "",
+    "gender": "unknown",
+    "example": "Euer Kurs beginnt heute.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fahren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich fahre mit dem Auto zur Arbeit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Fahrer",
+    "english": "",
+    "gender": "masculine",
+    "example": "Bitte nicht mit dem Fahrer sprechen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Fahrkarte",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Hast du schon eine Fahrkarte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Fahrrad",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ä, er Fährst du mit dem Fahrrad oder mit dem Auto?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "falsch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das ist falsch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Familie",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Meine Familie lebt in Spanien.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Familienname",
+    "english": "",
+    "gender": "masculine",
+    "example": "Meine Familiennamen sind García González.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Familienstand",
+    "english": "",
+    "gender": "masculine",
+    "example": "Bei „Familienstand“ musst du „ledig“ ankreuzen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Farbe",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Die Farbe gefällt mir gut.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Fax",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Schicken Sie uns einfach ein Fax!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Feier",
+    "english": "",
+    "gender": "unknown",
+    "example": "z. B. Feierabend, Feiertag",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Am",
+    "english": "",
+    "gender": "unknown",
+    "example": "Montag ist Feiertag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "feiern",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir feiern heute meinen Geburtstag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fehlen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herr Müller ist nicht da, er fehlt schon seit drei Tagen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "fehlt Ihnen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Fehler",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Diesen Fehler mache ich immer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fernsehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wollen wir heute Abend mal fernsehen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fertig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bist du fertig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "mein Auto schon fertig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Feuer",
+    "english": "",
+    "gender": "neutral",
+    "example": "Haben Sie Feuer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Fieber",
+    "english": "",
+    "gender": "neutral",
+    "example": "Mein Mann hat noch immer Fieber.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Film",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Ich möchte gern diesen Film sehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "finden",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir müssen den Schlüssel finden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Firma",
+    "english": "",
+    "gender": "feminine",
+    "example": "Er arbeitet jetzt bei einer anderen Firma.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Fisch",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Ich esse gern Fisch. Fleisch mag ich nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Flasche",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Eine Flasche Bier, bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Fleisch",
+    "english": "",
+    "gender": "neutral",
+    "example": "Fleisch mag ich nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fliegen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich fliege nicht gern. Deshalb fahre ich mit dem Zug.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "abfliegen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wann fliegst du ab?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Abflug",
+    "english": "",
+    "gender": "masculine",
+    "example": "Der Abflug ist um 11.20 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Flughafen",
+    "english": "",
+    "gender": "masculine",
+    "example": "Kannst du mich zum Flughafen bringen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Flugzeug",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Flugzeug aus Berlin kommt heute später an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Formular",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Sie müssen dieses Formular ausfüllen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Foto",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Darf ich ein Foto machen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fragen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er möchte Sie etwas fragen. Wann kommen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Frage",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe eine Frage.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Frau",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Das ist Frau Becker.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Guten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Tag, Frau Schmitt!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "arbeiten mehr Frauen als Männer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "frei",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ist der Platz noch frei?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Freizeit",
+    "english": "",
+    "gender": "feminine",
+    "example": "In meiner Freizeit spiele ich oft Fußball.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "fremd",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das weiß ich nicht; ich bin fremd hier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "freuen Ich freue mich auf den Urlaub.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Freund",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Das ist ein Freund von mir.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist meine Freundin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "früher",
+    "english": "",
+    "gender": "unknown",
+    "example": "Früher waren wir oft zusammen im Kino.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "frühstücken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Am Sonntag frühstücke ich gern im Bett.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Frühstück",
+    "english": "",
+    "gender": "neutral",
+    "example": "Möchtest du ein Ei zum Frühstück?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Führung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Führung durch das Haus beginnt in 3 Minuten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "für",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das ist für Sie.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist der Schlüssel für die Haustür.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist das Brot für morgen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Fuß",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ü, e Der linke Fuß tut mir weh.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Fußball",
+    "english": "",
+    "gender": "masculine",
+    "example": "Spielt ihr gerne Fußball?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Garten",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wir haben leider keinen Garten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Gast",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Am Wochenende haben wir mehrere Gäste.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "geben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kannst du mir bitte deinen Kugelschreiber geben?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Es",
+    "english": "",
+    "gender": "unknown",
+    "example": "gibt keine Karten mehr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "geboren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin in Zagreb geboren.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Geburtsjahr",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Geburtsjahr Ihres Sohnes, bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Geburtsort",
+    "english": "",
+    "gender": "masculine",
+    "example": "Bitte schreiben Sie Ihren Geburtsort auf das Formular.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Geburtstag",
+    "english": "",
+    "gender": "masculine",
+    "example": "Herzlichen Glückwunsch zum Geburtstag!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gefallen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das gefällt mir.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gegen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Fahr nicht gegen den Baum!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "bin gegen diese Lösung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wer",
+    "english": "",
+    "gender": "unknown",
+    "example": "spielt gegen wen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich weiß nicht, wie das geht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "geht‘s?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Jetzt",
+    "english": "",
+    "gender": "unknown",
+    "example": "muss ich (aber) leider gehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "muss zum Arzt gehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "geht nicht!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gehören",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wem gehört das?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Geld",
+    "english": "",
+    "gender": "neutral",
+    "example": "Hast du noch Geld?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Gemüse",
+    "english": "",
+    "gender": "neutral",
+    "example": "Gemüse brauchen wir auch noch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Gepäck",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wollen Sie Ihr Gepäck mitnehmen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gerade",
+    "english": "",
+    "gender": "unknown",
+    "example": "Da kommt er ja gerade.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "geradeaus",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gehen Sie immer geradeaus!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gern(e)",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich gehe gerne einkaufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Geschäft",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Die Geschäfte schließen um 18.30 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Geschenk",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Danke für das schöne Geschenk.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Geschwister",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) Ich habe leider keine Geschwister.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Gespräch",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Das Gespräch mit Frau Kunz ist um 14 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gestern",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gestern war ich krank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gestorben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Meine Frau ist gestern gestorben.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Getränk",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Mein Lieblingsgetränk ist Tomatensaft.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Gewicht",
+    "english": "",
+    "gender": "neutral",
+    "example": "Bei „Gewicht“ schreibst du: 62 Kilo.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gewinnen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wer gewinnt das Spiel?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Glas",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ä, er Bitte noch ein Glas Wein!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "brauchen noch drei Gläser.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "glauben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie können mir glauben, es ist so.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "glaube, er kommt gleich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gleich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das ist mir gleich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist der gleiche Preis.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "komme gleich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Gleis",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Der ICE nach Berlin hält heute an Gleis 12.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Glück",
+    "english": "",
+    "gender": "neutral",
+    "example": "Viel Glück!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "glücklich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Meine Kinder sind glücklich verheiratet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Glückwunsch",
+    "english": "",
+    "gender": "masculine",
+    "example": "Herzlichen Glückwunsch zum Geburtstag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Grad",
+    "english": "",
+    "gender": "unknown",
+    "example": "(Celsius) Heute haben wir dreißig Grad.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gratulieren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich gratuliere dir!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "grillen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Heute grillen wir im Garten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "groß",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mein Bruder und ich sind gleich groß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Frankfurt",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist eine große Stadt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Größe",
+    "english": "",
+    "gender": "feminine",
+    "example": "Haben Sie das auch in Größe 40?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Großeltern",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) Meine Großeltern leben in Japan.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Großmutter",
+    "english": "",
+    "gender": "feminine",
+    "example": "Meine Großmutter heißt Eva.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Großvater",
+    "english": "",
+    "gender": "masculine",
+    "example": "Mein Großvater ist schon 80.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Gruppe",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Die erste Gruppe beginnt um 16 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Gruß",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ü, e Viele Grüße an Ihre Frau.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Mit",
+    "english": "",
+    "gender": "unknown",
+    "example": "freundlichen Grüßen",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gültig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Pass ist nicht mehr gültig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "günstig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dort gibt es günstige Angebote.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "gut",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das finde ich gut.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "komme um 13 Uhr. – Gut!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Guten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Morgen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ein",
+    "english": "",
+    "gender": "unknown",
+    "example": "gutes neues Jahr!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Guten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Appetit!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Haar",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Sie hat lange Haare.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "haben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich habe ein neues Auto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Hähnchen",
+    "english": "",
+    "gender": "neutral",
+    "example": "- Ein Hähnchen mit Pommes bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Halbpension",
+    "english": "",
+    "gender": "feminine",
+    "example": "Möchten Sie Vollpension oder Halbpension?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Halle",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wir treffen uns in Halle B",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hallo",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hallo Inge! Wie geht’s?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "halten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dieser Zug hält nicht in Rüdesheim.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Haltestelle",
+    "english": "",
+    "gender": "feminine",
+    "example": "An der nächsten Haltestelle müssen Sie aussteigen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Hand",
+    "english": "",
+    "gender": "feminine",
+    "example": "-ä, e Er gibt mir die Hand.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Handy",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s In der Schule bitte die Handys ausmachen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Haus",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ä, er In welchem Haus wohnst du?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "gehe jetzt nach Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Paul",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist nicht zu Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Hausaufgabe",
+    "english": "",
+    "gender": "feminine",
+    "example": "Kannst du mir bei den Hausaufgaben helfen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Hausfrau",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en/",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Hausmann",
+    "english": "",
+    "gender": "masculine",
+    "example": "Die Hausfrau/der Hausmann wäscht, kocht und kauft",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Heimat",
+    "english": "",
+    "gender": "feminine",
+    "example": "Ich komme aus der Schweiz. Das ist meine Heimat.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "heiraten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Meine Schwester heiratet einen Japaner.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "heißen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich heiße Charlotte Meier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "heißt das auf Deutsch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "helfen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Können Sie mir helfen, bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hell",
+    "english": "",
+    "gender": "unknown",
+    "example": "Im Sommer ist es bis 21 Uhr hell.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Herd",
+    "english": "",
+    "gender": "masculine",
+    "example": "In der neuen Küche fehlt noch der Herd.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Herr",
+    "english": "",
+    "gender": "masculine",
+    "example": "-en Guten Tag, Herr Sommer!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "herzlich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herzlichen Glückwunsch!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "heute",
+    "english": "",
+    "gender": "unknown",
+    "example": "Heute ist ein schöner Tag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hier ist 06131-553221, Pamela Linke.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "wohne ich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Hilfe",
+    "english": "",
+    "gender": "feminine",
+    "example": "Hilfe! Bitte helfen Sie mir!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Brauchen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie meine Hilfe?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hinten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Tür zum Aussteigen ist hinten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Hobby",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Meine Hobbys sind Wandern und Schwimmen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hoch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Mount Everest ist 8.880 Meter hoch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Hochzeit",
+    "english": "",
+    "gender": "feminine",
+    "example": "Zur dieser Hochzeit kommen mehr als fünfzig Gäste.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "holen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich hole zwei Flaschen Wasser aus der Küche.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "hören",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hör mal! Was ist das?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "habe das Lied schon mal gehört.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Hotel",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Im Urlaub sind wir in einem Hotel am Meer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Hund",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Der Hund ist noch jung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Hunger",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich habe Hunger! Wann ist das Essen fertig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich heiße Veronika.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ihr/ihm/ihn",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gib ihr/ihm bitte das Buch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ruf",
+    "english": "",
+    "gender": "unknown",
+    "example": "ihn bitte an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "immer",
+    "english": "",
+    "gender": "unknown",
+    "example": "Frau Bast kommt immer zu spät.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "in",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich wohne in Wiesbaden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Der",
+    "english": "",
+    "gender": "unknown",
+    "example": "Zug kommt in fünf Minuten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Frau",
+    "english": "",
+    "gender": "unknown",
+    "example": "Rausch arbeitet in einem Geschäft.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Komm",
+    "english": "",
+    "gender": "unknown",
+    "example": "wir gehen ins Kino.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Information",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Wenn Sie Fragen haben, gehen Sie zur Information.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "haben hier wichtige Informationen für Sie.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "international",
+    "english": "",
+    "gender": "unknown",
+    "example": "Unser Deutschkurs ist international: Silvana kommt",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "aus",
+    "english": "",
+    "gender": "unknown",
+    "example": "Italien, Conchi aus Spanien, Yin aus China ...",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Internet",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das findest du im Internet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ja",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sind Sie Herr Watanabe? – Ja.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Jacke",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Zieh dir eine Jacke an. Es ist kalt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "jed",
+    "english": "",
+    "gender": "unknown",
+    "example": "Blumen kannst du in jedem Bahnhof kaufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "jetzt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Jetzt machen wir eine Pause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Job",
+    "english": "",
+    "gender": "masculine",
+    "example": "-s Jenny hat einen neuen Job bei der Post.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Jugendliche",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Viele Jugendliche kaufen gern ein.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "jung",
+    "english": "",
+    "gender": "unknown",
+    "example": "Claudia ist 21. – Was? Noch so jung?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Junge",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Ich habe zwei Kinder. Einen Jungen und ein Mädchen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kaffee",
+    "english": "",
+    "gender": "masculine",
+    "example": "Zum Frühstück trinke ich immer Kaffee.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kaputt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das Glas war teuer. Es geht sehr leicht kaputt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Karte",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich schreibe meinen Bekannten eine Karte aus dem",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wollen",
+    "english": "",
+    "gender": "unknown",
+    "example": "wir Karten spielen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "möchte auch etwas essen. Bringen Sie mir die Karte,",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(Kredit)Karte",
+    "english": "",
+    "gender": "unknown",
+    "example": "-n Kann ich auch mit Karte (be-) zahlen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Kartoffel",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Für Pommes frites braucht man Kartoffeln.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Kasse",
+    "english": "",
+    "gender": "feminine",
+    "example": "Zahlen Sie bitte an der Kasse.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kaufen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Tim kauft sich ein neues Auto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Es gibt keine Eintrittskarten mehr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kennen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kennen Sie diese Frau? – Nein, leider nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kennenlernen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir sind neu hier. Wir möchten Sie kennenlernen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Kind",
+    "english": "",
+    "gender": "neutral",
+    "example": "-er Wie viele Kinder haben Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kindergarten",
+    "english": "",
+    "gender": "masculine",
+    "example": "Die kleine Laura geht schon in den Kindergarten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Kino",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Wir sehen heute Abend im Kino einen schönen Film.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kiosk",
+    "english": "",
+    "gender": "masculine",
+    "example": "Am Kiosk bekommen Sie Getränke, Zigaretten und",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "klar",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kommst du mit? – Klar!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Klasse",
+    "english": "",
+    "gender": "feminine",
+    "example": "In unserer Klasse sind fünfundzwanzig Schüler.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Im",
+    "english": "",
+    "gender": "unknown",
+    "example": "Zug fahre ich immer 2. Klasse.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Kleidung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wo finde ich Kleidung? – Jacken im ersten, Jeans im",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zweiten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Stock.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "klein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Eltville ist eine kleine Stadt am Rhein.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kochen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herr Georgi kann gut kochen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Koffer",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Ist das Ihr Koffer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kollege",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Wie heißt die neue Kollegin?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kommen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Woher kommen Sie? – Aus Frankreich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Kommst",
+    "english": "",
+    "gender": "unknown",
+    "example": "du mit ins Schwimmbad?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "können",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich kann Deutsch und Russisch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Können",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie mir helfen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Konto",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Geld überweisen wir am ersten März auf Ihr Konto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kopf",
+    "english": "",
+    "gender": "masculine",
+    "example": "Mein Kopf tut weh!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kosten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie viel kostet das? – 10 Euro.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "krank",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich kann heute nicht zur Arbeit kommen, ich bin krank",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "und",
+    "english": "",
+    "gender": "unknown",
+    "example": "liege im Bett.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kriegen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich kriege 15 Euro in der Stunde für meine Arbeit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Küche",
+    "english": "",
+    "gender": "feminine",
+    "example": "Der neue Herd kommt in die Küche.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kuchen",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich nehme ein Stück Kuchen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kugelschreiber",
+    "english": "",
+    "gender": "masculine",
+    "example": "Hast du einen Kugelschreiber für mich?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kühlschrank",
+    "english": "",
+    "gender": "masculine",
+    "example": "Haben wir noch Milch? – Ja, im Kühlschrank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kulturell",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin kulturell interessiert. Ich gehe oft ins Museum.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sich",
+    "english": "",
+    "gender": "unknown",
+    "example": "kümmern Jede Mutter kümmert sich um ihre kleinen Kinder.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kunde",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Einen Moment, bitte. Ich habe eine Kundin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kurs",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Der Deutschkurs geht bis zum Sommer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "kurz",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ricardo hat kurzes Haar.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lachen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Kinder lachen viel.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Laden",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä Im Buchladen können Sie Bücher kaufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Land",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ä, er Italien ist ein schönes Land.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lang",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Jeans ist zu lang.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lange",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie lange fährt der Zug von Hamburg nach Berlin?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "langsam",
+    "english": "",
+    "gender": "unknown",
+    "example": "Könnten Sie bitte etwas langsamer sprechen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "laufen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich möchte nicht Auto fahren, ich möchte laufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "laut",
+    "english": "",
+    "gender": "unknown",
+    "example": "Nicht so laut! Das Baby schläft.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "leben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie lebt bei ihrer Schwester.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ihre",
+    "english": "",
+    "gender": "unknown",
+    "example": "Eltern leben nicht mehr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Leben",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Leben in diesem Land ist teuer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Lebens-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mittel",
+    "english": "",
+    "gender": "unknown",
+    "example": "(pl.) Lebensmittel bekommen Sie im Supermarkt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ledig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sind Sie verheiratet? – Nein. Ledig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "legen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Legen Sie das Buch auf den Tisch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Lehrer",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Unsere Deutschlehrerin heißt Frau Müller.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "leicht",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Koffer ist leicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Deutsch",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist nicht leicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "leider",
+    "english": "",
+    "gender": "unknown",
+    "example": "Leider kann ich nicht kommen. Ich muss zum Arzt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "leise",
+    "english": "",
+    "gender": "unknown",
+    "example": "Seid leise. Die anderen schlafen schon.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lernen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie lange lernen Sie schon Deutsch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lesen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich lese ein Buch von García Márquez.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "letzt",
+    "english": "",
+    "gender": "unknown",
+    "example": "Morgen ist der letzte Kurstag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Leute",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) In der Disko sind viele Leute.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Licht",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wo macht man hier das Licht an?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lieb",
+    "english": "",
+    "gender": "unknown",
+    "example": "Liebe Susanne, lieber Hans,",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lieben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich liebe dich!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lieber",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie fährt lieber mit der Bahn.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Lieblings",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mein Lieblingsfilm ist „Schwarze Augen“.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Lied",
+    "english": "",
+    "gender": "neutral",
+    "example": "-er Welches ist dein Lieblingslied?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "liegen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Um neun Uhr liegt Judith noch im Bett.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Frankfurt",
+    "english": "",
+    "gender": "unknown",
+    "example": "liegt am Main.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "links",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gehen Sie die nächste Straße links.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Lkw",
+    "english": "",
+    "gender": "masculine",
+    "example": "-s Dieser Lastkraftwagen ist sehr groß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Lokal",
+    "english": "",
+    "gender": "neutral",
+    "example": "In unserer Straße gibt es ein neues Lokal.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Lösung",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Die Lösung ist ganz einfach.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "lustig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Frau Mertens ist lustig. Sie lacht immer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "machen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was machst du heute Abend?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "muss jetzt das Essen machen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "macht 5 Euro 95.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "macht nichts.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Mädchen",
+    "english": "",
+    "gender": "neutral",
+    "example": "– Familie Kurz bekommt ein Baby. – Junge oder Mädchen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "man",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hier darf man nicht rauchen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Mann",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, er Mein Mann arbeitet bei der Polizei.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "männlich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kreuzen Sie bitte an: „weiblich“ oder „männlich“.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Maschine",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Die Waschmaschine ist günstig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Meer",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wir machen Urlaub am Meer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mehr",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dieses Auto kostet 1.000 Euro mehr als das andere.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mein Vater ist Arzt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "meist",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die meisten Norddeutschen sind sehr groß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Mensch",
+    "english": "",
+    "gender": "masculine",
+    "example": "-en Die Menschen sind hier anders als bei uns.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mieten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich möchte ein Auto mieten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Miete",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Miete für diese Wohnung ist 600 Euro.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Milch",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Milch steht im Kühlschrank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mit",
+    "english": "",
+    "gender": "unknown",
+    "example": "Trinken Sie den Kaffee mit Milch?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mitbringen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich gehe einkaufen. Soll ich dir was mitbringen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mitkommen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich gehe ins Kino. Kommst du mit?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mitmachen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Warum macht ihr nicht mit?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mitnehmen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Nehmen wir meine Schwester ins Kino mit?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Mitte",
+    "english": "",
+    "gender": "feminine",
+    "example": "Der Lehrer steht in der Mitte des Klassenzimmers.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Möbel",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) Sind die Möbel neu?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "möchten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was möchten Sie trinken?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "mögen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Magst du Kaffee oder Tee?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "möglich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mit dieser Fahrkarte ist die Fahrt ab 9 Uhr möglich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Moment",
+    "english": "",
+    "gender": "masculine",
+    "example": "Moment mal bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Einen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Moment bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "morgen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Morgen beginnt die Schule um 10 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "müde",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin müde. Ich gehe schlafen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Mund",
+    "english": "",
+    "gender": "masculine",
+    "example": "Öffnen Sie den Mund.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "müssen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich muss jeden Tag von 8 Uhr bis 18 Uhr arbeiten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Mutter",
+    "english": "",
+    "gender": "feminine",
+    "example": "-ü Frau Berghäuser ist die Mutter von Michaela.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nach",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich gehe jetzt nach Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "fliege nach München.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Es",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist schon 5 nach 12.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nächst",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sehen wir uns nächste Woche?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Name",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Mein Name ist Thomas Schmidt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Mein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Vorname ist Thomas; Schmidt ist der Familienname.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nehmen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Heute gibt es Hähnchen. Das nehme ich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "nehme den Bus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Fährst du auch nach München? – Nein, ich habe keine",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "neu",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin der neue Kollege.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "haben eine neue Wohnung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nicht",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das stimmt nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist doch schön, nicht?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nichts",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das macht nichts.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hier",
+    "english": "",
+    "gender": "unknown",
+    "example": "kaufe ich nichts. Der Laden gefällt mir nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nie",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er kommt nie pünktlich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "noch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Vielleicht kommt er noch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "warten noch fünf Minuten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "habe noch 20 Euro.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "normal",
+    "english": "",
+    "gender": "unknown",
+    "example": "75 kg. Sein Gewicht ist normal.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Nummer",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Sie haben Zimmer Nummer zwölf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Welche",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hausnummer haben Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Können",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie mir Ihre Nummer geben?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nur",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich möchte nur ein Glas Wasser.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "oben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich wohne oben.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Obst",
+    "english": "",
+    "gender": "neutral",
+    "example": "Im Sommer ist das Obst billig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "oder",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wann können Sie kommen – heute oder morgen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "öffnen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich öffne die Tür.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "geöffnet",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Laden ist samstags bis 16.00 Uhr geöffnet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "oft",
+    "english": "",
+    "gender": "unknown",
+    "example": "Petra treffe ich oft.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ohne",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ohne Geld kann er nichts kaufen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Öl",
+    "english": "",
+    "gender": "neutral",
+    "example": "Den Salat machen wir ohne Öl.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Oma",
+    "english": "",
+    "gender": "feminine",
+    "example": "-s Meine Oma ist schon tot.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Opa",
+    "english": "",
+    "gender": "masculine",
+    "example": "-s Mein Opa heißt Hans.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Ordnung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Das ist in Ordnung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Ort",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Der Ort liegt am Meer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Papier",
+    "english": "",
+    "gender": "neutral",
+    "example": "Hier sind Papier und Bleistift.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Papiere",
+    "english": "",
+    "gender": "feminine",
+    "example": "(pl.) Haben Sie Ihre Papiere dabei?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Partner",
+    "english": "",
+    "gender": "masculine",
+    "example": "-/",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Partnerin",
+    "english": "",
+    "gender": "feminine",
+    "example": "-nen Sie ist meine Partnerin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Party",
+    "english": "",
+    "gender": "feminine",
+    "example": "Heute Abend machen wir eine Party.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Pass",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Im Hotel brauchst du deinen Pass.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Pause",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Von 12.00 bis 12.30 Uhr haben wir Mittagspause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Plan",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Ich kaufe mir einen Stadtplan.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Platz",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Tut mir leid, der Platz ist besetzt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Bitte",
+    "english": "",
+    "gender": "unknown",
+    "example": "nehmen Sie Platz!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "wohne Messeplatz 5.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Polizei",
+    "english": "",
+    "gender": "feminine",
+    "example": "Holen Sie die Polizei!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Pommes",
+    "english": "",
+    "gender": "feminine",
+    "example": "frites (pl.) Die Kinder essen Hähnchen mit Pommes frites.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Post",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wo ist die Post, bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ist",
+    "english": "",
+    "gender": "unknown",
+    "example": "Post da?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Postleitzahl",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wie ist Ihre Postleitzahl?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Praktikum",
+    "english": "",
+    "gender": "neutral",
+    "example": "Ich mache ein Praktikum bei Siemens.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Praxis",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Praxis ist ab acht Uhr geöffnet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Preis",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Die Preise sind hoch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Problem",
+    "english": "",
+    "gender": "neutral",
+    "example": "-e Mein Problem ist die Sprache.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Prospekt",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Bitte schicken Sie mir einen Prospekt von Ihrem Hotel.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Prüfung",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Prüfung ist am Montag um 8.00 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "pünktlich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Bus fährt pünktlich um acht Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Herr",
+    "english": "",
+    "gender": "unknown",
+    "example": "Müller ist immer pünktlich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Rad",
+    "english": "",
+    "gender": "unknown",
+    "example": "fahren Das Kind kann schon Rad fahren.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "rauchen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich rauche nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Raum",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Der Unterricht ist in Raum 332.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Rechnung",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Die Rechnung, bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "rechts",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Schillerstraße ist hier rechts.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "regnen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Heute regnet es.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Regen",
+    "english": "",
+    "gender": "masculine",
+    "example": "Bei diesem Regen gehe ich nicht raus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Reis",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich esse gern Reis.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "reisen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich reise gern.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Reise",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wir machen eine Reise nach Österreich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Reisebüro",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Mein Mann arbeitet im Reisebüro.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Reiseführer",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich kaufe mir einen Reiseführer von Berlin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Unser",
+    "english": "",
+    "gender": "unknown",
+    "example": "Reiseführer heißt Peter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "reparieren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er hat das Fahrrad repariert.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Reparatur",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Reparatur ist sehr teuer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Restaurant",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Wir essen heute in einem Restaurant.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Rezeption",
+    "english": "",
+    "gender": "feminine",
+    "example": "Fragen Sie bitte im Hotel an der Rezeption.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "richtig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Habe ich das richtig verstanden?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist richtig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "riechen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dieser Wein riecht gut.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ruhig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich möchte ein ruhiges Zimmer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Saft",
+    "english": "",
+    "gender": "masculine",
+    "example": "Möchtest du einen Apfelsaft?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sagen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sag mal, wie geht es dir denn?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Salat",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wie schmeckt dir der Salat?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Salz",
+    "english": "",
+    "gender": "neutral",
+    "example": "Herr Ober, kann ich bitte Salz haben?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Satz",
+    "english": "",
+    "gender": "unknown",
+    "example": "-ä, e Dieser Satz ist sehr einfach.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die SBahn",
+    "english": "",
+    "gender": "feminine",
+    "example": "Ich nehme lieber die S-Bahn.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schalter",
+    "english": "",
+    "gender": "masculine",
+    "example": "Gehen Sie bitte zum Schalter drei!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "scheinen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Sonne scheint.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schicken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bitte schicken Sie mir eine E-Mail.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Schild",
+    "english": "",
+    "gender": "neutral",
+    "example": "-er Haben Sie nicht das Schild gesehen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schinken",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Ich möchte gern ein Schinkenbrot.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schlafen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich schlafe meistens acht Stunden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schlecht",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mir ist schlecht!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sie",
+    "english": "",
+    "gender": "unknown",
+    "example": "sehen schlecht aus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "haben schlechtes Wetter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schließen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bitte, schließen Sie die Tür.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "geschlossen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Bank hat am Samstag geschlossen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schluss",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich muss jetzt Schluss machen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Zum",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schluss gibt er uns allen die Hand.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schlüssel",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Ich gebe Ihnen noch den Zimmerschlüssel.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schmecken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schmeckt das gut?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schnell",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er fährt schnell.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schon",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ist das Essen schon fertig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schön",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schönen Urlaub!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist sehr schön.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schrank",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä, e Die Gläser stehen im Schrank.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schreiben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er schreibt jeden Tag fünfzig E-Mails.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schuh",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Zieh die Schuhe aus!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Schule",
+    "english": "",
+    "gender": "feminine",
+    "example": "Meine Tochter geht schon in die Schule.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Schule ist gleich hier um die Ecke.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Schüler",
+    "english": "",
+    "gender": "masculine",
+    "example": "– In meinem Kurs sind acht Schülerinnen und fünf",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schwer",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ist Ihr Gepäck sehr schwer?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist eine schwere Arbeit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Schwester",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Meine Schwester kommt am Dienstag.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "schwimmen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich schwimme jeden Tag einen Kilometer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Schwimmbad",
+    "english": "",
+    "gender": "neutral",
+    "example": "Kommst du mit ins Schwimmbad?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der See",
+    "english": "",
+    "gender": "masculine",
+    "example": "Komm, wir fahren zum Starnberger See.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich kann dich nicht sehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "habe diesen Jungen schon einmal gesehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Sehenswürdigkeit",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Welche",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sehenswürdigkeiten gibt es in Frankfurt?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sehr",
+    "english": "",
+    "gender": "unknown",
+    "example": "Danke sehr!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist sehr schwer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sein",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herr Müller ist in seinem Zimmer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Mir",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist kalt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "bin dreiundzwanzig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "an",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Das Licht ist noch an.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Das Fenster ist noch auf.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "weg",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Herr Meier ist schon weg.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zu",
+    "english": "",
+    "gender": "unknown",
+    "example": "sein Die Tür ist zu.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "seit",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich wohne seit drei Jahren in Köln.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "selbstständig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er ist selbstständig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie müssen sich erst anmelden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sie",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie heißt sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sie",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie heißen Sie, bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sitzen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo sitzen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "so",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie müssen das so machen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Fahren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie bitte nicht so schnell!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Meine",
+    "english": "",
+    "gender": "unknown",
+    "example": "Frau ist so groß wie ich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "So",
+    "english": "",
+    "gender": "unknown",
+    "example": "das war‘s/wär‘s!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Sofa",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Sofa ist neu.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sofort",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bitte antworten Sie sofort.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Sohn",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ö, e Das ist Hans, mein Sohn.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sollen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Soll ich kommen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "soll ich mitbringen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Sonne",
+    "english": "",
+    "gender": "feminine",
+    "example": "Die Sonne scheint.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "spät",
+    "english": "",
+    "gender": "unknown",
+    "example": "Es ist schon spät, ich muss gehen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "später",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das können wir später machen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Speisekarte",
+    "english": "",
+    "gender": "feminine",
+    "example": "Bringen Sie mir die Speisekarte, bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "spielen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Kinder spielen draußen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Spielen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie Karten?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Sport",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich mache viel Sport.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Sprache",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Welche Sprachen sprichst du?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sprechen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kann ich (mit) Herrn Klein sprechen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Stadt",
+    "english": "",
+    "gender": "feminine",
+    "example": "-ä, e Heidelberg ist eine alte Stadt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "stehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich glaube es nicht, aber es steht in der Zeitung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Der",
+    "english": "",
+    "gender": "unknown",
+    "example": "Bus steht schon an der Haltestelle.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Stelle",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe eine neue Stelle.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "stellen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Stell die Tasche rechts in die Ecke!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Stock",
+    "english": "",
+    "gender": "masculine",
+    "example": "Unsere Wohnung liegt im ersten Stock.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Straße",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n In welcher Straße wohnen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Straßenbahn",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wo fährt die Straßenbahn ab?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "studieren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich studiere in Mainz.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Studium",
+    "english": "",
+    "gender": "neutral",
+    "example": "Das Studium beginnt im Oktober.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Student",
+    "english": "",
+    "gender": "masculine",
+    "example": "-en Ich bin Studentin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Stunde",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich bin in einer Stunde zurück.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "suchen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Suchst du etwas?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "tanzen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Tanzen Sie gern?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Tasche",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Ich habe die Schlüssel in der Tasche.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Taxi",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Es gibt heute keinen Bus mehr. Er fährt mit dem Taxi.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Tee",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich trinke morgens immer Tee.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Teil",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Lies bitte auch den zweiten Teil.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "telefonieren",
+    "english": "",
+    "gender": "unknown",
+    "example": "Darf ich mal telefonieren?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Telefon",
+    "english": "",
+    "gender": "neutral",
+    "example": "Haben Sie Telefon?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Termin",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Am besten machen wir sofort einen Termin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Test",
+    "english": "",
+    "gender": "masculine",
+    "example": "Der Test war einfach.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "teuer",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das ist mir zu teuer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Text",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Lesen Sie bitte diesen Text.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Thema",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wir sprechen heute über das Thema „Essen und",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Ticket",
+    "english": "",
+    "gender": "neutral",
+    "example": "-s Wie viel kostet das Ticket?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Tisch",
+    "english": "",
+    "gender": "masculine",
+    "example": "-e Die Fotos liegen auf dem Tisch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Tochter",
+    "english": "",
+    "gender": "feminine",
+    "example": "-ö Das ist meine Tochter Katharina.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Toilette",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Wo ist die Toilette, bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Tomate",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Die Tomate ist noch grün.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "tot",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sein Vater ist schon lange tot.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "treffen Ich treffe in der Stadt einen Kollegen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "treffen uns immer freitags.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Treppe",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Die Toilette? Die Treppe hoch und dann links.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "trinken",
+    "english": "",
+    "gender": "unknown",
+    "example": "Möchtest du etwas trinken?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "tschüss",
+    "english": "",
+    "gender": "unknown",
+    "example": "Junge Leute sagen meistens „tschüss!“ und nicht",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "„auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wiedersehen“.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "tun",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich habe noch etwas zu tun.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "tut Ihr Mann?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "über",
+    "english": "",
+    "gender": "unknown",
+    "example": "Gehen Sie hier über die Straße.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "wohnt im zweiten Stock über Familie Meier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Sind",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie über 18?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "übernachten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Du kannst bei mir übernachten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "überweisen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sie können das Geld auch überweisen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Uhr",
+    "english": "",
+    "gender": "feminine",
+    "example": "Es ist vier Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "um",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er kommt um sieben Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Da",
+    "english": "",
+    "gender": "unknown",
+    "example": "kommt er gerade um die Ecke.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "umziehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Nächsten Monat ziehen wir um.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "und",
+    "english": "",
+    "gender": "unknown",
+    "example": "Peter und Helmut sind meine Söhne.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "unser",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das ist unsere Lehrerin.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "unten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er wohnt ganz unten im Haus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "unter",
+    "english": "",
+    "gender": "unknown",
+    "example": "Unter uns wohnt eine Familie mit drei Kindern.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Unterricht",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wir haben Unterricht von 8.00 bis 12.00 Uhr.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "unterschreiben",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo muss ich unterschreiben?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Unterschrift",
+    "english": "",
+    "gender": "feminine",
+    "example": "Hier fehlt noch Ihre Unterschrift.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Urlaub",
+    "english": "",
+    "gender": "masculine",
+    "example": "Ich nehme im September Urlaub.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Vater",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ä Mein Vater ist Arbeiter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "verboten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hier ist Rauchen verboten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "verdienen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich verdiene 1.500 Euro im Monat.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Verein",
+    "english": "",
+    "gender": "masculine",
+    "example": "Es gibt einen neuen Sportverein in der Stadt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "verheiratet",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin verheiratet und habe drei Kinder.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "verkaufen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Er verkauft sein altes Auto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Verkäufer",
+    "english": "",
+    "gender": "masculine",
+    "example": "– Meine Mutter ist Verkäuferin im Kaufhaus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "vermieten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Die Wohnung ist schon vermietet.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Vermieter",
+    "english": "",
+    "gender": "masculine",
+    "example": "Unser Vermieter heißt Huber. Er wohnt auch hier.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "verstehen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Können Sie mich verstehen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Verwandte",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Peter besucht seine Verwandten in Polen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "viel",
+    "english": "",
+    "gender": "unknown",
+    "example": "Hier regnet es viel.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "vielleicht",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich komme vielleicht mit dem Bus.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "von",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das Auto von Felix ist kaputt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "kommt gerade von Köln/von zu Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "vor",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Termin war vor einer Stunde.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "Auto steht vor der Tür.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Vorname",
+    "english": "",
+    "gender": "masculine",
+    "example": "-n Ich heiße Müller, mein Vorname ist Eva.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Vorsicht",
+    "english": "",
+    "gender": "feminine",
+    "example": "Vorsicht! Da kommt ein Auto.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "vorstellen Wir wollen uns kennenlernen. Können Sie sich bitte",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Vorwahl",
+    "english": "",
+    "gender": "feminine",
+    "example": "Wie ist die Vorwahl von München?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wandern",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir wandern um den Chiemsee.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wann",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wann bist du fertig?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wann",
+    "english": "",
+    "gender": "unknown",
+    "example": "kann ich Sie anrufen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wann",
+    "english": "",
+    "gender": "unknown",
+    "example": "sind Sie geboren?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "warten",
+    "english": "",
+    "gender": "unknown",
+    "example": "Können Sie ein paar Minuten warten?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Auf",
+    "english": "",
+    "gender": "unknown",
+    "example": "wen warten Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "warum",
+    "english": "",
+    "gender": "unknown",
+    "example": "Warum kommt er nicht?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "was",
+    "english": "",
+    "gender": "unknown",
+    "example": "Was ist das?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Was",
+    "english": "",
+    "gender": "unknown",
+    "example": "möchten Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "was",
+    "english": "",
+    "gender": "unknown",
+    "example": "für ein Was für eine Farbe möchten Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "(sich)",
+    "english": "",
+    "gender": "unknown",
+    "example": "waschen Wo kann ich mir die Hände waschen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "muss morgen waschen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Wasser",
+    "english": "",
+    "gender": "neutral",
+    "example": "Ein Glas Wasser, bitte.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "weh",
+    "english": "",
+    "gender": "unknown",
+    "example": "tun Ich muss zum Arzt. Mein Bein tut weh.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "weiblich",
+    "english": "",
+    "gender": "unknown",
+    "example": "Kreuzen Sie bitte an: „weiblich“ oder „männlich“.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Wein",
+    "english": "",
+    "gender": "masculine",
+    "example": "Nein danke, ich möchte keinen Wein.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "weit",
+    "english": "",
+    "gender": "unknown",
+    "example": "Zum Bahnhof ist es nicht weit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "weiter",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Bus fährt nicht weiter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "welch",
+    "english": "",
+    "gender": "unknown",
+    "example": "Welches Buch möchtest du?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Welt",
+    "english": "",
+    "gender": "feminine",
+    "example": "Es gibt viele Probleme auf der Welt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wenig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich habe leider nur wenig verstanden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "verdient wenig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wer",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wer ist das?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "werden",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mein Sohn will Arzt werden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Wetter",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wir hatten schlechtes Wetter.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wichtig",
+    "english": "",
+    "gender": "unknown",
+    "example": "Dieses Formular ist sehr wichtig.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wie heißt du?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Er",
+    "english": "",
+    "gender": "unknown",
+    "example": "schreibt wie ein Kind.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Meine",
+    "english": "",
+    "gender": "unknown",
+    "example": "Frau ist so groß wie ich.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "soll ich das machen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "groß ist die Wohnung?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "bitte?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "lange bist du schon hier?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wiederholen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Können Sie das bitte wiederholen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Wiederhören",
+    "english": "",
+    "gender": "neutral",
+    "example": "Wir müssen jetzt Schluss machen.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Also",
+    "english": "",
+    "gender": "unknown",
+    "example": "auf Wiederhören!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Wiedersehen",
+    "english": "",
+    "gender": "neutral",
+    "example": "Auf Wiedersehen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wie",
+    "english": "",
+    "gender": "unknown",
+    "example": "viel Wie viel Milch nehmen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "willkommen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Herzlich willkommen!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Wind",
+    "english": "",
+    "gender": "masculine",
+    "example": "Der Wind kommt aus Osten.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wir",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wir lernen Deutsch.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wissen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Weißt du, wie er heißt?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wo",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wo waren Sie im Urlaub?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wo",
+    "english": "",
+    "gender": "unknown",
+    "example": "ist die Post?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wo",
+    "english": "",
+    "gender": "unknown",
+    "example": "sind Sie geboren?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "woher",
+    "english": "",
+    "gender": "unknown",
+    "example": "Woher kommen Sie?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wohin",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wohin fährt dieser Bus?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wohin",
+    "english": "",
+    "gender": "unknown",
+    "example": "wollen Sie am Wochenende?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wohnen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich wohne in München.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Wohnung",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Seit wann haben Sie diese Wohnung?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wollen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wollen Sie einen Kaffee trinken?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Wort",
+    "english": "",
+    "gender": "neutral",
+    "example": "-ö, er/-e Ich kenne das Wort nicht.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "wunderbar",
+    "english": "",
+    "gender": "unknown",
+    "example": "Das Essen schmeckt wunderbar.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zahlen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Zahlen, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Zeit",
+    "english": "",
+    "gender": "feminine",
+    "example": "Ich habe heute keine Zeit.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zurzeit",
+    "english": "",
+    "gender": "unknown",
+    "example": "Zurzeit habe ich sehr viel zu tun.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Zeitung",
+    "english": "",
+    "gender": "feminine",
+    "example": "-en Ich lese gern Zeitung.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "die Zigarette",
+    "english": "",
+    "gender": "feminine",
+    "example": "-n Wie teuer sind die Zigaretten?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "das Zimmer",
+    "english": "",
+    "gender": "neutral",
+    "example": "– Das Zimmer ist groß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Öffne",
+    "english": "",
+    "gender": "unknown",
+    "example": "im Schlafzimmer das Fenster, bitte!",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Die",
+    "english": "",
+    "gender": "unknown",
+    "example": "Wohnung hat drei Zimmer.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "habe ein Zimmer bestellt.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Zoll",
+    "english": "",
+    "gender": "masculine",
+    "example": "Wir müssen noch durch den Zoll.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zu",
+    "english": "",
+    "gender": "unknown",
+    "example": "Der Bus fährt zum Bahnhof.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "gehe zu Fuß.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Ich",
+    "english": "",
+    "gender": "unknown",
+    "example": "bin zu Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zufrieden",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ich bin mit der Wohnung zufrieden.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Zug",
+    "english": "",
+    "gender": "masculine",
+    "example": "-ü, e Ich fahre gern mit dem Zug.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zurück",
+    "english": "",
+    "gender": "unknown",
+    "example": "Einmal Frankfurt und zurück.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Wann",
+    "english": "",
+    "gender": "unknown",
+    "example": "kommst du zurück?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zusammen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Sollen wir zusammen essen gehen?",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Das",
+    "english": "",
+    "gender": "unknown",
+    "example": "macht zusammen 2 Euro 80.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "zwischen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Heidelberg liegt zwischen Frankfurt und Stuttgart.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Zwischen",
+    "english": "",
+    "gender": "unknown",
+    "example": "8 und 10 Uhr bin ich zu Hause.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ALTE",
+    "english": "",
+    "gender": "unknown",
+    "example": "Handbuch. Europäische Sprachprüfungen und Prüfungsverfahren,",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Hg.",
+    "english": "",
+    "gender": "unknown",
+    "example": "Association of Language Testers in Europe. Cambridge, 1998.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Gemeinsamer",
+    "english": "",
+    "gender": "unknown",
+    "example": "europäischer Referenzrahmen für Sprachen: lernen, lehren, be-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "urteilen",
+    "english": "",
+    "gender": "unknown",
+    "example": "im Auftrag des Europarats, Rat für kulturelle Zusammenarbeit, deut-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "sche",
+    "english": "",
+    "gender": "unknown",
+    "example": "Ausgabe Hg. Goethe-Institut Inter Nationes, der Ständigen Konferenz",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "der Kultusminister",
+    "english": "",
+    "gender": "masculine",
+    "example": "der Länder in der Bundesrepublik Deutschland (KMK), der",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Schweizerischen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Konferenz der Kantonalen Erziehungs direktoren (EDK) und",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "dem",
+    "english": "",
+    "gender": "unknown",
+    "example": "österreichischen Bundesministerium für Bildung, Wissenschaft und Kul-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "tur",
+    "english": "",
+    "gender": "unknown",
+    "example": "(BMBWK), München,",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Langenscheidt",
+    "english": "",
+    "gender": "unknown",
+    "example": "2001.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Profile",
+    "english": "",
+    "gender": "unknown",
+    "example": "Deutsch. Lernzielbestimmungen, Kannbeschreibungen und kommu-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "nikative",
+    "english": "",
+    "gender": "unknown",
+    "example": "Mittel für die Niveaustufen A1, A2, B1 und B2 des „Gemeinsamen",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "europäischen",
+    "english": "",
+    "gender": "unknown",
+    "example": "Referenzrahmens für Sprachen“ von Manuela Glaboniat, Martin",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Müller",
+    "english": "",
+    "gender": "unknown",
+    "example": "Paul Rusch, Helen Schmitz, Lukas Wertenschlag, München, Langen-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "scheidt",
+    "english": "",
+    "gender": "unknown",
+    "example": "2002.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "Waystage.",
+    "english": "",
+    "gender": "unknown",
+    "example": "Systems development in adult language learning. An intermediary",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "objective",
+    "english": "",
+    "gender": "unknown",
+    "example": "below Threshold-Level in a European unit/credit system for",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "modern",
+    "english": "",
+    "gender": "unknown",
+    "example": "language learning by adults, Hg. J.A. van Ek, L.G. Alexander in associ-",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  },
+  {
+    "german": "ation",
+    "english": "",
+    "gender": "unknown",
+    "example": "with M.A. Fitzpatrick, Strassburg, 1977.",
+    "pronunciation_tip": "",
+    "source": "Goethe A1"
+  }
+]

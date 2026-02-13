@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeutschesEcho - Ultimate A1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: flex;
+        }
+
+        .sub-view {
+            display: none;
+        }
+
+        .sub-view.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mic-pulse {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .chat-bubble {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .chat-user {
+            background-color: #3b82f6;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-ai {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #334155;
+        }
+
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #a855f7;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Gender Colors */
+        .border-masculine {
+            border-color: #3b82f6;
+            color: #60a5fa;
+        }
+
+        .border-feminine {
+            border-color: #ef4444;
+            color: #f87171;
+        }
+
+        .border-neutral {
+            border-color: #22c55e;
+            color: #4ade80;
+        }
+
+        .correct-word {
+            color: #4ade80;
+        }
+
+        .wrong-word {
+            color: #f87171;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 h-screen overflow-hidden flex flex-col">
+
+    <!-- SETTINGS MODAL -->
+    <div id="settings-modal" class="fixed inset-0 bg-black/90 z-[70] hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-sm shadow-2xl">
+            <h2 class="text-xl font-bold text-white mb-4"><i class="fas fa-robot text-purple-400 mr-2"></i>Unlock AI
+                Power</h2>
+            <p class="text-slate-400 text-sm mb-4">Enter Gemini API Key for infinite Reading texts, Speaking scenarios,
+                and AI Chat.</p>
+            <input type="password" id="api-key-input" placeholder="Paste API Key here..."
+                class="w-full bg-slate-800 border border-slate-700 text-white rounded-lg p-3 mb-4 focus:ring-2 focus:ring-purple-500 outline-none">
+            <div class="flex gap-3">
+                <button onclick="saveSettings()"
+                    class="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 rounded-lg transition">Save</button>
+                <button onclick="toggleSettings()"
+                    class="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-300 font-bold py-2 rounded-lg transition">Cancel</button>
+            </div>
+            <p class="text-xs text-slate-500 mt-4 text-center">Stored securely in your browser.</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 relative overflow-y-auto pb-24 scroll-smooth">
+
+        <!-- 1. HOME TAB -->
+        <div id="tab-home" class="tab-content active flex-col p-6 space-y-6 max-w-md mx-auto w-full">
+            <!-- Header -->
+            <div class="flex justify-between items-center mt-4">
+                <div>
+                    <h1
+                        class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-500">
+                        DeutschesEcho</h1>
+                    <p class="text-slate-400 text-sm">Ultimate A1 Trainer</p>
+                </div>
+                <button onclick="toggleSettings()"
+                    class="bg-slate-800 p-2 rounded-full border border-slate-700 text-slate-400 hover:text-white transition">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+                    <div class="text-slate-400 text-xs uppercase font-bold mb-1">Streak</div>
+                    <div class="text-2xl font-bold text-yellow-500"><i class="fas fa-fire mr-1"></i> 5 Days</div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
+                    <div class="text-slate-400 text-xs uppercase font-bold mb-1">XP Points</div>
+                    <div class="text-2xl font-bold text-blue-500">1,250</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="switchTab('vocab')"
+                    class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
+                    <div class="p-3 bg-green-500/10 text-green-500 rounded-full group-hover:bg-green-500/20"><i
+                            class="fas fa-book-open text-xl"></i></div>
+                    <span class="font-bold text-sm">Vocab</span>
+                </button>
+                <button onclick="openPracticeMode('grammar')"
+                    class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
+                    <div class="p-3 bg-blue-500/10 text-blue-500 rounded-full group-hover:bg-blue-500/20"><i
+                            class="fas fa-cubes text-xl"></i></div>
+                    <span class="font-bold text-sm">Grammar</span>
+                </button>
+                <button onclick="openPracticeMode('reading')"
+                    class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
+                    <div class="p-3 bg-orange-500/10 text-orange-500 rounded-full group-hover:bg-orange-500/20"><i
+                            class="fas fa-book-reader text-xl"></i></div>
+                    <span class="font-bold text-sm">Reading</span>
+                </button>
+                <button onclick="openPracticeMode('speaking')"
+                    class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
+                    <div class="p-3 bg-red-500/10 text-red-500 rounded-full group-hover:bg-red-500/20"><i
+                            class="fas fa-microphone text-xl"></i></div>
+                    <span class="font-bold text-sm">Speaking</span>
+                </button>
+            </div>
+
+            <!-- Exam Teaser -->
+            <button onclick="switchTab('exam')"
+                class="w-full bg-gradient-to-r from-indigo-900 to-purple-900 p-5 rounded-xl border border-indigo-700 flex items-center justify-between group transition hover:scale-[1.02]">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white/10 p-3 rounded-full"><i class="fas fa-graduation-cap text-white"></i></div>
+                    <div class="text-left">
+                        <h3 class="font-bold text-white">Mock Exam</h3>
+                        <p class="text-indigo-200 text-xs">Test your A1 readiness</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-indigo-300"></i>
+            </button>
+        </div>
+
+        <!-- 2. VOCAB TAB -->
+        <div id="tab-vocab" class="tab-content flex-col items-center justify-center h-full p-6">
+            <div class="w-full max-w-md mb-4 flex justify-between items-center">
+                <button onclick="switchTab('home')" class="text-slate-500 hover:text-white"><i
+                        class="fas fa-arrow-left"></i></button>
+                <h2 class="text-xl font-bold text-white">Flashcards</h2>
+                <div class="w-6"></div>
+            </div>
+            <div id="vocab-card-container" class="w-full max-w-sm h-96 relative perspective-1000"></div>
+            <div class="flex gap-6 mt-8">
+                <button onclick="handleSwipe(false)"
+                    class="p-6 rounded-full bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white transition"><i
+                        class="fas fa-times text-2xl"></i></button>
+                <button onclick="playVocabAudio()"
+                    class="p-6 rounded-full bg-slate-800 text-white shadow-lg transition transform active:scale-95"><i
+                        class="fas fa-volume-up text-2xl"></i></button>
+                <button onclick="handleSwipe(true)"
+                    class="p-6 rounded-full bg-green-500/10 text-green-500 hover:bg-green-500 hover:text-white transition"><i
+                        class="fas fa-check text-2xl"></i></button>
+            </div>
+        </div>
+
+        <!-- 3. PRACTICE TAB (Container for Grammar, Reading, Speaking) -->
+        <div id="tab-practice" class="tab-content flex-col h-full bg-slate-950">
+
+            <!-- HEADER -->
+            <div class="p-4 bg-slate-900/50 border-b border-slate-800 flex justify-between items-center">
+                <button onclick="switchTab('home')" class="text-slate-400 hover:text-white"><i
+                        class="fas fa-arrow-left mr-1"></i> Back</button>
+                <h2 id="practice-title" class="font-bold text-white">Practice</h2>
+                <button id="ai-action-btn"
+                    class="text-purple-400 text-xs font-bold border border-purple-500/30 px-2 py-1 rounded bg-purple-500/10">AI
+                    Gen</button>
+            </div>
+
+            <!-- SUB-VIEW: GRAMMAR (Sentence Builder) -->
+            <div id="view-grammar" class="sub-view flex-col items-center p-6 pt-10 w-full max-w-md mx-auto">
+                <p id="sentence-instruction"
+                    class="text-slate-300 text-center mb-6 text-sm bg-slate-800 p-3 rounded-lg w-full">Loading...</p>
+                <div id="sentence-slot-area"
+                    class="flex flex-wrap gap-2 min-h-[80px] bg-slate-900 rounded-xl p-4 mb-6 border border-slate-800 w-full justify-center items-center">
+                </div>
+                <div id="sentence-word-bank" class="flex flex-wrap gap-3 justify-center mb-8 w-full"></div>
+                <button onclick="checkSentence()"
+                    class="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-lg shadow-blue-900/20">Check
+                    Answer</button>
+                <div id="sentence-feedback" class="mt-4 text-center text-sm font-bold min-h-[20px]"></div>
+            </div>
+
+            <!-- SUB-VIEW: READING (Lesen) -->
+            <div id="view-reading" class="sub-view flex-col p-6 w-full max-w-md mx-auto overflow-y-auto">
+                <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 mb-6 shadow-lg">
+                    <h3 id="reading-title" class="text-yellow-500 font-bold mb-2 text-sm uppercase">Letter from Maria
+                    </h3>
+                    <p id="reading-text" class="text-slate-300 text-sm leading-relaxed font-serif">
+                        Liebe Tina,<br><br>
+                        ich komme am Freitag um 14 Uhr in Berlin an. Kannst du mich vom Bahnhof abholen? Mein Zug ist
+                        der ICE 504. Wir können dann zusammen Kaffee trinken.<br><br>
+                        Viele Grüße,<br>Maria
+                    </p>
+                </div>
+
+                <div id="reading-question-area">
+                    <p class="text-white font-bold mb-4">Question:</p>
+                    <p id="reading-q-text" class="text-slate-300 mb-4 text-sm">When does Maria arrive?</p>
+                    <div id="reading-options" class="space-y-3">
+                        <!-- Options generated here -->
+                    </div>
+                </div>
+                <div id="reading-feedback" class="mt-4 p-3 rounded-lg hidden text-center text-sm"></div>
+            </div>
+
+            <!-- SUB-VIEW: SPEAKING (Sprechen) -->
+            <div id="view-speaking" class="sub-view flex-col items-center p-6 w-full max-w-md mx-auto pt-10">
+                <div class="text-center mb-8">
+                    <div
+                        class="inline-block bg-slate-800 px-4 py-1 rounded-full text-slate-400 text-xs font-bold mb-4 uppercase tracking-widest">
+                        Read & Speak</div>
+                    <h2 id="speak-target-text" class="text-2xl font-bold text-white mb-2 leading-tight">Guten Morgen,
+                        wie geht es Ihnen?</h2>
+                    <p id="speak-translation" class="text-slate-500 text-sm">"Good morning, how are you?"</p>
+                </div>
+
+                <div id="speak-feedback"
+                    class="min-h-[60px] flex flex-wrap justify-center gap-1 mb-8 text-lg font-medium text-slate-400">
+                    Tap mic to start...
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <button onclick="playTargetAudio()"
+                        class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-slate-700 transition"><i
+                            class="fas fa-volume-up"></i></button>
+                    <button id="mic-btn" onclick="toggleMic()"
+                        class="w-20 h-20 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg shadow-red-900/50 hover:scale-105 transition"><i
+                            id="mic-icon" class="fas fa-microphone text-3xl"></i></button>
+                    <button onclick="nextSpeakingDrill()"
+                        class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-slate-700 transition"><i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. EXAM TAB -->
+        <div id="tab-exam" class="tab-content flex-col h-full bg-slate-950 p-6">
+            <div class="w-full max-w-md mx-auto">
+                <div class="flex justify-between items-center mb-6">
+                    <button onclick="switchTab('home')" class="text-slate-500 hover:text-white"><i
+                            class="fas fa-times"></i> Quit</button>
+                    <div class="font-bold text-white">Mock Exam</div>
+                    <div class="text-yellow-500 font-mono text-sm" id="exam-timer">15:00</div>
+                </div>
+
+                <!-- Exam Question Container -->
+                <div id="exam-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                    <div class="mb-4 flex justify-between items-center">
+                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Part 2: Lesen</span>
+                        <span class="text-slate-500 text-xs">Question 1/3</span>
+                    </div>
+
+                    <div class="prose prose-invert prose-sm mb-6">
+                        <p class="font-serif italic bg-slate-950 p-4 rounded border-l-4 border-slate-700">
+                            "Suche gebrauchten Tisch für meine Küche. Er soll nicht groß sein, maximal 80cm breit. Bitte
+                            rufen Sie an: 0176-555-444."
+                        </p>
+                    </div>
+
+                    <p class="font-bold text-white mb-4">Was sucht die Person?</p>
+
+                    <div class="space-y-3">
+                        <label
+                            class="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:bg-slate-800 cursor-pointer">
+                            <input type="radio" name="exam-q1" class="accent-blue-500 w-5 h-5">
+                            <span class="text-slate-300">Ein neues Auto</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:bg-slate-800 cursor-pointer">
+                            <input type="radio" name="exam-q1" class="accent-blue-500 w-5 h-5">
+                            <span class="text-slate-300">Einen kleinen Tisch</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 p-3 rounded-lg border border-slate-700 hover:bg-slate-800 cursor-pointer">
+                            <input type="radio" name="exam-q1" class="accent-blue-500 w-5 h-5">
+                            <span class="text-slate-300">Eine große Küche</span>
+                        </label>
+                    </div>
+
+                    <button class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg"
+                        onclick="alert('This is a demo layout for the exam module.')">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. AI TUTOR TAB -->
+        <div id="tab-ai-tutor" class="tab-content flex-col h-full bg-slate-900">
+            <div class="bg-slate-950 p-4 border-b border-slate-800 flex items-center justify-between shadow-md z-10">
+                <div class="flex items-center gap-3">
+                    <button onclick="switchTab('home')" class="text-slate-500 hover:text-white"><i
+                            class="fas fa-arrow-left"></i></button>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-white text-sm">AI Tutor</span>
+                        <span class="text-xs text-green-400">Online</span>
+                    </div>
+                </div>
+                <button onclick="clearChat()" class="text-slate-500 text-xs"><i class="fas fa-trash"></i></button>
+            </div>
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-4 flex flex-col bg-slate-900"></div>
+            <div class="p-4 bg-slate-950 border-t border-slate-800 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type in German..."
+                    class="flex-1 bg-slate-800 border border-slate-700 text-white rounded-full px-4 py-3 focus:outline-none focus:border-purple-500"
+                    onkeypress="if(event.key === 'Enter') sendMessage()">
+                <button onclick="sendMessage()"
+                    class="bg-purple-600 w-12 h-12 rounded-full text-white hover:bg-purple-500"><i
+                        class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- NAVBAR -->
+    <nav class="fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 px-2 py-2 z-50">
+        <div class="flex justify-around items-center max-w-md mx-auto">
+            <button onclick="switchTab('home')"
+                class="nav-btn text-yellow-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                <i class="fas fa-home text-lg mb-1"></i><span class="text-[9px] font-bold">Home</span>
+            </button>
+            <button onclick="switchTab('vocab')"
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                <i class="fas fa-layer-group text-lg mb-1"></i><span class="text-[9px] font-bold">Vocab</span>
+            </button>
+
+            <div class="relative -top-5">
+                <button onclick="switchTab('ai-tutor')"
+                    class="bg-gradient-to-tr from-purple-600 to-indigo-600 text-white w-14 h-14 rounded-full shadow-lg shadow-purple-500/30 border-4 border-slate-950 flex items-center justify-center transform transition hover:scale-110">
+                    <i class="fas fa-robot text-xl"></i>
+                </button>
+            </div>
+
+            <button onclick="switchTab('practice')"
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                <i class="fas fa-dumbbell text-lg mb-1"></i><span class="text-[9px] font-bold">Practice</span>
+            </button>
+            <button onclick="switchTab('exam')"
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                <i class="fas fa-graduation-cap text-lg mb-1"></i><span class="text-[9px] font-bold">Exam</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- APP LOGIC -->
+    <script>
+        // --- 1. CONFIG & STATE ---
+        let apiKey = localStorage.getItem('gemini_api_key') || '';
+        let currentTab = 'home';
+        let currentPractice = 'grammar';
+
+        // --- 2. STATIC CONTENT DATA ---
+
+        // Vocab Data
+        const VOCAB_DATA = [
+            { german: "der Bahnhof", english: "Train Station", gender: "masculine", example: "Ich gehe zum Bahnhof." },
+            { german: "das Mädchen", english: "Girl", gender: "neutral", example: "Das Mädchen spielt." },
+            { german: "die Zeitung", english: "Newspaper", gender: "feminine", example: "Er liest die Zeitung." },
+            { german: "einkaufen", english: "To shop", gender: "plural", example: "Wir gehen einkaufen." },
+            { german: "vielleicht", english: "Maybe", gender: "plural", example: "Vielleicht komme ich." }
+        ];
+        let vocabIndex = 0;
+
+        // Grammar Data
+        const GRAMMAR_DATA = [
+            { instruction: "Translate: 'I can play football.'", correct: ["Ich", "kann", "Fußball", "spielen"], scrambled: ["spielen", "Ich", "Fußball", "kann"], rule: "Modal Verb (kann) = Pos 2. Infinitive (spielen) = End." },
+            { instruction: "Translate: 'I have a brother.'", correct: ["Ich", "habe", "einen", "Bruder"], scrambled: ["Bruder", "Ich", "ein", "einen", "habe"], rule: "Haben + Akkusativ. Bruder is Masculine (Der) -> Den/Einen." }
+        ];
+        let grammarIndex = 0;
+        let currentSentenceBuilder = [];
+
+        // Reading Data
+        const READING_DATA = [
+            {
+                title: "Email from Hans",
+                text: "Hallo! Mein Name ist Hans. Ich bin 30 Jahre alt und wohne in München. Ich arbeite als Lehrer. Am Wochenende spiele ich gern Fußball.",
+                question: "Wo wohnt Hans?",
+                options: ["Berlin", "München", "Hamburg"],
+                answer: 1 // index
+            },
+            {
+                title: "At the Bakery",
+                text: "Verkäuferin: Guten Tag, was möchten Sie? <br>Kunde: Ich möchte drei Brötchen und ein Stück Kuchen, bitte. <br>Verkäuferin: Sonst noch etwas? <br>Kunde: Nein, danke.",
+                question: "Was kauft der Kunde?",
+                options: ["Nur Kuchen", "Brot und Kaffee", "Brötchen und Kuchen"],
+                answer: 2
+            }
+        ];
+        let readingIndex = 0;
+
+        // Speaking Data
+        const SPEAKING_DATA = [
+            { german: "Ich möchte einen Kaffee, bitte.", english: "I would like a coffee, please." },
+            { german: "Entschuldigung, wo ist der Bahnhof?", english: "Excuse me, where is the train station?" },
+            { german: "Mein Name ist Sarah und ich komme aus Indien.", english: "My name is Sarah and I come from India." }
+        ];
+        let speakingIndex = 0;
+        let recognition = null;
+        let isListening = false;
+
+        // --- 3. INIT ---
+        window.onload = function () {
+            initSpeechRec();
+            switchTab('home');
+            addChatBubble("Willkommen! Click on the microphone to chat or go to 'Practice' to start drills.", 'ai');
+        };
+
+        // --- 4. NAVIGATION LOGIC ---
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+
+            // Icon Highlight
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('text-yellow-500'));
+            const activeBtn = document.querySelector(`button[onclick="switchTab('${tabId}')"]`);
+            if (activeBtn) activeBtn.classList.add('text-yellow-500');
+
+            if (tabId === 'vocab') renderVocabCard();
+        }
+
+        function openPracticeMode(mode) {
+            currentPractice = mode;
+            switchTab('practice');
+            document.querySelectorAll('.sub-view').forEach(el => el.classList.remove('active'));
+            document.getElementById(`view-${mode}`).classList.add('active');
+
+            // Update Header
+            const titles = { grammar: "Sentence Architect", reading: "Reading Lab", speaking: "Speech Dojo" };
+            document.getElementById('practice-title').innerText = titles[mode];
+
+            // Update AI Button Action
+            const btn = document.getElementById('ai-action-btn');
+            if (mode === 'grammar') btn.onclick = generateAIGrammar;
+            if (mode === 'reading') btn.onclick = generateAIReading;
+            if (mode === 'speaking') btn.onclick = generateAISpeaking;
+
+            // Load Initial Data
+            if (mode === 'grammar') loadGrammarDrill();
+            if (mode === 'reading') loadReadingDrill();
+            if (mode === 'speaking') loadSpeakingDrill();
+        }
+
+        // --- 5. GRAMMAR MODULE ---
+        function loadGrammarDrill() {
+            const data = GRAMMAR_DATA[grammarIndex % GRAMMAR_DATA.length];
+            document.getElementById('sentence-instruction').innerText = data.instruction;
+            document.getElementById('sentence-feedback').innerText = '';
+            currentSentenceBuilder = [];
+            renderGrammarUI(data);
+        }
+
+        function renderGrammarUI(data) {
+            const slotArea = document.getElementById('sentence-slot-area');
+            const bankArea = document.getElementById('sentence-word-bank');
+
+            // Render Slots
+            slotArea.innerHTML = '';
+            if (currentSentenceBuilder.length === 0) slotArea.innerHTML = '<span class="text-slate-600 text-sm">Tap words below...</span>';
+            currentSentenceBuilder.forEach((word, idx) => {
+                const badge = document.createElement('span');
+                badge.className = 'bg-blue-600 text-white px-3 py-1 rounded cursor-pointer text-sm font-bold animate-pulse-once';
+                badge.innerText = word;
+                badge.onclick = () => { currentSentenceBuilder.splice(idx, 1); renderGrammarUI(data); };
+                slotArea.appendChild(badge);
+            });
+
+            // Render Bank
+            bankArea.innerHTML = '';
+            data.scrambled.forEach(word => {
+                const btn = document.createElement('button');
+                btn.className = 'bg-slate-800 text-slate-300 px-3 py-2 rounded border border-slate-700 text-sm font-medium';
+                btn.innerText = word;
+
+                // Check usage count
+                const limit = data.scrambled.filter(w => w === word).length;
+                const used = currentSentenceBuilder.filter(w => w === word).length;
+
+                if (used >= limit) {
+                    btn.classList.add('opacity-30', 'cursor-not-allowed');
+                } else {
+                    btn.onclick = () => { currentSentenceBuilder.push(word); renderGrammarUI(data); };
+                }
+                bankArea.appendChild(btn);
+            });
+        }
+
+        function checkSentence() {
+            const data = GRAMMAR_DATA[grammarIndex % GRAMMAR_DATA.length];
+            const isCorrect = JSON.stringify(currentSentenceBuilder) === JSON.stringify(data.correct);
+            const fb = document.getElementById('sentence-feedback');
+
+            if (isCorrect) {
+                fb.innerText = "Perfekt! Correct.";
+                fb.className = "mt-4 text-center text-sm font-bold text-green-400";
+                speakText(data.correct.join(' '));
+                setTimeout(() => { grammarIndex++; loadGrammarDrill(); }, 1500);
+            } else {
+                fb.innerText = `Falsch! Tip: ${data.rule}`;
+                fb.className = "mt-4 text-center text-sm font-bold text-red-400";
+            }
+        }
+
+        // --- 6. READING MODULE ---
+        function loadReadingDrill() {
+            const data = READING_DATA[readingIndex % READING_DATA.length];
+            document.getElementById('reading-title').innerText = data.title;
+            document.getElementById('reading-text').innerHTML = data.text;
+            document.getElementById('reading-q-text').innerText = data.question;
+            document.getElementById('reading-feedback').classList.add('hidden');
+
+            const optsDiv = document.getElementById('reading-options');
+            optsDiv.innerHTML = '';
+
+            data.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3 rounded-lg border border-slate-800 hover:bg-slate-800 transition text-slate-300 text-sm";
+                btn.innerText = opt;
+                btn.onclick = () => checkReading(idx, data.answer);
+                optsDiv.appendChild(btn);
+            });
+        }
+
+        function checkReading(selected, correct) {
+            const fb = document.getElementById('reading-feedback');
+            fb.classList.remove('hidden');
+            if (selected === correct) {
+                fb.innerText = "Richtig! Well understood.";
+                fb.className = "mt-4 p-3 rounded-lg bg-green-500/20 text-green-400 text-center text-sm font-bold";
+                setTimeout(() => { readingIndex++; loadReadingDrill(); }, 2000);
+            } else {
+                fb.innerText = "Falsch. Read the text carefully again.";
+                fb.className = "mt-4 p-3 rounded-lg bg-red-500/20 text-red-400 text-center text-sm font-bold";
+            }
+        }
+
+        // --- 7. SPEAKING MODULE ---
+        function initSpeechRec() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.lang = 'de-DE';
+                recognition.continuous = false;
+                recognition.interimResults = true;
+
+                recognition.onstart = () => {
+                    isListening = true;
+                    document.getElementById('mic-btn').classList.add('mic-pulse');
+                };
+                recognition.onend = () => {
+                    isListening = false;
+                    document.getElementById('mic-btn').classList.remove('mic-pulse');
+                };
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    compareSpeech(transcript);
+                };
+            } else {
+                alert("Speech Recognition not supported in this browser. Please use Chrome.");
+            }
+        }
+
+        function loadSpeakingDrill() {
+            const data = SPEAKING_DATA[speakingIndex % SPEAKING_DATA.length];
+            document.getElementById('speak-target-text').innerText = data.german;
+            document.getElementById('speak-translation').innerText = `"${data.english}"`;
+            document.getElementById('speak-feedback').innerHTML = 'Tap mic to start...';
+        }
+
+        function toggleMic() {
+            if (!recognition) return;
+            if (isListening) recognition.stop();
+            else recognition.start();
+        }
+
+        function compareSpeech(spoken) {
+            const target = SPEAKING_DATA[speakingIndex % SPEAKING_DATA.length].german;
+            const cleanTarget = target.toLowerCase().replace(/[.,?]/g, "").split(' ');
+            const cleanSpoken = spoken.toLowerCase().replace(/[.,?]/g, "").split(' ');
+
+            let html = "";
+            cleanTarget.forEach((word, idx) => {
+                if (cleanSpoken[idx] === word) html += `<span class="correct-word mr-1">${word}</span>`;
+                else html += `<span class="wrong-word mr-1 opacity-50">${cleanSpoken[idx] || '_'}</span>`;
+            });
+
+            document.getElementById('speak-feedback').innerHTML = html;
+        }
+
+        function nextSpeakingDrill() {
+            speakingIndex++;
+            loadSpeakingDrill();
+        }
+
+        function playTargetAudio() {
+            speakText(SPEAKING_DATA[speakingIndex % SPEAKING_DATA.length].german);
+        }
+
+        // --- 8. VOCAB LOGIC ---
+        function renderVocabCard() {
+            const container = document.getElementById('vocab-card-container');
+            const word = VOCAB_DATA[vocabIndex % VOCAB_DATA.length];
+
+            let borderClass = 'border-yellow-500';
+            if (word.gender === 'masculine') borderClass = 'border-masculine';
+            if (word.gender === 'feminine') borderClass = 'border-feminine';
+            if (word.gender === 'neutral') borderClass = 'border-neutral';
+
+            container.innerHTML = `
+                <div id="active-card" class="w-full h-full bg-slate-800 rounded-3xl border-2 ${borderClass} flex flex-col items-center justify-center p-6 shadow-2xl relative overflow-hidden transition-all duration-300">
+                    <div class="absolute top-4 right-4 text-xs font-bold uppercase tracking-widest opacity-50 text-white">${word.gender}</div>
+                    <h2 class="text-3xl font-bold text-white mb-2 text-center">${word.german}</h2>
+                    <p class="text-slate-400 text-lg mb-8 text-center">${word.english}</p>
+                    <div class="w-full bg-slate-900/50 p-4 rounded-xl">
+                        <p class="text-sm text-slate-300 italic text-center">"${word.example}"</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function handleSwipe(known) {
+            const card = document.getElementById('active-card');
+            const x = known ? 200 : -200;
+            card.style.transform = `translateX(${x}px) rotate(${known ? 10 : -10}deg) opacity(0)`;
+            setTimeout(() => { vocabIndex++; renderVocabCard(); }, 300);
+        }
+
+        function playVocabAudio() {
+            speakText(VOCAB_DATA[vocabIndex % VOCAB_DATA.length].german);
+        }
+
+        // --- 9. AI LOGIC (Simulated hooks) ---
+        async function generateAIReading() {
+            if (!apiKey) { toggleSettings(); return; }
+            // Call Gemini here to get new READING_DATA object
+            alert("AI Generation triggered (Requires Key)");
+        }
+
+        async function generateAIGrammar() {
+            if (!apiKey) { toggleSettings(); return; }
+            // Call Gemini
+        }
+
+        async function generateAISpeaking() {
+            if (!apiKey) { toggleSettings(); return; }
+            // Call Gemini
+        }
+
+        // --- 10. CHAT LOGIC ---
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            addChatBubble(text, 'user');
+            input.value = '';
+
+            const loadingId = addChatBubble('<span class="loader"></span>', 'ai');
+
+            // Gemini Call Mockup
+            if (apiKey) {
+                const reply = await callGeminiAPI(text); // Implement fetch
+                document.getElementById(loadingId).innerHTML = marked.parse(reply || "Error");
+            } else {
+                setTimeout(() => {
+                    document.getElementById(loadingId).innerHTML = "Please add API Key in settings to chat.";
+                }, 1000);
+            }
+        }
+
+        function addChatBubble(html, type) {
+            const div = document.createElement('div');
+            div.className = `chat-bubble chat-${type}`;
+            div.id = `msg-${Date.now()}`;
+            div.innerHTML = html;
+            const container = document.getElementById('chat-messages');
+            container.appendChild(div);
+            container.scrollTop = container.scrollHeight;
+            return div.id;
+        }
+
+        function clearChat() {
+            document.getElementById('chat-messages').innerHTML = '';
+        }
+
+        // --- UTILS ---
+        function speakText(text) {
+            const u = new SpeechSynthesisUtterance(text);
+            u.lang = 'de-DE';
+            window.speechSynthesis.speak(u);
+        }
+
+        function toggleSettings() {
+            document.getElementById('settings-modal').classList.toggle('hidden');
+        }
+
+        function saveSettings() {
+            apiKey = document.getElementById('api-key-input').value;
+            localStorage.setItem('gemini_api_key', apiKey);
+            toggleSettings();
+            alert("Key Saved!");
+        }
+
+        async function callGeminiAPI(prompt) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ contents: [{ parts: [{ text: "Act as a German Tutor. Reply short. User: " + prompt }] }] })
+                });
+                const data = await response.json();
+                return data.candidates[0].content.parts[0].text;
+            } catch (e) { return null; }
+        }
+
+    </script>
+</body>
+
+</html>
