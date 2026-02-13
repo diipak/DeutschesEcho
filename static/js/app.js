@@ -77,9 +77,98 @@ window.switchTab = function (tabId) {
 
 // Initialize Profile System
 function initializeProfile() {
-    // Profile system will auto-create default profile if none exists
+    updateProfileDisplay();
+    checkStreak(); // Check and update streak on load
+
+    // Listen for profile changes
+    window.addEventListener('profileChanged', (e) => {
+        updateProfileDisplay();
+        loadUserStats();
+        // Reload current tab content to reflect new user state if needed
+        if (currentTab === 'vocab') loadVocabCard();
+    });
+
+    // Listen for updates (XP gain, etc)
+    window.addEventListener('profileUpdated', (e) => {
+        updateProfileDisplay();
+    });
+}
+
+function updateProfileDisplay() {
     const profile = window.profileManager.getActiveProfile();
-    console.log('Active profile:', profile.name);
+
+    // Update Header
+    document.getElementById('profile-name').textContent = profile.name;
+    document.getElementById('profile-level').textContent = `LEVEL ${profile.level}`;
+
+    const avatar = document.getElementById('profile-avatar');
+    avatar.textContent = profile.name.charAt(0).toUpperCase();
+    avatar.style.background = profile.color; // Use profile color
+    if (profile.color.startsWith('#')) {
+        // Add subtle gradient if it's a hex color
+        avatar.style.backgroundImage = `linear-gradient(135deg, ${profile.color}, ${adjustColor(profile.color, -20)})`;
+    }
+}
+
+// Check for daily streak on load
+async function checkStreak() {
+    const result = window.profileManager.updateStreak();
+    if (result.bonusXP > 0) {
+        // Show streak notification
+        window.profileManager.showXPAnimation(result.bonusXP, result.message);
+    }
+}
+
+// Profile Menu Functions
+window.toggleProfileMenu = function () {
+    const menu = document.getElementById('profile-menu');
+    menu.classList.toggle('hidden');
+
+    if (!menu.classList.contains('hidden')) {
+        renderProfileList();
+    }
+};
+
+function renderProfileList() {
+    const profiles = window.profileManager.getProfiles();
+    const active = window.profileManager.getActiveProfile();
+    const list = document.getElementById('profile-list');
+
+    list.innerHTML = profiles.map(p => `
+        <button onclick="switchProfile('${p.id}')" class="w-full flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 transition ${p.id === active.id ? 'bg-white/10 ring-1 ring-white/20' : ''}">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style="background: ${p.color}; background-image: linear-gradient(135deg, ${p.color}, ${adjustColor(p.color, -20)})">
+                ${p.name.charAt(0).toUpperCase()}
+            </div>
+            <div class="flex-1 text-left">
+                <div class="text-sm font-medium text-white">${p.name}</div>
+                <div class="text-[10px] text-slate-400">Level ${p.level} • ${p.xp} XP</div>
+            </div>
+            ${p.id === active.id ? '<i class="fas fa-check text-green-500"></i>' : ''}
+        </button>
+    `).join('');
+}
+
+window.switchProfile = function (profileId) {
+    window.profileManager.setActiveProfile(profileId);
+    window.toggleProfileMenu(); // Close menu
+};
+
+window.createNewProfile = function () {
+    const name = prompt("Enter name for new profile:");
+    if (name) {
+        try {
+            const newProfile = window.profileManager.createProfile(name);
+            window.profileManager.setActiveProfile(newProfile.id);
+            window.toggleProfileMenu();
+        } catch (e) {
+            alert(e.message);
+        }
+    }
+};
+
+// Helper to darken color for gradient
+function adjustColor(color, amount) {
+    return '#' + color.replace(/^#/, '').replace(/../g, color => ('0' + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 }
 
 // Load User Stats from Profile
@@ -87,8 +176,12 @@ async function loadUserStats() {
     try {
         const profile = window.profileManager.getActiveProfile();
 
-        document.getElementById('user-streak').innerHTML = `<i class="fas fa-fire mr-1"></i> ${profile.streak} Days`;
-        document.getElementById('user-xp').textContent = profile.xp;
+        document.getElementById('user-streak').innerHTML = `
+            ${profile.streak} <span class="text-sm font-normal opacity-50">days</span>
+        `;
+        document.getElementById('user-xp').innerHTML = `
+            ${profile.xp} <span class="text-sm font-normal opacity-50">XP</span>
+        `;
 
         // Also update from backend API
         const response = await fetch(`${API_BASE}/api/user/stats`);

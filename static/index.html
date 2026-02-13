@@ -12,12 +12,33 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-dark": "#101622",
+                        "slate-card": "#1e293b",
+                        "accent-purple": "#7c3aed",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome & Material Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/static/manifest.json">
@@ -43,47 +64,149 @@
     <!-- MAIN CONTENT AREA -->
     <main class="flex-1 relative overflow-y-auto pb-24 scroll-smooth">
 
-        Days</div>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl">
-            <div class="text-slate-400 text-xs uppercase font-bold mb-1">XP Points</div>
-            <div class="text-2xl font-bold text-blue-500" id="user-xp">0</div>
-        </div>
-        </div>
+        <!-- Dashboard Tab -->
+        <div id="tab-home" class="tab-content active flex-col p-6 max-w-xl mx-auto w-full font-display">
 
-        <!-- Dashboard Grid -->
-        <div class="grid grid-cols-2 gap-4">
-            <button onclick="switchTab('vocab')"
-                class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
-                <div class="p-3 bg-green-500/10 text-green-500 rounded-full group-hover:bg-green-500/20"><i
-                        class="fas fa-book-open text-xl"></i></div>
-                <span class="font-bold text-sm">Vocab</span>
-            </button>
-            <button onclick="switchTab('grammar')"
-                class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
-                <div class="p-3 bg-blue-500/10 text-blue-500 rounded-full group-hover:bg-blue-500/20"><i
-                        class="fas fa-cubes text-xl"></i></div>
-                <span class="font-bold text-sm">Grammar</span>
-            </button>
-            <button onclick="switchTab('reading')"
-                class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
-                <div class="p-3 bg-orange-500/10 text-orange-500 rounded-full group-hover:bg-orange-500/20"><i
-                        class="fas fa-book-reader text-xl"></i></div>
-                <span class="font-bold text-sm">Reading</span>
-            </button>
-            <button onclick="switchTab('speaking')"
-                class="bg-slate-800 hover:bg-slate-750 p-4 rounded-xl border border-slate-700 flex flex-col items-center gap-2 transition hover:scale-105 group">
-                <div class="p-3 bg-red-500/10 text-red-500 rounded-full group-hover:bg-red-500/20"><i
-                        class="fas fa-microphone text-xl"></i></div>
-                <span class="font-bold text-sm">Speaking</span>
-            </button>
-        </div>
+            <!-- Header -->
+            <header class="pt-6 pb-8 flex items-center justify-between">
+                <div class="flex items-center gap-3 cursor-pointer" onclick="toggleProfileMenu()">
+                    <div class="relative">
+                        <div id="profile-avatar"
+                            class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl ring-2 ring-primary/20 shadow-lg shadow-primary/20 transition-transform hover:scale-105">
+                            M
+                        </div>
+                        <div
+                            class="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-background-dark">
+                        </div>
+                    </div>
+                    <div>
+                        <div id="profile-name" class="text-lg font-semibold leading-none text-white">Me</div>
+                        <span id="profile-level"
+                            class="inline-flex items-center px-2 py-0.5 mt-1 rounded-full text-[10px] font-bold bg-primary/20 text-primary tracking-wider border border-primary/20">LEVEL
+                            1</span>
+                    </div>
+                </div>
+                <button onclick="toggleSettings()"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 text-slate-400 hover:text-white transition-all hover:bg-slate-700/50 backdrop-blur-sm border border-white/5">
+                    <span class="material-icons-round">settings</span>
+                </button>
+            </header>
 
-        <!-- Daily Wisdom -->
-        <div class="bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-4 rounded-xl border border-purple-700/30">
-            <div class="text-xs uppercase text-purple-400 mb-2 font-bold">Daily Wisdom</div>
-            <p id="daily-wisdom" class="text-slate-300 text-sm italic"></p>
-        </div>
+            <!-- Profile Menu (Hidden) -->
+            <div id="profile-menu"
+                class="hidden absolute top-24 left-6 z-50 bg-slate-800/95 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-4 w-64 transform origin-top-left transition-all duration-200">
+                <h4 class="text-xs font-bold text-slate-500 uppercase mb-3 tracking-wider">Switch Profile</h4>
+                <div id="profile-list" class="space-y-2 mb-3 max-h-48 overflow-y-auto"></div>
+                <button onclick="createNewProfile()"
+                    class="w-full py-2 px-3 bg-primary hover:bg-blue-600 rounded-xl text-white text-sm font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                    <span class="material-icons-round text-sm">add</span> Add Profile
+                </button>
+            </div>
+
+            <!-- Stats Cards -->
+            <section class="grid grid-cols-2 gap-4 mb-8">
+                <div
+                    class="glass p-5 rounded-2xl flex flex-col gap-1 relative overflow-hidden group hover:bg-white/5 transition-colors">
+                    <div class="flex items-center gap-2 text-orange-500 mb-2">
+                        <span class="material-icons-round text-xl">local_fire_department</span>
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70">Streak</span>
+                    </div>
+                    <div class="text-3xl font-bold text-white flex items-baseline gap-1" id="user-streak">
+                        0 <span class="text-sm font-normal opacity-50">days</span>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-icons-round text-6xl text-orange-500">local_fire_department</span>
+                    </div>
+                </div>
+                <div
+                    class="glass p-5 rounded-2xl flex flex-col gap-1 relative overflow-hidden group hover:bg-white/5 transition-colors">
+                    <div class="flex items-center gap-2 text-yellow-500 mb-2">
+                        <span class="material-icons-round text-xl">bolt</span>
+                        <span class="text-xs font-bold uppercase tracking-wider opacity-70">Total XP</span>
+                    </div>
+                    <div class="text-3xl font-bold text-white flex items-baseline gap-1" id="user-xp">
+                        0 <span class="text-sm font-normal opacity-50">XP</span>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <span class="material-icons-round text-6xl text-yellow-500">bolt</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Grid -->
+            <main class="mb-8">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4 px-1">Daily Practice</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Vocab -->
+                    <button onclick="switchTab('vocab')"
+                        class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 active:scale-95 transition-all hover:bg-white/5 group border-b-4 border-green-500/20 hover:border-green-500/50">
+                        <div
+                            class="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform duration-300 ring-1 ring-green-500/20">
+                            <span class="material-icons-round text-3xl">menu_book</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">Vocab</div>
+                            <div class="text-xs text-slate-400 mt-1">Foundations</div>
+                        </div>
+                    </button>
+                    <!-- Grammar -->
+                    <button onclick="switchTab('grammar')"
+                        class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 active:scale-95 transition-all hover:bg-white/5 group border-b-4 border-primary/20 hover:border-primary/50">
+                        <div
+                            class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 ring-1 ring-primary/20">
+                            <span class="material-icons-round text-3xl">widgets</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">Grammar</div>
+                            <div class="text-xs text-slate-400 mt-1">Structure</div>
+                        </div>
+                    </button>
+                    <!-- Reading -->
+                    <button onclick="switchTab('reading')"
+                        class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 active:scale-95 transition-all hover:bg-white/5 group border-b-4 border-orange-500/20 hover:border-orange-500/50">
+                        <div
+                            class="w-14 h-14 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform duration-300 ring-1 ring-orange-500/20">
+                            <span class="material-icons-round text-3xl">auto_stories</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">Reading</div>
+                            <div class="text-xs text-slate-400 mt-1">Comprehension</div>
+                        </div>
+                    </button>
+                    <!-- Speaking -->
+                    <button onclick="switchTab('speaking')"
+                        class="glass p-6 rounded-2xl flex flex-col items-center text-center gap-4 active:scale-95 transition-all hover:bg-white/5 group border-b-4 border-red-500/20 hover:border-red-500/50">
+                        <div
+                            class="w-14 h-14 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform duration-300 ring-1 ring-red-500/20">
+                            <span class="material-icons-round text-3xl">mic</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-white">Speaking</div>
+                            <div class="text-xs text-slate-400 mt-1">Pronunciation</div>
+                        </div>
+                    </button>
+                </div>
+            </main>
+
+            <!-- Daily Wisdom Card -->
+            <section class="mt-auto">
+                <div
+                    class="purple-gradient p-6 rounded-2xl relative overflow-hidden shadow-2xl shadow-accent-purple/20 group cursor-pointer transition-transform hover:scale-[1.02]">
+                    <!-- Abstract Background Detail -->
+                    <div
+                        class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="material-icons-round text-white/80 text-sm">lightbulb</span>
+                            <span class="text-xs font-bold text-white/70 uppercase tracking-widest">Daily Wisdom</span>
+                        </div>
+                        <p id="daily-wisdom" class="text-white text-lg font-medium leading-relaxed italic">
+                            Learning German...
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- 2. VOCAB TAB -->
