@@ -1,0 +1,679 @@
+[
+    {
+        "id": 1,
+        "title": "Basics of German Language",
+        "summary": "Covers the German alphabet, sounds and pronunciations (vowels, dipthongs), basic greetings, farewells, and the self-introduction structure.",
+        "key_vocab": [
+            {
+                "german": "Hallo",
+                "english": "Hello",
+                "gender": "none"
+            },
+            {
+                "german": "Guten Tag",
+                "english": "Good day",
+                "gender": "none"
+            },
+            {
+                "german": "Tschüss",
+                "english": "Bye",
+                "gender": "none"
+            },
+            {
+                "german": "Ich heiße...",
+                "english": "My name is...",
+                "gender": "none"
+            },
+            {
+                "german": "Buchstabieren",
+                "english": "To spell",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Vowel Length",
+                "logic": "Long sound if followed by 1 consonant (e.g., 'Name'). Short sound if followed by 2 consonants (e.g., 'Hallo')."
+            },
+            {
+                "rule_name": "Dipthong Pronunciation",
+                "logic": "'ei' sounds like 'eye' (Eis). 'ie' sounds like 'ee' (Brief). 'eu/äu' sounds like 'oy' (Euro)."
+            },
+            {
+                "rule_name": "Consonant Sounds",
+                "logic": "'w' = English 'v'. 'v' = English 'f'. 'st/sp' at start = 'sht/shp'."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Hallo, ich heiße Thomas. Wie heißt du?",
+            "speakerB": "Hallo, ich bin Julia. Ich komme aus Deutschland."
+        }
+    },
+    {
+        "id": 2,
+        "title": "Articles & Nouns",
+        "summary": "Introduction to definite (der, die, das) and indefinite articles, noun gender rules, compound nouns, and asking 'what is that?'.",
+        "key_vocab": [
+            {
+                "german": "der Tisch",
+                "english": "the table",
+                "gender": "masculine"
+            },
+            {
+                "german": "die Frau",
+                "english": "the woman",
+                "gender": "feminine"
+            },
+            {
+                "german": "das Kind",
+                "english": "the child",
+                "gender": "neutral"
+            },
+            {
+                "german": "Was ist das?",
+                "english": "What is that?",
+                "gender": "none"
+            },
+            {
+                "german": "die Woche",
+                "english": "the week",
+                "gender": "feminine"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Gender Suffixes (Masculine)",
+                "logic": "Endings: -ig, -ling, -or, -ismus. Categories: Days, Months, Seasons, Directions."
+            },
+            {
+                "rule_name": "Gender Suffixes (Feminine)",
+                "logic": "Endings: -ung, -heit, -keit, -tät, -ion, -ik, -ie, -e (mostly). Category: Numbers."
+            },
+            {
+                "rule_name": "Gender Suffixes (Neutral)",
+                "logic": "Endings: -chen, -lein, -ment, -um. Categories: Colors, Metals."
+            },
+            {
+                "rule_name": "Compound Nouns",
+                "logic": "The article is determined by the LAST word in the combination (e.g., Das Wasser + Die Flasche = Die Wasserflasche)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Was ist das?",
+            "speakerB": "Das ist ein Stuhl.",
+            "speakerA": "Ist der Stuhl neu?",
+            "speakerB": "Ja, er ist neu."
+        }
+    },
+    {
+        "id": 3,
+        "title": "Pronouns, Numbers & Dates",
+        "summary": "Personal pronouns, singular vs plural noun formation, numbers 0-1M, phone numbers, ordinal numbers for dates.",
+        "key_vocab": [
+            {
+                "german": "wir",
+                "english": "we",
+                "gender": "none"
+            },
+            {
+                "german": "ihr",
+                "english": "you all (informal)",
+                "gender": "none"
+            },
+            {
+                "german": "zwanzig",
+                "english": "twenty",
+                "gender": "none"
+            },
+            {
+                "german": "der erste",
+                "english": "the first",
+                "gender": "masculine"
+            },
+            {
+                "german": "Wann",
+                "english": "When",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Number Logic (21-99)",
+                "logic": "Read backwards: Unit + und + Ten. E.g., 21 is 'ein-und-zwanzig' (one-and-twenty)."
+            },
+            {
+                "rule_name": "Ordinal Numbers",
+                "logic": "1-19: Add '-te' (vierte). 20+: Add '-ste' (zwanzigste). Exceptions: erste (1st), dritte (3rd), siebte (7th)."
+            },
+            {
+                "rule_name": "Plural Formation",
+                "logic": "Masculine often adds '-e'. Feminine often adds '-en'. Neutral often adds '-er'. Words ending in -er/-el often change only article."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Wie ist deine Telefonnummer?",
+            "speakerB": "Meine Nummer ist null-eins-fünf...",
+            "speakerA": "Wann hast du Geburtstag?",
+            "speakerB": "Am fünften Mai."
+        }
+    },
+    {
+        "id": 4,
+        "title": "Sentence Structure & Time",
+        "summary": "Basic sentence structure, present tense verbs, negation with 'nicht'/'kein', telling time (formal/informal).",
+        "key_vocab": [
+            {
+                "german": "spät",
+                "english": "late",
+                "gender": "none"
+            },
+            {
+                "german": "halb",
+                "english": "half (time)",
+                "gender": "none"
+            },
+            {
+                "german": "Viertel",
+                "english": "quarter",
+                "gender": "neutral"
+            },
+            {
+                "german": "bezahlen",
+                "english": "to pay",
+                "gender": "none"
+            },
+            {
+                "german": "nicht",
+                "english": "not",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Golden Rule (Position 2)",
+                "logic": "The conjugated verb must always be in Position 2. The subject is usually Pos 1 or 3."
+            },
+            {
+                "rule_name": "Informal Time",
+                "logic": "'Halb' + Next Hour (e.g., 8:30 is 'Halb neun'). Use 'vor' (to) and 'nach' (past) the hour."
+            },
+            {
+                "rule_name": "Negation Logic",
+                "logic": "Use 'Kein' for indefinite nouns (no car). Use 'Nicht' for verbs, adjectives, and definite nouns."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Wie spät ist es?",
+            "speakerB": "Es ist halb drei.",
+            "speakerA": "Ich möchte bitte zahlen.",
+            "speakerB": "Zusammen oder getrennt?"
+        }
+    },
+    {
+        "id": 5,
+        "title": "Questions & Time Prepositions",
+        "summary": "Yes/No questions, W-Questions, time prepositions (am, um, im), weather vocabulary.",
+        "key_vocab": [
+            {
+                "german": "Woher",
+                "english": "From where",
+                "gender": "none"
+            },
+            {
+                "german": "Wohin",
+                "english": "Where to",
+                "gender": "none"
+            },
+            {
+                "german": "der Frühling",
+                "english": "Spring",
+                "gender": "masculine"
+            },
+            {
+                "german": "regnen",
+                "english": "to rain",
+                "gender": "none"
+            },
+            {
+                "german": "Warum",
+                "english": "Why",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Question Structure",
+                "logic": "Ja/Nein Questions: Verb comes first (Pos 1). W-Questions: W-word (Pos 1) + Verb (Pos 2)."
+            },
+            {
+                "rule_name": "Time Prepositions",
+                "logic": "'Um' for exact time (Um 8 Uhr). 'Am' for days/dates (Am Montag). 'Im' for months/seasons (Im Sommer)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Woher kommst du?",
+            "speakerB": "Ich komme aus Spanien.",
+            "speakerA": "Wann treffen wir uns?",
+            "speakerB": "Am Freitag um 10 Uhr."
+        }
+    },
+    {
+        "id": 6,
+        "title": "Adjectives & Colors",
+        "summary": "Using adjectives, adjective endings in Nominative (Definite, Indefinite, No article), colors.",
+        "key_vocab": [
+            {
+                "german": "schwarz",
+                "english": "black",
+                "gender": "none"
+            },
+            {
+                "german": "weiß",
+                "english": "white",
+                "gender": "none"
+            },
+            {
+                "german": "groß",
+                "english": "big",
+                "gender": "none"
+            },
+            {
+                "german": "klein",
+                "english": "small",
+                "gender": "none"
+            },
+            {
+                "german": "neu",
+                "english": "new",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Nominative Adjective Endings (Definite)",
+                "logic": "Der/Die/Das + Adj -> add '-e' (der alte Mann). Plural + Adj -> add '-en'."
+            },
+            {
+                "rule_name": "Nominative Adjective Endings (Indefinite)",
+                "logic": "Ein (Masc) -> -er (ein alter Mann). Ein (Neut) -> -es (ein kleines Kind). Eine (Fem) -> -e."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Magst du das rote Auto?",
+            "speakerB": "Nein, ich mag das blaue Auto.",
+            "speakerA": "Das ist ein schönes Haus."
+        }
+    },
+    {
+        "id": 7,
+        "title": "Modal & Separable Verbs",
+        "summary": "Modal Verbs (können, müssen, wollen, etc.), Separable verbs structure, describing daily routines.",
+        "key_vocab": [
+            {
+                "german": "aufstehen",
+                "english": "to get up",
+                "gender": "none"
+            },
+            {
+                "german": "können",
+                "english": "can",
+                "gender": "none"
+            },
+            {
+                "german": "müssen",
+                "english": "must",
+                "gender": "none"
+            },
+            {
+                "german": "wollen",
+                "english": "want",
+                "gender": "none"
+            },
+            {
+                "german": "einkaufen",
+                "english": "to shop",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "The Sandwich Rule (Modal)",
+                "logic": "Conjugated Modal Verb at Pos 2. Main Verb (Infinitive) at the very END."
+            },
+            {
+                "rule_name": "Separable Verb Logic",
+                "logic": "Prefix moves to the end in simple sentences (Ich stehe um 7 auf). With Modal: Joined infinitive at end (Ich muss aufstehen)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Wann musst du morgen aufstehen?",
+            "speakerB": "Ich will um 8 Uhr aufstehen.",
+            "speakerA": "Kannst du heute einkaufen?"
+        }
+    },
+    {
+        "id": 8,
+        "title": "Past Tense (Präteritum)",
+        "summary": "Simple past of Haben and Sein, Regular/Irregular verbs in Präteritum, Transportation vocab.",
+        "key_vocab": [
+            {
+                "german": "war",
+                "english": "was",
+                "gender": "none"
+            },
+            {
+                "german": "hatte",
+                "english": "had",
+                "gender": "none"
+            },
+            {
+                "german": "gestern",
+                "english": "yesterday",
+                "gender": "none"
+            },
+            {
+                "german": "der Zug",
+                "english": "train",
+                "gender": "masculine"
+            },
+            {
+                "german": "früher",
+                "english": "earlier",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Präteritum Endings (Regular)",
+                "logic": "Stem + -te + ending (Ich mach-te, Du mach-test)."
+            },
+            {
+                "rule_name": "Präteritum (Haben/Sein)",
+                "logic": "Irregular but vital. Ich war/Er war (same). Ich hatte/Er hatte (same)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Wo warst du gestern?",
+            "speakerB": "Ich war in Berlin. Ich hatte einen Termin.",
+            "speakerA": "Bist du mit dem Zug gefahren?"
+        }
+    },
+    {
+        "id": 9,
+        "title": "Perfect Tense & Housing",
+        "summary": "The Perfect form (spoken past), Partizip II, Haben vs. Sein, Apartment vocabulary.",
+        "key_vocab": [
+            {
+                "german": "die Wohnung",
+                "english": "apartment",
+                "gender": "feminine"
+            },
+            {
+                "german": "die Küche",
+                "english": "kitchen",
+                "gender": "feminine"
+            },
+            {
+                "german": "gegessen",
+                "english": "eaten",
+                "gender": "none"
+            },
+            {
+                "german": "gefahren",
+                "english": "driven",
+                "gender": "none"
+            },
+            {
+                "german": "das Wochenende",
+                "english": "weekend",
+                "gender": "neutral"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Perfect Construction",
+                "logic": "Helper (Haben/Sein) at Pos 2 + Partizip II at End."
+            },
+            {
+                "rule_name": "Haben vs Sein",
+                "logic": "Use 'Sein' for movement (fahren, gehen) or state change (aufstehen, sterben). Use 'Haben' for everything else."
+            },
+            {
+                "rule_name": "Partizip II -ieren exception",
+                "logic": "Verbs ending in -ieren do not get 'ge-'. (studieren -> studiert)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Was hast du am Wochenende gemacht?",
+            "speakerB": "Ich bin nach Hause gefahren und habe gelernt."
+        }
+    },
+    {
+        "id": 10,
+        "title": "Accusative Case & Professions",
+        "summary": "Accusative articles, pronouns, adjective endings, negation (keinen), Professions.",
+        "key_vocab": [
+            {
+                "german": "den",
+                "english": "the (masc acc)",
+                "gender": "none"
+            },
+            {
+                "german": "mich",
+                "english": "me",
+                "gender": "none"
+            },
+            {
+                "german": "ihn",
+                "english": "him",
+                "gender": "none"
+            },
+            {
+                "german": "der Lehrer",
+                "english": "teacher",
+                "gender": "masculine"
+            },
+            {
+                "german": "arbeiten",
+                "english": "to work",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Accusative Change",
+                "logic": "Only Masculine changes: Der -> Den, Ein -> Einen, Kein -> Keinen. Feminine/Neutral/Plural stay same."
+            },
+            {
+                "rule_name": "Subject vs Object",
+                "logic": "Subject (Nominative) does the action. Object (Accusative) receives the action."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Ich suche einen Job.",
+            "speakerB": "Hast du den Chef angerufen?",
+            "speakerA": "Nein, ich rufe ihn gleich an."
+        }
+    },
+    {
+        "id": 11,
+        "title": "Possessive Articles & Clothing",
+        "summary": "Possessive articles (mein, dein...) in Nominative/Accusative, Clothing vocabulary.",
+        "key_vocab": [
+            {
+                "german": "mein",
+                "english": "my",
+                "gender": "none"
+            },
+            {
+                "german": "dein",
+                "english": "your",
+                "gender": "none"
+            },
+            {
+                "german": "die Hose",
+                "english": "pants",
+                "gender": "feminine"
+            },
+            {
+                "german": "das Hemd",
+                "english": "shirt",
+                "gender": "neutral"
+            },
+            {
+                "german": "tragen",
+                "english": "to wear",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Possessive Endings",
+                "logic": "Possessives follow 'Ein' endings. Accusative Masculine: 'meinen'. Nom/Acc Plural: 'meine'."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Ist das dein Pullover?",
+            "speakerB": "Nein, das ist nicht mein Pullover. Ich trage ein Hemd."
+        }
+    },
+    {
+        "id": 12,
+        "title": "Dative Case & Directions",
+        "summary": "Dative intro (indirect object), Location (Wo?) vs Direction (Wohin?), Two-way prepositions.",
+        "key_vocab": [
+            {
+                "german": "dem",
+                "english": "the (masc/neut dat)",
+                "gender": "none"
+            },
+            {
+                "german": "links",
+                "english": "left",
+                "gender": "none"
+            },
+            {
+                "german": "geradeaus",
+                "english": "straight",
+                "gender": "none"
+            },
+            {
+                "german": "der Bahnhof",
+                "english": "train station",
+                "gender": "masculine"
+            },
+            {
+                "german": "zu",
+                "english": "to (dative)",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Dative Articles",
+                "logic": "Der/Das -> Dem. Die -> Der. Plural Die -> Den (+n on noun)."
+            },
+            {
+                "rule_name": "Location vs Direction",
+                "logic": "Static Location (Wo?) = Dative (Im Park). Movement/Direction (Wohin?) = Accusative (In den Park). 'Zu' always takes Dative."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Entschuldigung, wo ist die Post?",
+            "speakerB": "Gehen Sie geradeaus und dann links zu dem Bahnhof."
+        }
+    },
+    {
+        "id": 13,
+        "title": "Comparisons & Shopping",
+        "summary": "Comparative/Superlative forms, Demonstrative pronouns, Grocery shopping vocabulary.",
+        "key_vocab": [
+            {
+                "german": "besser",
+                "english": "better",
+                "gender": "none"
+            },
+            {
+                "german": "am besten",
+                "english": "the best",
+                "gender": "none"
+            },
+            {
+                "german": "dieser",
+                "english": "this (masc)",
+                "gender": "none"
+            },
+            {
+                "german": "das Obst",
+                "english": "fruit",
+                "gender": "neutral"
+            },
+            {
+                "german": "teuer",
+                "english": "expensive",
+                "gender": "none"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Comparison Logic",
+                "logic": "Comparative: Adj + -er + 'als' (schneller als). Superlative: 'am' + adj + '-sten' (am schnellsten)."
+            },
+            {
+                "rule_name": "Demonstrative Pronouns",
+                "logic": "'Dieser/Diese/Dieses' implies specific pointing ('this one'). Endings follow definite article rules."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Welcher Apfel schmeckt besser?",
+            "speakerB": "Dieser Apfel schmeckt am besten. Er ist süßer als der andere."
+        }
+    },
+    {
+        "id": 14,
+        "title": "Imperative & Health",
+        "summary": "Imperative mood (Orders), Body parts, Health, Doctor appointments.",
+        "key_vocab": [
+            {
+                "german": "Sei!",
+                "english": "Be! (Imperative)",
+                "gender": "none"
+            },
+            {
+                "german": "der Kopf",
+                "english": "head",
+                "gender": "masculine"
+            },
+            {
+                "german": "Schmerzen",
+                "english": "pain",
+                "gender": "none"
+            },
+            {
+                "german": "Fieber",
+                "english": "fever",
+                "gender": "none"
+            },
+            {
+                "german": "der Termin",
+                "english": "appointment",
+                "gender": "masculine"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Imperative Formation",
+                "logic": "Formal: Verb + Sie (Gehen Sie!). Du: Verb stem (no -st, no pronoun). Ihr: Conjugated (Geht!)."
+            },
+            {
+                "rule_name": "Imperative Vowel Changes",
+                "logic": "Verbs with 'ä' in conjugation lose the umlaut in Imperative (Du fährst -> Fahr!)."
+            }
+        ],
+        "dialogue": {
+            "speakerA": "Ich habe Kopfschmerzen.",
+            "speakerB": "Nimm eine Tablette und geh zum Arzt!",
+            "speakerA": "Ja, ich brauche einen Termin."
+        }
+    }
+]

@@ -19,8 +19,21 @@ class User(Base):
     username = Column(String(50), unique=True, nullable=False, default="default_user")
     daily_streak = Column(Integer, default=0)
     xp_points = Column(Integer, default=0)
+    completed_chapter_ids = Column(String, default="[]")  # JSON string of completed IDs
+    master_unlock = Column(Boolean, default=False)  # Admin unlock for all chapters
     created_at = Column(DateTime, default=func.now())
     last_login = Column(DateTime, default=func.now(), onupdate=func.now())
+
+
+class Chapter(Base):
+    """Curriculum chapter content"""
+    __tablename__ = "chapters"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String(100), nullable=False)
+    summary = Column(String(200), nullable=False)
+    content = Column(Text, nullable=False)  # JSON string of vocab, grammar, dialogue
+    created_at = Column(DateTime, default=func.now())
 
 
 class ContentCache(Base):
