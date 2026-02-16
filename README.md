@@ -1,4 +1,4 @@
-# DeutschesEcho - God Tier German Learning App
+# DeutschesEcho - German Learning App
 
 A progressive web application (PWA) for learning German with AI-powered content generation and intelligent spaced repetition.
 
@@ -147,3 +147,14 @@ MIT License - Feel free to use for personal or commercial projects.
 - **Semantic Similarity**: sentence-transformers (paraphrase-multilingual-MiniLM-L12-v2)
 - **Framework**: FastAPI
 - **Frontend**: Vanilla JS + TailwindCSS
+
+## 📚 Credits & Acknowledgments
+
+This application was built as a personal study tool to accompany the learning materials from the following excellent resources. The code structure is original, but the curriculum logic is based on:
+
+* **Learn German with Kedar Jadhav:** The "Cheat Codes" and grammar logic (Accusative/Dative triggers) are inspired by his teaching methods. [Watch his Channel here](https://www.youtube.com/c/learngermanwithkedarjadhav).
+* **Learn German Step by Step:** The structured A1 curriculum path is based on their "9.5 Hour Complete Course." [Watch the full course here](https://www.youtube.com/@FiveMinuteGerman).
+* **Goethe Institut:** Vocabulary standards align with the official A1 Wordlist.
+
+**Disclaimer:**
+This project is for **educational purposes only**. It is a study companion and is not affiliated with, endorsed by, or connected to the creators mentioned above. All course content, audio transcripts, and teaching methodologies belong to their respective copyright holders. If you are using this app, please support the original creators by watching their videos and purchasing their official materials.

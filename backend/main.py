@@ -31,7 +31,7 @@ async def lifespan(app: FastAPI):
 # Create FastAPI app
 app = FastAPI(
     title="DeutschesEcho API",
-    description="God Tier German Learning Platform",
+    description="German Learning Platform",
     version="1.0.0",
     lifespan=lifespan
 )
