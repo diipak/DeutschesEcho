@@ -31,6 +31,9 @@ function registerServiceWorker() {
 // Tab Navigation
 // Tab Navigation
 window.switchTab = function (tabId) {
+    // 0. Close Lesson Modal if open (Fixes navigation issue)
+    if (typeof closeLesson === 'function') closeLesson();
+
     // Handle specific practice modes by redirecting to practice tab
     if (['grammar', 'reading', 'speaking'].includes(tabId)) {
         switchTab('practice');
@@ -304,46 +307,112 @@ async function loadVocabCard() {
 function renderVocabCard(word) {
     const container = document.getElementById('vocab-card-container');
 
-    let borderClass = 'border-yellow-500';
-    let glowClass = 'shadow-yellow-500/20';
-    let textClass = 'text-yellow-500';
+    let borderColor = 'border-green-500/50';
+    let glowShadow = 'shadow-glow-green';
+    let genderLabel = 'Neutral';
+    let iconColorBg = 'bg-green-400';
+    let article = '';
+    let articleColor = 'text-green-400/80';
+    let btnBg = 'bg-green-500/20';
+    let btnBorder = 'border-green-500/40';
+    let btnHover = 'hover:bg-green-500/40';
+    let btnGlow = 'group-hover:shadow-[0_0_15px_rgba(34,197,94,0.4)]';
+    let btnText = 'text-green-100';
+    let contextHighlight = 'text-green-300';
+    let gradientFrom = 'from-green-500/5';
 
-    if (word.gender === 'masculine') {
-        borderClass = 'border-blue-500';
-        glowClass = 'shadow-blue-500/20';
-        textClass = 'text-blue-400';
+    if (word.gender === 'masculine' || word.gender === 'der') {
+        borderColor = 'border-blue-500/50';
+        glowShadow = 'shadow-glow-blue-strong';
+        genderLabel = 'Masculine';
+        iconColorBg = 'bg-blue-400';
+        article = 'der';
+        articleColor = 'text-blue-400/80';
+        btnBg = 'bg-blue-500/20';
+        btnBorder = 'border-blue-500/40';
+        btnHover = 'hover:bg-blue-500/40';
+        btnGlow = 'group-hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]';
+        btnText = 'text-blue-100';
+        contextHighlight = 'text-blue-300';
+        gradientFrom = 'from-blue-500/5';
+    } else if (word.gender === 'feminine' || word.gender === 'die') {
+        borderColor = 'border-red-500/50';
+        glowShadow = 'shadow-glow-red';
+        genderLabel = 'Feminine';
+        iconColorBg = 'bg-red-400';
+        article = 'die';
+        articleColor = 'text-red-400/80';
+        btnBg = 'bg-red-500/20';
+        btnBorder = 'border-red-500/40';
+        btnHover = 'hover:bg-red-500/40';
+        btnGlow = 'group-hover:shadow-[0_0_15px_rgba(239,68,68,0.4)]';
+        btnText = 'text-red-100';
+        contextHighlight = 'text-red-300';
+        gradientFrom = 'from-red-500/5';
+    } else if (word.gender === 'neutral' || word.gender === 'das') {
+        article = 'das';
     }
-    if (word.gender === 'feminine') {
-        borderClass = 'border-red-500';
-        glowClass = 'shadow-red-500/20';
-        textClass = 'text-red-400';
-    }
-    if (word.gender === 'neutral') {
-        borderClass = 'border-green-500';
-        glowClass = 'shadow-green-500/20';
-        textClass = 'text-green-400';
-    }
+
+    const exampleSentence = word.example || '';
 
     container.innerHTML = `
-        <div id="active-card" class="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl border-2 ${borderClass} flex flex-col items-center justify-center p-6 shadow-2xl ${glowClass} relative overflow-hidden card-transition group">
+        <div id="active-card" class="glass-card relative w-full h-full rounded-3xl ${glowShadow} flex flex-col items-center justify-center p-8 overflow-hidden transition-transform duration-500 group ${borderColor}">
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-tr ${gradientFrom} via-transparent to-white/5 pointer-events-none"></div>
             
-            <!-- Abstract Background Shape -->
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-black/20 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="absolute top-6 right-6 text-xs font-bold uppercase tracking-widest opacity-70 ${textClass}">${word.gender || 'General'}</div>
-            
-            <div class="flex-1 flex flex-col items-center justify-center w-full z-10">
-                <h2 class="text-4xl font-bold text-white mb-2 text-center font-display tracking-tight drop-shadow-md">${word.german}</h2>
-                <p class="text-slate-400 text-lg mb-8 text-center font-medium">${word.english}</p>
-                
-                <div class="w-full bg-slate-950/30 backdrop-blur-sm p-4 rounded-xl border border-white/5">
-                    <p class="text-sm text-slate-300 italic text-center leading-relaxed">"${word.example}"</p>
-                </div>
+            <!-- Gender badge top-right -->
+            <div class="absolute top-6 right-6 z-20">
+                <span class="px-3 py-1.5 rounded-full bg-white/5 backdrop-blur-md ${articleColor.replace('/80', '')} border border-white/10 text-[10px] font-bold tracking-widest uppercase shadow-sm">
+                    ${word.topic || genderLabel}
+                </span>
             </div>
 
-            <!-- Hint text -->
-            <div class="absolute bottom-4 opacity-20 text-[10px] uppercase tracking-widest text-white">Tap for Audio</div>
+            <!-- Gender icon top-left -->
+            <div class="absolute top-6 left-6 opacity-30 z-20">
+                <span class="w-2.5 h-2.5 rounded-full ${iconColorBg} inline-block"></span>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex flex-col items-center text-center gap-8 z-10 mt-2 w-full">
+                <div class="flex items-center justify-center gap-4 w-full">
+                    <div class="flex flex-col items-center">
+                        <h1 class="text-5xl font-bold tracking-tight text-white drop-shadow-xl flex items-baseline gap-3">
+                            ${article ? `<span class="${articleColor} font-normal text-2xl tracking-normal">${article}</span>` : ''}${word.german}
+                        </h1>
+                    </div>
+                    <button onclick="playVocabAudio()" class="flex items-center justify-center w-12 h-12 rounded-full ${btnBg} ${btnText} border ${btnBorder} ${btnHover} hover:scale-105 active:scale-95 transition-all backdrop-blur-sm ${btnGlow}">
+                        <i class="fas fa-volume-up text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Divider -->
+                <div class="w-12 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                
+                <!-- Translation -->
+                <div>
+                    <p class="text-xl text-slate-400 font-medium tracking-wide">${word.english}</p>
+                </div>
+
+                ${exampleSentence ? `
+                <!-- Context (inside card) -->
+                <div class="w-full glass-panel rounded-xl p-4 flex flex-col items-center text-center gap-2 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+                    <div class="flex items-center gap-2 ${articleColor.replace('/80', '/70')}">
+                        <i class="fas fa-lightbulb text-xs"></i>
+                        <span class="text-[10px] uppercase tracking-widest font-bold">Context</span>
+                    </div>
+                    <p class="text-sm text-white/90 font-medium leading-relaxed tracking-wide">"${exampleSentence}"</p>
+                </div>
+                ` : ''}
+            </div>
+
+            <!-- Swipe hint -->
+            <div class="absolute bottom-3 left-0 right-0 flex justify-center items-center gap-2 opacity-30 text-[10px] uppercase tracking-widest text-white z-20">
+                <i class="fas fa-hand-pointer animate-bounce"></i> Swipe or Tap Buttons
+            </div>
+
+            <!-- Bottom fade -->
+            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t ${gradientFrom.replace('/5', '/10')} to-transparent pointer-events-none"></div>
         </div>
     `;
 }
@@ -600,23 +669,37 @@ function renderChapterList(chapters) {
     list.innerHTML = chapters.map((chapter, index) => {
         const isLocked = chapter.is_locked;
         const isCompleted = chapter.is_completed;
-        const statusClass = isLocked ? 'opacity-50 grayscale pointer-events-none' : 'hover:scale-[1.02] active:scale-[0.98] cursor-pointer';
-        const bgClass = isCompleted ? 'bg-green-500/10 border-green-500/30' : (isLocked ? 'bg-slate-800/50 border-white/5' : 'glass border-white/10');
-        const icon = isCompleted ? '<i class="fas fa-check text-green-400"></i>' : (isLocked ? '<i class="fas fa-lock text-slate-500"></i>' : `<span class="font-bold text-white/50">${chapter.id}</span>`);
+        const statusClass = isLocked ? 'opacity-50 grayscale pointer-events-none' : 'hover:scale-[1.02] active:scale-[0.98] cursor-pointer hover:shadow-lg hover:shadow-purple-500/10';
+
+        let bgClass = isLocked ? 'bg-slate-800/50 border-white/5' : 'glass border-white/10';
+        let iconBg = 'bg-white/5 border-white/10';
+        let iconContent = isLocked ? '<i class="fas fa-lock text-slate-500"></i>' : `<span class="font-bold text-white/50">${chapter.id}</span>`;
+
+        if (isCompleted) {
+            bgClass = 'bg-green-500/10 border-green-500/30 shadow-[0_0_15px_-3px_rgba(34,197,94,0.1)]';
+            iconBg = 'bg-green-500/20 border-green-500/30';
+            iconContent = '<i class="fas fa-check text-green-400"></i>';
+        } else if (!isLocked) {
+            // Active/Available Chapter - Add subtle gradient
+            bgClass = 'bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-white/10 hover:border-purple-500/30 backdrop-blur-xl';
+        }
 
         return `
-            <div onclick="openLesson(${chapter.id})" class="relative p-5 rounded-2xl border transition-all duration-300 ${bgClass} ${statusClass}">
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
-                        ${icon}
+            <div onclick="openLesson(${chapter.id})" class="relative p-5 rounded-2xl border transition-all duration-300 ${bgClass} ${statusClass} group overflow-hidden">
+                ${!isLocked && !isCompleted ? '<div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>' : ''}
+                
+                <div class="flex items-center gap-4 relative z-10">
+                    <div class="w-12 h-12 rounded-2xl ${iconBg} flex items-center justify-center border shrink-0 shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        ${iconContent}
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex justify-between items-center mb-1">
-                            <h3 class="font-bold text-white text-lg truncate pr-2">${chapter.title}</h3>
-                            ${!isLocked && !isCompleted ? '<span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[10px] font-bold uppercase tracking-wider">Start</span>' : ''}
+                            <h3 class="font-bold text-white text-lg truncate pr-2 group-hover:text-purple-300 transition-colors">${chapter.title}</h3>
+                            ${!isLocked && !isCompleted ? '<span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[10px] font-bold uppercase tracking-wider shadow-[0_0_10px_-2px_rgba(168,85,247,0.4)]">Start</span>' : ''}
                         </div>
-                        <p class="text-sm text-slate-400 truncate">${chapter.summary}</p>
+                        <p class="text-sm text-slate-400 truncate group-hover:text-slate-300 transition-colors">${chapter.summary}</p>
                     </div>
+                    ${!isLocked ? '<i class="fas fa-chevron-right text-slate-600 group-hover:text-white transition-colors transform group-hover:translate-x-1"></i>' : ''}
                 </div>
             </div>
         `;
@@ -667,55 +750,203 @@ function renderLessonContent(chapter, tab) {
     const content = chapter.content;
 
     if (tab === 'vocab') {
+        const vocabList = content.key_vocab || [];
+        if (vocabList.length === 0) {
+            container.innerHTML = '<div class="p-8 text-center text-slate-400">No vocabulary in this lesson.</div>';
+            return;
+        }
+
+        // Stitch Vocab List Design (from stitch_grammar.html)
         container.innerHTML = `
-            <div class="p-6 space-y-4 pb-32">
-                ${content.key_vocab.map(word => `
-                    <div class="glass p-4 rounded-xl border border-white/10 flex items-center justify-between">
-                        <div>
-                            <p class="text-lg font-bold text-white mb-1">${word.german}</p>
-                            <p class="text-sm text-slate-400">${word.english}</p>
+            <div class="max-w-md mx-auto space-y-6 px-6 py-6 pb-40">
+                ${vocabList.map(word => {
+            let cardClass = 'card-neutral';
+            let genderColor = 'neutral';
+            let genderLabel = '';
+            let btnBg = 'bg-green-500';
+            let btnHover = 'hover:bg-green-400';
+            let btnShadow = 'shadow-green-500/30';
+            let tagBg = 'bg-green-500/20';
+            let tagText = 'text-green-200';
+            let tagBorder = 'border-green-500/30';
+
+            if (word.gender === 'masculine' || word.gender === 'der') {
+                cardClass = 'card-masculine';
+                genderColor = 'masculine';
+                genderLabel = 'Masculine';
+                btnBg = 'bg-blue-500';
+                btnHover = 'hover:bg-blue-400';
+                btnShadow = 'shadow-blue-500/30';
+                tagBg = 'bg-blue-500/20';
+                tagText = 'text-blue-200';
+                tagBorder = 'border-blue-500/30';
+            } else if (word.gender === 'feminine' || word.gender === 'die') {
+                cardClass = 'card-feminine';
+                genderColor = 'feminine';
+                genderLabel = 'Feminine';
+                btnBg = 'bg-red-500';
+                btnHover = 'hover:bg-red-400';
+                btnShadow = 'shadow-red-500/30';
+                tagBg = 'bg-red-500/20';
+                tagText = 'text-red-200';
+                tagBorder = 'border-red-500/30';
+            } else if (word.gender === 'neutral' || word.gender === 'das') {
+                cardClass = 'card-neutral';
+                genderColor = 'neutral';
+                genderLabel = 'Neutral';
+                btnBg = 'bg-green-500';
+                btnHover = 'hover:bg-green-400';
+                btnShadow = 'shadow-green-500/30';
+                tagBg = 'bg-green-500/20';
+                tagText = 'text-green-200';
+                tagBorder = 'border-green-500/30';
+            }
+
+            const safeGerman = (word.german || '').replace(/'/g, "\\'");
+            const example = word.example || '';
+
+            return `
+                <div class="glass ${cardClass} rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+                    <div class="p-6 pb-2 relative z-10">
+                        ${genderLabel ? `
+                        <div class="flex justify-end mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium ${tagBg} ${tagText} border ${tagBorder}">${genderLabel}</span>
+                        </div>` : ''}
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold text-white mb-1 tracking-tight">${word.german}</h3>
+                                <p class="text-slate-400 font-medium">${word.english}</p>
+                            </div>
+                            <button onclick="playAudio('${safeGerman}')" class="h-14 w-14 flex-shrink-0 rounded-full ${btnBg} text-white flex items-center justify-center ${btnHover} shadow-lg ${btnShadow} transition-all active:scale-95">
+                                <i class="fas fa-play text-xl"></i>
+                            </button>
                         </div>
-                        <button onclick="playAudio('${word.german.replace(/'/g, "\\'")}')" class="w-10 h-10 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 flex items-center justify-center transition">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
                     </div>
-                `).join('')}
+                    ${example ? `
+                    <div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+                        <p class="text-slate-300 text-sm leading-relaxed italic">"${example}"</p>
+                    </div>` : ''}
+                </div>`;
+        }).join('')}
             </div>
         `;
     } else if (tab === 'grammar') {
+        const rules = content.grammar_rules || [];
+        if (rules.length === 0) {
+            container.innerHTML = '<div class="p-8 text-center text-slate-400">No grammar rules in this lesson.</div>';
+            return;
+        }
+
+        // Stitch Grammar Design — glass cards with gender-coded examples
         container.innerHTML = `
-            <div class="p-6 space-y-6 pb-32">
-                ${content.grammar_rules.map(rule => `
-                    <div class="bg-indigo-900/10 border border-indigo-500/20 p-5 rounded-2xl">
-                        <h4 class="text-indigo-300 font-bold mb-2 flex items-center gap-2">
-                            <i class="fas fa-lightbulb"></i> ${rule.rule_name}
-                        </h4>
-                        <p class="text-slate-300 leading-relaxed">${rule.logic}</p>
+            <div class="max-w-md mx-auto space-y-6 px-6 py-6 pb-40">
+                ${rules.map((rule, idx) => {
+            const examplesHtml = (rule.examples && rule.examples.length > 0) ? `
+                    <div class="mx-2 mb-2 space-y-2">
+                        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2 pt-2">Examples</p>
+                        ${rule.examples.map(ex => {
+                let germanText = '';
+                let englishText = '';
+                if (typeof ex === 'string') {
+                    germanText = ex;
+                } else {
+                    germanText = ex.german || '';
+                    englishText = ex.english || '';
+                }
+                const safeExGerman = germanText.replace(/'/g, "\\'");
+                return `
+                        <div onclick="playAudio('${safeExGerman}')" class="p-4 rounded-2xl glass-inner cursor-pointer hover:bg-white/5 transition-all">
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                <span class="text-white font-medium">${germanText}</span>
+                            </p>
+                            ${englishText ? `<p class="text-slate-500 text-xs mt-1">${englishText}</p>` : ''}
+                        </div>`;
+            }).join('')}
+                    </div>` : '';
+
+            return `
+                <div class="glass card-masculine rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+                    <div class="p-6 pb-2 relative z-10">
+                        <div class="flex justify-end mb-2">
+                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-200 border border-blue-500/30">Rule ${idx + 1}</span>
+                        </div>
+                        <div class="flex items-center justify-between gap-4 mb-4">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-white mb-1 tracking-tight">${rule.rule_name}</h3>
+                            </div>
+                        </div>
                     </div>
-                `).join('')}
+                    <div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+                        <p class="text-slate-300 text-sm leading-relaxed">${rule.explanation || rule.logic || 'No explanation available.'}</p>
+                    </div>
+                    ${examplesHtml}
+                </div>`;
+        }).join('')}
             </div>
         `;
     } else if (tab === 'dialogue') {
-        const d = content.dialogue;
-        // Convert simple object to array for rendering if possible, else just pairs
-        const entries = Object.entries(d);
+        const content = chapter.content;
+        let dialogueLines = [];
 
+        if (content.dialogues && Array.isArray(content.dialogues) && content.dialogues.length > 0) {
+            dialogueLines = content.dialogues[0].turns || [];
+        } else if (content.dialogue) {
+            if (!Array.isArray(content.dialogue) && typeof content.dialogue === 'object') {
+                dialogueLines = Object.entries(content.dialogue).map(([key, text]) => {
+                    return { speaker: key, german: text };
+                });
+            } else {
+                dialogueLines = content.dialogue;
+            }
+        }
+
+        if (dialogueLines.length === 0) {
+            container.innerHTML = '<div class="p-8 text-center text-slate-400">No dialogue in this lesson.</div>';
+            return;
+        }
+
+        // Stitch Dialogue Design (from stitch_dialogue.html)
         container.innerHTML = `
-            <div class="p-6 space-y-6 pb-32">
-                ${entries.map(([key, text], i) => {
-            const isA = i % 2 === 0; // Alternating roughly
-            // Better heuristic: key contains 'A' or '1'
-            const actuallyA = key.toLowerCase().includes('speaker a') || key.toLowerCase().includes('speakera') || i % 2 === 0;
+            <div class="px-4 py-6 space-y-6 pb-40">
+                ${dialogueLines.map((line, i) => {
+            const speakerName = line.speaker || 'Unknown';
+            const isRight = i % 2 === 1; // Alternate speakers
+            const text = line.german || line.text || '';
+            const english = line.english || '';
+            const safeText = text.replace(/'/g, "\\'");
+            const initials = speakerName.charAt(0).toUpperCase();
 
-            return `
-                    <div class="flex flex-col ${actuallyA ? 'items-start' : 'items-end'}">
-                        <div class="max-w-[85%] ${actuallyA ? 'bg-slate-800 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl' : 'bg-purple-600 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl'} p-4 text-white shadow-lg relative group cursor-pointer" onclick="playAudio('${text.replace(/'/g, "\\'")}')">
-                           <p class="leading-relaxed">${text}</p>
-                           <span class="absolute ${actuallyA ? '-right-8' : '-left-8'} bottom-0 opacity-0 group-hover:opacity-100 transition text-slate-500"><i class="fas fa-volume-up"></i></span>
+            if (isRight) {
+                return `
+                <div class="flex flex-col items-end max-w-[85%] ml-auto space-y-1">
+                    <div class="flex items-end space-x-2 flex-row-reverse">
+                        <div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-primary/30 ml-2 bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">${initials}</div>
+                        <div class="relative px-4 py-3 rounded-2xl rounded-br-none glass bg-chat-right border border-primary/20 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform" onclick="playAudio('${safeText}')">
+                            <p class="text-[15px] leading-relaxed font-medium">${text}</p>
+                            ${english ? `<p class="text-xs text-primary/70 mt-1 italic">${english}</p>` : ''}
+                            <button class="absolute -left-10 bottom-0 text-primary p-2" onclick="event.stopPropagation(); playAudio('${safeText}')">
+                                <i class="fas fa-volume-up text-sm"></i>
+                            </button>
                         </div>
-                        <span class="text-[10px] text-slate-500 mt-1 mx-1">${actuallyA ? 'Speaker A' : 'Speaker B'}</span>
                     </div>
-                    `;
+                    <span class="text-[10px] text-slate-500 mr-10">${speakerName}</span>
+                </div>`;
+            } else {
+                return `
+                <div class="flex flex-col items-start max-w-[85%] space-y-1">
+                    <div class="flex items-end space-x-2">
+                        <div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-white/10 bg-white/5 flex items-center justify-center text-white/60 text-xs font-bold">${initials}</div>
+                        <div class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform" onclick="playAudio('${safeText}')">
+                            <p class="text-[15px] leading-relaxed font-medium">${text}</p>
+                            ${english ? `<p class="text-xs text-slate-400 mt-1 italic">${english}</p>` : ''}
+                            <button class="absolute -right-10 bottom-0 text-primary p-2" onclick="event.stopPropagation(); playAudio('${safeText}')">
+                                <i class="fas fa-volume-up text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <span class="text-[10px] text-slate-500 ml-10">${speakerName}</span>
+                </div>`;
+            }
         }).join('')}
             </div>
         `;

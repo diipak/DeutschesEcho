@@ -44,3 +44,9 @@ htmlcov/
 # Models cache (sentence-transformers)
 .cache/
 models/
+
+# Large source PDFs (keep in local only)
+backend/data/complete-a1-course-notes-compressed.pdf
+
+# Extraction artifacts
+backend/data/chapters_raw/

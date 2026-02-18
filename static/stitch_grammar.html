@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lesson View - Vocab Tab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee9d2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#020617", // Slate-950
+                        "masculine": "#3b82f6", // Blue-500
+                        "feminine": "#ef4444", // Red-500
+                        "neutral": "#22c55e", // Green-500
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .glass-inner {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }.card-masculine {
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(2, 6, 23, 0.8) 100%);
+            box-shadow: 0 4px 20px -8px rgba(59, 130, 246, 0.2);
+        }
+        .card-feminine {
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(2, 6, 23, 0.8) 100%);
+            box-shadow: 0 4px 20px -8px rgba(239, 68, 68, 0.2);
+        }
+        .card-neutral {
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(2, 6, 23, 0.8) 100%);
+            box-shadow: 0 4px 20px -8px rgba(34, 197, 94, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 px-6 pt-12 pb-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<h1 class="text-lg font-semibold tracking-tight text-slate-900 dark:text-white">Chapter 2: Daily Routines</h1>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons-round text-2xl">close</span>
+</button>
+</div>
+</header>
+<nav class="px-6 my-6">
+<div class="max-w-md mx-auto flex gap-1 p-1 bg-slate-200/50 dark:bg-white/5 rounded-xl border border-white/5">
+<button class="flex-1 py-2 text-sm font-medium rounded-lg bg-white dark:bg-primary text-slate-900 dark:text-background-dark shadow-sm transition-all">
+            Vocab
+        </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+            Grammar
+        </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">
+            Dialogue
+        </button>
+</div>
+</nav>
+<main class="flex-1 px-6 overflow-y-auto pb-40">
+<div class="max-w-md mx-auto space-y-6">
+<div class="glass card-masculine rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+<div class="p-6 pb-2 relative z-10">
+<div class="flex justify-end mb-2">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-masculine/20 text-blue-200 border border-masculine/30">Verb • Refl.</span>
+</div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-white mb-1 tracking-tight">Aufstehen</h3>
+<p class="text-slate-400 font-medium">To wake up / To get up</p>
+</div>
+<button class="h-14 w-14 flex-shrink-0 rounded-full bg-masculine text-white flex items-center justify-center hover:bg-blue-400 shadow-lg shadow-masculine/30 transition-all active:scale-95">
+<span class="material-icons-round text-3xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+<p class="text-slate-300 text-sm leading-relaxed italic">
+                    "<span class="text-white font-medium not-italic">Steh auf!</span> Es ist schon spät."
+                </p>
+<p class="text-slate-500 text-xs mt-1">Get up! It is already late.</p>
+</div>
+</div>
+<div class="glass card-neutral rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+<div class="p-6 pb-2 relative z-10">
+<div class="flex justify-end mb-2">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-neutral/20 text-green-200 border border-neutral/30">Verb</span>
+</div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-white mb-1 tracking-tight">Frühstücken</h3>
+<p class="text-slate-400 font-medium">To eat breakfast</p>
+</div>
+<button class="h-14 w-14 flex-shrink-0 rounded-full bg-neutral text-white flex items-center justify-center hover:bg-green-400 shadow-lg shadow-neutral/30 transition-all active:scale-95">
+<span class="material-icons-round text-3xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+<p class="text-slate-300 text-sm leading-relaxed italic">
+                    "Wir <span class="text-white font-medium not-italic">frühstücken</span> immer um acht Uhr."
+                </p>
+<p class="text-slate-500 text-xs mt-1">We always eat breakfast at eight o'clock.</p>
+</div>
+</div>
+<div class="glass card-feminine rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+<div class="p-6 pb-2 relative z-10">
+<div class="flex justify-end mb-2">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-feminine/20 text-red-200 border border-feminine/30">Compound Noun</span>
+</div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-white mb-1 tracking-tight">Die Zahnbürste</h3>
+<p class="text-slate-400 font-medium">The toothbrush</p>
+</div>
+<button class="h-14 w-14 flex-shrink-0 rounded-full bg-feminine text-white flex items-center justify-center hover:bg-red-400 shadow-lg shadow-feminine/30 transition-all active:scale-95">
+<span class="material-icons-round text-3xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+<p class="text-slate-300 text-sm leading-relaxed italic">
+                    "Ich brauche eine neue <span class="text-white font-medium not-italic">Zahnbürste</span>."
+                </p>
+<p class="text-slate-500 text-xs mt-1">I need a new toothbrush.</p>
+</div>
+</div>
+<div class="glass card-masculine rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+<div class="p-6 pb-2 relative z-10">
+<div class="flex justify-end mb-2">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-masculine/20 text-blue-200 border border-masculine/30">Verb</span>
+</div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-white mb-1 tracking-tight">Duschen</h3>
+<p class="text-slate-400 font-medium">To shower</p>
+</div>
+<button class="h-14 w-14 flex-shrink-0 rounded-full bg-masculine text-white flex items-center justify-center hover:bg-blue-400 shadow-lg shadow-masculine/30 transition-all active:scale-95">
+<span class="material-icons-round text-3xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+<p class="text-slate-300 text-sm leading-relaxed italic">
+                    "Er <span class="text-white font-medium not-italic">duscht</span> jeden Morgen kalt."
+                </p>
+<p class="text-slate-500 text-xs mt-1">He showers cold every morning.</p>
+</div>
+</div>
+<div class="glass card-neutral rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
+<div class="p-6 pb-2 relative z-10">
+<div class="flex justify-end mb-2">
+<span class="px-3 py-1 rounded-full text-xs font-medium bg-neutral/20 text-green-200 border border-neutral/30">Verb • Refl.</span>
+</div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold text-white mb-1 tracking-tight">Anziehen</h3>
+<p class="text-slate-400 font-medium">To get dressed</p>
+</div>
+<button class="h-14 w-14 flex-shrink-0 rounded-full bg-neutral text-white flex items-center justify-center hover:bg-green-400 shadow-lg shadow-neutral/30 transition-all active:scale-95">
+<span class="material-icons-round text-3xl">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
+<p class="text-slate-300 text-sm leading-relaxed italic">
+                    "Ich muss mich schnell <span class="text-white font-medium not-italic">anziehen</span>."
+                </p>
+<p class="text-slate-500 text-xs mt-1">I have to get dressed quickly.</p>
+</div>
+</div>
+<div class="relative w-full h-40 mt-8 rounded-3xl overflow-hidden border border-white/10 shadow-lg">
+<img alt="Morning routine items" class="w-full h-full object-cover opacity-60" data-alt="A clean wooden desk with a morning coffee and journal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdQkSHP8WaYVfUp7aZHK4pjD4tCyFghRYhKFo6_poNjV0-MKos6S9ivJ-CVl4BBP_ITqObcwAVAAYVazJgFO5BCC-YtKh4DVmfGQbcusWEZZ6821-VLBGVfkG8kTO98JK0hKl3tk5AHEbm6u755azCDd9c13Eyj29jU5mEUiH5i5B_y9r-TXXxBTvWpMxmCLCxFgoaekUys_m0U6KYFl7NX2P7ErgGLvR_zzT6SkUdPbASdUm7WWmMeWxJW372tglzAbb_z_mbi-IP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
+<div class="absolute bottom-5 left-6 right-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-sm">lightbulb</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Pro Tip</span>
+</div>
+<p class="text-sm text-slate-200 leading-snug">Reflexive verbs like <span class="italic text-white">sich anziehen</span> require a reflexive pronoun (mich, dich, etc.).</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark to-transparent safe-area-bottom z-50">
+<div class="max-w-md mx-auto">
+<button class="w-full py-4 px-6 bg-primary text-background-dark font-bold text-lg rounded-2xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all hover:brightness-110 flex items-center justify-center gap-2">
+<span>Complete Lesson</span>
+<span class="material-icons-round">check_circle</span>
+</button>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ee9d2b",
+            "background-light": "#f8f7f6",
+            "background-dark": "#1a1612", // Adjusted slightly for a warmer dark feel aligned with primary hue
+            "chat-left": "rgba(45, 38, 30, 0.6)",
+            "chat-right": "rgba(238, 157, 43, 0.15)",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: contain;
+    }
+    .glass {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full"></div>
+<!-- Lesson Modal Header -->
+<header class="px-4 pt-2 pb-4 sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center justify-between mb-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200/50 dark:bg-white/10">
+<span class="material-icons">close</span>
+</button>
+<div class="text-center">
+<p class="text-[10px] uppercase tracking-widest text-primary font-bold">German Level A1</p>
+<h1 class="text-lg font-semibold">Daily Routines</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200/50 dark:bg-white/10">
+<span class="material-icons">more_horiz</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-slate-200 dark:bg-white/10 h-1.5 rounded-full mb-6">
+<div class="bg-primary h-1.5 rounded-full w-2/3 shadow-[0_0_10px_rgba(238,157,43,0.4)]"></div>
+</div>
+<!-- Tab Switcher -->
+<nav class="flex p-1 bg-slate-200/50 dark:bg-white/5 rounded-xl">
+<button class="flex-1 py-2 text-sm font-medium rounded-lg bg-white dark:bg-primary text-slate-900 dark:text-white shadow-sm">
+        Dialogue
+      </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-lg text-slate-500 dark:text-slate-400">
+        Vocabulary
+      </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-lg text-slate-500 dark:text-slate-400">
+        Grammar
+      </button>
+</nav>
+</header>
+<!-- Chat Content -->
+<main class="flex-1 px-4 py-6 overflow-y-auto space-y-6 no-scrollbar pb-32">
+<!-- Speaker A -->
+<div class="flex flex-col items-start max-w-[85%] space-y-1">
+<div class="flex items-end space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvEl3irD2ZixfYLz4rve1xPxS9ko1xW1CZcFuQuaCehMcmZfKZd0fVrpWIptscWpRFxBrilyX4iSjETwoezTzB31mXz2MjXOVv74D7JQioccLw6PqiQXnpYUZygBhb3swDLOrPFC9r3WfKfexuhYVHPNQ2cgoq7Qrqi2cqRU9IgTH5hmtkCElI-FmQIAreRpErE0sEgEbCcf2I_iPXrKOHgdgqUIcdSQsVYyRlap0uTSJ1PrHrc6ZEIDUawS4AK7UcOvIn85St_h1b"/>
+</div>
+<div class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl">
+<p class="text-[15px] leading-relaxed font-medium">Hallo! Um wie viel Uhr stehst du normalerweise auf?</p>
+<p class="text-xs text-slate-400 mt-1 italic">Hello! At what time do you normally get up?</p>
+<button class="absolute -right-10 bottom-0 text-primary p-2">
+<span class="material-icons text-lg">volume_up</span>
+</button>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 ml-10">Lukas</span>
+</div>
+<!-- Speaker B -->
+<div class="flex flex-col items-end max-w-[85%] ml-auto space-y-1">
+<div class="flex items-end space-x-2 flex-row-reverse">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/30 ml-2">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFp958l0HblRCESgafT1XKJtRLRKJkKTM-nMMBcQEu5acALrJn6R3kt7GYj5dEkmROTYNjv0wuYZHuEGYqZp79krbwMu2rZsqSPlb-sdth2BYisdIYWFtYeujqplwkhowQ4MwkQ-MGPz3Ytix04rgQ8L_C6FisBXysKgg5BUODryE9UaxJzXC2r1xE4ldRAlekAExCGZIgoVl9bVBXfLcjlgclABzu450_NYWWPlP-m-IuNQq4yINPmW5jtKMxFBGf834sHLGbbJDG"/>
+</div>
+<div class="relative px-4 py-3 rounded-2xl rounded-br-none glass bg-chat-right border border-primary/20 text-slate-100 shadow-xl">
+<p class="text-[15px] leading-relaxed font-medium">Ich stehe normalerweise um sieben Uhr auf. Und du?</p>
+<p class="text-xs text-primary/70 mt-1 italic">I usually get up at seven o'clock. And you?</p>
+<button class="absolute -left-10 bottom-0 text-primary p-2">
+<span class="material-icons text-lg">volume_up</span>
+</button>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 mr-10">Anna (You)</span>
+</div>
+<!-- Speaker A -->
+<div class="flex flex-col items-start max-w-[85%] space-y-1">
+<div class="flex items-end space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFOtfoCO6R1GqX3wPZP__oBY9QDpJZ8DUQiTJX-YI1PWJx0aYyQOxzxnxLwT2Xy885k8x1FM4IoMX--2XRMWpW-L0_o-cFs6b4-t6YIagAcYdIJl5G_xgtwADp3qQa5uXhzKwMWeH7Q3oMw7TRJt4vqTNLJ0vFd05AJOIouqazCKQwmyKcykcJ47e32i1Rn4NRLLdXMscWV0bvcXRH-h8SryyqMDrhGYR-1mkmemSHOec13VzIM7DmLOWECJU7PEQMDqlrADSl9YpQ"/>
+</div>
+<div class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl">
+<p class="text-[15px] leading-relaxed font-medium">Ich bin eine Nachteule. Ich stehe erst um neun Uhr auf.</p>
+<p class="text-xs text-slate-400 mt-1 italic">I am a night owl. I only get up at nine o'clock.</p>
+<button class="absolute -right-10 bottom-0 text-primary p-2">
+<span class="material-icons text-lg">volume_up</span>
+</button>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 ml-10">Lukas</span>
+</div>
+<!-- Speaker B -->
+<div class="flex flex-col items-end max-w-[85%] ml-auto space-y-1">
+<div class="flex items-end space-x-2 flex-row-reverse">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/30 ml-2">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0cgKCsy3y6ZmvVvotISzWuZWNzPL1KQPnsF_WoNKB-kS2q5nFo9SvVniaeHkgBA1EXLB8pOxNsM2c7JtdpBjpVgyPaN2uwXwluyLjOLSKHMYICb4gVhtedU4gLluRjj28HhlaenHoptal3WdjK6J0XTsjbtFmW3viyT8RdidIImzRvcoNc-jyZTjertnoH8H913i4B7PpbnK3821pdXANzfRc7EDq358MfZcWOGL5rWdQYqF0dhHOQ4sktaRXCZt-Est3gRFhwEjP"/>
+</div>
+<div class="relative px-4 py-3 rounded-2xl rounded-br-none glass bg-chat-right border border-primary/20 text-slate-100 shadow-xl">
+<p class="text-[15px] leading-relaxed font-medium">Das ist spät! Frühstückst du dann sofort?</p>
+<p class="text-xs text-primary/70 mt-1 italic">That is late! Do you have breakfast immediately then?</p>
+<button class="absolute -left-10 bottom-0 text-primary p-2">
+<span class="material-icons text-lg">volume_up</span>
+</button>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 mr-10">Anna (You)</span>
+</div>
+<!-- Speaker A -->
+<div class="flex flex-col items-start max-w-[85%] space-y-1">
+<div class="flex items-end space-x-2">
+<div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4MhjOkX9yT2nj_pImW1A0aM1qBFDjYVMwKiH1U0mtKKV6RKOF2gtb_aCAOruGkhCR9sAi2_g0ALPTT15l3cuIZvvLIDhUJd15lV2BbALU0xUG_sBlSUXGBednrABilH_thqHYuONF_AFSkMs9LIjvoH-vKDsZhi6araEOYGvIhMu7_MoPcjHCADSGDswR-8TtsxjBufmd7r5Ag1BosbgwxfPVo2_UwguIWDNnudSCR-7QeuxC8hHbQVNR-m_phwvSf01PDxZRhpc"/>
+</div>
+<div class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl">
+<p class="text-[15px] leading-relaxed font-medium">Nein, zuerst trinke ich einen großen Kaffee.</p>
+<p class="text-xs text-slate-400 mt-1 italic">No, first I drink a large coffee.</p>
+<button class="absolute -right-10 bottom-0 text-primary p-2">
+<span class="material-icons text-lg">volume_up</span>
+</button>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 ml-10">Lukas</span>
+</div>
+</main>
+<!-- Sticky Footer -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark to-transparent pt-12">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center space-x-2 active:scale-[0.98]">
+<span>COMPLETE LESSON</span>
+<span class="material-icons">arrow_forward</span>
+</button>
+<!-- iOS Home Indicator Space -->
+<div class="h-6"></div>
+</div>
+</footer>
+<!-- Subtle background glow -->
+<div class="fixed top-1/4 -right-20 w-64 h-64 bg-primary/5 blur-[100px] -z-10 rounded-full"></div>
+<div class="fixed bottom-1/4 -left-20 w-64 h-64 bg-primary/5 blur-[100px] -z-10 rounded-full"></div>
+</body></html>

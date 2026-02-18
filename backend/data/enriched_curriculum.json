@@ -1,0 +1,4009 @@
+[
+    {
+        "id": 1,
+        "title": "Basics of German Language",
+        "summary": "German alphabet, pronunciation rules, greetings, farewells, basic phrases, and self-introduction.",
+        "source_pages": "0-80",
+        "key_vocab": [
+            {
+                "german": "Hallo",
+                "english": "Hello",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Guten Morgen",
+                "english": "Good morning",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Guten Tag",
+                "english": "Good day",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Guten Abend",
+                "english": "Good evening",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Gute Nacht",
+                "english": "Good night",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Tschüss",
+                "english": "Bye (informal)",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Auf Wiedersehen",
+                "english": "Goodbye (formal)",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Auf Wiederhören",
+                "english": "Goodbye (on phone)",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Bis bald",
+                "english": "See you soon",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Bis morgen",
+                "english": "See you tomorrow",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Wie geht es Ihnen?",
+                "english": "How are you? (formal)",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Wie geht's?",
+                "english": "How are you? (informal)",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Mir geht es gut",
+                "english": "I am doing well",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Es geht mir nicht gut",
+                "english": "I am not doing well",
+                "gender": "none",
+                "category": "greetings"
+            },
+            {
+                "german": "Danke",
+                "english": "Thanks",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Vielen Dank",
+                "english": "Thank you very much",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Bitte",
+                "english": "Please / You're welcome",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Bitte schön",
+                "english": "Here you go / You're welcome",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Danke schön",
+                "english": "Thank you very much",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Entschuldigung",
+                "english": "Excuse me",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Entschuldigen Sie bitte",
+                "english": "Excuse me please (formal)",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Es tut mir leid",
+                "english": "I am sorry",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "Kein Problem",
+                "english": "No problem",
+                "gender": "none",
+                "category": "basic_phrases"
+            },
+            {
+                "german": "der Vater",
+                "english": "father",
+                "gender": "masculine",
+                "category": "pronunciation"
+            },
+            {
+                "german": "der Vogel",
+                "english": "bird",
+                "gender": "masculine",
+                "category": "pronunciation"
+            },
+            {
+                "german": "der Käse",
+                "english": "cheese",
+                "gender": "masculine",
+                "category": "pronunciation"
+            },
+            {
+                "german": "das Öl",
+                "english": "oil",
+                "gender": "neutral",
+                "category": "pronunciation"
+            },
+            {
+                "german": "die Tür",
+                "english": "door",
+                "gender": "feminine",
+                "category": "pronunciation"
+            },
+            {
+                "german": "der Fuß",
+                "english": "foot",
+                "gender": "masculine",
+                "category": "pronunciation"
+            },
+            {
+                "german": "das Gleis",
+                "english": "platform",
+                "gender": "neutral",
+                "category": "pronunciation"
+            },
+            {
+                "german": "singen",
+                "english": "to sing",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "wissen",
+                "english": "to know",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "lesen",
+                "english": "to read",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "hören",
+                "english": "to hear",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "buchstabieren",
+                "english": "to spell",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "das Mädchen",
+                "english": "young girl",
+                "gender": "neutral",
+                "category": "people"
+            },
+            {
+                "german": "die Männer",
+                "english": "men",
+                "gender": "feminine",
+                "category": "people"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Vowel Length",
+                "explanation": "Long sound if followed by 1 consonant or 'H'. Short sound if followed by 2 consonants.",
+                "examples": [
+                    "Name (long)",
+                    "Sohn (long, H)",
+                    "Stadt (short)",
+                    "Bank (short)"
+                ],
+                "formula": "1 consonant → long | 2 consonants → short"
+            },
+            {
+                "rule_name": "Diphthong Pronunciation",
+                "explanation": "'ei' sounds like 'eye'. 'ie' sounds like 'ee'. 'eu/äu' sounds like 'oy'.",
+                "examples": [
+                    "Eis → 'eyes'",
+                    "Brief → 'breef'",
+                    "Euro → 'oyro'"
+                ],
+                "formula": "ei=eye | ie=ee | eu/äu=oy"
+            },
+            {
+                "rule_name": "Consonant Sounds",
+                "explanation": "'w'=English 'v'. 'v'=English 'f'. 'st/sp' at start='sht/shp'. 'z'='ts'.",
+                "examples": [
+                    "Wasser → Vasser",
+                    "Vater → Fater",
+                    "Student → Shtudent",
+                    "Sport → Shport"
+                ],
+                "formula": "w=v | v=f | st-=sht | sp-=shp | z=ts"
+            },
+            {
+                "rule_name": "S Pronunciation",
+                "explanation": "At start/middle: S sounds like Z. At end or doubled: S sounds like English S.",
+                "examples": [
+                    "singen → z sound",
+                    "lesen → z sound",
+                    "Gleis → s sound",
+                    "wissen → s sound"
+                ],
+                "formula": "S start/middle = Z | S end/doubled = S"
+            },
+            {
+                "rule_name": "Umlaut Pronunciation",
+                "explanation": "Ä = 'ay' in 'may'. Ö = 'er' with rounded lips. Ü = 'ue' with rounded lips.",
+                "examples": [
+                    "spät → shpayt",
+                    "Öl",
+                    "Tür"
+                ],
+                "formula": "ä=ay | ö≈er | ü≈ue"
+            }
+        ],
+        "pronunciation_notes": [
+            {
+                "letter": "Ä/ä",
+                "sound": "Similar to 'ay' in 'may'",
+                "examples": [
+                    "spät",
+                    "Männer",
+                    "Mädchen"
+                ]
+            },
+            {
+                "letter": "Ö/ö",
+                "sound": "Like 'er' with rounded lips",
+                "examples": [
+                    "Öl",
+                    "schön"
+                ]
+            },
+            {
+                "letter": "Ü/ü",
+                "sound": "Like 'ue' with rounded lips",
+                "examples": [
+                    "Tür",
+                    "über"
+                ]
+            },
+            {
+                "letter": "ß",
+                "sound": "Sharp S (like 'ss')",
+                "examples": [
+                    "Fuß",
+                    "Straße"
+                ]
+            },
+            {
+                "letter": "V",
+                "sound": "Pronounced as F",
+                "examples": [
+                    "Vater",
+                    "voll",
+                    "Vogel"
+                ]
+            },
+            {
+                "letter": "W",
+                "sound": "Pronounced as V",
+                "examples": [
+                    "Wasser",
+                    "wissen"
+                ]
+            },
+            {
+                "letter": "Z",
+                "sound": "Pronounced as 'ts'",
+                "examples": [
+                    "Zug",
+                    "zehn"
+                ]
+            },
+            {
+                "letter": "ei",
+                "sound": "'eye'",
+                "examples": [
+                    "Eis",
+                    "mein",
+                    "Arbeit"
+                ]
+            },
+            {
+                "letter": "ie",
+                "sound": "'ee'",
+                "examples": [
+                    "Brief",
+                    "Spiel",
+                    "die"
+                ]
+            },
+            {
+                "letter": "eu/äu",
+                "sound": "'oy'",
+                "examples": [
+                    "Euro",
+                    "Häuser",
+                    "neu"
+                ]
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Self Introduction",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Hallo, ich heiße Thomas. Wie heißt du?",
+                        "english": "Hello, my name is Thomas. What's your name?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Hallo, ich bin Julia. Ich komme aus Deutschland.",
+                        "english": "Hello, I am Julia. I come from Germany."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ich komme aus England. Ich wohne in Berlin.",
+                        "english": "I come from England. I live in Berlin."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich bin Studentin. Und du?",
+                        "english": "I am a student (f). And you?"
+                    }
+                ]
+            }
+        ],
+        "introduction_template": {
+            "steps": [
+                {
+                    "label": "Begrüßung",
+                    "example": "Hallo, Guten Tag"
+                },
+                {
+                    "label": "Name",
+                    "example": "Mein Name ist... / Ich heiße..."
+                },
+                {
+                    "label": "Land",
+                    "example": "Ich komme aus..."
+                },
+                {
+                    "label": "Wohnort",
+                    "example": "Ich wohne in..."
+                },
+                {
+                    "label": "Beruf",
+                    "example": "Ich bin Student/Studentin"
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "title": "Articles & Nouns",
+        "summary": "Definite and indefinite articles, noun gender rules by suffix, compound nouns, days and months.",
+        "source_pages": "81-142",
+        "key_vocab": [
+            {
+                "german": "der Mann",
+                "english": "man",
+                "gender": "masculine",
+                "category": "people"
+            },
+            {
+                "german": "die Frau",
+                "english": "woman",
+                "gender": "feminine",
+                "category": "people"
+            },
+            {
+                "german": "das Kind",
+                "english": "child",
+                "gender": "neutral",
+                "category": "people"
+            },
+            {
+                "german": "der Tisch",
+                "english": "table",
+                "gender": "masculine",
+                "category": "objects"
+            },
+            {
+                "german": "der Stuhl",
+                "english": "chair",
+                "gender": "masculine",
+                "category": "objects"
+            },
+            {
+                "german": "das Buch",
+                "english": "book",
+                "gender": "neutral",
+                "category": "objects"
+            },
+            {
+                "german": "das Spiel",
+                "english": "game",
+                "gender": "neutral",
+                "category": "objects"
+            },
+            {
+                "german": "der Platz",
+                "english": "place/seat",
+                "gender": "masculine",
+                "category": "objects"
+            },
+            {
+                "german": "der Kurs",
+                "english": "course",
+                "gender": "masculine",
+                "category": "general"
+            },
+            {
+                "german": "das Wasser",
+                "english": "water",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "die Flasche",
+                "english": "bottle",
+                "gender": "feminine",
+                "category": "objects"
+            },
+            {
+                "german": "die Wasserflasche",
+                "english": "water bottle",
+                "gender": "feminine",
+                "category": "objects"
+            },
+            {
+                "german": "der Montag",
+                "english": "Monday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Dienstag",
+                "english": "Tuesday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Mittwoch",
+                "english": "Wednesday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Donnerstag",
+                "english": "Thursday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Freitag",
+                "english": "Friday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Samstag",
+                "english": "Saturday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "der Sonntag",
+                "english": "Sunday",
+                "gender": "masculine",
+                "category": "days"
+            },
+            {
+                "german": "die Woche",
+                "english": "week",
+                "gender": "feminine",
+                "category": "time"
+            },
+            {
+                "german": "das Wochenende",
+                "english": "weekend",
+                "gender": "neutral",
+                "category": "time"
+            },
+            {
+                "german": "der Januar",
+                "english": "January",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Februar",
+                "english": "February",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der März",
+                "english": "March",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der April",
+                "english": "April",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Mai",
+                "english": "May",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Juni",
+                "english": "June",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Juli",
+                "english": "July",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der August",
+                "english": "August",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der September",
+                "english": "September",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Oktober",
+                "english": "October",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der November",
+                "english": "November",
+                "gender": "masculine",
+                "category": "months"
+            },
+            {
+                "german": "der Dezember",
+                "english": "December",
+                "gender": "masculine",
+                "category": "months"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Definite Articles",
+                "explanation": "der (masculine), die (feminine), das (neutral), die (plural).",
+                "examples": [
+                    "der Mann",
+                    "die Frau",
+                    "das Kind",
+                    "die Kinder"
+                ],
+                "formula": "m=der | f=die | n=das | pl=die"
+            },
+            {
+                "rule_name": "Indefinite Articles",
+                "explanation": "ein (masculine/neutral), eine (feminine). No indefinite plural.",
+                "examples": [
+                    "ein Mann",
+                    "eine Frau",
+                    "ein Kind"
+                ],
+                "formula": "m=ein | f=eine | n=ein | pl=—"
+            },
+            {
+                "rule_name": "Gender Suffixes (Masculine)",
+                "explanation": "Endings: -ig, -ling, -or, -ismus. Categories: Days, Months, Seasons, Directions.",
+                "examples": [
+                    "der Honig",
+                    "der Lehrling",
+                    "der Motor",
+                    "der Montag"
+                ],
+                "formula": "-ig, -ling, -or, -ismus"
+            },
+            {
+                "rule_name": "Gender Suffixes (Feminine)",
+                "explanation": "Endings: -ung, -heit, -keit, -tät, -ion, -ik, -ie, -e (mostly). Numbers are feminine.",
+                "examples": [
+                    "die Wohnung",
+                    "die Freiheit",
+                    "die Möglichkeit",
+                    "die Nation"
+                ],
+                "formula": "-ung, -heit, -keit, -tät, -ion, -ik, -ie, -e"
+            },
+            {
+                "rule_name": "Gender Suffixes (Neutral)",
+                "explanation": "Endings: -chen, -lein, -ment, -um. Colors and metals are neutral.",
+                "examples": [
+                    "das Mädchen",
+                    "das Büchlein",
+                    "das Dokument"
+                ],
+                "formula": "-chen, -lein, -ment, -um"
+            },
+            {
+                "rule_name": "Compound Nouns",
+                "explanation": "The article comes from the LAST word in the compound.",
+                "examples": [
+                    "das Wasser + die Flasche = die Wasserflasche",
+                    "der Fuß + der Ball = der Fußball"
+                ],
+                "formula": "Article = Article of LAST word"
+            }
+        ],
+        "declension_tables": [
+            {
+                "case": "Nominativ",
+                "definite": {
+                    "masculine": "der",
+                    "feminine": "die",
+                    "neutral": "das",
+                    "plural": "die"
+                },
+                "indefinite": {
+                    "masculine": "ein",
+                    "feminine": "eine",
+                    "neutral": "ein",
+                    "plural": "—"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Asking about objects",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Was ist das?",
+                        "english": "What is that?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Das ist ein Stuhl.",
+                        "english": "That is a chair."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ist der Stuhl neu?",
+                        "english": "Is the chair new?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, er ist neu.",
+                        "english": "Yes, it is new."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Pronouns, Numbers & Dates",
+        "summary": "Personal pronouns, singular vs plural nouns, numbers 0-1M, phone numbers, ordinal numbers, dates.",
+        "source_pages": "143-191",
+        "key_vocab": [
+            {
+                "german": "ich",
+                "english": "I",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "du",
+                "english": "you (informal)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "er",
+                "english": "he",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "sie",
+                "english": "she",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "es",
+                "english": "it",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "wir",
+                "english": "we",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "ihr",
+                "english": "you all (informal)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "sie",
+                "english": "they",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "Sie",
+                "english": "you (formal)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "die Straße",
+                "english": "street",
+                "gender": "feminine",
+                "category": "general"
+            },
+            {
+                "german": "das Auge",
+                "english": "eye",
+                "gender": "neutral",
+                "category": "body"
+            },
+            {
+                "german": "der Name",
+                "english": "name",
+                "gender": "masculine",
+                "category": "general"
+            },
+            {
+                "german": "der Hund",
+                "english": "dog",
+                "gender": "masculine",
+                "category": "animals"
+            },
+            {
+                "german": "der Tag",
+                "english": "day",
+                "gender": "masculine",
+                "category": "time"
+            },
+            {
+                "german": "null",
+                "english": "zero",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "eins",
+                "english": "one",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "zwei",
+                "english": "two",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "drei",
+                "english": "three",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "vier",
+                "english": "four",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "fünf",
+                "english": "five",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "sechs",
+                "english": "six",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "sieben",
+                "english": "seven",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "acht",
+                "english": "eight",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "neun",
+                "english": "nine",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "zehn",
+                "english": "ten",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "zwanzig",
+                "english": "twenty",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "hundert",
+                "english": "hundred",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "tausend",
+                "english": "thousand",
+                "gender": "none",
+                "category": "numbers"
+            },
+            {
+                "german": "der erste",
+                "english": "the first",
+                "gender": "masculine",
+                "category": "ordinals"
+            },
+            {
+                "german": "der dritte",
+                "english": "the third",
+                "gender": "masculine",
+                "category": "ordinals"
+            },
+            {
+                "german": "der siebte",
+                "english": "the seventh",
+                "gender": "masculine",
+                "category": "ordinals"
+            },
+            {
+                "german": "Wann",
+                "english": "When",
+                "gender": "none",
+                "category": "question_words"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Number Logic (21-99)",
+                "explanation": "Read backwards: Unit + und + Ten.",
+                "examples": [
+                    "21 = einundzwanzig (one-and-twenty)",
+                    "45 = fünfundvierzig",
+                    "99 = neunundneunzig"
+                ],
+                "formula": "Unit + und + Ten"
+            },
+            {
+                "rule_name": "Ordinal Numbers",
+                "explanation": "1-19: add '-te'. 20+: add '-ste'. Exceptions: erste (1st), dritte (3rd), siebte (7th).",
+                "examples": [
+                    "vierte (4th)",
+                    "zwanzigste (20th)",
+                    "erste (1st)",
+                    "dritte (3rd)"
+                ],
+                "formula": "1-19: -te | 20+: -ste | Exceptions: 1st, 3rd, 7th"
+            },
+            {
+                "rule_name": "Plural Formation",
+                "explanation": "Masculine often adds '-e'. Feminine often adds '-en'. Neutral often adds '-er'. Words ending in -er/-el often only change article.",
+                "examples": [
+                    "der Tisch → die Tische",
+                    "die Frau → die Frauen",
+                    "das Kind → die Kinder",
+                    "der Lehrer → die Lehrer"
+                ],
+                "formula": "m→-e | f→-en | n→-er | -er/-el→same"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Phone numbers and dates",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wie ist deine Telefonnummer?",
+                        "english": "What is your phone number?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Meine Nummer ist null-eins-fünf-zwei...",
+                        "english": "My number is 0-1-5-2..."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Wann hast du Geburtstag?",
+                        "english": "When is your birthday?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Am fünften Mai.",
+                        "english": "On the 5th of May."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Sentence Structure & Time",
+        "summary": "Basic sentence structure, verb position (Position 2 rule), present tense conjugation, sein/haben, negation, telling time, ordering and paying.",
+        "source_pages": "192-269",
+        "key_vocab": [
+            {
+                "german": "spielen",
+                "english": "to play",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "kaufen",
+                "english": "to buy",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "machen",
+                "english": "to do/make",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "hören",
+                "english": "to hear",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "wohnen",
+                "english": "to live",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "brauchen",
+                "english": "to need",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "wandern",
+                "english": "to hike",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "trinken",
+                "english": "to drink",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "bezahlen",
+                "english": "to pay",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "bestellen",
+                "english": "to order",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "sprechen",
+                "english": "to speak",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "essen",
+                "english": "to eat",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "fahren",
+                "english": "to drive",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "nicht",
+                "english": "not",
+                "gender": "none",
+                "category": "negation"
+            },
+            {
+                "german": "kein",
+                "english": "no/not a",
+                "gender": "none",
+                "category": "negation"
+            },
+            {
+                "german": "spät",
+                "english": "late",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "halb",
+                "english": "half (time)",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "Viertel",
+                "english": "quarter",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "vor",
+                "english": "before/to (time)",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "nach",
+                "english": "after/past (time)",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "die Uhr",
+                "english": "clock/hour",
+                "gender": "feminine",
+                "category": "time"
+            },
+            {
+                "german": "die Speisekarte",
+                "english": "menu",
+                "gender": "feminine",
+                "category": "ordering"
+            },
+            {
+                "german": "die Rechnung",
+                "english": "bill",
+                "gender": "feminine",
+                "category": "ordering"
+            },
+            {
+                "german": "zusammen",
+                "english": "together",
+                "gender": "none",
+                "category": "ordering"
+            },
+            {
+                "german": "getrennt",
+                "english": "separate",
+                "gender": "none",
+                "category": "ordering"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Golden Rule (Position 2)",
+                "explanation": "The conjugated verb MUST always be in Position 2. Position means phrase, not word. Subject is usually Pos 1 or 3.",
+                "examples": [
+                    "Er spielt heute Fußball",
+                    "Heute spielt er Fußball",
+                    "Fußball spielt er heute"
+                ],
+                "counter_examples": [
+                    "Heute spielt Fußball er ✗",
+                    "Fußball spielt heute er ✗"
+                ],
+                "formula": "Verb = ALWAYS Position 2"
+            },
+            {
+                "rule_name": "Hauptsatz Subject Rule",
+                "explanation": "In a main clause (Hauptsatz), the Subject comes directly BEFORE or AFTER the verb.",
+                "examples": [
+                    "Er spielt heute (before)",
+                    "Heute spielt er (after)"
+                ],
+                "formula": "Subject = directly before/after Verb"
+            },
+            {
+                "rule_name": "Negation: nicht vs kein",
+                "explanation": "'kein' negates indefinite nouns (replaces ein). 'nicht' negates verbs, adjectives, and definite nouns.",
+                "examples": [
+                    "Ich habe kein Auto (no car)",
+                    "Ich spiele nicht (I don't play)",
+                    "Das ist nicht mein Buch"
+                ],
+                "formula": "kein = ein→kein | nicht = verbs/adjectives/definite"
+            },
+            {
+                "rule_name": "Informal Time",
+                "explanation": "'Halb' + NEXT hour (8:30 = halb neun). Use 'vor' (to) and 'nach' (past).",
+                "examples": [
+                    "8:30 = halb neun",
+                    "8:15 = Viertel nach acht",
+                    "8:45 = Viertel vor neun"
+                ],
+                "formula": "halb+next | nach=past | vor=to"
+            },
+            {
+                "rule_name": "Regular Verb Conjugation",
+                "explanation": "Remove -en from infinitive to get stem. Add endings: -e, -st, -t, -en, -t, -en.",
+                "examples": [
+                    "spielen: ich spiele, du spielst, er spielt, wir spielen, ihr spielt, sie spielen"
+                ],
+                "formula": "Stem + -e/-st/-t/-en/-t/-en"
+            },
+            {
+                "rule_name": "Irregular Verb Stem Change",
+                "explanation": "In present tense, only 2nd and 3rd person singular change stem. Changes: e→i, e→ie, a→ä.",
+                "examples": [
+                    "sprechen: du sprichst, er spricht (e→i)",
+                    "lesen: du liest, er liest (e→ie)",
+                    "fahren: du fährst, er fährt (a→ä)"
+                ],
+                "formula": "Only du/er change: e→i | e→ie | a→ä"
+            }
+        ],
+        "conjugation_tables": [
+            {
+                "verb": "sein",
+                "english": "to be",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "bin",
+                    "du": "bist",
+                    "er/es/sie": "ist",
+                    "wir": "sind",
+                    "ihr": "seid",
+                    "sie": "sind",
+                    "Sie": "sind"
+                }
+            },
+            {
+                "verb": "haben",
+                "english": "to have",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "habe",
+                    "du": "hast",
+                    "er/es/sie": "hat",
+                    "wir": "haben",
+                    "ihr": "habt",
+                    "sie": "haben",
+                    "Sie": "haben"
+                }
+            },
+            {
+                "verb": "spielen",
+                "english": "to play (regular)",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "spiele",
+                    "du": "spielst",
+                    "er/es/sie": "spielt",
+                    "wir": "spielen",
+                    "ihr": "spielt",
+                    "sie": "spielen",
+                    "Sie": "spielen"
+                }
+            },
+            {
+                "verb": "sprechen",
+                "english": "to speak (irregular e→i)",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "spreche",
+                    "du": "sprichst",
+                    "er/es/sie": "spricht",
+                    "wir": "sprechen",
+                    "ihr": "sprecht",
+                    "sie": "sprechen",
+                    "Sie": "sprechen"
+                }
+            },
+            {
+                "verb": "essen",
+                "english": "to eat (irregular e→i)",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "esse",
+                    "du": "isst",
+                    "er/es/sie": "isst",
+                    "wir": "essen",
+                    "ihr": "esst",
+                    "sie": "essen",
+                    "Sie": "essen"
+                }
+            },
+            {
+                "verb": "fahren",
+                "english": "to drive (irregular a→ä)",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "fahre",
+                    "du": "fährst",
+                    "er/es/sie": "fährt",
+                    "wir": "fahren",
+                    "ihr": "fahrt",
+                    "sie": "fahren",
+                    "Sie": "fahren"
+                }
+            },
+            {
+                "verb": "lesen",
+                "english": "to read (irregular e→ie)",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "lese",
+                    "du": "liest",
+                    "er/es/sie": "liest",
+                    "wir": "lesen",
+                    "ihr": "lest",
+                    "sie": "lesen",
+                    "Sie": "lesen"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Telling time",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wie spät ist es?",
+                        "english": "What time is it?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Es ist halb drei.",
+                        "english": "It is 2:30."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Danke!",
+                        "english": "Thanks!"
+                    }
+                ]
+            },
+            {
+                "context": "Ordering and paying at restaurant",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ich möchte bitte bestellen.",
+                        "english": "I would like to order please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Was möchten Sie trinken?",
+                        "english": "What would you like to drink?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ein Wasser, bitte.",
+                        "english": "A water, please."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ich möchte bitte zahlen.",
+                        "english": "I would like to pay please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Zusammen oder getrennt?",
+                        "english": "Together or separate?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Zusammen, bitte.",
+                        "english": "Together, please."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Questions & Time Prepositions",
+        "summary": "Yes/No questions, W-questions, time prepositions (am/um/im), weather vocabulary, seasons, extended introduction.",
+        "source_pages": "270-350",
+        "key_vocab": [
+            {
+                "german": "Wer",
+                "english": "Who",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Was",
+                "english": "What",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Wo",
+                "english": "Where",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Woher",
+                "english": "From where",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Wohin",
+                "english": "Where to",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Wann",
+                "english": "When",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Warum",
+                "english": "Why",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Wie",
+                "english": "How",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "Welcher/Welche/Welches",
+                "english": "Which",
+                "gender": "none",
+                "category": "question_words"
+            },
+            {
+                "german": "der Frühling",
+                "english": "Spring",
+                "gender": "masculine",
+                "category": "seasons"
+            },
+            {
+                "german": "der Sommer",
+                "english": "Summer",
+                "gender": "masculine",
+                "category": "seasons"
+            },
+            {
+                "german": "der Herbst",
+                "english": "Autumn",
+                "gender": "masculine",
+                "category": "seasons"
+            },
+            {
+                "german": "der Winter",
+                "english": "Winter",
+                "gender": "masculine",
+                "category": "seasons"
+            },
+            {
+                "german": "die Jahreszeit",
+                "english": "season",
+                "gender": "feminine",
+                "category": "seasons"
+            },
+            {
+                "german": "die Sonne",
+                "english": "sun",
+                "gender": "feminine",
+                "category": "weather"
+            },
+            {
+                "german": "der Regen",
+                "english": "rain",
+                "gender": "masculine",
+                "category": "weather"
+            },
+            {
+                "german": "der Schnee",
+                "english": "snow",
+                "gender": "masculine",
+                "category": "weather"
+            },
+            {
+                "german": "der Nebel",
+                "english": "fog",
+                "gender": "masculine",
+                "category": "weather"
+            },
+            {
+                "german": "das Gewitter",
+                "english": "thunderstorm",
+                "gender": "neutral",
+                "category": "weather"
+            },
+            {
+                "german": "die Wolken",
+                "english": "clouds",
+                "gender": "feminine",
+                "category": "weather"
+            },
+            {
+                "german": "heiß",
+                "english": "hot",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "warm",
+                "english": "warm",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "kalt",
+                "english": "cold",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "bewölkt",
+                "english": "cloudy",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "windig",
+                "english": "windy",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "sonnig",
+                "english": "sunny",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "regnen",
+                "english": "to rain",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "schneien",
+                "english": "to snow",
+                "gender": "none",
+                "category": "weather"
+            },
+            {
+                "german": "lernen",
+                "english": "to learn",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "sprechen",
+                "english": "to speak",
+                "gender": "none",
+                "category": "verbs"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Yes/No Question Structure",
+                "explanation": "Verb comes FIRST (Position 1). Subject follows.",
+                "examples": [
+                    "Lernst du Deutsch? (Are you learning German?)",
+                    "Wohnt Thomas in Berlin?",
+                    "Spielst du Fußball?"
+                ],
+                "formula": "Verb (Pos 1) + Subject + Rest"
+            },
+            {
+                "rule_name": "W-Question Structure",
+                "explanation": "W-word (Pos 1) + Verb (Pos 2) + Subject.",
+                "examples": [
+                    "Woher kommst du?",
+                    "Was machst du?",
+                    "Wann treffen wir uns?"
+                ],
+                "formula": "W-word (Pos 1) + Verb (Pos 2) + Subject"
+            },
+            {
+                "rule_name": "Time Prepositions",
+                "explanation": "'um' for exact time, 'am' for days/dates, 'im' for months/seasons.",
+                "examples": [
+                    "Um 8 Uhr (at 8 o'clock)",
+                    "Am Montag (on Monday)",
+                    "Im Sommer (in summer)",
+                    "Im Januar (in January)"
+                ],
+                "formula": "um=exact time | am=days/dates | im=months/seasons"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Extended introduction",
+                "turns": [
+                    {
+                        "speaker": "Frank",
+                        "german": "Wie heißen Sie?",
+                        "english": "What is your name?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich heiße Julia.",
+                        "english": "My name is Julia."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Woher kommen Sie?",
+                        "english": "Where do you come from?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich komme aus Frankreich.",
+                        "english": "I come from France."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Wo wohnen Sie?",
+                        "english": "Where do you live?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich wohne in Hamburg.",
+                        "english": "I live in Hamburg."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Seit wann wohnst du in Deutschland?",
+                        "english": "Since when have you lived in Germany?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich wohne seit zwei Jahren in Deutschland.",
+                        "english": "I've lived in Germany for 2 years."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Was machen Sie von Beruf?",
+                        "english": "What is your profession?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich bin Ärztin.",
+                        "english": "I am a doctor."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Welche Sprachen sprechen Sie?",
+                        "english": "Which languages do you speak?"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Ich kann Französisch, Englisch und ein bisschen Deutsch.",
+                        "english": "I speak French, English and a little German."
+                    },
+                    {
+                        "speaker": "Frank",
+                        "german": "Es freut mich, dich kennen zu lernen!",
+                        "english": "Nice to meet you!"
+                    },
+                    {
+                        "speaker": "Julia",
+                        "german": "Es freut mich auch!",
+                        "english": "Nice to meet you too!"
+                    }
+                ]
+            },
+            {
+                "context": "Weather conversation",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wie ist das Wetter heute?",
+                        "english": "How is the weather today?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Heute ist es sonnig und warm.",
+                        "english": "Today it is sunny and warm."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Und morgen?",
+                        "english": "And tomorrow?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Morgen wird es kälter und es regnet auch.",
+                        "english": "Tomorrow it will be colder and it will also rain."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Adjectives & Colors",
+        "summary": "Adjective usage, adjective endings in Nominative (definite, indefinite, no article), colors.",
+        "source_pages": "351-378",
+        "key_vocab": [
+            {
+                "german": "groß",
+                "english": "big/tall",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "klein",
+                "english": "small/short",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "neu",
+                "english": "new",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "alt",
+                "english": "old",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "schön",
+                "english": "beautiful",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "schnell",
+                "english": "fast",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "lang",
+                "english": "long",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "kurz",
+                "english": "short",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "hell",
+                "english": "light/bright",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "dunkel",
+                "english": "dark",
+                "gender": "none",
+                "category": "adjectives"
+            },
+            {
+                "german": "schwarz",
+                "english": "black",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "weiß",
+                "english": "white",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "rot",
+                "english": "red",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "blau",
+                "english": "blue",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "grün",
+                "english": "green",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "gelb",
+                "english": "yellow",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "braun",
+                "english": "brown",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "grau",
+                "english": "gray",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "orange",
+                "english": "orange",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "rosa",
+                "english": "pink",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "lila",
+                "english": "purple",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "hellblau",
+                "english": "light blue",
+                "gender": "none",
+                "category": "colors"
+            },
+            {
+                "german": "dunkelblau",
+                "english": "dark blue",
+                "gender": "none",
+                "category": "colors"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Predicate Adjectives (no ending)",
+                "explanation": "After sein/werden, adjectives have NO ending.",
+                "examples": [
+                    "Das Haus ist groß",
+                    "Der Himmel ist blau",
+                    "Das Auto ist schnell"
+                ],
+                "formula": "Subject + sein + Adjective (no ending)"
+            },
+            {
+                "rule_name": "Nominative Adjective Endings (Definite)",
+                "explanation": "After der/die/das: always add -e. Plural: add -en.",
+                "examples": [
+                    "der alte Mann",
+                    "die schöne Frau",
+                    "das kleine Kind",
+                    "die alten Männer (-en)"
+                ],
+                "formula": "der/die/das + Adj-e | die(pl) + Adj-en"
+            },
+            {
+                "rule_name": "Nominative Adjective Endings (Indefinite)",
+                "explanation": "ein (masc) → -er. ein (neut) → -es. eine (fem) → -e.",
+                "examples": [
+                    "ein alter Mann (-er)",
+                    "ein kleines Kind (-es)",
+                    "eine schöne Frau (-e)"
+                ],
+                "formula": "ein(m)→-er | ein(n)→-es | eine(f)→-e"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Discussing colors and objects",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Magst du das rote Auto?",
+                        "english": "Do you like the red car?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Nein, ich mag das blaue Auto.",
+                        "english": "No, I like the blue car."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Das ist ein schönes Haus.",
+                        "english": "That is a beautiful house."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Modal & Separable Verbs",
+        "summary": "Modal verbs (können, müssen, wollen, sollen, dürfen, mögen), separable verbs, daily routines.",
+        "source_pages": "379-424",
+        "key_vocab": [
+            {
+                "german": "können",
+                "english": "can/to be able to",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "müssen",
+                "english": "must/to have to",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "wollen",
+                "english": "to want to",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "sollen",
+                "english": "should/to be supposed to",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "dürfen",
+                "english": "may/to be allowed to",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "mögen",
+                "english": "to like",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "möchten",
+                "english": "would like",
+                "gender": "none",
+                "category": "modal_verbs"
+            },
+            {
+                "german": "aufstehen",
+                "english": "to get up",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "einkaufen",
+                "english": "to shop",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "aufmachen",
+                "english": "to open",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "zumachen",
+                "english": "to close",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "anrufen",
+                "english": "to call",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "fernsehen",
+                "english": "to watch TV",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "anfangen",
+                "english": "to begin",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "mitkommen",
+                "english": "to come along",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "stattfinden",
+                "english": "to take place",
+                "gender": "none",
+                "category": "separable_verbs"
+            },
+            {
+                "german": "zurückkommen",
+                "english": "to come back",
+                "gender": "none",
+                "category": "separable_verbs"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Modal Verb Sandwich Rule",
+                "explanation": "Conjugated modal verb at Position 2. Main verb (infinitive) goes to the END.",
+                "examples": [
+                    "Ich will Deutsch lernen",
+                    "Wir wollen eine Pause machen",
+                    "Ich kann gut Fußball spielen"
+                ],
+                "formula": "Subject + Modal(Pos2) + ... + Infinitive(END)"
+            },
+            {
+                "rule_name": "Separable Verb Logic",
+                "explanation": "Prefix splits off and goes to the END in simple sentences. With modal verb: stays joined as infinitive at end.",
+                "examples": [
+                    "Ich stehe um 7 Uhr auf (prefix at end)",
+                    "Ich muss um 7 Uhr aufstehen (joined with modal)"
+                ],
+                "formula": "Simple: prefix to END | With modal: joined infinitive at END"
+            },
+            {
+                "rule_name": "Common Separable Prefixes",
+                "explanation": "Prefixes: ab-, an-, auf-, aus-, ein-, mit-, vor-, zu-, zurück-, statt-, fern-.",
+                "examples": [
+                    "aufstehen (auf|stehen)",
+                    "einkaufen (ein|kaufen)",
+                    "anrufen (an|rufen)",
+                    "fernsehen (fern|sehen)"
+                ],
+                "formula": "Prefix + Base verb = Separable verb"
+            }
+        ],
+        "conjugation_tables": [
+            {
+                "verb": "können",
+                "english": "can",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "kann",
+                    "du": "kannst",
+                    "er/es/sie": "kann",
+                    "wir": "können",
+                    "ihr": "könnt",
+                    "sie": "können",
+                    "Sie": "können"
+                }
+            },
+            {
+                "verb": "müssen",
+                "english": "must",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "muss",
+                    "du": "musst",
+                    "er/es/sie": "muss",
+                    "wir": "müssen",
+                    "ihr": "müsst",
+                    "sie": "müssen",
+                    "Sie": "müssen"
+                }
+            },
+            {
+                "verb": "wollen",
+                "english": "want",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "will",
+                    "du": "willst",
+                    "er/es/sie": "will",
+                    "wir": "wollen",
+                    "ihr": "wollt",
+                    "sie": "wollen",
+                    "Sie": "wollen"
+                }
+            },
+            {
+                "verb": "sollen",
+                "english": "should",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "soll",
+                    "du": "sollst",
+                    "er/es/sie": "soll",
+                    "wir": "sollen",
+                    "ihr": "sollt",
+                    "sie": "sollen",
+                    "Sie": "sollen"
+                }
+            },
+            {
+                "verb": "dürfen",
+                "english": "may",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "darf",
+                    "du": "darfst",
+                    "er/es/sie": "darf",
+                    "wir": "dürfen",
+                    "ihr": "dürft",
+                    "sie": "dürfen",
+                    "Sie": "dürfen"
+                }
+            },
+            {
+                "verb": "mögen",
+                "english": "to like",
+                "tense": "Präsens",
+                "forms": {
+                    "ich": "mag",
+                    "du": "magst",
+                    "er/es/sie": "mag",
+                    "wir": "mögen",
+                    "ihr": "mögt",
+                    "sie": "mögen",
+                    "Sie": "mögen"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Daily routine with separable verbs",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wann musst du morgen aufstehen?",
+                        "english": "When do you have to get up tomorrow?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich will um 8 Uhr aufstehen.",
+                        "english": "I want to get up at 8."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Kannst du heute einkaufen?",
+                        "english": "Can you go shopping today?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, ich kaufe nach der Arbeit ein.",
+                        "english": "Yes, I'll shop after work."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Past Tense (Präteritum)",
+        "summary": "Simple past of haben and sein, regular/irregular Präteritum, transportation vocabulary, apologizing.",
+        "source_pages": "425-481",
+        "key_vocab": [
+            {
+                "german": "war",
+                "english": "was",
+                "gender": "none",
+                "category": "past_tense"
+            },
+            {
+                "german": "hatte",
+                "english": "had",
+                "gender": "none",
+                "category": "past_tense"
+            },
+            {
+                "german": "gestern",
+                "english": "yesterday",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "früher",
+                "english": "earlier/in the past",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "letzte Woche",
+                "english": "last week",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "letztes Jahr",
+                "english": "last year",
+                "gender": "none",
+                "category": "time"
+            },
+            {
+                "german": "der Zug",
+                "english": "train",
+                "gender": "masculine",
+                "category": "transportation"
+            },
+            {
+                "german": "der Bus",
+                "english": "bus",
+                "gender": "masculine",
+                "category": "transportation"
+            },
+            {
+                "german": "das Auto",
+                "english": "car",
+                "gender": "neutral",
+                "category": "transportation"
+            },
+            {
+                "german": "das Fahrrad",
+                "english": "bicycle",
+                "gender": "neutral",
+                "category": "transportation"
+            },
+            {
+                "german": "das Flugzeug",
+                "english": "airplane",
+                "gender": "neutral",
+                "category": "transportation"
+            },
+            {
+                "german": "die Straßenbahn",
+                "english": "tram",
+                "gender": "feminine",
+                "category": "transportation"
+            },
+            {
+                "german": "die U-Bahn",
+                "english": "subway",
+                "gender": "feminine",
+                "category": "transportation"
+            },
+            {
+                "german": "der Bahnhof",
+                "english": "train station",
+                "gender": "masculine",
+                "category": "transportation"
+            },
+            {
+                "german": "der Flughafen",
+                "english": "airport",
+                "gender": "masculine",
+                "category": "transportation"
+            },
+            {
+                "german": "die Haltestelle",
+                "english": "stop (bus/tram)",
+                "gender": "feminine",
+                "category": "transportation"
+            },
+            {
+                "german": "die Verspätung",
+                "english": "delay",
+                "gender": "feminine",
+                "category": "transportation"
+            },
+            {
+                "german": "pünktlich",
+                "english": "on time",
+                "gender": "none",
+                "category": "transportation"
+            },
+            {
+                "german": "zu Fuß",
+                "english": "on foot",
+                "gender": "none",
+                "category": "transportation"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Präteritum of sein",
+                "explanation": "Irregular but vital. Used in everyday speech (not just writing).",
+                "examples": [
+                    "Ich war in Berlin",
+                    "Du warst müde",
+                    "Er war krank",
+                    "Wir waren zu Hause"
+                ],
+                "formula": "ich war | du warst | er war | wir waren | ihr wart | sie waren"
+            },
+            {
+                "rule_name": "Präteritum of haben",
+                "explanation": "Also commonly used in speech.",
+                "examples": [
+                    "Ich hatte einen Termin",
+                    "Du hattest recht",
+                    "Er hatte Hunger"
+                ],
+                "formula": "ich hatte | du hattest | er hatte | wir hatten | ihr hattet | sie hatten"
+            },
+            {
+                "rule_name": "Regular Präteritum",
+                "explanation": "Stem + -te + personal ending.",
+                "examples": [
+                    "machen → ich machte, du machtest, er machte",
+                    "lernen → ich lernte"
+                ],
+                "formula": "Stem + -te + ending"
+            }
+        ],
+        "conjugation_tables": [
+            {
+                "verb": "sein",
+                "english": "to be",
+                "tense": "Präteritum",
+                "forms": {
+                    "ich": "war",
+                    "du": "warst",
+                    "er/es/sie": "war",
+                    "wir": "waren",
+                    "ihr": "wart",
+                    "sie": "waren",
+                    "Sie": "waren"
+                }
+            },
+            {
+                "verb": "haben",
+                "english": "to have",
+                "tense": "Präteritum",
+                "forms": {
+                    "ich": "hatte",
+                    "du": "hattest",
+                    "er/es/sie": "hatte",
+                    "wir": "hatten",
+                    "ihr": "hattet",
+                    "sie": "hatten",
+                    "Sie": "hatten"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Talking about past trips",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wo warst du gestern?",
+                        "english": "Where were you yesterday?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich war in Berlin. Ich hatte einen Termin.",
+                        "english": "I was in Berlin. I had an appointment."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Bist du mit dem Zug gefahren?",
+                        "english": "Did you go by train?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, aber der Zug hatte Verspätung.",
+                        "english": "Yes, but the train was delayed."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Perfect Tense & Housing",
+        "summary": "Perfekt construction, Partizip II formation (regular/irregular/separable), haben vs sein, apartment and housing vocabulary.",
+        "source_pages": "482-604",
+        "key_vocab": [
+            {
+                "german": "die Wohnung",
+                "english": "apartment",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "das Haus",
+                "english": "house",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "die Küche",
+                "english": "kitchen",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "das Wohnzimmer",
+                "english": "living room",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "das Schlafzimmer",
+                "english": "bedroom",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "das Badezimmer",
+                "english": "bathroom",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "der Balkon",
+                "english": "balcony",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "der Keller",
+                "english": "basement",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "der Flur",
+                "english": "hallway",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "das Bett",
+                "english": "bed",
+                "gender": "neutral",
+                "category": "furniture"
+            },
+            {
+                "german": "der Schrank",
+                "english": "wardrobe/cabinet",
+                "gender": "masculine",
+                "category": "furniture"
+            },
+            {
+                "german": "das Sofa",
+                "english": "sofa",
+                "gender": "neutral",
+                "category": "furniture"
+            },
+            {
+                "german": "der Kühlschrank",
+                "english": "refrigerator",
+                "gender": "masculine",
+                "category": "appliances"
+            },
+            {
+                "german": "die Waschmaschine",
+                "english": "washing machine",
+                "gender": "feminine",
+                "category": "appliances"
+            },
+            {
+                "german": "der Herd",
+                "english": "stove",
+                "gender": "masculine",
+                "category": "appliances"
+            },
+            {
+                "german": "das Bügeleisen",
+                "english": "iron",
+                "gender": "neutral",
+                "category": "appliances"
+            },
+            {
+                "german": "die Klimaanlage",
+                "english": "air conditioning",
+                "gender": "feminine",
+                "category": "appliances"
+            },
+            {
+                "german": "die Tür",
+                "english": "door",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "das Fenster",
+                "english": "window",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "der Schlüssel",
+                "english": "key",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Wand",
+                "english": "wall",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "die Decke",
+                "english": "ceiling",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "der Boden",
+                "english": "floor",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Heizung",
+                "english": "heating",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "der Vermieter",
+                "english": "landlord",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Vermieterin",
+                "english": "landlady",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "der Mieter",
+                "english": "tenant (m)",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Mieterin",
+                "english": "tenant (f)",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "der Aufzug",
+                "english": "elevator",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Treppe",
+                "english": "stairs",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "die Klingel",
+                "english": "doorbell",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "der Briefkasten",
+                "english": "letterbox",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "der Parkplatz",
+                "english": "parking space",
+                "gender": "masculine",
+                "category": "housing"
+            },
+            {
+                "german": "die Tiefgarage",
+                "english": "underground garage",
+                "gender": "feminine",
+                "category": "housing"
+            },
+            {
+                "german": "das Erdgeschoss",
+                "english": "ground floor",
+                "gender": "neutral",
+                "category": "housing"
+            },
+            {
+                "german": "das Wochenende",
+                "english": "weekend",
+                "gender": "neutral",
+                "category": "time"
+            },
+            {
+                "german": "gegessen",
+                "english": "eaten (Partizip II)",
+                "gender": "none",
+                "category": "partizip"
+            },
+            {
+                "german": "gefahren",
+                "english": "driven (Partizip II)",
+                "gender": "none",
+                "category": "partizip"
+            },
+            {
+                "german": "gelesen",
+                "english": "read (Partizip II)",
+                "gender": "none",
+                "category": "partizip"
+            },
+            {
+                "german": "geschrieben",
+                "english": "written (Partizip II)",
+                "gender": "none",
+                "category": "partizip"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Perfect Tense Construction",
+                "explanation": "Helper verb (haben/sein) at Position 2 + Partizip II at END.",
+                "examples": [
+                    "Ich habe Deutsch gelernt",
+                    "Er ist nach Berlin gefahren",
+                    "Wir haben den Film gesehen"
+                ],
+                "formula": "Subject + haben/sein(Pos2) + ... + Partizip II(END)"
+            },
+            {
+                "rule_name": "Partizip II Regular Verbs",
+                "explanation": "ge- + verb stem + -t. If stem ends in -t/-d, add -et. Verbs ending in -ieren: no ge-.",
+                "examples": [
+                    "lernen → gelernt",
+                    "arbeiten → gearbeitet",
+                    "reparieren → repariert"
+                ],
+                "formula": "ge + stem + t | ge + stem(t/d) + et | -ieren → stem + t"
+            },
+            {
+                "rule_name": "Partizip II Irregular Verbs",
+                "explanation": "ge- + changed stem + -en. No fixed rule — must memorize.",
+                "examples": [
+                    "lesen → gelesen",
+                    "schreiben → geschrieben",
+                    "essen → gegessen",
+                    "beginnen → begonnen"
+                ],
+                "formula": "ge + changed_stem + en (memorize!)"
+            },
+            {
+                "rule_name": "Partizip II Separable Verbs",
+                "explanation": "ge- goes between prefix and base. Prefix + ge + base Partizip.",
+                "examples": [
+                    "zumachen → zugemacht",
+                    "aufstehen → aufgestanden",
+                    "einkaufen → eingekauft"
+                ],
+                "formula": "prefix + ge + base_partizip"
+            },
+            {
+                "rule_name": "Haben vs Sein",
+                "explanation": "Use sein for movement (fahren, gehen, fliegen) or state change (aufstehen, sterben). Use haben for everything else.",
+                "examples": [
+                    "Ich bin nach Berlin gefahren (sein - movement)",
+                    "Ich habe Deutsch gelernt (haben - no movement)"
+                ],
+                "formula": "sein = movement/state change | haben = everything else"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Weekend activities",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Was hast du am Wochenende gemacht?",
+                        "english": "What did you do on the weekend?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich bin nach Hause gefahren und habe gelernt.",
+                        "english": "I drove home and studied."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Hast du auch etwas gekocht?",
+                        "english": "Did you also cook something?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, ich habe Pasta gekocht.",
+                        "english": "Yes, I cooked pasta."
+                    }
+                ]
+            },
+            {
+                "context": "Apartment description",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Wie ist deine Wohnung?",
+                        "english": "What is your apartment like?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Sie hat zwei Schlafzimmer und einen Balkon.",
+                        "english": "It has two bedrooms and a balcony."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Hast du eine Waschmaschine?",
+                        "english": "Do you have a washing machine?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, sie ist in der Küche.",
+                        "english": "Yes, it's in the kitchen."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Accusative Case & Professions",
+        "summary": "Accusative articles, accusative pronouns, adjective endings in accusative, negation with keinen, professions.",
+        "source_pages": "605-677",
+        "key_vocab": [
+            {
+                "german": "der Lehrer",
+                "english": "teacher (m)",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Lehrerin",
+                "english": "teacher (f)",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "der Arzt",
+                "english": "doctor (m)",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Ärztin",
+                "english": "doctor (f)",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "der Ingenieur",
+                "english": "engineer (m)",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Ingenieurin",
+                "english": "engineer (f)",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "der Bäcker",
+                "english": "baker (m)",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Bäckerin",
+                "english": "baker (f)",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "der Koch",
+                "english": "cook (m)",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Köchin",
+                "english": "cook (f)",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "der Kellner",
+                "english": "waiter",
+                "gender": "masculine",
+                "category": "professions"
+            },
+            {
+                "german": "die Kellnerin",
+                "english": "waitress",
+                "gender": "feminine",
+                "category": "professions"
+            },
+            {
+                "german": "arbeiten",
+                "english": "to work",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "suchen",
+                "english": "to search/look for",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "sehen",
+                "english": "to see",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "mich",
+                "english": "me (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "dich",
+                "english": "you (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "ihn",
+                "english": "him (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "sie",
+                "english": "her (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "uns",
+                "english": "us (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "euch",
+                "english": "you all (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Accusative Article Change",
+                "explanation": "ONLY masculine changes. der→den, ein→einen, kein→keinen. Feminine/Neutral/Plural stay the same.",
+                "examples": [
+                    "Ich kaufe den Tisch (der→den)",
+                    "Ich kaufe einen Tisch (ein→einen)",
+                    "Ich sehe die Katze (no change)"
+                ],
+                "formula": "Masculine ONLY: der→den | ein→einen | kein→keinen"
+            },
+            {
+                "rule_name": "Finding Subject vs Object",
+                "explanation": "Subject (Nominativ) = WHO does action. Object (Akkusativ) = WHAT receives action.",
+                "examples": [
+                    "Peter kauft den Tisch (Peter=subject, Tisch=object)",
+                    "Der Hund sieht die Katze (Hund=subject, Katze=object)"
+                ],
+                "formula": "Who verb? = Subject | What gets verbed? = Object"
+            },
+            {
+                "rule_name": "Sein always takes Nominativ",
+                "explanation": "After the verb 'sein', always use Nominativ (not Akkusativ).",
+                "examples": [
+                    "Das ist ein guter Mann (NOT: einen guten Mann)",
+                    "Sie ist eine Ärztin"
+                ],
+                "formula": "sein + Nominativ (always!)"
+            },
+            {
+                "rule_name": "Accusative Adjective Endings",
+                "explanation": "Same as Nominativ EXCEPT masculine: definite→-en, indefinite→-en.",
+                "examples": [
+                    "Ich sehe den alten Mann (-en)",
+                    "Ich kaufe einen neuen Tisch (-en)",
+                    "Ich sehe die schöne Frau (-e, no change)"
+                ],
+                "formula": "Masculine Akk: always -en | Rest: same as Nom"
+            }
+        ],
+        "declension_tables": [
+            {
+                "case": "Akkusativ",
+                "definite": {
+                    "masculine": "den",
+                    "feminine": "die",
+                    "neutral": "das",
+                    "plural": "die"
+                },
+                "indefinite": {
+                    "masculine": "einen",
+                    "feminine": "eine",
+                    "neutral": "ein",
+                    "plural": "—"
+                },
+                "negative": {
+                    "masculine": "keinen",
+                    "feminine": "keine",
+                    "neutral": "kein",
+                    "plural": "keine"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Talking about professions",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ich suche einen Job.",
+                        "english": "I am looking for a job."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Hast du den Chef angerufen?",
+                        "english": "Did you call the boss?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Nein, ich rufe ihn gleich an.",
+                        "english": "No, I'll call him right away."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Possessive Articles & Clothing",
+        "summary": "Possessive articles (mein, dein, sein...) in Nominative and Accusative, clothing vocabulary.",
+        "source_pages": "678-728",
+        "key_vocab": [
+            {
+                "german": "mein",
+                "english": "my",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "dein",
+                "english": "your (informal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "sein",
+                "english": "his/its",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "ihr",
+                "english": "her/their",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "unser",
+                "english": "our",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "euer",
+                "english": "your (pl informal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "Ihr",
+                "english": "your (formal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "das T-Shirt",
+                "english": "t-shirt",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "das Hemd",
+                "english": "shirt",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "die Bluse",
+                "english": "blouse",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Pullover",
+                "english": "sweater",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Jacke",
+                "english": "jacket",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Hose",
+                "english": "pants",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Rock",
+                "english": "skirt",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "das Kleid",
+                "english": "dress",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "die Schuhe",
+                "english": "shoes",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Socken",
+                "english": "socks",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Mantel",
+                "english": "coat",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Hut",
+                "english": "hat",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Mütze",
+                "english": "cap/beanie",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Schal",
+                "english": "scarf",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Handschuhe",
+                "english": "gloves",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "tragen",
+                "english": "to wear/carry",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "anziehen",
+                "english": "to put on (clothes)",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "ausziehen",
+                "english": "to take off (clothes)",
+                "gender": "none",
+                "category": "verbs"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Possessive Article Endings",
+                "explanation": "Possessives follow the same endings as 'ein'. Accusative masculine: add -en.",
+                "examples": [
+                    "Nominativ: mein Hund, meine Katze, mein Buch",
+                    "Akkusativ: meinen Hund, meine Katze, mein Buch",
+                    "Plural: meine Hunde"
+                ],
+                "formula": "Possessives use ein-endings | Akk masc: -en"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Talking about clothes",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ist das dein Pullover?",
+                        "english": "Is that your sweater?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Nein, das ist nicht mein Pullover.",
+                        "english": "No, that is not my sweater."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Was trägst du heute?",
+                        "english": "What are you wearing today?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich trage ein Hemd und eine Hose.",
+                        "english": "I'm wearing a shirt and pants."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Dative Case & Directions",
+        "summary": "Dative articles, dative pronouns, dative verbs, location vs direction (Wo/Wohin), two-way prepositions, giving directions.",
+        "source_pages": "729-833",
+        "key_vocab": [
+            {
+                "german": "links",
+                "english": "left",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "rechts",
+                "english": "right",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "geradeaus",
+                "english": "straight ahead",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "gegenüber",
+                "english": "opposite/across from",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "neben",
+                "english": "next to",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "zwischen",
+                "english": "between",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "hinter",
+                "english": "behind",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "vor",
+                "english": "in front of",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "über",
+                "english": "above/over",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "unter",
+                "english": "under/below",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "in",
+                "english": "in",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "an",
+                "english": "at/on (vertical)",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "auf",
+                "english": "on (horizontal)",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "der Bahnhof",
+                "english": "train station",
+                "gender": "masculine",
+                "category": "places"
+            },
+            {
+                "german": "die Post",
+                "english": "post office",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Apotheke",
+                "english": "pharmacy",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "das Krankenhaus",
+                "english": "hospital",
+                "gender": "neutral",
+                "category": "places"
+            },
+            {
+                "german": "die Kirche",
+                "english": "church",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "das Rathaus",
+                "english": "town hall",
+                "gender": "neutral",
+                "category": "places"
+            },
+            {
+                "german": "die Schule",
+                "english": "school",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Bibliothek",
+                "english": "library",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "der Supermarkt",
+                "english": "supermarket",
+                "gender": "masculine",
+                "category": "places"
+            },
+            {
+                "german": "die Bäckerei",
+                "english": "bakery",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Kreuzung",
+                "english": "intersection",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "die Ampel",
+                "english": "traffic light",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "die Brücke",
+                "english": "bridge",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "helfen",
+                "english": "to help",
+                "gender": "none",
+                "category": "dative_verbs"
+            },
+            {
+                "german": "gefallen",
+                "english": "to please/like",
+                "gender": "none",
+                "category": "dative_verbs"
+            },
+            {
+                "german": "gehören",
+                "english": "to belong to",
+                "gender": "none",
+                "category": "dative_verbs"
+            },
+            {
+                "german": "zu",
+                "english": "to (dative)",
+                "gender": "none",
+                "category": "prepositions"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Dative Articles",
+                "explanation": "der/das → dem. die → der. Plural die → den (+n on noun).",
+                "examples": [
+                    "dem Mann (der→dem)",
+                    "der Frau (die→der)",
+                    "dem Kind (das→dem)",
+                    "den Kindern (die→den+n)"
+                ],
+                "formula": "m/n: der/das→dem | f: die→der | pl: die→den(+n)"
+            },
+            {
+                "rule_name": "Dative Indefinite Articles",
+                "explanation": "ein(m/n) → einem. eine(f) → einer.",
+                "examples": [
+                    "einem Mann",
+                    "einer Frau",
+                    "einem Kind"
+                ],
+                "formula": "ein→einem | eine→einer"
+            },
+            {
+                "rule_name": "Location (Wo?) vs Direction (Wohin?)",
+                "explanation": "Static location (Wo?) = Dative. Movement/direction (Wohin?) = Accusative. Two-way prepositions take either depending on meaning.",
+                "examples": [
+                    "Wo bist du? Im Park (Dative - location)",
+                    "Wohin gehst du? In den Park (Accusative - direction)"
+                ],
+                "formula": "Wo? → Dativ (static) | Wohin? → Akkusativ (movement)"
+            },
+            {
+                "rule_name": "Dative Verbs",
+                "explanation": "Some verbs always take Dative object: helfen, gefallen, gehören, danken, antworten, gratulieren.",
+                "examples": [
+                    "Ich helfe dem Mann",
+                    "Das gefällt mir",
+                    "Das Buch gehört der Frau"
+                ],
+                "formula": "helfen, gefallen, gehören, danken, antworten, gratulieren → Dativ"
+            },
+            {
+                "rule_name": "'zu' always Dative",
+                "explanation": "The preposition 'zu' always takes Dative.",
+                "examples": [
+                    "Ich gehe zum (zu dem) Bahnhof",
+                    "Ich gehe zur (zu der) Schule"
+                ],
+                "formula": "zu + Dativ always | zu+dem=zum | zu+der=zur"
+            }
+        ],
+        "declension_tables": [
+            {
+                "case": "Dativ",
+                "definite": {
+                    "masculine": "dem",
+                    "feminine": "der",
+                    "neutral": "dem",
+                    "plural": "den (+n)"
+                },
+                "indefinite": {
+                    "masculine": "einem",
+                    "feminine": "einer",
+                    "neutral": "einem",
+                    "plural": "—"
+                }
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Asking for directions",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Entschuldigung, wo ist die Post?",
+                        "english": "Excuse me, where is the post office?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Gehen Sie geradeaus und dann links.",
+                        "english": "Go straight and then left."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ist es weit?",
+                        "english": "Is it far?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Nein, es ist neben dem Bahnhof.",
+                        "english": "No, it's next to the train station."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Comparisons & Shopping",
+        "summary": "Comparative and superlative forms, demonstrative pronouns (dieser/diese/dieses), grocery shopping vocabulary, frequency adverbs.",
+        "source_pages": "834-895",
+        "key_vocab": [
+            {
+                "german": "gern",
+                "english": "gladly/like to",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "lieber",
+                "english": "rather/prefer",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am liebsten",
+                "english": "most of all",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "gut",
+                "english": "good",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "besser",
+                "english": "better",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am besten",
+                "english": "the best",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "viel",
+                "english": "much/a lot",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "mehr",
+                "english": "more",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am meisten",
+                "english": "the most",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "teuer",
+                "english": "expensive",
+                "gender": "none",
+                "category": "shopping"
+            },
+            {
+                "german": "billig",
+                "english": "cheap",
+                "gender": "none",
+                "category": "shopping"
+            },
+            {
+                "german": "dieser/diese/dieses",
+                "english": "this",
+                "gender": "none",
+                "category": "demonstratives"
+            },
+            {
+                "german": "das Brot",
+                "english": "bread",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Ei",
+                "english": "egg",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "die Butter",
+                "english": "butter",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "die Milch",
+                "english": "milk",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Käse",
+                "english": "cheese",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "das Obst",
+                "english": "fruit",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Gemüse",
+                "english": "vegetables",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Fleisch",
+                "english": "meat",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "der Fisch",
+                "english": "fish",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "der Reis",
+                "english": "rice",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "die Kartoffel",
+                "english": "potato",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Apfel",
+                "english": "apple",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "die Tomate",
+                "english": "tomato",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "die Gurke",
+                "english": "cucumber",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Zucker",
+                "english": "sugar",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "das Salz",
+                "english": "salt",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "immer",
+                "english": "always",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "oft",
+                "english": "often",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "manchmal",
+                "english": "sometimes",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "selten",
+                "english": "rarely",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "nie",
+                "english": "never",
+                "gender": "none",
+                "category": "frequency"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Comparative",
+                "explanation": "Adjective + -er + 'als'. Many common adjectives get umlaut (a→ä, o→ö, u→ü).",
+                "examples": [
+                    "schnell → schneller als",
+                    "groß → größer als",
+                    "alt → älter als",
+                    "gut → besser als"
+                ],
+                "formula": "Adj + -er + als | Often: umlaut change"
+            },
+            {
+                "rule_name": "Superlative",
+                "explanation": "'am' + adjective + '-sten'. Adjectives ending in -t/-d/-s/-z add '-esten'.",
+                "examples": [
+                    "am schnellsten",
+                    "am größten",
+                    "am ältesten",
+                    "am besten"
+                ],
+                "formula": "am + Adj + -sten | -t/-d/-s/-z: am + Adj + -esten"
+            },
+            {
+                "rule_name": "Demonstrative Pronouns",
+                "explanation": "'dieser/diese/dieses' = 'this (specific)'. Endings follow definite article pattern.",
+                "examples": [
+                    "dieser Mann (like 'der')",
+                    "diese Frau (like 'die')",
+                    "dieses Kind (like 'das')"
+                ],
+                "formula": "dieser=der | diese=die | dieses=das pattern"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Shopping comparison",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Welcher Apfel schmeckt besser?",
+                        "english": "Which apple tastes better?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Dieser Apfel schmeckt am besten.",
+                        "english": "This apple tastes the best."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Er ist süßer als der andere.",
+                        "english": "It is sweeter than the other one."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, aber er ist auch teurer.",
+                        "english": "Yes, but it's also more expensive."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Imperative & Health",
+        "summary": "Imperative mood (commands) for du/ihr/Sie, body parts, health vocabulary, doctor appointments.",
+        "source_pages": "896-975",
+        "key_vocab": [
+            {
+                "german": "der Kopf",
+                "english": "head",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Auge",
+                "english": "eye",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Nase",
+                "english": "nose",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Mund",
+                "english": "mouth",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Ohr",
+                "english": "ear",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Hals",
+                "english": "neck/throat",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Schulter",
+                "english": "shoulder",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Arm",
+                "english": "arm",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Hand",
+                "english": "hand",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Finger",
+                "english": "finger",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Bauch",
+                "english": "stomach/belly",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Rücken",
+                "english": "back",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Bein",
+                "english": "leg",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Knie",
+                "english": "knee",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Fuß",
+                "english": "foot",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Zahn",
+                "english": "tooth",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Schmerzen",
+                "english": "pain",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Kopfschmerzen",
+                "english": "headache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Bauchschmerzen",
+                "english": "stomachache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Halsschmerzen",
+                "english": "sore throat",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Rückenschmerzen",
+                "english": "backache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Zahnschmerzen",
+                "english": "toothache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "das Fieber",
+                "english": "fever",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "der Schnupfen",
+                "english": "cold/runny nose",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "der Husten",
+                "english": "cough",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "die Tablette",
+                "english": "tablet/pill",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "das Medikament",
+                "english": "medicine",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "das Rezept",
+                "english": "prescription",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "der Termin",
+                "english": "appointment",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "der Arzt",
+                "english": "doctor (m)",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "die Ärztin",
+                "english": "doctor (f)",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Apotheke",
+                "english": "pharmacy",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "krank",
+                "english": "sick",
+                "gender": "none",
+                "category": "health"
+            },
+            {
+                "german": "gesund",
+                "english": "healthy",
+                "gender": "none",
+                "category": "health"
+            },
+            {
+                "german": "weh tun",
+                "english": "to hurt",
+                "gender": "none",
+                "category": "health"
+            }
+        ],
+        "grammar_rules": [
+            {
+                "rule_name": "Imperative with Sie (formal)",
+                "explanation": "Conjugated verb + Sie. Same as question form but with exclamation.",
+                "examples": [
+                    "Gehen Sie zum Arzt!",
+                    "Essen Sie viel Obst!",
+                    "Nehmen Sie Ihre Medikamente!",
+                    "Rufen Sie mich an!"
+                ],
+                "formula": "Verb + Sie + !"
+            },
+            {
+                "rule_name": "Imperative with du (informal)",
+                "explanation": "Verb stem only (drop -st ending, no pronoun). Verbs with e→i keep the change. Verbs with a→ä lose the umlaut.",
+                "examples": [
+                    "Geh zum Arzt! (gehen)",
+                    "Iss mehr Obst! (essen, e→i)",
+                    "Fahr langsam! (fahren, NOT Fähr!)"
+                ],
+                "formula": "Verb stem (no -st, no du) | e→i stays | a→ä drops"
+            },
+            {
+                "rule_name": "Imperative with ihr (informal plural)",
+                "explanation": "Same as normal ihr-conjugation, but without the pronoun.",
+                "examples": [
+                    "Geht zum Arzt!",
+                    "Esst viel Obst!",
+                    "Fahrt langsam!"
+                ],
+                "formula": "ihr-conjugation without 'ihr'"
+            },
+            {
+                "rule_name": "Separable Verbs in Imperative",
+                "explanation": "Prefix still goes to the end, even in imperative.",
+                "examples": [
+                    "Rufen Sie mich an! (anrufen)",
+                    "Mach die Tür zu! (zumachen)",
+                    "Steh auf! (aufstehen)"
+                ],
+                "formula": "Imperative + prefix at END"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Doctor visit",
+                "turns": [
+                    {
+                        "speaker": "Patient",
+                        "german": "Ich habe Kopfschmerzen und Fieber.",
+                        "english": "I have a headache and fever."
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Seit wann haben Sie die Schmerzen?",
+                        "english": "Since when have you had the pain?"
+                    },
+                    {
+                        "speaker": "Patient",
+                        "german": "Seit gestern.",
+                        "english": "Since yesterday."
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Nehmen Sie diese Tabletten und ruhen Sie sich aus.",
+                        "english": "Take these tablets and rest."
+                    },
+                    {
+                        "speaker": "Patient",
+                        "german": "Brauche ich ein Rezept?",
+                        "english": "Do I need a prescription?"
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Ja, hier ist das Rezept. Gehen Sie zur Apotheke.",
+                        "english": "Yes, here is the prescription. Go to the pharmacy."
+                    }
+                ]
+            },
+            {
+                "context": "Making an appointment",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ich möchte bitte einen Termin machen.",
+                        "english": "I would like to make an appointment please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Wann passt es Ihnen?",
+                        "english": "When suits you?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Am Montag um 10 Uhr, bitte.",
+                        "english": "On Monday at 10 o'clock, please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Das geht. Bis Montag!",
+                        "english": "That works. See you Monday!"
+                    }
+                ]
+            }
+        ]
+    }
+]

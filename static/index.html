@@ -11,21 +11,42 @@
     <title>DeutschesEcho - Ultimate A1</title>
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#135bec",
-                        "background-dark": "#101622",
+                        "primary": "#135bec", // Stitch Primary (Blue-600ish)
+                        "primary-glow": "#60a5fa",
+                        "background-dark": "#020617", // Slate-950
+                        "background-light": "#f8f7f6",
                         "slate-card": "#1e293b",
                         "accent-purple": "#7c3aed",
+                        "masculine": "#3b82f6", // Blue-500
+                        "feminine": "#ef4444", // Red-500
+                        "neutral": "#22c55e", // Green-500
+                        "chat-left": "rgba(45, 38, 30, 0.6)",
+                        "chat-right": "rgba(19, 91, 236, 0.15)",
                     },
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"],
                         "sans": ["Inter", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 20px -5px rgba(59, 130, 246, 0.5), 0 0 10px -2px rgba(59, 130, 246, 0.3)',
+                        'glow-blue-strong': '0 0 30px -5px rgba(59, 130, 246, 0.4), inset 0 0 20px -10px rgba(59, 130, 246, 0.3)',
+                        'glow-red': '0 0 20px -5px rgba(239, 68, 68, 0.5), 0 0 10px -2px rgba(239, 68, 68, 0.3)',
+                        'glow-green': '0 0 20px -5px rgba(34, 197, 94, 0.5), 0 0 10px -2px rgba(34, 197, 94, 0.3)',
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
                     }
                 }
             }
@@ -36,6 +57,8 @@
     <!-- Font Awesome & Material Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -218,7 +241,7 @@
                 <h2 class="text-xl font-bold text-white">Flashcards</h2>
                 <div class="w-6"></div>
             </div>
-            <div id="vocab-card-container" class="w-full max-w-sm h-96 relative perspective-1000"></div>
+            <div id="vocab-card-container" class="w-full max-w-sm min-h-80 relative perspective-1000"></div>
             <div class="flex gap-6 mt-8">
                 <button onclick="handleSwipe(false)"
                     class="p-6 rounded-full bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white transition"><i
