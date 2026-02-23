@@ -472,25 +472,294 @@
             </footer>
         </div>
 
+        <!-- SCREEN 4: Live AI Tutor (Voice Mode) -->
+        <div id="live-voice-screen" class="hidden fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm transition-opacity">
+            <!-- LIVE TUTOR OVERLAY (Deep Dark Glassmorphism) -->
+            <div
+                class="absolute bottom-0 left-0 w-full h-[90vh] md:h-[85vh] bg-[#0b1121]/95 backdrop-blur-2xl border-t border-slate-800 rounded-t-[40px] flex flex-col px-6 py-6 transition-transform duration-500 transform translate-y-0 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+
+                <!-- Top Bar -->
+                <div class="flex items-center justify-between mb-8">
+                    <button onclick="closeLiveTutor()"
+                        class="w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                    </button>
+
+                    <div
+                        class="bg-slate-800/80 border border-slate-700 px-4 py-1.5 rounded-full flex items-center gap-2 shadow-inner">
+                        <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                        <span class="live-status-text text-xs font-bold text-slate-300 tracking-wide">AI is
+                            Listening...</span>
+                    </div>
+
+                    <button
+                        class="w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-300 transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- The Glowing Orb Media Center -->
+                <div class="flex-1 flex flex-col items-center justify-center relative mb-8">
+                    <!-- Glowing Background Blob -->
+                    <div class="absolute w-64 h-64 bg-indigo-600/30 rounded-full blur-[60px] animate-pulse"></div>
+                    <div class="absolute w-48 h-48 bg-purple-600/20 rounded-full blur-[40px]"></div>
+
+                    <!-- The Main Orb -->
+                    <div id="audio-visualizer-orb"
+                        class="w-44 h-44 bg-slate-900 border border-indigo-500/30 rounded-full flex items-center justify-center relative z-10 shadow-[0_0_40px_rgba(99,102,241,0.2)] overflow-hidden">
+                        <!-- Hidden Video/Canvas for Vision Mode -->
+                        <video id="live-vision-video" playsinline autoplay
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"></video>
+                        <canvas id="live-vision-canvas" class="hidden"></canvas>
+
+                        <!-- Simple static wave for now, JS can animate heights later -->
+                        <div class="flex gap-1.5 items-center relative z-20">
+                            <div class="w-1.5 h-6 bg-indigo-400 rounded-full"></div>
+                            <div class="w-1.5 h-10 bg-purple-400 rounded-full"></div>
+                            <div class="w-1.5 h-16 bg-pink-400 rounded-full"></div>
+                            <div class="w-1.5 h-10 bg-purple-400 rounded-full"></div>
+                            <div class="w-1.5 h-6 bg-indigo-400 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Camera Toggle Floating Button -->
+                    <button id="toggle-vision-btn" onclick="toggleLiveVision()"
+                        class="absolute bottom-[-10px] w-12 h-12 bg-slate-800 border border-slate-700 rounded-full flex items-center justify-center text-slate-400 z-20 hover:bg-slate-700 transition shadow-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Live Transcript & Correction Toast -->
+                <div
+                    class="bg-slate-800/60 backdrop-blur-md border border-slate-700 rounded-3xl p-5 mb-8 w-full max-w-md mx-auto shadow-xl">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-[10px] font-black text-slate-500 tracking-widest uppercase">Transcript</span>
+                        <span
+                            class="text-[10px] font-black text-green-400 tracking-widest uppercase flex items-center gap-1"><svg
+                                class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z"
+                                    clip-rule="evenodd"></path>
+                            </svg> Correction</span>
+                    </div>
+
+                    <!-- User Speech (Wrong) -->
+                    <div class="text-slate-400 font-medium mb-3 flex items-center gap-2">
+                        <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+                        <p id="live-user-transcript" class="line-through decoration-red-500/50">Ich bin spielen</p>
+                    </div>
+
+                    <!-- AI Correction (Right) -->
+                    <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-3 flex gap-3 items-start">
+                        <div
+                            class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-900 flex-shrink-0 mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p id="live-ai-transcript" class="text-white font-bold text-lg">Ich spiele.</p>
+                            <p class="text-green-400/80 text-xs mt-1">Verb conjugation corrected</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Controls -->
+                <div class="flex items-center justify-center gap-8 pb-4">
+                    <!-- Keyboard Toggle -->
+                    <button
+                        class="w-12 h-12 rounded-full bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 flex items-center justify-center transition">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Main Mic Button (wrapped to preserve mic-pulse logic) -->
+                    <div class="relative group">
+                        <div class="mic-pulse absolute inset-0 rounded-full bg-red-500/30 blur-md animate-pulse hidden">
+                        </div>
+                        <button onclick="toggleLiveAudio()"
+                            class="live-mic-btn relative z-10 w-20 h-20 rounded-full bg-red-500 flex items-center justify-center text-white shadow-[0_0_30px_rgba(239,68,68,0.4)] hover:scale-105 hover:bg-red-400 transition-all active:scale-95">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- End Call -->
+                    <button onclick="closeLiveTutor()"
+                        class="w-12 h-12 rounded-full bg-red-500/10 text-red-500 hover:bg-red-500/20 border border-red-500/20 flex items-center justify-center transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Live AI Tutor (Vision Mode) -->
+        <div id="live-vision-screen"
+            class="fixed inset-0 z-[70] hidden bg-background-light dark:bg-[#221011] font-display flex-col overflow-hidden relative text-slate-900 dark:text-slate-100">
+            <!-- Background decorative gradients -->
+            <div
+                class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#ee2b34]/10 blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-[#ee2b34]/5 blur-[100px] pointer-events-none">
+            </div>
+
+            <!-- Header -->
+            <header class="flex items-center justify-between p-4 px-6 pt-12 z-20 relative">
+                <button onclick="closeLiveTutor()"
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition text-white">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <h2 class="text-white text-lg font-bold tracking-tight">Live Tutor</h2>
+                <button
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition text-white">
+                    <span class="material-symbols-outlined">settings</span>
+                </button>
+            </header>
+
+            <!-- Main Content -->
+            <main
+                class="flex-1 flex flex-col items-center justify-start px-4 pb-4 gap-6 z-10 w-full max-w-md mx-auto relative">
+                <!-- Status Pill -->
+                <div
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#361a1c] border border-white/10 shadow-lg">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ee2b34] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#ee2b34]"></span>
+                    </span>
+                    <p class="live-status-text text-sm font-medium text-slate-200">🤖 AI is Seeing...</p>
+                </div>
+
+                <!-- Viewfinder Area -->
+                <div
+                    class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 group">
+                    <div class="absolute inset-0 bg-cover bg-center"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKzbBTMwwmxVrnS3brO5k7tbXyWtR3W7CEqx9ccyLXK0xBpNThiPcb4062ZNxxYHjEcokr2NkKAdk0VIVaSr62-2BEkm9pFBAORp0L7LAdfNRS30PhfQFbR9cTHDX1-c82mmDbxnuH-28KukW9n9HFoEWDuD2YT4RSkZhsk5tk8lreLTx-asPiqJG_hC_iJlu6qp9_OxAKYaAfuw4E3mR-XgnFdv9MbEl0a2kU4G-WdDw974YDeQR-YaYo7N6QG3W9AR964sjmiUdK');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
+                    <!-- Viewfinder Brackets -->
+                    <div class="absolute inset-4 pointer-events-none opacity-50">
+                        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white rounded-tl-xl">
+                        </div>
+                        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white rounded-tr-xl">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-white rounded-bl-xl">
+                        </div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white rounded-br-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transcript / Correction Panel -->
+                <div class="w-full flex flex-col gap-3">
+                    <div class="self-end max-w-[90%]">
+                        <div class="flex items-center justify-end gap-2 mb-1"><span
+                                class="text-xs font-medium text-[#ee2b34]/80 uppercase tracking-wider">You</span></div>
+                        <div class="bg-[#361a1c]/90 p-4 rounded-2xl rounded-tr-sm border border-white/5 shadow-lg">
+                            <p class="text-base text-slate-200 leading-relaxed">
+                                Ich habe <span
+                                    class="line-through decoration-[#ee2b34] decoration-2 opacity-60">ein</span> <span
+                                    class="text-[#ee2b34] font-bold">einen</span> Becher...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="self-start max-w-[90%]">
+                        <div class="flex items-center gap-2 mb-1">
+                            <div
+                                class="w-5 h-5 rounded-full bg-gradient-to-br from-[#ee2b34] to-rose-900 flex items-center justify-center text-[10px] font-bold text-white shadow-lg">
+                                AI</div>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Tutor</span>
+                        </div>
+                        <div
+                            class="bg-[#221011]/70 backdrop-blur-md border border-[#ee2b34]/10 p-4 rounded-2xl rounded-tl-sm shadow-lg">
+                            <p class="text-base text-white font-medium leading-relaxed">Fast! Da "der Becher" maskulin
+                                ist, brauchst du den Akkusativ: <span class="italic text-[#ff4c54]">einen</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Bottom Control Deck -->
+            <div class="w-full px-6 pb-10 pt-4 z-20 bg-gradient-to-t from-[#221011] via-[#221011]/95 to-transparent">
+                <div class="flex items-center justify-between max-w-md mx-auto">
+                    <button onclick="closeLiveTutor(); openLiveVoiceMode();"
+                        class="flex flex-col items-center gap-1 group">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#361a1c] flex items-center justify-center text-slate-300 border border-white/5 group-hover:bg-[#361a1c]/80 transition-all">
+                            <span class="material-symbols-outlined">mic_none</span>
+                        </div>
+                        <span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Voice</span>
+                    </button>
+                    <div class="relative group">
+                        <div class="mic-pulse absolute inset-0 rounded-full bg-[#ee2b34] z-0 hidden"></div>
+                        <button onclick="toggleLiveAudio()"
+                            class="live-mic-btn relative z-10 w-20 h-20 rounded-full bg-gradient-to-b from-[#ee2b34] to-[#c41e26] flex items-center justify-center shadow-[0_8px_20px_rgba(238,43,52,0.4)] hover:scale-105 active:scale-95 transition-transform duration-200">
+                            <span class="material-symbols-outlined text-white text-[32px]">mic</span>
+                        </button>
+                    </div>
+                    <button onclick="closeLiveTutor()" class="flex flex-col items-center gap-1 group">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#361a1c] flex items-center justify-center text-slate-300 border border-white/5 group-hover:bg-red-900/20 group-hover:text-red-400 transition-all">
+                            <span class="material-symbols-outlined">call_end</span>
+                        </div>
+                        <span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">End</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- NAVBAR -->
     <nav class="fixed bottom-0 left-0 w-full bg-slate-950/95 backdrop-blur-md border-t border-slate-800 px-2 py-2 z-50">
-        <div class="flex justify-around items-center max-w-md mx-auto">
+        <div class="flex justify-around items-center max-w-md mx-auto px-1">
             <button onclick="switchTab('home')" id="nav-home"
-                class="nav-btn text-yellow-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                class="nav-btn text-yellow-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-14">
                 <i class="fas fa-home text-lg mb-1"></i><span class="text-[9px] font-bold">Home</span>
             </button>
             <button onclick="switchTab('vocab')" id="nav-vocab"
-                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-14">
                 <i class="fas fa-layer-group text-lg mb-1"></i><span class="text-[9px] font-bold">Vocab</span>
             </button>
+
+            <!-- Center Mic Button -->
+            <div class="relative w-16 flex justify-center pb-6">
+                <button onclick="openLiveVoiceMode()"
+                    class="absolute bottom-1 z-40 flex items-center justify-center w-14 h-14 bg-gradient-to-r from-red-500 to-red-600 rounded-full shadow-[0_4px_15px_rgba(239,68,68,0.5)] hover:scale-105 active:scale-95 transition-all group border-[4px] border-slate-950 outline-none">
+                    <span class="material-symbols-outlined text-white text-[28px] group-hover:animate-pulse">mic</span>
+                </button>
+            </div>
+
             <button onclick="switchTab('practice')" id="nav-practice"
-                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-14">
                 <i class="fas fa-dumbbell text-lg mb-1"></i><span class="text-[9px] font-bold">Practice</span>
             </button>
             <button onclick="switchTab('learn')" id="nav-learn"
-                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-16">
+                class="nav-btn text-slate-500 flex flex-col items-center p-2 rounded-lg hover:bg-white/5 transition w-14">
                 <i class="fas fa-book text-lg mb-1"></i><span class="text-[9px] font-bold">Learn</span>
             </button>
         </div>
@@ -498,6 +767,8 @@
 
     <!-- Main App Script -->
     <script type="module" src="/static/js/app.js?v=4"></script>
+    <!-- Live Tutor Audio Bridge -->
+    <script src="/static/js/live_tutor.js"></script>
 </body>
 
 </html>

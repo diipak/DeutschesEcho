@@ -47,13 +47,14 @@ app.add_middleware(
 )
 
 # API routes
-from .routers import vocab, grammar, reading, speaking, user, curriculum
+from .routers import vocab, grammar, reading, speaking, user, curriculum, live
 app.include_router(vocab.router, prefix="/api/vocab", tags=["Vocabulary"])
 app.include_router(grammar.router, prefix="/api/grammar", tags=["Grammar"])
 app.include_router(reading.router, prefix="/api/reading", tags=["Reading"])
 app.include_router(speaking.router, prefix="/api/speaking", tags=["Speaking"])
 app.include_router(user.router, prefix="/api/user", tags=["User"])
 app.include_router(curriculum.router)
+app.include_router(live.router)
 
 
 @app.get("/api/health")

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live AI Tutor - Voice Mode</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#020617", // slate-950
+              "surface-dark": "#1e293b", // slate-800
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "1rem", 
+              "lg": "2rem", 
+              "xl": "3rem", 
+              "full": "9999px"
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" }
+              }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar hide for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-pill {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display h-screen w-full overflow-hidden flex flex-col relative selection:bg-primary selection:text-slate-900">
+<!-- Background Ambient Glows -->
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob"></div>
+<div class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob animation-delay-2000"></div>
+<div class="absolute bottom-[-10%] left-[20%] w-[600px] h-[600px] bg-pink-600/10 rounded-full mix-blend-screen filter blur-[100px] opacity-30 animate-blob animation-delay-4000"></div>
+</div>
+<!-- Header -->
+<header class="relative z-20 flex justify-between items-center px-6 pt-12 pb-4 w-full">
+<!-- Back Button -->
+<button class="flex items-center justify-center w-12 h-12 rounded-full glass-pill hover:bg-white/10 transition-colors text-slate-100">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Status Pill -->
+<div class="flex items-center gap-3 px-5 py-2 rounded-full glass-pill">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="text-sm font-medium tracking-wide text-slate-200">AI is Listening...</span>
+</div>
+<!-- Settings Button -->
+<button class="flex items-center justify-center w-12 h-12 rounded-full glass-pill hover:bg-white/10 transition-colors text-slate-100">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="relative z-10 flex-1 flex flex-col items-center justify-center w-full px-6">
+<!-- Central Visualizer & Avatar Area -->
+<div class="relative w-full flex-1 flex flex-col items-center justify-center min-h-[300px]">
+<!-- Fluid Orb Visualizer Container -->
+<div class="relative w-64 h-64 flex items-center justify-center">
+<!-- Outer Glow Rings -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-500 via-blue-500 to-pink-500 opacity-20 blur-xl animate-pulse-slow"></div>
+<div class="absolute inset-4 rounded-full bg-gradient-to-bl from-blue-600 via-indigo-600 to-purple-600 opacity-30 blur-lg animate-blob"></div>
+<!-- Core Orb -->
+<div class="relative w-48 h-48 rounded-full overflow-hidden shadow-[0_0_60px_-15px_rgba(139,92,246,0.5)] bg-slate-900 border border-white/10 flex items-center justify-center">
+<!-- Dynamic wave simulation inside orb -->
+<div class="absolute w-[200%] h-[200%] bg-gradient-to-t from-indigo-500/40 via-purple-500/20 to-transparent bottom-[-50%] animate-[spin_8s_linear_infinite] rounded-[40%]"></div>
+<div class="absolute w-[200%] h-[200%] bg-gradient-to-t from-blue-500/40 via-cyan-500/20 to-transparent bottom-[-45%] animate-[spin_6s_linear_infinite_reverse] rounded-[38%] mix-blend-overlay"></div>
+<!-- Icon in center -->
+<span class="material-symbols-outlined text-white/80 text-[48px] relative z-10 drop-shadow-lg">graphic_eq</span>
+</div>
+<!-- Floating Camera Toggle (Attached visually to the orb area) -->
+<button class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-surface-dark border border-white/10 shadow-lg text-primary hover:bg-slate-700 transition-all z-20 group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">videocam</span>
+</button>
+</div>
+</div>
+<!-- Transcript & Correction Panel -->
+<div class="w-full max-w-sm mt-8 mb-6 glass-panel rounded-3xl p-5 flex flex-col gap-4 shadow-2xl relative z-20">
+<!-- Header for context -->
+<div class="flex justify-between items-center text-xs font-semibold tracking-wider text-slate-400 uppercase">
+<span>Transcript</span>
+<span class="text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+                    Correction
+                </span>
+</div>
+<!-- Incorrect Input -->
+<div class="flex items-start gap-3 opacity-60">
+<span class="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-red-400"></span>
+<p class="text-lg text-slate-300 font-medium line-through decoration-red-400/80 decoration-2">Ich bin spielen</p>
+</div>
+<!-- Corrected Output -->
+<div class="flex items-center gap-3 bg-primary/10 border border-primary/20 rounded-xl p-3 pr-4 transition-all">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-slate-900 flex-shrink-0">
+<span class="material-symbols-outlined text-[20px] font-bold">check</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xl font-bold text-white tracking-tight">Ich spiele.</p>
+<span class="text-xs text-primary/80">Verb conjugation corrected</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Control Dock -->
+<footer class="relative z-20 w-full px-6 pb-10 pt-4">
+<div class="flex items-center justify-between max-w-sm mx-auto">
+<!-- Keyboard Toggle -->
+<button class="flex items-center justify-center w-14 h-14 rounded-full bg-surface-dark/80 text-slate-300 hover:text-white hover:bg-surface-dark transition-all border border-white/5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[26px]">keyboard</span>
+</button>
+<!-- Main Mic Button (Active State) -->
+<div class="relative group">
+<!-- Pulse Effect behind button -->
+<div class="absolute inset-0 rounded-full bg-red-500/30 blur-md animate-pulse"></div>
+<button class="relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-b from-red-500 to-red-600 text-white shadow-[0_0_20px_rgba(239,68,68,0.4)] border-4 border-background-dark active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[36px] animate-pulse">mic</span>
+</button>
+</div>
+<!-- End Call Button -->
+<button class="flex items-center justify-center w-14 h-14 rounded-full bg-red-500/20 text-red-500 hover:bg-red-500 hover:text-white transition-all border border-red-500/30 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[26px]">call_end</span>
+</button>
+</div>
+<!-- Safe Area Spacer for iOS Home Indicator -->
+<div class="h-2 w-full"></div>
+</footer>
+</body></html>

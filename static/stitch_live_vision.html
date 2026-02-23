@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live AI Tutor - Vision Mode</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b34",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221011",
+                        "surface-dark": "#361a1c",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for glassmorphism and animations that Tailwind doesn't support directly or cleanly in v3 CDN */
+        .glass-panel {
+            background: rgba(34, 16, 17, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(238, 43, 52, 0.1);
+        }
+        
+        .mic-pulse {
+            box-shadow: 0 0 0 0 rgba(238, 43, 52, 0.7);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(238, 43, 52, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 20px rgba(238, 43, 52, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(238, 43, 52, 0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-hidden relative text-slate-900 dark:text-slate-100">
+<!-- Background decorative gradients -->
+<div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[100px] pointer-events-none"></div>
+<!-- Header -->
+<header class="flex items-center justify-between p-4 z-20 relative">
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 hover:bg-white/10 transition text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-white text-lg font-bold tracking-tight">Live Tutor</h2>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 hover:bg-white/10 transition text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-start px-4 pb-4 gap-6 z-10 w-full max-w-md mx-auto relative">
+<!-- Status Pill -->
+<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-dark border border-white/10 shadow-lg">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<p class="text-sm font-medium text-slate-200">🤖 AI is Seeing...</p>
+</div>
+<!-- Viewfinder Area -->
+<div class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 group">
+<!-- Simulated Camera Feed Background -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A clean, close-up photo of a ceramic coffee mug on a wooden table, simulating a camera viewfinder perspective" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKzbBTMwwmxVrnS3brO5k7tbXyWtR3W7CEqx9ccyLXK0xBpNThiPcb4062ZNxxYHjEcokr2NkKAdk0VIVaSr62-2BEkm9pFBAORp0L7LAdfNRS30PhfQFbR9cTHDX1-c82mmDbxnuH-28KukW9n9HFoEWDuD2YT4RSkZhsk5tk8lreLTx-asPiqJG_hC_iJlu6qp9_OxAKYaAfuw4E3mR-XgnFdv9MbEl0a2kU4G-WdDw974YDeQR-YaYo7N6QG3W9AR964sjmiUdK');">
+</div>
+<!-- Dark Overlay for better text readability contrast -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60"></div>
+<!-- Viewfinder Brackets -->
+<div class="absolute inset-4 pointer-events-none opacity-50">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white rounded-tl-xl"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white rounded-tr-xl"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-white rounded-bl-xl"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white rounded-br-xl"></div>
+</div>
+<!-- AR Object Label -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+<div class="size-4 rounded-full border-2 border-primary bg-primary/20 backdrop-blur-sm shadow-[0_0_15px_rgba(238,43,52,0.6)]"></div>
+<div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 shadow-xl backdrop-blur-md bg-black/40 border-white/10">
+<span class="material-symbols-outlined text-primary text-[20px]">local_cafe</span>
+<div>
+<p class="text-white font-bold text-lg leading-none">der Becher</p>
+<p class="text-xs text-slate-300 font-medium tracking-wide uppercase mt-0.5">[masc.]</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transcript / Correction Panel -->
+<div class="w-full flex flex-col gap-3">
+<!-- User Speech Bubble (Right Aligned) -->
+<div class="self-end max-w-[90%]">
+<div class="flex items-center justify-end gap-2 mb-1">
+<span class="text-xs font-medium text-primary/80 uppercase tracking-wider">You</span>
+</div>
+<div class="bg-surface-dark/90 p-4 rounded-2xl rounded-tr-sm border border-white/5 shadow-lg">
+<p class="text-base text-slate-200 leading-relaxed">
+                        Ich habe <span class="line-through decoration-primary decoration-2 opacity-60">ein</span> <span class="text-primary font-bold">einen</span> Becher...
+                    </p>
+</div>
+</div>
+<!-- AI Response Bubble (Left Aligned) -->
+<div class="self-start max-w-[90%]">
+<div class="flex items-center gap-2 mb-1">
+<div class="size-5 rounded-full bg-gradient-to-br from-primary to-rose-900 flex items-center justify-center text-[10px] font-bold text-white shadow-lg">AI</div>
+<span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Tutor</span>
+</div>
+<div class="glass-panel p-4 rounded-2xl rounded-tl-sm shadow-lg">
+<p class="text-base text-white font-medium leading-relaxed">
+                        Fast! Da "der Becher" maskulin ist, brauchst du den Akkusativ: <span class="italic text-primary-light">einen</span>.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Control Deck -->
+<div class="w-full px-6 pb-8 pt-4 z-20 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<!-- Keyboard Mode -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center text-slate-300 border border-white/5 group-hover:bg-surface-dark/80 group-hover:border-primary/30 transition-all">
+<span class="material-symbols-outlined">keyboard</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Type</span>
+</button>
+<!-- Main Microphone Action -->
+<div class="relative group">
+<!-- Pulse Effect Ring -->
+<div class="mic-pulse absolute inset-0 rounded-full bg-primary z-0"></div>
+<!-- Button -->
+<button class="relative z-10 size-20 rounded-full bg-gradient-to-b from-primary to-[#c41e26] flex items-center justify-center shadow-[0_8px_20px_rgba(238,43,52,0.4)] hover:scale-105 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-white text-[32px]">mic</span>
+</button>
+</div>
+<!-- End Session -->
+<button class="flex flex-col items-center gap-1 group">
+<div class="size-12 rounded-full bg-surface-dark flex items-center justify-center text-slate-300 border border-white/5 group-hover:bg-red-900/20 group-hover:text-red-400 group-hover:border-red-900/40 transition-all">
+<span class="material-symbols-outlined">call_end</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 uppercase tracking-wider">End</span>
+</button>
+</div>
+</div>
+</body></html>
