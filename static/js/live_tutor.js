@@ -17,6 +17,10 @@ class LiveAgentAudio {
 
         // Playback queue management
         this.playbackTime = 0;
+        this.sampleRate = 16000; // Target sample rate
+        this.downsamplingFactor = 2; // Assuming original is 44.1kHz or 48kHz
+        this.audioQueue = [];
+        this.currentSubtitle = "";
     }
 
     async start() {
@@ -30,29 +34,65 @@ class LiveAgentAudio {
             };
 
             this.ws.onmessage = async (event) => {
-                // Expected to receive Bytes (Blob) from our FastAPI backend echo server,
-                // or eventually Base64 string from Gemini.
-                let buffer;
-                if (event.data instanceof Blob) {
-                    buffer = await event.data.arrayBuffer();
-                } else if (typeof event.data === 'string') {
-                    // Try to decode Base64 if needed
-                    try {
-                        const binaryStr = atob(event.data);
+                try {
+                    const msg = JSON.parse(event.data);
+
+                    if (msg.type === "audio") {
+                        const binaryStr = atob(msg.data);
                         const len = binaryStr.length;
                         const bytes = new Uint8Array(len);
                         for (let i = 0; i < len; i++) {
                             bytes[i] = binaryStr.charCodeAt(i);
                         }
-                        buffer = bytes.buffer;
-                    } catch (e) {
-                        console.error("Failed to decode WS message string:", e);
-                        return;
-                    }
-                }
+                        this.playPcm16Audio(bytes.buffer);
 
-                if (buffer) {
-                    this.playPcm16Audio(buffer);
+                    } else if (msg.type === "ai_subtitle") {
+                        // Streaming AI output transcription — accumulate for live subtitles
+                        const subtitleEl = document.getElementById("ai-live-subtitle");
+                        if (subtitleEl && msg.data) {
+                            // Append each chunk (transcription comes word-by-word)
+                            this.currentSubtitle = (this.currentSubtitle || "") + msg.data;
+                            subtitleEl.textContent = this.currentSubtitle;
+                        }
+
+                    } else if (msg.type === "ai_english_translation") {
+                        // PASS 2: AI's English translation arrives after the turn is complete
+                        const userEl = document.getElementById("live-user-transcript");
+                        const userContainer = document.getElementById("transcript-user");
+
+                        if (userEl && userContainer && msg.data) {
+                            // Morph the transcript box into a translation box
+                            userEl.textContent = "🇬🇧 " + msg.data;
+                            userEl.classList.remove("text-slate-400");
+                            userEl.classList.add("text-blue-300", "italic");
+
+                            // Change the red dot to a blue dot for translation mode
+                            const dot = userContainer.querySelector('.bg-red-400');
+                            if (dot) {
+                                dot.classList.replace('bg-red-400', 'bg-blue-400');
+                            }
+                        }
+
+                    } else if (msg.type === "turn_complete") {
+                        // AI finished speaking — reset subtitle accumulator for next turn
+                        this.currentSubtitle = "";
+
+                        // Reset the translation box back to waiting state
+                        const userEl = document.getElementById("live-user-transcript");
+                        const userContainer = document.getElementById("transcript-user");
+                        if (userEl && userContainer) {
+                            userEl.textContent = "Listening to you...";
+                            userEl.classList.add("text-slate-400");
+                            userEl.classList.remove("text-blue-300", "italic");
+
+                            const dot = userContainer.querySelector('.bg-blue-400');
+                            if (dot) {
+                                dot.classList.replace('bg-blue-400', 'bg-red-400');
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.error("[LiveAgentAudio] Failed to parse incoming websocket message:", e);
                 }
             };
 
@@ -114,6 +154,12 @@ class LiveAgentAudio {
 
             this.isRecording = true;
             this.playbackTime = this.audioContext.currentTime;
+            this.currentSubtitle = ""; // Reset subtitles on new recording
+
+            // Clear subtitle UI
+            const subtitleEl = document.getElementById("ai-live-subtitle");
+            if (subtitleEl) subtitleEl.textContent = "";
+
             console.log("[LiveAgentAudio] Recording started...");
 
         } catch (err) {

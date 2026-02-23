@@ -542,6 +542,12 @@
                     </button>
                 </div>
 
+                <!-- AI Subtitle Floating Text -->
+                <div class="text-center px-4 mb-6 min-h-[30px]">
+                    <p id="ai-live-subtitle"
+                        class="text-xl font-bold text-white drop-shadow-lg tracking-wide transition-all"></p>
+                </div>
+
                 <!-- Live Transcript & Correction Toast -->
                 <div
                     class="bg-slate-800/60 backdrop-blur-md border border-slate-700 rounded-3xl p-5 mb-8 w-full max-w-md mx-auto shadow-xl">
@@ -556,14 +562,15 @@
                             </svg> Correction</span>
                     </div>
 
-                    <!-- User Speech (Wrong) -->
-                    <div class="text-slate-400 font-medium mb-3 flex items-center gap-2">
+                    <!-- User Speech -->
+                    <div id="transcript-user" class="text-slate-400 font-medium mb-3 flex items-center gap-2">
                         <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
-                        <p id="live-user-transcript" class="line-through decoration-red-500/50">Ich bin spielen</p>
+                        <p id="live-user-transcript" class="">Waiting for you to speak...</p>
                     </div>
 
                     <!-- AI Correction (Right) -->
-                    <div class="bg-green-900/20 border border-green-500/30 rounded-xl p-3 flex gap-3 items-start">
+                    <div id="transcript-correction"
+                        class="bg-green-900/20 border border-green-500/30 rounded-xl p-3 flex gap-3 items-start hidden">
                         <div
                             class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-900 flex-shrink-0 mt-0.5">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -572,8 +579,8 @@
                             </svg>
                         </div>
                         <div>
-                            <p id="live-ai-transcript" class="text-white font-bold text-lg">Ich spiele.</p>
-                            <p class="text-green-400/80 text-xs mt-1">Verb conjugation corrected</p>
+                            <p id="live-ai-transcript" class="text-white font-bold text-lg"></p>
+                            <p class="text-green-400/80 text-xs mt-1">Grammar Suggestion</p>
                         </div>
                     </div>
                 </div>
