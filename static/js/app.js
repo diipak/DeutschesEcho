@@ -663,47 +663,171 @@ function renderChapterList(chapters) {
     const list = document.getElementById('chapter-list');
     if (!list) return;
 
-    // Check master unlock status from first user check or derived
-    // For now assuming implicit from API response content
+    // Find active chapter (first non-completed, non-locked)
+    const activeChapter = chapters.find(c => !c.is_completed && !c.is_locked);
+    const completedChapters = chapters.filter(c => c.is_completed);
+    const lockedChapters = chapters.filter(c => c.is_locked);
 
-    list.innerHTML = chapters.map((chapter, index) => {
-        const isLocked = chapter.is_locked;
-        const isCompleted = chapter.is_completed;
-        const statusClass = isLocked ? 'opacity-50 grayscale pointer-events-none' : 'hover:scale-[1.02] active:scale-[0.98] cursor-pointer hover:shadow-lg hover:shadow-purple-500/10';
+    // Difficulty color map
+    const diffColors = {
+        'Beginner': { bg: 'bg-green-500/20', text: 'text-green-300', border: 'border-green-500/30' },
+        'Intermediate': { bg: 'bg-blue-500/20', text: 'text-blue-300', border: 'border-blue-500/30' },
+        'Advanced': { bg: 'bg-orange-500/20', text: 'text-orange-300', border: 'border-orange-500/30' },
+        'Expert': { bg: 'bg-red-500/20', text: 'text-red-300', border: 'border-red-500/30' }
+    };
 
-        let bgClass = isLocked ? 'bg-slate-800/50 border-white/5' : 'glass border-white/10';
-        let iconBg = 'bg-white/5 border-white/10';
-        let iconContent = isLocked ? '<i class="fas fa-lock text-slate-500"></i>' : `<span class="font-bold text-white/50">${chapter.id}</span>`;
+    let html = '<div class="relative"><div class="path-line"></div><div class="relative z-10">';
 
-        if (isCompleted) {
-            bgClass = 'bg-green-500/10 border-green-500/30 shadow-[0_0_15px_-3px_rgba(34,197,94,0.1)]';
-            iconBg = 'bg-green-500/20 border-green-500/30';
-            iconContent = '<i class="fas fa-check text-green-400"></i>';
-        } else if (!isLocked) {
-            // Active/Available Chapter - Add subtle gradient
-            bgClass = 'bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-white/10 hover:border-purple-500/30 backdrop-blur-xl';
-        }
+    // Active Chapter Banner (Stitch Screen 1 style)
+    if (activeChapter) {
+        const diff = diffColors[activeChapter.difficulty] || diffColors['Beginner'];
+        const vocabCount = (activeChapter.content?.key_vocab || []).length;
+        const algoCount = (activeChapter.content?.grammar_algorithms || []).length;
+        const totalItems = vocabCount + algoCount;
+        const completedItems = 0; // Future: track per-section progress
+        const progressPercent = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+        const dashArray = 175.9;
+        const dashOffset = dashArray - (dashArray * progressPercent / 100);
 
-        return `
-            <div onclick="openLesson(${chapter.id})" class="relative p-5 rounded-2xl border transition-all duration-300 ${bgClass} ${statusClass} group overflow-hidden">
-                ${!isLocked && !isCompleted ? '<div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>' : ''}
-                
-                <div class="flex items-center gap-4 relative z-10">
-                    <div class="w-12 h-12 rounded-2xl ${iconBg} flex items-center justify-center border shrink-0 shadow-inner group-hover:scale-110 transition-transform duration-300">
-                        ${iconContent}
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <div class="flex justify-between items-center mb-1">
-                            <h3 class="font-bold text-white text-lg truncate pr-2 group-hover:text-purple-300 transition-colors">${chapter.title}</h3>
-                            ${!isLocked && !isCompleted ? '<span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 text-[10px] font-bold uppercase tracking-wider shadow-[0_0_10px_-2px_rgba(168,85,247,0.4)]">Start</span>' : ''}
+        // Extract focus tags from grammar_algorithms concepts
+        const focusTags = (activeChapter.content?.grammar_algorithms || [])
+            .slice(0, 3)
+            .map(a => a.concept || a.rule_name || '')
+            .filter(Boolean);
+
+        html += `
+            <div class="mb-8">
+                <div class="glass-banner rounded-3xl p-6 relative overflow-hidden group border-t border-white/10">
+                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-900/30 rounded-full blur-[60px] pointer-events-none"></div>
+                    <div class="absolute -left-10 bottom-0 w-40 h-40 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
+                    <div class="relative z-10">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="space-y-1">
+                                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20 shadow-[0_0_10px_rgba(242,153,74,0.3)]">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                    </span>
+                                    In Progress
+                                </span>
+                                <h2 class="text-3xl font-bold text-white leading-tight pt-2">Chapter ${activeChapter.id}</h2>
+                                <p class="text-slate-300 font-medium">${activeChapter.title}</p>
+                            </div>
+                            <div class="relative h-16 w-16 flex items-center justify-center">
+                                <svg class="transform -rotate-90 w-16 h-16">
+                                    <circle class="text-slate-700" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+                                    <circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="${dashArray}" stroke-dashoffset="${dashOffset}" stroke-linecap="round" stroke-width="4" style="filter: drop-shadow(0 0 6px rgba(242,153,74,0.5))"></circle>
+                                </svg>
+                                <span class="absolute text-sm font-bold text-white">${progressPercent}%</span>
+                            </div>
                         </div>
-                        <p class="text-sm text-slate-400 truncate group-hover:text-slate-300 transition-colors">${chapter.summary}</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 ${diff.bg} rounded-md text-xs ${diff.text} border ${diff.border} backdrop-blur-sm">${activeChapter.difficulty || 'Beginner'}</span>
+                            ${focusTags.map(tag => `<span class="px-2.5 py-1 bg-white/5 rounded-md text-xs text-slate-300 border border-white/10 backdrop-blur-sm">${tag}</span>`).join('')}
+                        </div>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between text-xs font-medium text-slate-400">
+                                <span>Lesson Content</span>
+                                <span class="text-primary">${vocabCount} Vocab • ${algoCount} Rules</span>
+                            </div>
+                            <div class="h-2.5 w-full bg-slate-800/50 rounded-full overflow-hidden border border-white/5">
+                                <div class="h-full bg-gradient-to-r from-primary to-orange-400 rounded-full shadow-[0_0_12px_rgba(242,153,74,0.6)] relative" style="width: ${Math.max(progressPercent, 5)}%">
+                                    <div class="absolute right-0 top-0 bottom-0 w-1 bg-white/20"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="openLesson(${activeChapter.id})" class="w-full py-3.5 bg-primary hover:bg-orange-400 text-white rounded-xl text-sm font-bold shadow-lg shadow-orange-900/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2 group/btn">
+                            <span>Continue Learning</span>
+                            <span class="material-icons-round text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
                     </div>
-                    ${!isLocked ? '<i class="fas fa-chevron-right text-slate-600 group-hover:text-white transition-colors transform group-hover:translate-x-1"></i>' : ''}
                 </div>
-            </div>
-        `;
-    }).join('');
+            </div>`;
+    }
+
+    // Chapter list with path dots
+    html += '<div class="space-y-6 pl-8">';
+
+    // Completed chapters
+    completedChapters.forEach(chapter => {
+        const diff = diffColors[chapter.difficulty] || diffColors['Beginner'];
+        // Extract topic tags from grammar_algorithms
+        const topics = (chapter.content?.grammar_algorithms || [])
+            .slice(0, 3)
+            .map(a => a.concept || '')
+            .filter(Boolean)
+            .join(' • ');
+
+        html += `
+            <div class="relative group" onclick="openLesson(${chapter.id})">
+                <div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-primary z-10 shadow-[0_0_10px_rgba(242,153,74,0.3)] flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                </div>
+                <div class="glass p-5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer border-l-2 border-l-transparent hover:border-l-primary/50">
+                    <div class="flex items-start justify-between mb-1">
+                        <div>
+                            <span class="text-xs font-semibold text-primary uppercase tracking-wide mb-1 block">Completed</span>
+                            <h3 class="text-lg font-bold text-white">Chapter ${chapter.id}: ${chapter.title}</h3>
+                        </div>
+                        <div class="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                            <span class="material-icons-round text-green-500 text-lg">check</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-3 leading-relaxed">${chapter.summary}</p>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 ${diff.bg} rounded text-[10px] font-bold ${diff.text} border ${diff.border}">${chapter.difficulty || 'Beginner'}</span>
+                        ${topics ? `<span class="text-xs text-slate-500 font-medium">${topics}</span>` : ''}
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    // Other unlocked chapters (not active, not completed)
+    const otherUnlocked = chapters.filter(c => !c.is_completed && !c.is_locked && c !== activeChapter);
+    otherUnlocked.forEach(chapter => {
+        const diff = diffColors[chapter.difficulty] || diffColors['Beginner'];
+        html += `
+            <div class="relative group" onclick="openLesson(${chapter.id})">
+                <div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-600 group-hover:border-primary transition-colors z-10"></div>
+                <div class="glass p-5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer border-l-2 border-l-transparent hover:border-l-primary/50">
+                    <div class="flex items-start justify-between mb-1">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Available</span>
+                            <h3 class="text-lg font-bold text-white">${chapter.title}</h3>
+                        </div>
+                        <span class="px-2 py-0.5 ${diff.bg} rounded text-[10px] font-bold ${diff.text} border ${diff.border}">${chapter.difficulty || 'Beginner'}</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">${chapter.summary}</p>
+                </div>
+            </div>`;
+    });
+
+    // Locked chapters
+    lockedChapters.forEach(chapter => {
+        html += `
+            <div class="relative group opacity-60">
+                <div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-700 z-10"></div>
+                <div class="glass p-5 rounded-2xl border border-dashed border-white/10 bg-transparent hover:bg-white/5 transition-all duration-300">
+                    <div class="flex items-start justify-between mb-1">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1 block">Locked</span>
+                            <h3 class="text-lg font-bold text-slate-400">Chapter ${chapter.id}: ${chapter.title}</h3>
+                        </div>
+                        <div class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center">
+                            <span class="material-icons-round text-slate-600 text-lg">lock</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-3 leading-relaxed">${chapter.summary}</p>
+                    <div class="text-xs text-slate-600 font-medium flex items-center gap-2">
+                        <span class="material-icons-round text-[14px]">menu_book</span>
+                        <span>Complete previous chapter to unlock</span>
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    html += '</div></div></div>';
+    list.innerHTML = html;
 }
 
 window.openLesson = function (chapterId) {
@@ -713,245 +837,419 @@ window.openLesson = function (chapterId) {
     currentLessonData = chapter;
 
     document.getElementById('lesson-title').innerText = chapter.title;
-    const modal = document.getElementById('lesson-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+    document.getElementById('lesson-subtitle').innerText = chapter.content?.difficulty || 'Core Logic';
+    const screen = document.getElementById('lesson-screen');
+    screen.classList.remove('hidden');
+    screen.classList.add('flex');
 
-    // Default to Vocab tab
-    switchLessonTab('vocab');
+    renderImmersiveLesson(chapter);
+
+    // Hide main navbar so it doesn't peek through
+    const nav = document.querySelector('nav');
+    if (nav) nav.style.display = 'none';
 }
 
 window.closeLesson = function () {
-    const modal = document.getElementById('lesson-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
+    const screen = document.getElementById('lesson-screen');
+    screen.classList.add('hidden');
+    screen.classList.remove('flex');
     currentLessonId = null;
     currentLessonData = null;
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+
+    // Restore main navbar
+    const nav = document.querySelector('nav');
+    if (nav) nav.style.display = '';
 }
 
-window.switchLessonTab = function (tab) {
-    // Update tabs UI
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        if (btn.dataset.tab === tab) {
-            btn.classList.add('bg-white/10', 'text-white', 'shadow-sm');
-            btn.classList.remove('text-slate-400');
-        } else {
-            btn.classList.remove('bg-white/10', 'text-white', 'shadow-sm');
-            btn.classList.add('text-slate-400');
+window.closeExercise = function () {
+    const screen = document.getElementById('exercise-screen');
+    screen.classList.add('hidden');
+    screen.classList.remove('flex');
+}
+
+// --- SCREEN 2: Immersive Lesson Renderer ---
+
+function renderImmersiveLesson(chapter) {
+    const container = document.getElementById('lesson-content');
+    const content = chapter.content || {};
+    const algorithms = content.grammar_algorithms || [];
+    const examProtocols = content.exam_protocols || {};
+    const dataVaults = content.data_vaults || {};
+    const keyVocab = content.key_vocab || [];
+    const dialogues = content.dialogues || [];
+
+    let sections = '';
+
+    // --- Section 1: Grammar Logic Cards (Horizontal Carousel) ---
+    if (algorithms.length > 0) {
+        const carouselId = 'grammar-carousel-' + Date.now();
+        const cardsHtml = algorithms.map((algo, idx) => {
+            const concept = algo.concept || algo.rule_name || `Rule ${idx + 1}`;
+            const logic = algo.logic || algo.explanation || '';
+            const formula = algo.formula || '';
+            const examples = algo.examples || [];
+
+            const exHtml = examples.slice(0, 3).map((ex, i) => {
+                let g = '', e = '';
+                if (typeof ex === 'string') { g = ex; } else { g = ex.german || ''; e = ex.english || ''; }
+                const safe = g.replace(/'/g, "\\'");
+                const bC = i % 2 === 0 ? 'border-primary' : 'border-accent-blue';
+                const tC = i % 2 === 0 ? 'text-primary' : 'text-accent-blue';
+                return `<div onclick="playAudio('${safe}')" class="glass-card-dark p-3 rounded-xl border-l-2 ${bC} flex items-center justify-between cursor-pointer hover:bg-white/5 transition-all">
+                    <div>${e ? `<span class="text-[10px] font-bold ${tC} uppercase block mb-0.5">${e}</span>` : ''}<p class="text-lg font-medium text-white">${g}</p></div>
+                    <span class="material-icons-round text-slate-600 text-lg">volume_up</span>
+                </div>`;
+            }).join('');
+
+            return `<div class="grammar-card glass rounded-3xl overflow-hidden relative shadow-xl shadow-black/40 w-[75vw] max-w-[320px] snap-center flex-shrink-0">
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
+                <div class="p-5">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/20 text-primary border border-primary/20 uppercase tracking-wider">Grammar</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700/50 text-slate-400 border border-white/5 uppercase tracking-wider">${content.difficulty || 'A1'}</span>
+                                <span class="text-[10px] text-slate-500 ml-auto">${idx + 1}/${algorithms.length}</span>
+                            </div>
+                            <h2 class="text-xl font-bold text-white leading-tight">${concept}</h2>
+                        </div>
+                        <button onclick="playAudio('${concept.replace(/'/g, "\\'")}')" class="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors group flex-shrink-0">
+                            <span class="material-icons-round text-primary text-xl group-hover:scale-110 transition-transform">play_arrow</span>
+                        </button>
+                    </div>
+                    ${exHtml ? `<div class="space-y-2 mb-3">${exHtml}</div>` : ''}
+                    ${formula ? `<div class="p-3 rounded-xl bg-black/20 border border-white/5 mb-3"><p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Formula</p><p class="text-sm font-mono text-primary leading-relaxed">${formula}</p></div>` : ''}
+                    ${logic ? `<div class="p-3 rounded-2xl glass-inner"><p class="text-slate-300 text-sm leading-relaxed">${logic}</p></div>` : ''}
+                </div>
+            </div>`;
+        }).join('');
+
+        sections += `<div class="space-y-3 relative">
+            <div class="flex items-center justify-between px-1">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-xl">psychology</span>
+                    Grammar Logic
+                </h3>
+                <span class="text-xs text-slate-500 font-medium">${algorithms.length} Rules</span>
+            </div>
+            <div class="relative group/carousel -mx-6 w-[calc(100%+3rem)]">
+                <div id="${carouselId}" class="carousel-scroll flex gap-4 overflow-x-auto no-scrollbar pb-6 pt-2 px-[12.5vw] sm:px-[calc(50%-160px)] scroll-smooth snap-x snap-mandatory">
+                    ${cardsHtml}
+                </div>
+                ${algorithms.length > 1 ? `
+                <button onclick="scrollCarousel('${carouselId}', -1)" class="carousel-arrow carousel-arrow-left absolute left-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-slate-950/60 border border-white/10 flex items-center justify-center text-white/50 hover:bg-slate-900/90 hover:text-primary hover:border-primary/50 hover:shadow-[0_0_15px_rgba(242,153,74,0.5)] transition-all backdrop-blur-md opacity-60 group-hover/carousel:opacity-100 shadow-lg">
+                    <span class="material-icons-round text-2xl">chevron_left</span>
+                </button>
+                <button onclick="scrollCarousel('${carouselId}', 1)" class="carousel-arrow carousel-arrow-right absolute right-2 top-1/2 -translate-y-1/2 z-10 h-10 w-10 rounded-full bg-slate-950/60 border border-white/10 flex items-center justify-center text-white/50 hover:bg-slate-900/90 hover:text-primary hover:border-primary/50 hover:shadow-[0_0_15px_rgba(242,153,74,0.5)] transition-all backdrop-blur-md opacity-60 group-hover/carousel:opacity-100 shadow-lg">
+                    <span class="material-icons-round text-2xl">chevron_right</span>
+                </button>` : ''}
+            </div>
+        </div>`;
+    }
+
+    // --- Section 2: Goethe Exam Hacks ---
+    const examEntries = Object.entries(examProtocols);
+    if (examEntries.length > 0) {
+        sections += `<div class="space-y-3">
+            <h3 class="text-lg font-bold text-white px-1 flex items-center gap-2"><span class="material-symbols-outlined text-primary text-xl">school</span>Goethe Exam Hacks</h3>
+            ${examEntries.map(([section, tip]) => `<div class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/20 relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-primary/10"><span class="material-icons-round text-8xl">lightbulb</span></div>
+                <div class="relative z-10">
+                    <h4 class="text-sm font-bold text-primary mb-1">${section.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">${typeof tip === 'string' ? tip : JSON.stringify(tip)}</p>
+                </div>
+            </div>`).join('')}
+        </div>`;
+    }
+
+    // --- Section 3: Pattern Recognition (2-col grid) ---
+    if (algorithms.length >= 2) {
+        const icons = ['sync_alt', 'history', 'compare_arrows', 'swap_horiz'];
+        const colors = ['accent-pink', 'accent-blue', 'accent-purple', 'green-400'];
+        sections += `<div class="space-y-4">
+            <div class="flex items-center justify-between px-1">
+                <h3 class="text-lg font-bold text-white">Pattern Recognition</h3>
+                <span class="text-xs text-slate-500 font-medium">${Math.min(algorithms.length, 4)} Rules</span>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                ${algorithms.slice(0, 4).map((algo, i) => {
+            const ic = icons[i % icons.length], co = colors[i % colors.length];
+            return `<div class="glass p-4 rounded-2xl flex flex-col h-full border border-white/5 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity"><span class="material-icons-round text-4xl text-${co}">${ic}</span></div>
+                        <div class="mb-3"><div class="h-8 w-8 rounded-lg bg-${co}/20 flex items-center justify-center text-${co} mb-2"><span class="material-symbols-outlined text-lg">${ic}</span></div>
+                        <h4 class="text-sm font-bold text-white">${algo.concept || ''}</h4></div>
+                        <div class="mt-auto">${algo.formula ? `<div class="text-xs font-mono bg-black/20 p-2 rounded border border-white/5 text-${co}">${algo.formula}</div>` : `<p class="text-xs text-slate-400 leading-snug">${(algo.logic || '').slice(0, 60)}...</p>`}</div>
+                    </div>`;
+        }).join('')}
+            </div>
+        </div>`;
+    }
+
+    // --- Section 4: Key Vocabulary (horizontal scroll tiles) ---
+    if (keyVocab.length > 0) {
+        const vIcons = ['translate', 'abc', 'spellcheck', 'text_fields', 'font_download', 'language'];
+        const vColors = ['yellow-400', 'green-400', 'blue-400', 'purple-400', 'pink-400', 'red-400'];
+        const vocabScrollId = 'vocab-scroll-' + Date.now();
+        sections += `<div class="space-y-4 relative">
+            <div class="flex items-center justify-between px-1">
+                <h3 class="text-lg font-bold text-white">Key Vocabulary</h3>
+                <span class="text-xs text-slate-500 font-medium">${keyVocab.length} Words</span>
+            </div>
+            <div class="relative group/carousel">
+                <div id="${vocabScrollId}" class="carousel-scroll flex gap-3 overflow-x-auto no-scrollbar pb-2 -mx-2 px-2 scroll-smooth snap-x snap-mandatory">
+                    ${keyVocab.slice(0, 20).map((v, i) => {
+            const word = typeof v === 'string' ? v : (v.german || v.word || '');
+            const meaning = typeof v === 'string' ? '' : (v.english || v.meaning || v.translation || '');
+            const article = typeof v === 'object' ? (v.article || '') : '';
+            const safe = word.replace(/'/g, "\\'");
+            return `<div onclick="playAudio('${safe}')" class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 min-w-[100px] aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5 flex-shrink-0 snap-start">
+                    <span class="material-symbols-outlined text-2xl text-${vColors[i % vColors.length]}">${vIcons[i % vIcons.length]}</span>
+                    <div><span class="block text-sm font-bold text-white">${article ? article + ' ' : ''}${word}</span>${meaning ? `<span class="block text-[10px] text-slate-400">${meaning}</span>` : ''}</div>
+                </div>`;
+        }).join('')}
+                </div>
+                ${keyVocab.length > 4 ? `
+                <button onclick="scrollCarousel('${vocabScrollId}', -1)" class="carousel-arrow absolute left-0 top-1/2 -translate-y-1/2 z-10 h-8 w-8 rounded-full bg-slate-900/80 border border-white/10 flex items-center justify-center text-white/60 hover:text-primary hover:border-primary/30 hover:shadow-[0_0_12px_rgba(242,153,74,0.3)] transition-all backdrop-blur-sm opacity-0 group-hover/carousel:opacity-100">
+                    <span class="material-icons-round text-lg">chevron_left</span>
+                </button>
+                <button onclick="scrollCarousel('${vocabScrollId}', 1)" class="carousel-arrow absolute right-0 top-1/2 -translate-y-1/2 z-10 h-8 w-8 rounded-full bg-slate-900/80 border border-white/10 flex items-center justify-center text-white/60 hover:text-primary hover:border-primary/30 hover:shadow-[0_0_12px_rgba(242,153,74,0.3)] transition-all backdrop-blur-sm opacity-0 group-hover/carousel:opacity-100">
+                    <span class="material-icons-round text-lg">chevron_right</span>
+                </button>` : ''}
+            </div>
+        </div>`;
+    }
+
+    // --- Section 5: Data Vaults (expand/collapse) ---
+    const vaultEntries = Object.entries(dataVaults);
+    if (vaultEntries.length > 0) {
+        sections += `<div class="space-y-4">
+            <div class="flex items-center justify-between px-1"><h3 class="text-lg font-bold text-white">Data Vaults</h3><span class="text-xs text-slate-500 font-medium">${vaultEntries.length} Collections</span></div>
+            ${vaultEntries.map(([name, data], idx) => {
+            const displayName = name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            const items = Array.isArray(data) ? data.slice(0, 12) : Object.entries(data).slice(0, 12);
+            return `<details class="glass rounded-2xl border border-white/5 group" ${idx === 0 ? 'open' : ''}>
+                    <summary class="p-4 cursor-pointer flex items-center justify-between hover:bg-white/5 transition-colors rounded-2xl">
+                        <h4 class="text-sm font-bold text-white">${displayName}</h4>
+                        <span class="material-icons-round text-slate-500 group-open:rotate-180 transition-transform text-lg">expand_more</span>
+                    </summary>
+                    <div class="px-4 pb-4 grid grid-cols-2 gap-2">
+                        ${items.map(item => {
+                if (typeof item === 'string') return `<div class="text-xs bg-black/20 p-2 rounded border border-white/5 text-slate-300">${item}</div>`;
+                if (Array.isArray(item)) return `<div class="text-xs bg-black/20 p-2 rounded border border-white/5"><span class="text-primary font-medium">${item[0]}</span><span class="block text-slate-400 text-[10px] mt-0.5">${typeof item[1] === 'string' ? item[1] : JSON.stringify(item[1]).slice(0, 50)}</span></div>`;
+                if (typeof item === 'object') { const l = item.german || item.word || item.name || ''; const s = item.english || item.meaning || ''; return `<div class="text-xs bg-black/20 p-2 rounded border border-white/5"><span class="text-white font-medium">${l}</span>${s ? `<span class="block text-slate-500 text-[10px] mt-0.5">${s}</span>` : ''}</div>`; }
+                return '';
+            }).join('')}
+                    </div>
+                </details>`;
+        }).join('')}
+        </div>`;
+    }
+
+    // --- Section 6: Dialogue chat bubbles ---
+    if (dialogues.length > 0) {
+        const turns = dialogues[0]?.turns || [];
+        if (turns.length > 0) {
+            sections += `<div class="space-y-4">
+                <h3 class="text-lg font-bold text-white px-1 flex items-center gap-2"><span class="material-icons-round text-accent-blue text-xl">forum</span>Dialogue</h3>
+                <div class="space-y-4">${turns.map((line, i) => {
+                const sp = line.speaker || 'Speaker', tx = line.german || line.text || '', en = line.english || '';
+                const safe = tx.replace(/'/g, "\\'"), ini = sp.charAt(0).toUpperCase(), isR = i % 2 === 1;
+                return isR ? `<div class="flex flex-col items-end max-w-[85%] ml-auto space-y-1"><div class="flex items-end space-x-2 flex-row-reverse"><div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-primary/30 ml-2 bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">${ini}</div><div onclick="playAudio('${safe}')" class="relative px-4 py-3 rounded-2xl rounded-br-none glass bg-chat-right border border-primary/20 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform"><p class="text-[15px] leading-relaxed font-medium">${tx}</p>${en ? `<p class="text-xs text-primary/70 mt-1 italic">${en}</p>` : ''}</div></div><span class="text-[10px] text-slate-500 mr-10">${sp}</span></div>`
+                    : `<div class="flex flex-col items-start max-w-[85%] space-y-1"><div class="flex items-end space-x-2"><div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-white/10 bg-white/5 flex items-center justify-center text-white/60 text-xs font-bold">${ini}</div><div onclick="playAudio('${safe}')" class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform"><p class="text-[15px] leading-relaxed font-medium">${tx}</p>${en ? `<p class="text-xs text-slate-400 mt-1 italic">${en}</p>` : ''}</div></div><span class="text-[10px] text-slate-500 ml-10">${sp}</span></div>`;
+            }).join('')}</div>
+            </div>`;
         }
+    }
+
+    if (!sections) sections = '<div class="p-8 text-center text-slate-400">No content available for this chapter yet.</div>';
+    container.querySelector('.max-w-md').innerHTML = sections;
+
+    // Enable mousewheel horizontal scrolling on all carousels
+    setTimeout(() => {
+        container.querySelectorAll('.carousel-scroll').forEach(el => {
+            el.addEventListener('wheel', (e) => {
+                if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                    e.preventDefault();
+                    el.scrollBy({ left: e.deltaY * 2, behavior: 'smooth' });
+                }
+            }, { passive: false });
+
+            // 3D Cylindrical Stack Effect for Grammar Carousel
+            if (el.id.startsWith('grammar-carousel')) {
+                el.style.perspective = '1500px';
+                el.style.transformStyle = 'preserve-3d';
+
+                const update3D = () => {
+                    const containerCenter = el.getBoundingClientRect().left + el.offsetWidth / 2;
+                    const cards = el.querySelectorAll('.grammar-card');
+
+                    cards.forEach(card => {
+                        const cardRect = card.getBoundingClientRect();
+                        const cardCenter = cardRect.left + cardRect.width / 2;
+                        const distance = cardCenter - containerCenter;
+
+                        // Normalize distance relative to card width
+                        let normalized = distance / (card.offsetWidth || 300);
+                        normalized = Math.max(-1.5, Math.min(1.5, normalized)); // clamp
+
+                        // Calculate 3D transforms
+                        const rotateY = normalized * 35; // Warp left/right up to 35 deg
+                        const translateZ = Math.abs(normalized) * -150; // Push inactive cards deep (-150px)
+                        const scale = 1 - Math.abs(normalized) * 0.05; // Slightly scale down
+                        const blur = Math.abs(normalized) * 4; // Depth of field blur
+                        const zIndex = Math.round(100 - Math.abs(normalized) * 10);
+
+                        // Active card power glow
+                        const glowAlpha = Math.max(0, 1 - Math.abs(normalized) * 1.5);
+
+                        card.style.transform = `rotateY(${rotateY}deg) translateZ(${translateZ}px) scale(${scale})`;
+                        card.style.filter = `blur(${blur}px)`;
+                        card.style.zIndex = zIndex;
+                        card.style.transition = 'transform 0.1s ease-out, filter 0.1s ease-out, box-shadow 0.1s ease-out';
+
+                        if (glowAlpha > 0.1) {
+                            card.style.boxShadow = `0 10px 40px -10px rgba(0,0,0,0.8), 0 0 ${50 * glowAlpha}px ${5 * glowAlpha}px rgba(242, 153, 74, ${0.4 * glowAlpha})`;
+                            card.style.opacity = 1;
+                        } else {
+                            card.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.8)';
+                            card.style.opacity = 1 - (Math.abs(normalized) - 0.7) * 0.8;
+                        }
+                    });
+                };
+
+                el.addEventListener('scroll', () => requestAnimationFrame(update3D));
+                window.addEventListener('resize', () => requestAnimationFrame(update3D));
+                // Initial injection
+                requestAnimationFrame(update3D);
+                // Secondary check in case images load
+                setTimeout(update3D, 200);
+            }
+        });
+    }, 100);
+}
+
+// --- Carousel scroll helper ---
+window.scrollCarousel = function (id, direction) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const scrollAmount = el.clientWidth * 0.8;
+    el.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+
+// --- SCREEN 3: Logic Gate Exercise Engine ---
+let exerciseData = { questions: [], currentIndex: 0 };
+
+window.openExercise = function () {
+    if (!currentLessonData) return;
+    const algorithms = (currentLessonData.content || {}).grammar_algorithms || [];
+    if (algorithms.length === 0) { alert('No exercises for this chapter.'); return; }
+
+    exerciseData.questions = algorithms.filter(a => a.examples && a.examples.length > 0).map(algo => {
+        const ex = algo.examples[Math.floor(Math.random() * algo.examples.length)];
+        const german = typeof ex === 'string' ? ex : (ex.german || '');
+        const concept = algo.concept || algo.rule_name || '';
+        const words = german.split(/\s+/);
+        let blankIdx = words.findIndex(w => w.length >= 4);
+        if (blankIdx === -1) blankIdx = Math.min(1, words.length - 1);
+        const correctWord = words[blankIdx];
+        const distractors = algorithms.filter(a => a !== algo && a.examples?.length > 0)
+            .map(a => { const d = a.examples[0]; const dG = typeof d === 'string' ? d : (d.german || ''); return dG.split(/\s+/).filter(w => w.length >= 3)[0] || ''; })
+            .filter(w => w && w !== correctWord).slice(0, 2);
+        while (distractors.length < 2) distractors.push(words[0] || 'nicht');
+        const options = [correctWord, ...distractors].sort(() => Math.random() - 0.5);
+        return { sentence: german, concept, words, blankIdx, correctWord, options };
+    }).slice(0, 5);
+
+    exerciseData.currentIndex = 0;
+    if (exerciseData.questions.length === 0) { alert('No exercises could be generated.'); return; }
+
+    const screen = document.getElementById('exercise-screen');
+    screen.classList.remove('hidden'); screen.classList.add('flex');
+    renderExercise();
+}
+
+function renderExercise() {
+    const q = exerciseData.questions[exerciseData.currentIndex];
+    if (!q) { closeExercise(); return; }
+
+    document.getElementById('exercise-progress').innerHTML = exerciseData.questions.map((_, i) =>
+        i <= exerciseData.currentIndex ? `<div class="h-1.5 w-6 bg-primary rounded-full shadow-[0_0_8px_rgba(242,153,74,0.6)]"></div>` : `<div class="h-1.5 w-1.5 bg-slate-700 rounded-full"></div>`
+    ).join('');
+
+    const sentenceParts = q.words.map((word, i) => {
+        if (i === q.blankIdx) return `<div class="relative group mx-1" id="exercise-blank"><div class="absolute -top-10 left-1/2 w-px h-10 bg-gradient-to-b from-transparent to-primary/50"></div><div class="absolute -top-1 left-1/2 w-2 h-2 -ml-1 rounded-full bg-primary/50"></div><div id="blank-slot" class="px-6 py-2.5 rounded-xl bg-slate-800/50 border-2 border-dashed border-slate-600 text-slate-500 font-bold min-w-[80px] text-center animate-float">?</div></div>`;
+        return `<span class="px-3 py-2 rounded-lg text-slate-300 border border-transparent">${word}</span>`;
+    }).join('');
+
+    const optionsHtml = q.options.map((opt, i) => `
+        <button onclick="selectExerciseOption(${i})" id="exercise-opt-${i}" class="relative h-36 rounded-2xl glass-panel hover:bg-slate-800/60 transition-all duration-300 group flex flex-col items-center justify-between p-4 border-slate-800 hover:border-slate-600">
+            <div class="w-full flex justify-center pt-2"><span class="text-[10px] uppercase tracking-widest text-slate-500 font-mono group-hover:text-slate-300 transition-colors">${q.concept}</span></div>
+            <span class="text-xl font-medium text-slate-300 group-hover:text-white group-hover:scale-110 transition-all duration-300">${opt}</span>
+            <div class="w-8 h-1 rounded-full bg-slate-700/50 group-hover:bg-slate-600 transition-colors"></div>
+        </button>`).join('');
+
+    document.getElementById('exercise-content').innerHTML = `
+        <div class="mt-2 mb-8 flex justify-center"><div class="inline-flex items-center px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/50 shadow-lg backdrop-blur-md"><span class="material-symbols-outlined text-sm text-primary mr-2 fill-1">lightbulb</span><span class="text-xs font-mono text-slate-400 tracking-tight">CONTEXT: <span class="text-white font-semibold ml-1">${q.concept.toUpperCase()}</span></span></div></div>
+        <div class="flex-grow flex flex-col justify-center mb-6 relative">
+            <div class="absolute inset-0 z-0 opacity-30 pointer-events-none"><div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent border-t border-dashed border-slate-600"></div></div>
+            <div class="relative glass-panel rounded-2xl p-6 sm:p-8 shadow-glass z-10">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-600 to-transparent opacity-30 rounded-t-2xl"></div>
+                <div class="absolute -top-3 left-6 px-3 py-1 bg-[#0B1120] border border-slate-700 rounded-md text-[10px] sm:text-xs font-mono text-slate-400 tracking-wider shadow-lg">LOGIC_GATE_${String(exerciseData.currentIndex + 1).padStart(2, '0')}</div>
+                <div class="flex flex-wrap items-center justify-center gap-y-4 gap-x-1.5 sm:gap-x-2 text-base sm:text-lg font-medium leading-relaxed mt-6 mb-2 px-1 text-center">${sentenceParts}<span class="text-slate-500 font-serif text-xl ml-0.5">.</span></div>
+                <div id="exercise-feedback" class="mt-6 pt-5 border-t border-slate-700/30 text-center hidden"><p class="text-sm font-medium flex items-center justify-center gap-2"><span id="feedback-dot" class="w-1.5 h-1.5 rounded-full"></span><span id="feedback-text"></span></p></div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3 mb-6">${optionsHtml}</div>`;
+
+    const btn = document.getElementById('exercise-continue-btn');
+    btn.style.opacity = '0.5'; btn.style.pointerEvents = 'none';
+}
+
+window.selectExerciseOption = function (optIdx) {
+    const q = exerciseData.questions[exerciseData.currentIndex];
+    if (!q) return;
+    const selected = q.options[optIdx], isCorrect = selected === q.correctWord;
+
+    const slot = document.getElementById('blank-slot');
+    if (slot) {
+        if (isCorrect) { slot.className = 'px-6 py-2.5 rounded-xl bg-primary/10 border border-primary text-primary font-bold shadow-neon-orange flex items-center justify-center space-x-2 animate-float'; slot.innerHTML = `<span>${selected}</span><span class="material-symbols-outlined text-lg fill-1">check_circle</span>`; }
+        else { slot.className = 'px-6 py-2.5 rounded-xl bg-red-500/10 border border-red-500 text-red-400 font-bold'; slot.textContent = selected; }
+    }
+
+    q.options.forEach((opt, i) => {
+        const el = document.getElementById(`exercise-opt-${i}`);
+        if (!el) return;
+        if (i === optIdx && isCorrect) {
+            el.className = 'relative h-36 rounded-2xl glass-card-active flex flex-col items-center justify-between p-4 z-10 transform scale-105 transition-all duration-300';
+            el.innerHTML = `<div class="absolute top-3 right-3"><span class="material-symbols-outlined text-primary text-lg font-bold">check</span></div><div class="w-full flex justify-center pt-2"><span class="text-[10px] uppercase tracking-widest text-primary/80 font-mono font-bold">${q.concept}</span></div><span class="text-2xl font-bold text-white drop-shadow-[0_0_8px_rgba(242,153,74,0.5)]">${opt}</span><div class="w-full flex justify-center pb-1"><div class="h-1 w-12 bg-primary/20 rounded-full overflow-hidden"><div class="h-full bg-primary w-full shadow-[0_0_10px_#F2994A]"></div></div></div><div class="absolute inset-0 rounded-2xl bg-primary/5 blur-xl -z-10"></div>`;
+        } else if (i === optIdx) { el.className = 'relative h-36 rounded-2xl glass-panel flex flex-col items-center justify-between p-4 border border-red-500/50 opacity-60'; }
+        else { el.style.opacity = '0.4'; el.style.pointerEvents = 'none'; }
     });
 
-    renderLessonContent(currentLessonData, tab);
+    const fb = document.getElementById('exercise-feedback'), ft = document.getElementById('feedback-text'), fd = document.getElementById('feedback-dot');
+    if (fb) { fb.classList.remove('hidden'); }
+    if (isCorrect) { if (ft) { ft.textContent = `Correct! "${q.correctWord}" is right.`; ft.className = 'text-sm text-primary font-medium'; } if (fd) fd.className = 'w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_5px_rgba(242,153,74,0.8)]'; }
+    else { if (ft) { ft.textContent = `Not quite. Answer: "${q.correctWord}".`; ft.className = 'text-sm text-red-400 font-medium'; } if (fd) fd.className = 'w-1.5 h-1.5 rounded-full bg-red-400 shadow-[0_0_5px_rgba(248,113,113,0.8)]'; }
+
+    const btn = document.getElementById('exercise-continue-btn');
+    btn.style.opacity = '1'; btn.style.pointerEvents = 'auto';
 }
 
-function renderLessonContent(chapter, tab) {
-    const container = document.getElementById('lesson-content');
-    const content = chapter.content;
-
-    if (tab === 'vocab') {
-        const vocabList = content.key_vocab || [];
-        if (vocabList.length === 0) {
-            container.innerHTML = '<div class="p-8 text-center text-slate-400">No vocabulary in this lesson.</div>';
-            return;
-        }
-
-        // Stitch Vocab List Design (from stitch_grammar.html)
-        container.innerHTML = `
-            <div class="max-w-md mx-auto space-y-6 px-6 py-6 pb-40">
-                ${vocabList.map(word => {
-            let cardClass = 'card-neutral';
-            let genderColor = 'neutral';
-            let genderLabel = '';
-            let btnBg = 'bg-green-500';
-            let btnHover = 'hover:bg-green-400';
-            let btnShadow = 'shadow-green-500/30';
-            let tagBg = 'bg-green-500/20';
-            let tagText = 'text-green-200';
-            let tagBorder = 'border-green-500/30';
-
-            if (word.gender === 'masculine' || word.gender === 'der') {
-                cardClass = 'card-masculine';
-                genderColor = 'masculine';
-                genderLabel = 'Masculine';
-                btnBg = 'bg-blue-500';
-                btnHover = 'hover:bg-blue-400';
-                btnShadow = 'shadow-blue-500/30';
-                tagBg = 'bg-blue-500/20';
-                tagText = 'text-blue-200';
-                tagBorder = 'border-blue-500/30';
-            } else if (word.gender === 'feminine' || word.gender === 'die') {
-                cardClass = 'card-feminine';
-                genderColor = 'feminine';
-                genderLabel = 'Feminine';
-                btnBg = 'bg-red-500';
-                btnHover = 'hover:bg-red-400';
-                btnShadow = 'shadow-red-500/30';
-                tagBg = 'bg-red-500/20';
-                tagText = 'text-red-200';
-                tagBorder = 'border-red-500/30';
-            } else if (word.gender === 'neutral' || word.gender === 'das') {
-                cardClass = 'card-neutral';
-                genderColor = 'neutral';
-                genderLabel = 'Neutral';
-                btnBg = 'bg-green-500';
-                btnHover = 'hover:bg-green-400';
-                btnShadow = 'shadow-green-500/30';
-                tagBg = 'bg-green-500/20';
-                tagText = 'text-green-200';
-                tagBorder = 'border-green-500/30';
-            }
-
-            const safeGerman = (word.german || '').replace(/'/g, "\\'");
-            const example = word.example || '';
-
-            return `
-                <div class="glass ${cardClass} rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
-                    <div class="p-6 pb-2 relative z-10">
-                        ${genderLabel ? `
-                        <div class="flex justify-end mb-2">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium ${tagBg} ${tagText} border ${tagBorder}">${genderLabel}</span>
-                        </div>` : ''}
-                        <div class="flex items-center justify-between gap-4 mb-4">
-                            <div class="flex-1">
-                                <h3 class="text-3xl font-bold text-white mb-1 tracking-tight">${word.german}</h3>
-                                <p class="text-slate-400 font-medium">${word.english}</p>
-                            </div>
-                            <button onclick="playAudio('${safeGerman}')" class="h-14 w-14 flex-shrink-0 rounded-full ${btnBg} text-white flex items-center justify-center ${btnHover} shadow-lg ${btnShadow} transition-all active:scale-95">
-                                <i class="fas fa-play text-xl"></i>
-                            </button>
-                        </div>
-                    </div>
-                    ${example ? `
-                    <div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
-                        <p class="text-slate-300 text-sm leading-relaxed italic">"${example}"</p>
-                    </div>` : ''}
-                </div>`;
-        }).join('')}
-            </div>
-        `;
-    } else if (tab === 'grammar') {
-        const rules = content.grammar_rules || [];
-        if (rules.length === 0) {
-            container.innerHTML = '<div class="p-8 text-center text-slate-400">No grammar rules in this lesson.</div>';
-            return;
-        }
-
-        // Stitch Grammar Design — glass cards with gender-coded examples
-        container.innerHTML = `
-            <div class="max-w-md mx-auto space-y-6 px-6 py-6 pb-40">
-                ${rules.map((rule, idx) => {
-            const examplesHtml = (rule.examples && rule.examples.length > 0) ? `
-                    <div class="mx-2 mb-2 space-y-2">
-                        <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-2 pt-2">Examples</p>
-                        ${rule.examples.map(ex => {
-                let germanText = '';
-                let englishText = '';
-                if (typeof ex === 'string') {
-                    germanText = ex;
-                } else {
-                    germanText = ex.german || '';
-                    englishText = ex.english || '';
-                }
-                const safeExGerman = germanText.replace(/'/g, "\\'");
-                return `
-                        <div onclick="playAudio('${safeExGerman}')" class="p-4 rounded-2xl glass-inner cursor-pointer hover:bg-white/5 transition-all">
-                            <p class="text-slate-300 text-sm leading-relaxed">
-                                <span class="text-white font-medium">${germanText}</span>
-                            </p>
-                            ${englishText ? `<p class="text-slate-500 text-xs mt-1">${englishText}</p>` : ''}
-                        </div>`;
-            }).join('')}
-                    </div>` : '';
-
-            return `
-                <div class="glass card-masculine rounded-3xl overflow-hidden relative group transition-all duration-300 hover:scale-[1.01]">
-                    <div class="p-6 pb-2 relative z-10">
-                        <div class="flex justify-end mb-2">
-                            <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-200 border border-blue-500/30">Rule ${idx + 1}</span>
-                        </div>
-                        <div class="flex items-center justify-between gap-4 mb-4">
-                            <div class="flex-1">
-                                <h3 class="text-2xl font-bold text-white mb-1 tracking-tight">${rule.rule_name}</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mx-2 mb-2 p-4 rounded-2xl glass-inner">
-                        <p class="text-slate-300 text-sm leading-relaxed">${rule.explanation || rule.logic || 'No explanation available.'}</p>
-                    </div>
-                    ${examplesHtml}
-                </div>`;
-        }).join('')}
-            </div>
-        `;
-    } else if (tab === 'dialogue') {
-        const content = chapter.content;
-        let dialogueLines = [];
-
-        if (content.dialogues && Array.isArray(content.dialogues) && content.dialogues.length > 0) {
-            dialogueLines = content.dialogues[0].turns || [];
-        } else if (content.dialogue) {
-            if (!Array.isArray(content.dialogue) && typeof content.dialogue === 'object') {
-                dialogueLines = Object.entries(content.dialogue).map(([key, text]) => {
-                    return { speaker: key, german: text };
-                });
-            } else {
-                dialogueLines = content.dialogue;
-            }
-        }
-
-        if (dialogueLines.length === 0) {
-            container.innerHTML = '<div class="p-8 text-center text-slate-400">No dialogue in this lesson.</div>';
-            return;
-        }
-
-        // Stitch Dialogue Design (from stitch_dialogue.html)
-        container.innerHTML = `
-            <div class="px-4 py-6 space-y-6 pb-40">
-                ${dialogueLines.map((line, i) => {
-            const speakerName = line.speaker || 'Unknown';
-            const isRight = i % 2 === 1; // Alternate speakers
-            const text = line.german || line.text || '';
-            const english = line.english || '';
-            const safeText = text.replace(/'/g, "\\'");
-            const initials = speakerName.charAt(0).toUpperCase();
-
-            if (isRight) {
-                return `
-                <div class="flex flex-col items-end max-w-[85%] ml-auto space-y-1">
-                    <div class="flex items-end space-x-2 flex-row-reverse">
-                        <div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-primary/30 ml-2 bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">${initials}</div>
-                        <div class="relative px-4 py-3 rounded-2xl rounded-br-none glass bg-chat-right border border-primary/20 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform" onclick="playAudio('${safeText}')">
-                            <p class="text-[15px] leading-relaxed font-medium">${text}</p>
-                            ${english ? `<p class="text-xs text-primary/70 mt-1 italic">${english}</p>` : ''}
-                            <button class="absolute -left-10 bottom-0 text-primary p-2" onclick="event.stopPropagation(); playAudio('${safeText}')">
-                                <i class="fas fa-volume-up text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <span class="text-[10px] text-slate-500 mr-10">${speakerName}</span>
-                </div>`;
-            } else {
-                return `
-                <div class="flex flex-col items-start max-w-[85%] space-y-1">
-                    <div class="flex items-end space-x-2">
-                        <div class="w-8 h-8 rounded-full flex-shrink-0 border-2 border-white/10 bg-white/5 flex items-center justify-center text-white/60 text-xs font-bold">${initials}</div>
-                        <div class="relative px-4 py-3 rounded-2xl rounded-bl-none glass bg-chat-left border border-white/5 text-slate-100 shadow-xl cursor-pointer active:scale-95 transition-transform" onclick="playAudio('${safeText}')">
-                            <p class="text-[15px] leading-relaxed font-medium">${text}</p>
-                            ${english ? `<p class="text-xs text-slate-400 mt-1 italic">${english}</p>` : ''}
-                            <button class="absolute -right-10 bottom-0 text-primary p-2" onclick="event.stopPropagation(); playAudio('${safeText}')">
-                                <i class="fas fa-volume-up text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <span class="text-[10px] text-slate-500 ml-10">${speakerName}</span>
-                </div>`;
-            }
-        }).join('')}
-            </div>
-        `;
+window.nextExercise = function () {
+    exerciseData.currentIndex++;
+    if (exerciseData.currentIndex >= exerciseData.questions.length) {
+        closeExercise();
+        if (window.confetti) confetti({ particleCount: 100, spread: 60, origin: { y: 0.6 } });
+        return;
     }
+    renderExercise();
 }
+
+
+
+
+
 
 window.completeLesson = async function () {
     if (!currentLessonId) return;

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masterclass Curriculum Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F2994A", // Brand Orange
+                        "primary-dark": "#C06F28",
+                        "background-dark": "#020617", // Slate-950
+                        "card-blue": "#1e293b", // Dark blue for banner background base
+                        "glass-border": "rgba(255, 255, 255, 0.08)",
+                        "glass-surface": "rgba(255, 255, 255, 0.05)",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(242, 153, 74, 0.15)',
+                        'glow-sm': '0 0 10px rgba(242, 153, 74, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        .glass-banner {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        .path-line {
+            position: absolute;
+            left: 2rem;
+            top: 4rem;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(242, 153, 74, 0.3), rgba(255,255,255,0.05) 40%, rgba(255,255,255,0.02));
+            z-index: 0;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark text-slate-100 min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 pt-12 pb-4 bg-background-dark/90 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center justify-between px-6 max-w-md mx-auto">
+<div>
+<span class="text-xs font-medium text-primary uppercase tracking-wider">DeutschesEcho Masterclass</span>
+<h1 class="text-xl font-bold tracking-tight text-white mt-0.5">Your Curriculum</h1>
+</div>
+<div class="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+<img alt="User Profile" class="h-full w-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHxjOKYW5kF91AmIrUi-s5NEsEyaTSHJKNHcYeohYHbBuMYuOBRM1WElOBQHtm3R2shjzi0ExQofN6ax-Wl_uCXEU7kspXdkXCsZichMCa31wWR9o2YL1zhjAcDx-Eln5uHPUemG87pmkvo7H3y1xPkuuzz7NGaJg0lYJw3aEAS44DZhx9b1gaVtj0zohQz2upX2qnt3WXDiYXfxhTeK7gSKtx5LGzNF16wEToaYYPtv_WNSFPkTVk-10hFohm5_SfHBNOLdYDDuqO"/>
+</div>
+</div>
+</header>
+<main class="flex-1 px-6 pb-32 max-w-md mx-auto w-full relative">
+<div class="path-line"></div>
+<div class="relative z-10 mt-6 mb-12">
+<div class="glass-banner rounded-3xl p-6 relative overflow-hidden group border-t border-white/10">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-blue-900/30 rounded-full blur-[60px] pointer-events-none"></div>
+<div class="absolute -left-10 bottom-0 w-40 h-40 bg-primary/10 rounded-full blur-[40px] pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<div class="space-y-1">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20 shadow-glow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                                In Progress
+                            </span>
+<h2 class="text-3xl font-bold text-white leading-tight pt-2">Chapter 7</h2>
+<p class="text-slate-300 font-medium">German Business Etiquette</p>
+</div>
+<div class="relative h-16 w-16 flex items-center justify-center">
+<svg class="transform -rotate-90 w-16 h-16">
+<circle class="text-slate-700" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-primary shadow-glow" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="61.5" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-sm font-bold text-white">65%</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 bg-white/5 rounded-md text-xs text-slate-300 border border-white/10 backdrop-blur-sm">Formal Address</span>
+<span class="px-2.5 py-1 bg-white/5 rounded-md text-xs text-slate-300 border border-white/10 backdrop-blur-sm">Email Writing</span>
+<span class="px-2.5 py-1 bg-white/5 rounded-md text-xs text-slate-300 border border-white/10 backdrop-blur-sm">Negotiation</span>
+</div>
+<div class="space-y-2 mb-6">
+<div class="flex justify-between text-xs font-medium text-slate-400">
+<span>Sprint Completion</span>
+<span class="text-primary">12/18 Lessons</span>
+</div>
+<div class="h-2.5 w-full bg-slate-800/50 rounded-full overflow-hidden border border-white/5">
+<div class="h-full bg-gradient-to-r from-primary to-orange-400 rounded-full w-[65%] shadow-[0_0_12px_rgba(242,153,74,0.6)] relative">
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-white/20"></div>
+</div>
+</div>
+</div>
+<button class="w-full py-3.5 bg-primary hover:bg-orange-400 text-white rounded-xl text-sm font-bold shadow-lg shadow-orange-900/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2 group/btn">
+<span>Continue Lesson 13</span>
+<span class="material-icons-round text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="space-y-6 relative z-10 pl-8">
+<div class="relative group">
+<div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-primary z-10 shadow-glow-sm flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+<div class="glass p-5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer border-l-2 border-l-transparent hover:border-l-primary/50">
+<div class="flex items-start justify-between mb-1">
+<div>
+<span class="text-xs font-semibold text-primary uppercase tracking-wide mb-1 block">Completed</span>
+<h3 class="text-lg font-bold text-white">Chapter 6: Complex Grammar</h3>
+</div>
+<div class="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
+<span class="material-icons-round text-green-500 text-lg">check</span>
+</div>
+</div>
+<p class="text-sm text-slate-400 mb-3 leading-relaxed">Mastering sentence structures and nuanced expression.</p>
+<div class="text-xs text-slate-500 font-medium flex items-center gap-2">
+<span class="material-icons-round text-[14px]">school</span>
+<span>Subjunctive II • Passive Voice • Connectors</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-600 group-hover:border-primary transition-colors z-10"></div>
+<div class="glass p-5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer border-l-2 border-l-transparent hover:border-l-primary/50">
+<div class="flex items-start justify-between mb-1">
+<div>
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Completed</span>
+<h3 class="text-lg font-bold text-white">Chapter 5: Traveling &amp; Transport</h3>
+</div>
+<div class="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
+<span class="material-icons-round text-green-500 text-lg">check</span>
+</div>
+</div>
+<p class="text-sm text-slate-400 mb-3 leading-relaxed">Navigating German cities and transport systems.</p>
+<div class="text-xs text-slate-500 font-medium flex items-center gap-2">
+<span class="material-icons-round text-[14px]">train</span>
+<span>Ticket Buying • Directions • Schedules</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-600 group-hover:border-primary transition-colors z-10"></div>
+<div class="glass p-5 rounded-2xl hover:bg-white/10 transition-all duration-300 cursor-pointer border-l-2 border-l-transparent hover:border-l-primary/50">
+<div class="flex items-start justify-between mb-1">
+<div>
+<span class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1 block">Completed</span>
+<h3 class="text-lg font-bold text-white">Chapter 4: Social Interactions</h3>
+</div>
+<div class="h-8 w-8 rounded-full bg-green-500/20 flex items-center justify-center">
+<span class="material-icons-round text-green-500 text-lg">check</span>
+</div>
+</div>
+<p class="text-sm text-slate-400 mb-3 leading-relaxed">Building friendships and social networking.</p>
+<div class="text-xs text-slate-500 font-medium flex items-center gap-2">
+<span class="material-icons-round text-[14px]">groups</span>
+<span>Party Talk • Invitations • Small Talk</span>
+</div>
+</div>
+</div>
+<div class="relative group opacity-60">
+<div class="absolute -left-[2.45rem] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-slate-800 border-2 border-slate-700 z-10"></div>
+<div class="glass p-5 rounded-2xl border border-dashed border-white/10 bg-transparent hover:bg-white/5 transition-all duration-300">
+<div class="flex items-start justify-between mb-1">
+<div>
+<span class="text-xs font-semibold text-slate-600 uppercase tracking-wide mb-1 block">Locked</span>
+<h3 class="text-lg font-bold text-slate-400">Chapter 3: Foundations II</h3>
+</div>
+<div class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center">
+<span class="material-icons-round text-slate-600 text-lg">lock</span>
+</div>
+</div>
+<p class="text-sm text-slate-500 mb-3 leading-relaxed">Expanding vocabulary and basic grammar concepts.</p>
+<div class="text-xs text-slate-600 font-medium flex items-center gap-2">
+<span class="material-icons-round text-[14px]">menu_book</span>
+<span>Review previous chapters to access</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent z-20 pointer-events-none"></div>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 safe-area-bottom z-50">
+<div class="max-w-md mx-auto flex justify-around items-center px-4 py-3">
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-primary relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-b-full shadow-[0_0_10px_rgba(242,153,74,0.8)]"></div>
+<span class="material-symbols-outlined text-2xl fill-current animate-pulse">school</span>
+<span class="text-[10px] font-medium">Learn</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">leaderboard</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-white transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+
+</body></html>

@@ -1,0 +1,1679 @@
+[
+    {
+        "chapter_id": 10,
+        "title": "Accusative Case & Professions",
+        "difficulty": "Advanced",
+        "summary": "Accusative articles, accusative pronouns, adjective endings in accusative, negation with keinen, professions.",
+        "source_pages": "605-677",
+        "exam_protocols": {
+            "lesen_teil_2": "Crucial for identifying exactly what someone needs in an advertisement ('Er sucht *einen* Job').",
+            "sprechen_teil_3": "When pulling a card, you must use accusative to ask for the item: 'Ich brauche *einen* Stift'."
+        },
+        "grammar_algorithms": [
+            {
+                "concept": "The Accusative Article Mutation",
+                "logic": "ONLY the masculine gender changes. der→den, ein→einen, kein→keinen. Feminine, Neutral, and Plural stay the same.",
+                "formula": "Masculine ONLY: der→den | ein→einen | kein→keinen",
+                "examples": [
+                    "Ich kaufe den Tisch (der→den)",
+                    "Ich kaufe einen Tisch (ein→einen)",
+                    "Ich sehe die Katze (no change)"
+                ]
+            },
+            {
+                "concept": "Finding Subject vs Object",
+                "logic": "Subject (Nominativ) = WHO does action. Object (Akkusativ) = WHAT receives action.",
+                "formula": "Who verb? = Subject | What gets verbed? = Object",
+                "examples": [
+                    "Peter kauft den Tisch (Peter=subject, Tisch=object)",
+                    "Der Hund sieht die Katze (Hund=subject, Katze=object)"
+                ]
+            },
+            {
+                "concept": "Sein always takes Nominativ",
+                "logic": "After the verb 'sein', always use Nominativ (not Akkusativ). The second noun defines the subject.",
+                "formula": "sein + Nominativ (always!)",
+                "examples": [
+                    "Das ist ein guter Mann (NOT: einen guten Mann)",
+                    "Sie ist eine Ärztin"
+                ]
+            },
+            {
+                "concept": "Accusative Adjective Endings",
+                "logic": "Same as Nominativ EXCEPT masculine: definite→-en, indefinite→-en.",
+                "formula": "Masculine Akk: always -en | Rest: same as Nom",
+                "examples": [
+                    "Ich sehe den alten Mann (-en)",
+                    "Ich kaufe einen neuen Tisch (-en)",
+                    "Ich sehe die schöne Frau (-e, no change)"
+                ]
+            },
+            {
+                "concept": "Accusative Personal Pronouns Mapping",
+                "logic": "Pronouns change when they are the direct object.",
+                "mapping": "ich→mich, du→dich, er→ihn, sie→sie, es→es, wir→uns, ihr→euch, Sie→Sie"
+            }
+        ],
+        "declension_tables": [
+            {
+                "case": "Akkusativ",
+                "definite": {
+                    "masculine": "den",
+                    "feminine": "die",
+                    "neutral": "das",
+                    "plural": "die"
+                },
+                "indefinite": {
+                    "masculine": "einen",
+                    "feminine": "eine",
+                    "neutral": "ein",
+                    "plural": "—"
+                },
+                "negative": {
+                    "masculine": "keinen",
+                    "feminine": "keine",
+                    "neutral": "kein",
+                    "plural": "keine"
+                }
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "der Lehrer / die Lehrerin",
+                "english": "teacher (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Arzt / die Ärztin",
+                "english": "doctor (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Ingenieur / die Ingenieurin",
+                "english": "engineer (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Bäcker / die Bäckerin",
+                "english": "baker (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Koch / die Köchin",
+                "english": "cook (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Kellner / die Kellnerin",
+                "english": "waiter/waitress",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Verkäufer / die Verkäuferin",
+                "english": "salesperson (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "der Programmierer / die Programmiererin",
+                "english": "programmer (m/f)",
+                "gender": "none",
+                "category": "professions"
+            },
+            {
+                "german": "arbeiten",
+                "english": "to work",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "suchen",
+                "english": "to search/look for",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "sehen",
+                "english": "to see",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "mich",
+                "english": "me (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "dich",
+                "english": "you (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "ihn",
+                "english": "him (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "sie",
+                "english": "her (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "uns",
+                "english": "us (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            },
+            {
+                "german": "euch",
+                "english": "you all (accusative)",
+                "gender": "none",
+                "category": "pronouns"
+            }
+        ],
+        "data_vaults": {
+            "akkusativ_trigger_verbs": [
+                {
+                    "verb": "abholen",
+                    "english": "to pick up",
+                    "example": "Kannst du mich nach der Arbeit abholen?"
+                },
+                {
+                    "verb": "anrufen",
+                    "english": "to call",
+                    "example": "Ich rufe dich heute Abend an."
+                },
+                {
+                    "verb": "bauen",
+                    "english": "to build",
+                    "example": "Sie bauen gerade eine neue Schule in der Stadt."
+                },
+                {
+                    "verb": "beantworten",
+                    "english": "to answer",
+                    "example": "Er beantwortet alle Fragen sehr schnell."
+                },
+                {
+                    "verb": "bearbeiten",
+                    "english": "to edit/process",
+                    "example": "Bitte bearbeiten Sie die Dateien bis morgen."
+                },
+                {
+                    "verb": "bedienen",
+                    "english": "to serve",
+                    "example": "Der Verkäufer bedient einen neuen Kunden."
+                },
+                {
+                    "verb": "beeinflussen",
+                    "english": "to influence",
+                    "example": "Kann Musik unsere Stimmung beeinflussen?"
+                },
+                {
+                    "verb": "bekämpfen",
+                    "english": "to fight/combat",
+                    "example": "Die Feuerwehr bekämpfte das Feuer erfolgreich."
+                },
+                {
+                    "verb": "benutzen",
+                    "english": "to use",
+                    "example": "Wir benutzen dieses Zimmer als Büro."
+                },
+                {
+                    "verb": "bestehen",
+                    "english": "to pass",
+                    "example": "Sie hat die Fahrprüfung bestanden."
+                },
+                {
+                    "verb": "besuchen",
+                    "english": "to visit",
+                    "example": "Ich besuche meine Großeltern einmal im Monat."
+                },
+                {
+                    "verb": "bezahlen",
+                    "english": "to pay",
+                    "example": "Kannst du die Rechnung bitte bezahlen?"
+                },
+                {
+                    "verb": "brauchen",
+                    "english": "to need",
+                    "example": "Ich brauche eine neue Tasche."
+                },
+                {
+                    "verb": "empfangen",
+                    "english": "to receive/welcome",
+                    "example": "Der Gastgeber empfängt die Gäste herzlich."
+                },
+                {
+                    "verb": "entwickeln",
+                    "english": "to develop",
+                    "example": "Wir entwickeln eine App für Online-Banking."
+                },
+                {
+                    "verb": "erhalten",
+                    "english": "to receive",
+                    "example": "Ich habe eine Einladung zur Party erhalten."
+                },
+                {
+                    "verb": "erwarten",
+                    "english": "to expect",
+                    "example": "Wir erwarten ein wichtiges Paket."
+                },
+                {
+                    "verb": "essen",
+                    "english": "to eat",
+                    "example": "Zum Mittagessen esse ich eine Pizza."
+                },
+                {
+                    "verb": "finden",
+                    "english": "to find",
+                    "example": "Findest du den Film interessant?"
+                },
+                {
+                    "verb": "genießen",
+                    "english": "to enjoy",
+                    "example": "Ich genieße den Sonnenuntergang."
+                },
+                {
+                    "verb": "gründen",
+                    "english": "to found/establish",
+                    "example": "Er möchte ein eigenes Unternehmen gründen."
+                },
+                {
+                    "verb": "haben",
+                    "english": "to have",
+                    "example": "Haben Sie noch Fragen?"
+                },
+                {
+                    "verb": "hinterlassen",
+                    "english": "to leave behind",
+                    "example": "Bitte hinterlassen Sie eine Nachricht."
+                },
+                {
+                    "verb": "holen",
+                    "english": "to fetch",
+                    "example": "Kannst du bitte den Schlüssel holen?"
+                },
+                {
+                    "verb": "hören",
+                    "english": "to hear/listen",
+                    "example": "Ich höre gern klassische Musik."
+                },
+                {
+                    "verb": "kennen",
+                    "english": "to know",
+                    "example": "Kennst du die Antwort?"
+                },
+                {
+                    "verb": "kennenlernen",
+                    "english": "to get to know",
+                    "example": "Wir haben uns im Urlaub kennengelernt."
+                },
+                {
+                    "verb": "kochen",
+                    "english": "to cook",
+                    "example": "Ich koche heute Abend Spaghetti."
+                },
+                {
+                    "verb": "kopieren",
+                    "english": "to copy",
+                    "example": "Kannst du die Datei für mich kopieren?"
+                },
+                {
+                    "verb": "lesen",
+                    "english": "to read",
+                    "example": "Ich lese gerade ein interessantes Buch."
+                },
+                {
+                    "verb": "lieben",
+                    "english": "to love",
+                    "example": "Sie liebt ihre Arbeit."
+                },
+                {
+                    "verb": "lösen",
+                    "english": "to solve",
+                    "example": "Ich kann diese Matheaufgabe nicht lösen."
+                },
+                {
+                    "verb": "mögen",
+                    "english": "to like",
+                    "example": "Magst du italienisches Essen?"
+                },
+                {
+                    "verb": "nehmen",
+                    "english": "to take",
+                    "example": "Ich nehme einen Kaffee, bitte."
+                },
+                {
+                    "verb": "öffnen",
+                    "english": "to open",
+                    "example": "Öffnen Sie bitte die Tür."
+                },
+                {
+                    "verb": "planen",
+                    "english": "to plan",
+                    "example": "Wir planen einen Kurztrip nach Italien."
+                },
+                {
+                    "verb": "präsentieren",
+                    "english": "to present",
+                    "example": "Der Schüler präsentiert sein Projekt."
+                },
+                {
+                    "verb": "respektieren",
+                    "english": "to respect",
+                    "example": "Wir respektieren die Meinungen anderer."
+                },
+                {
+                    "verb": "riechen",
+                    "english": "to smell",
+                    "example": "Diese Blume riecht wunderbar."
+                },
+                {
+                    "verb": "schließen",
+                    "english": "to close",
+                    "example": "Bitte schließen Sie die Fenster."
+                },
+                {
+                    "verb": "sehen",
+                    "english": "to see",
+                    "example": "Siehst du den Regenbogen?"
+                },
+                {
+                    "verb": "speichern",
+                    "english": "to save",
+                    "example": "Hast du das Dokument gespeichert?"
+                },
+                {
+                    "verb": "stehlen",
+                    "english": "to steal",
+                    "example": "Jemand hat meine Tasche gestohlen."
+                },
+                {
+                    "verb": "stören",
+                    "english": "to disturb",
+                    "example": "Störst du mich absichtlich?"
+                },
+                {
+                    "verb": "suchen",
+                    "english": "to search",
+                    "example": "Ich suche meine Brille."
+                },
+                {
+                    "verb": "trinken",
+                    "english": "to drink",
+                    "example": "Ich trinke gerne Tee mit Honig."
+                },
+                {
+                    "verb": "übersetzen",
+                    "english": "to translate",
+                    "example": "Ich habe den Text ins Englische übersetzt."
+                },
+                {
+                    "verb": "untersuchen",
+                    "english": "to examine",
+                    "example": "Der Arzt untersucht den Patienten."
+                },
+                {
+                    "verb": "verarbeiten",
+                    "english": "to process",
+                    "example": "Dieses Programm verarbeitet große Datenmengen."
+                },
+                {
+                    "verb": "vereinbaren",
+                    "english": "to arrange",
+                    "example": "Können wir einen Termin vereinbaren?"
+                },
+                {
+                    "verb": "vergessen",
+                    "english": "to forget",
+                    "example": "Ich habe mein Handy zu Hause vergessen."
+                },
+                {
+                    "verb": "verstehen",
+                    "english": "to understand",
+                    "example": "Ich verstehe das Problem nicht."
+                },
+                {
+                    "verb": "vorbereiten",
+                    "english": "to prepare",
+                    "example": "Der Lehrer bereitet den Unterricht vor."
+                },
+                {
+                    "verb": "würzen",
+                    "english": "to season",
+                    "example": "Sie würzt die Suppe mit frischen Kräutern."
+                }
+            ]
+        },
+        "dialogues": [
+            {
+                "context": "Talking about professions",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ich suche einen Job.",
+                        "english": "I am looking for a job."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Hast du den Chef angerufen?",
+                        "english": "Did you call the boss?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Nein, ich rufe ihn gleich an.",
+                        "english": "No, I'll call him right away."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "chapter_id": 11,
+        "title": "Possessive Articles & Clothing",
+        "difficulty": "Intermediate",
+        "summary": "Possessive articles (mein, dein, sein...) in Nominative and Accusative, clothing vocabulary.",
+        "source_pages": "678-728",
+        "exam_protocols": {
+            "sprechen_teil_1": "During self-introduction, expect questions like 'Wie ist *Ihre* Telefonnummer?' Know your possessives.",
+            "hören_teil_1": "Listen for the mutated plural noun endings to distinguish if someone bought one item or multiple."
+        },
+        "grammar_algorithms": [
+            {
+                "concept": "Possessive Articles in Nominative (The Root)",
+                "logic": "Used WITH a noun. They take the same endings as the indefinite article 'ein/eine/ein'.",
+                "roots": "ich→mein, du→dein, er/es→sein, sie→ihr, wir→unser, ihr→euer, sie/Sie→ihr/Ihr"
+            },
+            {
+                "concept": "Possessive Article Endings in Accusative",
+                "logic": "Possessives follow the same endings as 'ein'. Accusative masculine: add -en.",
+                "formula": "Possessives use ein-endings | Akk masc: -en",
+                "examples": [
+                    "Nominativ: mein Hund, meine Katze, mein Buch",
+                    "Akkusativ: meinen Hund, meine Katze, mein Buch",
+                    "Plural: meine Hunde"
+                ]
+            },
+            {
+                "concept": "Possessive Pronouns vs Articles",
+                "logic": "Articles sit WITH the noun (mein Auto). Pronouns REPLACE the noun and take the gender's ending (Das ist meins).",
+                "examples": [
+                    "Ist das dein Auto? Ja, das ist meins."
+                ]
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "mein",
+                "english": "my",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "dein",
+                "english": "your (informal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "sein",
+                "english": "his/its",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "ihr",
+                "english": "her/their",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "unser",
+                "english": "our",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "euer",
+                "english": "your (pl informal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "Ihr",
+                "english": "your (formal)",
+                "gender": "none",
+                "category": "possessives"
+            },
+            {
+                "german": "das T-Shirt",
+                "english": "t-shirt",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "das Hemd",
+                "english": "shirt",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "die Bluse",
+                "english": "blouse",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Pullover",
+                "english": "sweater",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Jacke",
+                "english": "jacket",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Hose",
+                "english": "pants",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Rock",
+                "english": "skirt",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "das Kleid",
+                "english": "dress",
+                "gender": "neutral",
+                "category": "clothing"
+            },
+            {
+                "german": "die Schuhe",
+                "english": "shoes",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Socken",
+                "english": "socks",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Mantel",
+                "english": "coat",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Hut",
+                "english": "hat",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Mütze",
+                "english": "cap/beanie",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "der Schal",
+                "english": "scarf",
+                "gender": "masculine",
+                "category": "clothing"
+            },
+            {
+                "german": "die Handschuhe",
+                "english": "gloves",
+                "gender": "feminine",
+                "category": "clothing"
+            },
+            {
+                "german": "tragen",
+                "english": "to wear/carry",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "anziehen",
+                "english": "to put on (clothes)",
+                "gender": "none",
+                "category": "verbs"
+            },
+            {
+                "german": "ausziehen",
+                "english": "to take off (clothes)",
+                "gender": "none",
+                "category": "verbs"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Talking about clothes",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ist das dein Pullover?",
+                        "english": "Is that your sweater?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Nein, das ist nicht mein Pullover.",
+                        "english": "No, that is not my sweater."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Was trägst du heute?",
+                        "english": "What are you wearing today?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ich trage ein Hemd und eine Hose.",
+                        "english": "I'm wearing a shirt and pants."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "chapter_id": 12,
+        "title": "Dative Case & Directions",
+        "difficulty": "Expert",
+        "summary": "Dative articles, dative pronouns, dative verbs, location vs direction (Wo/Wohin), two-way prepositions, giving directions.",
+        "source_pages": "729-833",
+        "exam_protocols": {
+            "hören_teil_2": "Crucial for navigating train stations. Listen for Dative contractions like 'am Bahnhof' or 'am Gleis 3'.",
+            "schreiben_teil_2": "When arranging meetings via email, you must use Dative for static locations: 'Wir treffen uns am Bahnhof.'"
+        },
+        "grammar_algorithms": [
+            {
+                "concept": "The Dative Case Mutation",
+                "logic": "ALL genders mutate in Dative. It represents the indirect object/beneficiary, or a static location.",
+                "formula": "m/n: der/das→dem | f: die→der | pl: die→den(+n)",
+                "examples": [
+                    "dem Mann (der→dem)",
+                    "der Frau (die→der)",
+                    "dem Kind (das→dem)",
+                    "den Kindern (die→den+n)"
+                ]
+            },
+            {
+                "concept": "Dative Indefinite Articles",
+                "logic": "ein(m/n) → einem. eine(f) → einer.",
+                "formula": "ein→einem | eine→einer",
+                "examples": [
+                    "einem Mann",
+                    "einer Frau",
+                    "einem Kind"
+                ]
+            },
+            {
+                "concept": "Location (Wo?) vs Direction (Wohin?)",
+                "logic": "Static location (Wo?) = Dative. Movement/direction (Wohin?) = Accusative.",
+                "formula": "Wo? → Dativ (static) | Wohin? → Akkusativ (movement)",
+                "examples": [
+                    "Wo bist du? Im Park (Dative - location)",
+                    "Wohin gehst du? In den Park (Accusative - direction)"
+                ]
+            },
+            {
+                "concept": "Direction Preposition Logic",
+                "logic": "'nach' (Cities/Countries without articles), 'zu' (Local places/people - always Dative), 'in' (Entering enclosed spaces - Accusative).",
+                "formula": "zu + Dativ always | zu+dem=zum | zu+der=zur"
+            }
+        ],
+        "declension_tables": [
+            {
+                "case": "Dativ",
+                "definite": {
+                    "masculine": "dem",
+                    "feminine": "der",
+                    "neutral": "dem",
+                    "plural": "den (+n)"
+                },
+                "indefinite": {
+                    "masculine": "einem",
+                    "feminine": "einer",
+                    "neutral": "einem",
+                    "plural": "—"
+                }
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "links",
+                "english": "left",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "rechts",
+                "english": "right",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "geradeaus",
+                "english": "straight ahead",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "gegenüber",
+                "english": "opposite/across from",
+                "gender": "none",
+                "category": "directions"
+            },
+            {
+                "german": "neben",
+                "english": "next to",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "zwischen",
+                "english": "between",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "hinter",
+                "english": "behind",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "vor",
+                "english": "in front of",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "über",
+                "english": "above/over",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "unter",
+                "english": "under/below",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "in",
+                "english": "in",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "an",
+                "english": "at/on (vertical)",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "auf",
+                "english": "on (horizontal)",
+                "gender": "none",
+                "category": "prepositions"
+            },
+            {
+                "german": "der Bahnhof",
+                "english": "train station",
+                "gender": "masculine",
+                "category": "places"
+            },
+            {
+                "german": "die Post",
+                "english": "post office",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Apotheke",
+                "english": "pharmacy",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "das Krankenhaus",
+                "english": "hospital",
+                "gender": "neutral",
+                "category": "places"
+            },
+            {
+                "german": "die Kirche",
+                "english": "church",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "das Rathaus",
+                "english": "town hall",
+                "gender": "neutral",
+                "category": "places"
+            },
+            {
+                "german": "die Schule",
+                "english": "school",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Bibliothek",
+                "english": "library",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "der Supermarkt",
+                "english": "supermarket",
+                "gender": "masculine",
+                "category": "places"
+            },
+            {
+                "german": "die Bäckerei",
+                "english": "bakery",
+                "gender": "feminine",
+                "category": "places"
+            },
+            {
+                "german": "die Kreuzung",
+                "english": "intersection",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "die Ampel",
+                "english": "traffic light",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "die Brücke",
+                "english": "bridge",
+                "gender": "feminine",
+                "category": "directions"
+            },
+            {
+                "german": "zu",
+                "english": "to (dative)",
+                "gender": "none",
+                "category": "prepositions"
+            }
+        ],
+        "data_vaults": {
+            "dativ_trigger_verbs": [
+                {
+                    "verb": "antworten",
+                    "level": "A1",
+                    "english": "to answer",
+                    "example": "Ich antworte dir später."
+                },
+                {
+                    "verb": "folgen",
+                    "level": "A1",
+                    "english": "to follow",
+                    "example": "Ich folge dem Hund."
+                },
+                {
+                    "verb": "gefallen",
+                    "level": "A1",
+                    "english": "to like, to please",
+                    "example": "Gefällt dir das Kleid?"
+                },
+                {
+                    "verb": "gehören",
+                    "level": "A1",
+                    "english": "to belong to",
+                    "example": "Das Buch gehört meiner Schwester."
+                },
+                {
+                    "verb": "glauben",
+                    "level": "A1",
+                    "english": "to believe",
+                    "example": "Warum glaubst du mir nicht?"
+                },
+                {
+                    "verb": "helfen",
+                    "level": "A1",
+                    "english": "to help",
+                    "example": "Er hilft seiner Mutter beim Kochen."
+                },
+                {
+                    "verb": "passieren",
+                    "level": "A1",
+                    "english": "to happen",
+                    "example": "Passiert dir das oft?"
+                },
+                {
+                    "verb": "raten",
+                    "level": "A1",
+                    "english": "to advise",
+                    "example": "Der Arzt rät ihm, mehr Wasser zu trinken."
+                },
+                {
+                    "verb": "schmecken",
+                    "level": "A1",
+                    "english": "to taste good",
+                    "example": "Der Kuchen schmeckt mir nicht."
+                },
+                {
+                    "verb": "wehtun",
+                    "level": "A1",
+                    "english": "to hurt",
+                    "example": "Tut dir der Kopf weh?"
+                },
+                {
+                    "verb": "zuhören",
+                    "level": "A1",
+                    "english": "to listen",
+                    "example": "Die Kinder hören dem Lehrer zu."
+                },
+                {
+                    "verb": "befehlen",
+                    "level": "A2",
+                    "english": "to command",
+                    "example": "Der Chef befiehlt dem Mitarbeiter, schneller zu arbeiten."
+                },
+                {
+                    "verb": "danken",
+                    "level": "A2",
+                    "english": "to thank",
+                    "example": "Ich danke dir für deine Hilfe."
+                },
+                {
+                    "verb": "fehlen",
+                    "level": "A2",
+                    "english": "to miss",
+                    "example": "Du fehlst mir."
+                },
+                {
+                    "verb": "nachlaufen",
+                    "level": "A2",
+                    "english": "to run after",
+                    "example": "Der Hund läuft dem Ball nach."
+                },
+                {
+                    "verb": "passen",
+                    "level": "A2",
+                    "english": "to fit",
+                    "example": "Der Anzug passt mir nicht mehr."
+                },
+                {
+                    "verb": "vertrauen",
+                    "level": "A2",
+                    "english": "to trust",
+                    "example": "Ich vertraue meinem Freund."
+                },
+                {
+                    "verb": "vergeben",
+                    "level": "A2",
+                    "english": "to forgive",
+                    "example": "Ich kann ihm seinen Fehler nicht vergeben."
+                },
+                {
+                    "verb": "verzeihen",
+                    "level": "A2",
+                    "english": "to forgive",
+                    "example": "Sie verzeiht ihrem Bruder."
+                },
+                {
+                    "verb": "widersprechen",
+                    "level": "A2",
+                    "english": "to contradict",
+                    "example": "Der Schüler widerspricht dem Lehrer."
+                },
+                {
+                    "verb": "zusehen",
+                    "level": "A2",
+                    "english": "to watch",
+                    "example": "Ich sehe dir beim Zeichnen zu."
+                }
+            ]
+        },
+        "dialogues": [
+            {
+                "context": "Asking for directions",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Entschuldigung, wo ist die Post?",
+                        "english": "Excuse me, where is the post office?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Gehen Sie geradeaus und dann links.",
+                        "english": "Go straight and then left."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Ist es weit?",
+                        "english": "Is it far?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Nein, es ist neben dem Bahnhof.",
+                        "english": "No, it's next to the train station."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "chapter_id": 13,
+        "title": "Comparisons & Shopping",
+        "difficulty": "Intermediate",
+        "summary": "Comparative and superlative forms, demonstrative pronouns (dieser/diese/dieses), grocery shopping vocabulary, frequency adverbs.",
+        "source_pages": "834-895",
+        "grammar_algorithms": [
+            {
+                "concept": "Comparative",
+                "logic": "Adjective + -er + 'als'. Many common adjectives get umlaut (a→ä, o→ö, u→ü).",
+                "formula": "Adj + -er + als | Often: umlaut change",
+                "examples": [
+                    "schnell → schneller als",
+                    "groß → größer als",
+                    "alt → älter als",
+                    "gut → besser als"
+                ]
+            },
+            {
+                "concept": "Superlative",
+                "logic": "'am' + adjective + '-sten'. Adjectives ending in -t/-d/-s/-z add '-esten'.",
+                "formula": "am + Adj + -sten | -t/-d/-s/-z: am + Adj + -esten",
+                "examples": [
+                    "am schnellsten",
+                    "am größten",
+                    "am ältesten",
+                    "am besten"
+                ]
+            },
+            {
+                "concept": "Demonstrative Pronouns",
+                "logic": "'dieser/diese/dieses' = 'this (specific)'. Endings follow definite article pattern.",
+                "formula": "dieser=der | diese=die | dieses=das pattern",
+                "examples": [
+                    "dieser Mann (like 'der')",
+                    "diese Frau (like 'die')",
+                    "dieses Kind (like 'das')"
+                ]
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "gern",
+                "english": "gladly/like to",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "lieber",
+                "english": "rather/prefer",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am liebsten",
+                "english": "most of all",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "gut",
+                "english": "good",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "besser",
+                "english": "better",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am besten",
+                "english": "the best",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "viel",
+                "english": "much/a lot",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "mehr",
+                "english": "more",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "am meisten",
+                "english": "the most",
+                "gender": "none",
+                "category": "comparisons"
+            },
+            {
+                "german": "teuer",
+                "english": "expensive",
+                "gender": "none",
+                "category": "shopping"
+            },
+            {
+                "german": "billig",
+                "english": "cheap",
+                "gender": "none",
+                "category": "shopping"
+            },
+            {
+                "german": "dieser/diese/dieses",
+                "english": "this",
+                "gender": "none",
+                "category": "demonstratives"
+            },
+            {
+                "german": "das Brot",
+                "english": "bread",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Ei",
+                "english": "egg",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "die Butter",
+                "english": "butter",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "die Milch",
+                "english": "milk",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Käse",
+                "english": "cheese",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "das Obst",
+                "english": "fruit",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Gemüse",
+                "english": "vegetables",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "das Fleisch",
+                "english": "meat",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "der Fisch",
+                "english": "fish",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "der Reis",
+                "english": "rice",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "die Kartoffel",
+                "english": "potato",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Apfel",
+                "english": "apple",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "die Tomate",
+                "english": "tomato",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "die Gurke",
+                "english": "cucumber",
+                "gender": "feminine",
+                "category": "food"
+            },
+            {
+                "german": "der Zucker",
+                "english": "sugar",
+                "gender": "masculine",
+                "category": "food"
+            },
+            {
+                "german": "das Salz",
+                "english": "salt",
+                "gender": "neutral",
+                "category": "food"
+            },
+            {
+                "german": "immer",
+                "english": "always",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "oft",
+                "english": "often",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "manchmal",
+                "english": "sometimes",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "selten",
+                "english": "rarely",
+                "gender": "none",
+                "category": "frequency"
+            },
+            {
+                "german": "nie",
+                "english": "never",
+                "gender": "none",
+                "category": "frequency"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Shopping comparison",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Welcher Apfel schmeckt besser?",
+                        "english": "Which apple tastes better?"
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Dieser Apfel schmeckt am besten.",
+                        "english": "This apple tastes the best."
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Er ist süßer als der andere.",
+                        "english": "It is sweeter than the other one."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Ja, aber er ist auch teurer.",
+                        "english": "Yes, but it's also more expensive."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "chapter_id": 14,
+        "title": "Imperative (Commands) & Exam Survival",
+        "difficulty": "Intermediate",
+        "summary": "Imperative mood (commands) for du/ihr/Sie, body parts, health vocabulary, doctor appointments.",
+        "source_pages": "896-975",
+        "exam_protocols": {
+            "sprechen_teil_3": "This section is entirely based on the Imperative. ALWAYS add 'bitte' (please) to secure full points for politeness.",
+            "survival_hack_1": "If you don't know an item on the card, say: 'Das Wort kenne ich nicht, was bedeutet das?'",
+            "survival_hack_2": "If you freeze or don't understand the examiner, DO NOT say 'Keine Ahnung'. Say: 'Wie bitte? Ich habe Sie nicht richtig verstanden.'"
+        },
+        "grammar_algorithms": [
+            {
+                "concept": "Imperative with Sie (formal)",
+                "logic": "Conjugated verb + Sie. Same as question form but with exclamation.",
+                "formula": "Verb + Sie + !",
+                "examples": [
+                    "Gehen Sie zum Arzt!",
+                    "Essen Sie viel Obst!",
+                    "Nehmen Sie Ihre Medikamente!",
+                    "Rufen Sie mich an!"
+                ]
+            },
+            {
+                "concept": "Imperative with du (informal)",
+                "logic": "Verb stem only (drop -st ending, no pronoun). Verbs with e→i keep the change. Verbs with a→ä lose the umlaut.",
+                "formula": "Verb stem (no -st, no du) | e→i stays | a→ä drops",
+                "examples": [
+                    "Geh zum Arzt! (gehen)",
+                    "Iss mehr Obst! (essen, e→i)",
+                    "Fahr langsam! (fahren, NOT Fähr!)"
+                ]
+            },
+            {
+                "concept": "Imperative with ihr (informal plural)",
+                "logic": "Same as normal ihr-conjugation, but without the pronoun.",
+                "formula": "ihr-conjugation without 'ihr'",
+                "examples": [
+                    "Geht zum Arzt!",
+                    "Esst viel Obst!",
+                    "Fahrt langsam!"
+                ]
+            },
+            {
+                "concept": "Separable Verbs in Imperative",
+                "logic": "Prefix still goes to the end, even in imperative.",
+                "formula": "Imperative + prefix at END",
+                "examples": [
+                    "Rufen Sie mich an! (anrufen)",
+                    "Mach die Tür zu! (zumachen)",
+                    "Steh auf! (aufstehen)"
+                ]
+            },
+            {
+                "concept": "Imperative Exceptions",
+                "logic": "Three verbs don't follow the standard rules: haben, sein, werden.",
+                "sein_rule": "du: Sei! | ihr: Seid! | Sie: Seien Sie!",
+                "haben_rule": "du: Hab! | ihr: Habt! | Sie: Haben Sie!",
+                "werden_rule": "du: Werde! | ihr: Werdet! | Sie: Werden Sie!"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "der Kopf",
+                "english": "head",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Auge",
+                "english": "eye",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Nase",
+                "english": "nose",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Mund",
+                "english": "mouth",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Ohr",
+                "english": "ear",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Hals",
+                "english": "neck/throat",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Schulter",
+                "english": "shoulder",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Arm",
+                "english": "arm",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Hand",
+                "english": "hand",
+                "gender": "feminine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Finger",
+                "english": "finger",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Bauch",
+                "english": "stomach/belly",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Rücken",
+                "english": "back",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Bein",
+                "english": "leg",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "das Knie",
+                "english": "knee",
+                "gender": "neutral",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Fuß",
+                "english": "foot",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "der Zahn",
+                "english": "tooth",
+                "gender": "masculine",
+                "category": "body_parts"
+            },
+            {
+                "german": "die Schmerzen",
+                "english": "pain",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Kopfschmerzen",
+                "english": "headache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Bauchschmerzen",
+                "english": "stomachache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Halsschmerzen",
+                "english": "sore throat",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Rückenschmerzen",
+                "english": "backache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "die Zahnschmerzen",
+                "english": "toothache",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "das Fieber",
+                "english": "fever",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "der Schnupfen",
+                "english": "cold/runny nose",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "der Husten",
+                "english": "cough",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "die Tablette",
+                "english": "tablet/pill",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "das Medikament",
+                "english": "medicine",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "das Rezept",
+                "english": "prescription",
+                "gender": "neutral",
+                "category": "health"
+            },
+            {
+                "german": "der Termin",
+                "english": "appointment",
+                "gender": "masculine",
+                "category": "health"
+            },
+            {
+                "german": "der Arzt / die Ärztin",
+                "english": "doctor (m/f)",
+                "gender": "none",
+                "category": "health"
+            },
+            {
+                "german": "die Apotheke",
+                "english": "pharmacy",
+                "gender": "feminine",
+                "category": "health"
+            },
+            {
+                "german": "krank",
+                "english": "sick",
+                "gender": "none",
+                "category": "health"
+            },
+            {
+                "german": "gesund",
+                "english": "healthy",
+                "gender": "none",
+                "category": "health"
+            },
+            {
+                "german": "weh tun",
+                "english": "to hurt",
+                "gender": "none",
+                "category": "health"
+            }
+        ],
+        "dialogues": [
+            {
+                "context": "Doctor visit",
+                "turns": [
+                    {
+                        "speaker": "Patient",
+                        "german": "Ich habe Kopfschmerzen und Fieber.",
+                        "english": "I have a headache and fever."
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Seit wann haben Sie die Schmerzen?",
+                        "english": "Since when have you had the pain?"
+                    },
+                    {
+                        "speaker": "Patient",
+                        "german": "Seit gestern.",
+                        "english": "Since yesterday."
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Nehmen Sie diese Tabletten und ruhen Sie sich aus.",
+                        "english": "Take these tablets and rest."
+                    },
+                    {
+                        "speaker": "Patient",
+                        "german": "Brauche ich ein Rezept?",
+                        "english": "Do I need a prescription?"
+                    },
+                    {
+                        "speaker": "Arzt",
+                        "german": "Ja, hier ist das Rezept. Gehen Sie zur Apotheke.",
+                        "english": "Yes, here is the prescription. Go to the pharmacy."
+                    }
+                ]
+            },
+            {
+                "context": "Making an appointment",
+                "turns": [
+                    {
+                        "speaker": "A",
+                        "german": "Ich möchte bitte einen Termin machen.",
+                        "english": "I would like to make an appointment please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Wann passt es Ihnen?",
+                        "english": "When suits you?"
+                    },
+                    {
+                        "speaker": "A",
+                        "german": "Am Montag um 10 Uhr, bitte.",
+                        "english": "On Monday at 10 o'clock, please."
+                    },
+                    {
+                        "speaker": "B",
+                        "german": "Das geht. Bis Montag!",
+                        "english": "That works. See you Monday!"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -11,7 +11,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from backend.database import DATABASE_URL, engine, init_db
 from backend.models import Base, Chapter, ContentCache
 
-CURRICULUM_FILE = os.path.join(os.path.dirname(__file__), "data/enriched_curriculum.json")
+CURRICULUM_FILE = os.path.join(os.path.dirname(__file__), "data/masterclass_database.json")
 
 async def migrate_schema():
     """Check for missing columns in User table and add them if needed."""
@@ -49,8 +49,12 @@ async def seed_chapters(chapters_data):
             # We map new fields from enriched_curriculum.json
             content_json = json.dumps({
                 "key_vocab": chapter.get("key_vocab", []),
-                "grammar_rules": chapter.get("grammar_rules", []),
-                "dialogues": chapter.get("dialogues", []),  # Changed from dialogue dict to dialogues list
+                "grammar_algorithms": chapter.get("grammar_algorithms", []),
+                "grammar_rules": chapter.get("grammar_rules", []),  # Legacy fallback
+                "dialogues": chapter.get("dialogues", []),
+                "exam_protocols": chapter.get("exam_protocols", {}),
+                "data_vaults": chapter.get("data_vaults", {}),
+                "difficulty": chapter.get("difficulty", "Beginner"),
                 "introduction_template": chapter.get("introduction_template", {}),
                 "pronunciation_notes": chapter.get("pronunciation_notes", []),
                 "declension_tables": chapter.get("declension_tables", []),

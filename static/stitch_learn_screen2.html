@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Themed Grammar Logic Engine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F2994A", // Brand Orange
+                        "primary-dark": "#d97706",
+                        "accent-blue": "#60A5FA",
+                        "accent-purple": "#A78BFA",
+                        "accent-pink": "#F472B6",
+                        "background-dark": "#020617", // Slate-950
+                        "surface-dark": "#0f172a", // Slate-900
+                        "surface-light": "#1e293b", // Slate-800
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "3xl": "2.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-highlight {
+            background: rgba(242, 153, 74, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(242, 153, 74, 0.3);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark text-slate-100 min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white">
+<header class="sticky top-0 z-50 px-6 pt-12 pb-4 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<div class="flex items-center gap-3">
+<button class="p-2 -ml-2 rounded-full hover:bg-white/5 text-slate-400 hover:text-white transition-colors">
+<span class="material-icons-round text-2xl">arrow_back</span>
+</button>
+<div>
+<h1 class="text-lg font-bold tracking-tight text-white">Modal Verbs</h1>
+<p class="text-xs text-primary font-medium tracking-wide uppercase">Core Logic</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="h-9 w-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
+<span class="material-icons-round text-lg">bookmark_border</span>
+</button>
+<button class="h-9 w-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
+<span class="material-icons-round text-lg">more_vert</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-6 pb-40 pt-6 overflow-y-auto no-scrollbar">
+<div class="max-w-md mx-auto space-y-8">
+<div class="glass rounded-3xl overflow-hidden relative shadow-2xl shadow-black/40">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/20 text-primary border border-primary/20 uppercase tracking-wider">Grammar</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-700/50 text-slate-400 border border-white/5 uppercase tracking-wider">Level A2</span>
+</div>
+<h2 class="text-2xl font-bold text-white leading-tight">Müssen vs Sollen</h2>
+</div>
+<button class="h-10 w-10 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center transition-colors group">
+<span class="material-icons-round text-primary text-xl group-hover:scale-110 transition-transform">play_arrow</span>
+</button>
+</div>
+<div class="space-y-3 mb-6">
+<div class="glass-card p-3 rounded-xl border-l-2 border-primary relative flex items-center justify-between">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase block mb-0.5">Necessity (Müssen)</span>
+<p class="text-lg font-medium text-white">Ich <span class="text-primary font-bold">muss</span> arbeiten.</p>
+</div>
+<span class="material-icons-round text-slate-600 text-lg">lock</span>
+</div>
+<div class="glass-card p-3 rounded-xl border-l-2 border-accent-blue relative flex items-center justify-between">
+<div>
+<span class="text-[10px] font-bold text-accent-blue uppercase block mb-0.5">Obligation (Sollen)</span>
+<p class="text-lg font-medium text-white">Ich <span class="text-accent-blue font-bold">soll</span> arbeiten.</p>
+</div>
+<span class="material-icons-round text-slate-600 text-lg">assignment</span>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl p-4 border border-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 text-primary/10">
+<span class="material-icons-round text-8xl">lightbulb</span>
+</div>
+<div class="relative z-10">
+<h4 class="text-sm font-bold text-primary mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">school</span>
+                                Goethe Exam Hack
+                            </h4>
+<p class="text-xs text-slate-300 leading-relaxed">
+                                Use <span class="text-primary font-bold">"müssen"</span> for internal necessity (I have to because I need money). Use <span class="text-accent-blue font-bold">"sollen"</span> for external orders (My boss says I have to).
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold text-white">Pattern Recognition</h3>
+<span class="text-xs text-slate-500 font-medium">2 Rules</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass p-4 rounded-2xl flex flex-col h-full border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons-round text-4xl text-accent-pink">swap_calls</span>
+</div>
+<div class="mb-3">
+<div class="h-8 w-8 rounded-lg bg-accent-pink/20 flex items-center justify-center text-accent-pink mb-2">
+<span class="material-symbols-outlined text-lg">sync_alt</span>
+</div>
+<h4 class="text-sm font-bold text-white">Vowel Switch</h4>
+</div>
+<div class="mt-auto space-y-2">
+<div class="text-xs bg-black/20 p-2 rounded border border-white/5">
+<span class="text-slate-400">ich m<span class="text-accent-pink font-bold">u</span>ss</span>
+<span class="block text-slate-500 text-[10px] mt-0.5">Singular</span>
+</div>
+<div class="text-xs bg-black/20 p-2 rounded border border-white/5">
+<span class="text-slate-400">wir m<span class="text-accent-pink font-bold">ü</span>ssen</span>
+<span class="block text-slate-500 text-[10px] mt-0.5">Plural</span>
+</div>
+</div>
+</div>
+<div class="glass p-4 rounded-2xl flex flex-col h-full border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-icons-round text-4xl text-accent-blue">undo</span>
+</div>
+<div class="mb-3">
+<div class="h-8 w-8 rounded-lg bg-accent-blue/20 flex items-center justify-center text-accent-blue mb-2">
+<span class="material-symbols-outlined text-lg">history</span>
+</div>
+<h4 class="text-sm font-bold text-white">Back to Normal</h4>
+</div>
+<div class="mt-auto space-y-2">
+<p class="text-xs text-slate-400 leading-snug">
+                                 Plural forms usually return to the infinitive stem vowel.
+                             </p>
+<div class="text-xs font-mono bg-black/20 p-2 rounded border border-white/5 text-accent-blue">
+                                 ü → u → ü
+                             </div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-lg font-bold text-white">Modal Drivers</h3>
+<span class="text-xs text-slate-500 font-medium">The Big 6</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5">
+<span class="material-symbols-outlined text-2xl text-yellow-400">bolt</span>
+<div>
+<span class="block text-sm font-bold text-white">Können</span>
+<span class="block text-[10px] text-slate-400">Ability</span>
+</div>
+</div>
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5 bg-white/5 ring-1 ring-primary/50">
+<span class="material-symbols-outlined text-2xl text-red-400">priority_high</span>
+<div>
+<span class="block text-sm font-bold text-white">Müssen</span>
+<span class="block text-[10px] text-slate-400">Must</span>
+</div>
+</div>
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5">
+<span class="material-symbols-outlined text-2xl text-green-400">check_circle</span>
+<div>
+<span class="block text-sm font-bold text-white">Dürfen</span>
+<span class="block text-[10px] text-slate-400">Permis.</span>
+</div>
+</div>
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5">
+<span class="material-symbols-outlined text-2xl text-blue-400">gavel</span>
+<div>
+<span class="block text-sm font-bold text-white">Sollen</span>
+<span class="block text-[10px] text-slate-400">Should</span>
+</div>
+</div>
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5">
+<span class="material-symbols-outlined text-2xl text-purple-400">favorite</span>
+<div>
+<span class="block text-sm font-bold text-white">Wollen</span>
+<span class="block text-[10px] text-slate-400">Want</span>
+</div>
+</div>
+<div class="glass p-3 rounded-xl flex flex-col items-center justify-center text-center gap-2 aspect-square hover:bg-white/5 transition-colors cursor-pointer border border-white/5">
+<span class="material-symbols-outlined text-2xl text-pink-400">thumb_up</span>
+<div>
+<span class="block text-sm font-bold text-white">Mögen</span>
+<span class="block text-[10px] text-slate-400">Like</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark to-transparent safe-area-bottom z-50">
+<div class="max-w-md mx-auto">
+<button class="w-full py-4 px-6 bg-primary text-background-dark font-bold text-lg rounded-2xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all hover:brightness-110 flex items-center justify-center gap-2">
+<span>Complete Lesson</span>
+<span class="material-icons-round">check_circle</span>
+</button>
+</div>
+</footer>
+
+</body></html>

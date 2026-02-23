@@ -18,6 +18,7 @@ class ChapterResponse(BaseModel):
     title: str
     summary: str
     content: dict
+    difficulty: str = "Beginner"
     is_locked: bool
     is_completed: bool
 
@@ -69,6 +70,7 @@ async def get_chapters(
             title=chapter.title,
             summary=chapter.summary,
             content=content_dict,
+            difficulty=content_dict.get("difficulty", "Beginner"),
             is_locked=is_locked,
             is_completed=is_completed
         ))

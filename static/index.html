@@ -18,8 +18,12 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#135bec", // Stitch Primary (Blue-600ish)
+                        "primary": "#F2994A", // Stitch Brand Orange
+                        "primary-dark": "#C06F28",
                         "primary-glow": "#60a5fa",
+                        "accent-blue": "#60A5FA",
+                        "accent-purple": "#A78BFA",
+                        "accent-pink": "#F472B6",
                         "background-dark": "#020617", // Slate-950
                         "background-light": "#f8f7f6",
                         "slate-card": "#1e293b",
@@ -32,7 +36,8 @@
                     },
                     fontFamily: {
                         "display": ["Lexend", "sans-serif"],
-                        "sans": ["Inter", "sans-serif"]
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
                     },
                     boxShadow: {
                         'glow-blue': '0 0 20px -5px rgba(59, 130, 246, 0.5), 0 0 10px -2px rgba(59, 130, 246, 0.3)',
@@ -61,8 +66,9 @@
         rel="stylesheet">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/static/manifest.json">
@@ -332,18 +338,20 @@
         <!-- The Path Tab -->
         <div id="tab-learn" class="tab-content flex-col w-full h-full font-display">
             <!-- Header -->
-            <div class="px-6 pt-12 pb-6 sticky top-0 z-20 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
+            <div class="px-6 pt-12 pb-6 sticky top-0 z-20 bg-slate-950/90 backdrop-blur-xl border-b border-white/5">
                 <div class="flex items-center justify-between mb-2">
-                    <h1
-                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
-                        The Path</h1>
+                    <div>
+                        <span class="text-xs font-medium text-primary uppercase tracking-wider">DeutschesEcho
+                            Masterclass</span>
+                        <h1 class="text-xl font-bold tracking-tight text-white mt-0.5">Your Curriculum</h1>
+                    </div>
                     <div class="flex items-center gap-3">
                         <span class="text-xs text-slate-400 font-medium">Unlock All</span>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="master-unlock-toggle" class="sr-only peer"
                                 onchange="toggleMasterUnlock()">
                             <div
-                                class="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-purple-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600">
+                                class="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
                             </div>
                         </label>
                     </div>
@@ -364,49 +372,104 @@
             </div>
         </div>
 
-        <!-- Lesson Modal -->
-        <div id="lesson-modal" class="fixed inset-0 z-50 bg-slate-950 hidden flex-col animate-fade-in font-display">
-            <!-- Modal Header -->
+        <!-- SCREEN 2: Immersive Lesson -->
+        <div id="lesson-screen" class="fixed inset-0 z-[55] bg-background-dark hidden flex-col font-display">
+            <!-- Sticky Header -->
             <header
-                class="px-6 pt-12 pb-4 bg-slate-900/50 backdrop-blur-xl border-b border-white/5 flex items-center justify-between">
-                <div class="flex-1">
-                    <p class="text-[10px] text-purple-400 font-bold uppercase tracking-widest mb-1">Current Lesson</p>
-                    <h2 id="lesson-title" class="text-lg font-bold text-white truncate">Chapter Title</h2>
+                class="sticky top-0 z-50 px-6 pt-12 pb-4 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+                <div class="flex items-center justify-between max-w-md mx-auto">
+                    <div class="flex items-center gap-3">
+                        <button onclick="closeLesson()"
+                            class="p-2 -ml-2 rounded-full hover:bg-white/5 text-slate-400 hover:text-white transition-colors">
+                            <span class="material-icons-round text-2xl">arrow_back</span>
+                        </button>
+                        <div>
+                            <h1 id="lesson-title" class="text-lg font-bold tracking-tight text-white">Chapter Title</h1>
+                            <p id="lesson-subtitle" class="text-xs text-primary font-medium tracking-wide uppercase">
+                                Core Logic</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2">
+                        <button
+                            class="h-9 w-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
+                            <span class="material-icons-round text-lg">bookmark_border</span>
+                        </button>
+                        <button
+                            class="h-9 w-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-slate-300 hover:text-primary transition-colors">
+                            <span class="material-icons-round text-lg">more_vert</span>
+                        </button>
+                    </div>
                 </div>
-                <button onclick="closeLesson()"
-                    class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition">
-                    <i class="fas fa-times"></i>
-                </button>
             </header>
 
-            <!-- Tabs -->
-            <div class="px-6 py-4 bg-slate-900/30 border-b border-white/5">
-                <div class="flex p-1 bg-black/20 rounded-xl" id="lesson-tabs">
-                    <button onclick="switchLessonTab('vocab')"
-                        class="tab-btn active flex-1 py-2 text-sm font-medium rounded-lg transition-all text-white bg-white/10 shadow-sm"
-                        data-tab="vocab">Vocab</button>
-                    <button onclick="switchLessonTab('grammar')"
-                        class="tab-btn flex-1 py-2 text-sm font-medium rounded-lg transition-all text-slate-400 hover:text-slate-200"
-                        data-tab="grammar">Grammar</button>
-                    <button onclick="switchLessonTab('dialogue')"
-                        class="tab-btn flex-1 py-2 text-sm font-medium rounded-lg transition-all text-slate-400 hover:text-slate-200"
-                        data-tab="dialogue">Dialogue</button>
+            <!-- Scrollable Content -->
+            <main id="lesson-content" class="flex-1 px-6 pb-44 pt-6 overflow-y-auto no-scrollbar">
+                <div class="max-w-md mx-auto space-y-8">
+                    <!-- Injected by renderImmersiveLesson() -->
                 </div>
+            </main>
+
+            <!-- Sticky Dual Footer -->
+            <footer
+                class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark via-background-dark to-background-dark/80 safe-area-bottom z-[56]">
+                <div class="max-w-md mx-auto flex gap-3">
+                    <button onclick="openExercise()"
+                        class="flex-1 py-4 px-6 bg-white/5 border border-white/10 text-white font-bold text-base rounded-2xl hover:bg-white/10 active:scale-[0.98] transition-all flex items-center justify-center gap-2 backdrop-blur-sm">
+                        <span class="material-icons-round text-xl text-primary">play_circle</span>
+                        <span>Practice</span>
+                    </button>
+                    <button onclick="completeLesson()"
+                        class="flex-1 py-4 px-6 bg-primary text-background-dark font-bold text-base rounded-2xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-all hover:brightness-110 flex items-center justify-center gap-2">
+                        <span>Complete</span>
+                        <span class="material-icons-round text-xl">check_circle</span>
+                    </button>
+                </div>
+            </footer>
+        </div>
+
+        <!-- SCREEN 3: Logic Gate Exercise -->
+        <div id="exercise-screen" class="fixed inset-0 z-[60] bg-[#0B1120] hidden flex-col font-sans overflow-hidden">
+            <!-- Ambient Background -->
+            <div class="fixed inset-0 pointer-events-none z-0">
+                <div class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary/10 blur-[100px]">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-slate-800/50 blur-[80px]">
+                </div>
+                <div class="absolute inset-0 bg-grid-pattern opacity-100"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0B1120]/50 to-[#0B1120]"></div>
             </div>
 
-            <!-- Content -->
-            <div id="lesson-content" class="flex-1 overflow-y-auto relative bg-slate-950">
-                <!-- Content Injected via JS -->
-            </div>
+            <!-- Exercise Header -->
+            <header class="w-full px-6 pt-14 pb-4 flex justify-between items-center z-20">
+                <div class="flex items-center space-x-3">
+                    <button onclick="closeExercise()"
+                        class="p-2 -ml-2 rounded-full hover:bg-slate-800 transition-colors text-slate-400 hover:text-white">
+                        <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+                    </button>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">DeutschesEcho</span>
+                        <span class="text-sm font-medium text-slate-300">Grammar Logic Engine</span>
+                    </div>
+                </div>
+                <div id="exercise-progress" class="flex items-center space-x-1.5">
+                    <!-- Progress dots injected by JS -->
+                </div>
+            </header>
 
-            <!-- Footer -->
-            <div class="p-6 bg-gradient-to-t from-slate-950 via-slate-950 to-transparent">
-                <button onclick="completeLesson()"
-                    class="w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl font-bold text-white shadow-lg shadow-purple-500/20 active:scale-[0.98] transition flex items-center justify-center gap-2 group">
-                    <span>Complete Lesson</span>
-                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition"></i>
+            <!-- Exercise Content -->
+            <main id="exercise-content" class="flex-grow flex flex-col px-4 relative z-10 w-full max-w-md mx-auto">
+                <!-- Injected by openExercise() -->
+            </main>
+
+            <!-- Sticky Continue Footer -->
+            <footer class="bg-slate-900/50 backdrop-blur-md border-t border-slate-800 p-6 z-20 pb-10">
+                <button id="exercise-continue-btn" onclick="nextExercise()"
+                    class="w-full bg-primary hover:bg-[#E08535] text-white font-bold py-4 rounded-xl shadow-[0_4px_20px_rgba(242,153,74,0.3)] flex items-center justify-center space-x-2 transition-all active:scale-[0.98]">
+                    <span class="tracking-wide">CONTINUE</span>
+                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
                 </button>
-            </div>
+            </footer>
         </div>
 
     </main>
