@@ -80,7 +80,12 @@ async def ask_notebook(request: AskNotebookRequest):
     "key_vocab": [
       {"german": "word in german", "english": "english translation"}
     ],
-    "exam_tip": "A practical tip for Goethe A1 Exam related to this"
+    "exam_cheat_code": {
+      "section": "E.g., Hören Part 1, Lesen Part 2, Sprechen, etc.",
+      "signal_word": "A specific cue word or grammatical trigger",
+      "the_hack": "The action to take when you see/hear the signal",
+      "the_trap": "The common trap or distractor they use in the Goethe A1 exam"
+    }
   }
 }"""
         )

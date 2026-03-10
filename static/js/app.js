@@ -622,21 +622,43 @@ window.showRuleRevealSheet = function (options) {
         </div>
     </div>
 
-    <!-- Section 3: A1 Exam Tip -->
-    <div class="bg-orange-900/20 border border-orange-500/30 rounded-xl p-3 ${fb.exam_tip ? '' : 'hidden'}">
-         <div class="flex items-start gap-2">
-            <span class="text-orange-400 mt-0.5"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></span>
-            <div>
-                <h4 class="text-orange-300 text-[10px] font-black uppercase tracking-widest mb-0.5">Goethe A1 Exam Tip</h4>
-                <p class="text-orange-200/80 text-sm leading-snug italic">${fb.exam_tip || ''}</p>
+    <!-- Section 3: A1 Exam Cheat Code (Zero Paragraphs) -->
+    <div class="bg-orange-950/30 border border-orange-500/40 rounded-xl p-4 mt-2 ${fb.exam_cheat_code ? '' : 'hidden'}">
+        <div class="flex justify-between items-center mb-3 border-b border-orange-500/20 pb-2">
+            <div class="flex items-center gap-2">
+                <span class="text-orange-400">🎯</span>
+                <h4 class="text-orange-300 text-[10px] font-black uppercase tracking-widest">Goethe A1 Cheat Code</h4>
             </div>
+            <!-- Exam Section Badge -->
+            <span class="bg-orange-500/20 text-orange-300 text-[9px] font-bold uppercase px-2 py-1 rounded border border-orange-500/30">${fb.exam_cheat_code?.section || 'Exam Tip'}</span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-2">
+            <!-- Signal / Trigger -->
+            <div class="flex items-start gap-3 bg-slate-900/50 p-2 rounded-lg border border-slate-700/50">
+                <span class="text-[10px] font-black text-slate-500 uppercase w-12 pt-0.5">Signal</span>
+                <span class="text-slate-200 font-bold text-sm font-mono">${fb.exam_cheat_code?.signal_word || ''}</span>
+            </div>
+
+            <!-- The Hack / Rule -->
+            <div class="flex items-start gap-3 bg-green-900/20 p-2 rounded-lg border border-green-500/30">
+                <span class="text-[10px] font-black text-green-500 uppercase w-12 pt-0.5">Hack</span>
+                <span class="text-green-300 font-bold text-sm">${fb.exam_cheat_code?.the_hack || ''}</span>
+            </div>
+
+            <!-- The Trap -->
+            <div class="flex items-start gap-3 bg-red-900/20 p-2 rounded-lg border border-red-500/30">
+                <span class="text-[10px] font-black text-red-500 uppercase w-12 pt-0.5">Trap ⚠️</span>
+                <span class="text-red-300 font-medium text-sm">${fb.exam_cheat_code?.the_trap || ''}</span>
+            </div>
+        </div>
         </div>
     </div>
 </div>`;
-        analogySlot.className = "mt-4 transition-all duration-500";
+        analogySlot.className = "mt-4 transition-all duration-500 max-h-[55vh] overflow-y-auto pr-2 custom-scrollbar";
     } else if (options.analogyHtml) {
         analogySlot.innerHTML = options.analogyHtml;
-        analogySlot.className = "mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm";
+        analogySlot.className = "mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm max-h-[55vh] overflow-y-auto";
     } else {
         analogySlot.innerHTML = '';
         analogySlot.className = "hidden";
