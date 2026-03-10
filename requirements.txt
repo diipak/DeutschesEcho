@@ -12,3 +12,4 @@ greenlet==3.1.1
 pytest
 httpx
 google-genai
+mcp

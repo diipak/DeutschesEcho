@@ -26,6 +26,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
+        env:
+          GEMINI_API_KEY: "dummy"
         run: |
           pip install pytest httpx
           pytest
