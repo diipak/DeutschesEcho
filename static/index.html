@@ -775,6 +775,14 @@
     <!-- The Rule Reveal Bottom Sheet (Hidden by default, slides up on answer) -->
     <div id="rule-reveal-sheet"
         class="fixed bottom-0 left-0 w-full bg-[#131b2c] border-t border-slate-700 rounded-t-[32px] p-6 shadow-[0_-20px_50px_rgba(0,0,0,0.5)] z-[80] transform translate-y-full transition-transform duration-500 flex flex-col gap-5">
+
+        <!-- The Drag Handle / Notch -->
+        <div id="drag-handle-zone"
+            class="w-full flex justify-center pt-2 pb-5 cursor-grab active:cursor-grabbing touch-pan-y">
+            <div class="w-12 h-1.5 bg-slate-600/60 rounded-full shadow-inner transition-colors hover:bg-slate-500">
+            </div>
+        </div>
+
         <!-- Header: Icon, Title & Status -->
         <div class="flex justify-between items-start">
             <div class="flex gap-3 items-center">

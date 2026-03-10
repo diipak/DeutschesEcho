@@ -673,12 +673,32 @@ window.showRuleRevealSheet = function (options) {
         breakdownGrid.classList.add('hidden');
     }
 
-    // Action
-    btn.onclick = () => {
-        sheet.classList.remove('translate-y-0');
-        sheet.classList.add('translate-y-full');
-        if (options.onContinue) options.onContinue();
-    };
+    // Action (Only override if a new callback is provided, to prevent async updates from erasing the navigation)
+    if (options.onContinue !== undefined) {
+        btn.onclick = () => {
+            sheet.classList.remove('translate-y-0');
+            sheet.classList.add('translate-y-full');
+            if (options.onContinue) options.onContinue();
+        };
+    }
+
+    // Swipe-to-Dismiss Logic
+    if (!window.ruleSheetSwipeInitialized) {
+        window.ruleSheetSwipeInitialized = true;
+        let startY = 0;
+        let currentY = 0;
+        sheet.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        sheet.addEventListener('touchend', (e) => {
+            currentY = e.changedTouches[0].clientY;
+            const deltaY = currentY - startY;
+            if (deltaY > 50 && !sheet.classList.contains('translate-y-full')) {
+                btn.click();
+            }
+        });
+    }
 
     // Show
     requestAnimationFrame(() => {
