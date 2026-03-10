@@ -200,8 +200,19 @@ window.toggleRecording = function () {
             isRecording = false;
             icon.textContent = 'mic';
             btn.className = "w-24 h-24 bg-slate-800 border-2 border-slate-700 rounded-full flex items-center justify-center hover:border-accent transition-all duration-300 active:scale-95 shadow-xl";
-            status.textContent = 'Error. Try Again';
-            status.className = "mt-6 text-red-400 font-semibold text-sm uppercase tracking-widest";
+
+            if (event.error === 'not-allowed') {
+                if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                    status.innerHTML = 'HTTP Blocked! Use HTTPS or localhost.<br><span class="text-xs text-slate-500 mt-2 block">Use manual input below</span>';
+                } else {
+                    status.innerHTML = 'Mic Blocked! Please allow permissions.<br><span class="text-xs text-slate-500 mt-2 block">Use manual input below</span>';
+                }
+                showManualInput();
+            } else {
+                status.textContent = 'Error. Try Again';
+            }
+
+            status.className = "mt-6 text-red-400 font-semibold text-sm uppercase tracking-widest text-center";
             if (wave) wave.classList.add('hidden');
         };
 
