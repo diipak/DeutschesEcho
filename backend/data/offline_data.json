@@ -1,0 +1,396 @@
+[
+    {
+        "rule_title": "The Split & Shift (Separable Verbs)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Base Verb (Pos 2)",
+                "value": "rufe",
+                "color": "orange"
+            },
+            {
+                "label": "Object/Time (Middle)",
+                "value": "dich morgen",
+                "color": "slate"
+            },
+            {
+                "label": "Prefix (End)",
+                "value": "an.",
+                "color": "green"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "anrufen",
+                "english": "to call"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Hören Part 3",
+            "signal_word": "rufe / rufen",
+            "the_hack": "Wait and listen to the very END of the sentence to catch the prefix, as it changes the whole meaning.",
+            "the_trap": "Guessing the verb's meaning too early before hearing the prefix."
+        }
+    },
+    {
+        "rule_title": "The Split & Shift (Separable Verbs)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Base Verb (Pos 2)",
+                "value": "kaufe",
+                "color": "orange"
+            },
+            {
+                "label": "Object (Middle)",
+                "value": "alles von Lidl",
+                "color": "slate"
+            },
+            {
+                "label": "Prefix (End)",
+                "value": "ein.",
+                "color": "green"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "einkaufen",
+                "english": "to shop"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Schreiben Part 2",
+            "signal_word": "einkaufen",
+            "the_hack": "Lock the conjugated base verb at Position 2 and kick the prefix 'ein' to the absolute end.",
+            "the_trap": "Writing 'Ich einkaufe' is an instant grammar point deduction."
+        }
+    },
+    {
+        "rule_title": "The Split & Shift (Time & Routine)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Base Verb (Pos 2)",
+                "value": "stehe",
+                "color": "orange"
+            },
+            {
+                "label": "Time (Middle)",
+                "value": "um 6 Uhr",
+                "color": "slate"
+            },
+            {
+                "label": "Prefix (End)",
+                "value": "auf.",
+                "color": "green"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "aufstehen",
+                "english": "to get up / wake up"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Sprechen Part 2",
+            "signal_word": "Wann / Tag",
+            "the_hack": "Use 'aufstehen' to confidently describe your daily routine (Tagesablauf) and show off sentence bracketing.",
+            "the_trap": "Forgetting the prefix 'auf' leaves just 'stehen' (to stand), confusing the examiner."
+        }
+    },
+    {
+        "rule_title": "The Split & Shift (Separable Verbs)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Base Verb (Pos 2)",
+                "value": "hole",
+                "color": "orange"
+            },
+            {
+                "label": "Object/Time (Middle)",
+                "value": "dich um 9 Uhr",
+                "color": "slate"
+            },
+            {
+                "label": "Prefix (End)",
+                "value": "ab.",
+                "color": "green"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "abholen",
+                "english": "to pick up"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Hören Part 3",
+            "signal_word": "hole / holen",
+            "the_hack": "Listen for 'ab' at the end of voicemail messages to know if someone is being picked up.",
+            "the_trap": "Confusing 'abholen' with just 'holen' (to fetch)."
+        }
+    },
+    {
+        "rule_title": "The Modal Override (Separable Verbs)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Modal Verb (Pos 2)",
+                "value": "muss",
+                "color": "orange"
+            },
+            {
+                "label": "Time (Middle)",
+                "value": "um 7 Uhr",
+                "color": "slate"
+            },
+            {
+                "label": "Combined Verb (End)",
+                "value": "aufstehen.",
+                "color": "green"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "aufstehen",
+                "english": "to get up"
+            },
+            {
+                "german": "müssen",
+                "english": "must"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Schreiben Part 2",
+            "signal_word": "Modal Verbs",
+            "the_hack": "When using a modal verb, the separable verb does NOT split. Send it fully combined to the end.",
+            "the_trap": "Splitting the separable verb even when a modal verb is in Position 2."
+        }
+    },
+    {
+        "rule_title": "The Masculine Mutation (Accusative Case)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Verb (Pos 2)",
+                "value": "suche",
+                "color": "orange"
+            },
+            {
+                "label": "Accusative Article",
+                "value": "einen",
+                "color": "green"
+            },
+            {
+                "label": "Masculine Object",
+                "value": "Tisch.",
+                "color": "slate"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "suchen",
+                "english": "to search"
+            },
+            {
+                "german": "der Tisch",
+                "english": "table"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Lesen Part 2",
+            "signal_word": "einen / den",
+            "the_hack": "Ads often use the accusative object. Look for '-en' endings to instantly spot masculine targets being sold or sought.",
+            "the_trap": "Assuming 'ein' always means nominative; for neutral nouns, 'ein' is also accusative."
+        }
+    },
+    {
+        "rule_title": "The Negation Engine (Accusative Case)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Der Mann",
+                "color": "blue"
+            },
+            {
+                "label": "Verb (Pos 2)",
+                "value": "hat",
+                "color": "orange"
+            },
+            {
+                "label": "Accusative Negation",
+                "value": "keinen",
+                "color": "green"
+            },
+            {
+                "label": "Masculine Object",
+                "value": "Hund.",
+                "color": "slate"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "haben",
+                "english": "to have"
+            },
+            {
+                "german": "der Hund",
+                "english": "dog"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Sprechen Part 2",
+            "signal_word": "Hast du...?",
+            "the_hack": "When asked if you have a masculine object, answer 'Nein, ich habe keinen...' to instantly score points for correct case negation.",
+            "the_trap": "Saying 'kein Hund' instead of 'keinen Hund' for masculine objects."
+        }
+    },
+    {
+        "rule_title": "The Feminine Pass (Accusative Case)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Verb (Pos 2)",
+                "value": "brauche",
+                "color": "orange"
+            },
+            {
+                "label": "Accusative Article",
+                "value": "eine",
+                "color": "green"
+            },
+            {
+                "label": "Feminine Object",
+                "value": "Tasche.",
+                "color": "slate"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "brauchen",
+                "english": "to need"
+            },
+            {
+                "german": "die Tasche",
+                "english": "bag"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Sprechen Part 3",
+            "signal_word": "Picture Card (die words)",
+            "the_hack": "If the item on your picture card is feminine (die) or neutral (das), the article does NOT mutate in Accusative. Just use 'eine' or 'ein'.",
+            "the_trap": "Overthinking and trying to mutate feminine or neutral articles when only masculine changes."
+        }
+    },
+    {
+        "rule_title": "The Adjective Match (Accusative Case)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Verb (Pos 2)",
+                "value": "besuche",
+                "color": "orange"
+            },
+            {
+                "label": "Article + Adjective",
+                "value": "den alten",
+                "color": "green"
+            },
+            {
+                "label": "Masculine Object",
+                "value": "Mann.",
+                "color": "slate"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "besuchen",
+                "english": "to visit"
+            },
+            {
+                "german": "alt",
+                "english": "old"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Lesen Part 2",
+            "signal_word": "-en adjective endings",
+            "the_hack": "In Accusative, 'den' forces the adjective to also carry the '-en' ending (den alten). Use this to quickly scan for matched descriptions.",
+            "the_trap": "Ignoring the adjective ending when trying to figure out the gender of an unknown word."
+        }
+    },
+    {
+        "rule_title": "The Pronoun Shift (Accusative Case)",
+        "grammar_formula": [
+            {
+                "label": "Subject (Pos 1)",
+                "value": "Ich",
+                "color": "blue"
+            },
+            {
+                "label": "Verb (Pos 2)",
+                "value": "rufe",
+                "color": "orange"
+            },
+            {
+                "label": "Accusative Pronoun",
+                "value": "dich",
+                "color": "green"
+            },
+            {
+                "label": "Prefix (End)",
+                "value": "an.",
+                "color": "slate"
+            }
+        ],
+        "key_vocab": [
+            {
+                "german": "anrufen",
+                "english": "to call"
+            },
+            {
+                "german": "dich",
+                "english": "you (accusative)"
+            }
+        ],
+        "exam_cheat_code": {
+            "section": "Hören Part 3",
+            "signal_word": "mich / dich / ihn",
+            "the_hack": "Pay close attention to accusative personal pronouns on answering machines to know WHO is being called or asked.",
+            "the_trap": "Confusing 'dir' (dative) with 'dich' (accusative) when listening to fast speech."
+        }
+    }
+]
