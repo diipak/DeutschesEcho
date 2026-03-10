@@ -39,7 +39,7 @@ async function fetchReadingText() {
         const data = await response.json();
 
         if (data.action === 'generate') {
-            showNoReadingMessage();
+            window.showNoReadingMessage();
             return;
         }
 
@@ -47,11 +47,11 @@ async function fetchReadingText() {
         displayReadingText(data);
     } catch (error) {
         console.error('Error fetching reading text:', error);
-        showNoReadingMessage();
+        window.showNoReadingMessage();
     }
 }
 
-function showNoReadingMessage() {
+window.showNoReadingMessage = function () {
     const content = document.getElementById('reading-content');
     if (!content) return;
 
