@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Speech Test</title></head>
+<body>
+    <button onclick="start()">Start Speech</button>
+    <div id="out"></div>
+    <script>
+        const out = document.getElementById('out');
+        function start() {
+            try {
+                out.innerHTML += "Starting...<br>";
+                const sr = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                sr.onresult = e => out.innerHTML += `Result: ${e.results[0][0].transcript}<br>`;
+                sr.onerror = e => out.innerHTML += `Error: ${e.error}<br>`;
+                sr.onend = () => out.innerHTML += "Ended.<br>";
+                sr.start();
+            } catch(e) {
+                out.innerHTML += `Catch: ${e.message}<br>`;
+            }
+        }
+    </script>
+</body>
+</html>
