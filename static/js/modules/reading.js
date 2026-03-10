@@ -217,12 +217,12 @@ window.checkReadingAnswer = async function (selectedIndex) {
 window.generateReadingTexts = async function () {
     const content = document.getElementById('reading-content');
     content.innerHTML = `
-            < div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center" >
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center">
             <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
             <p class="text-slate-300">Generating reading texts...</p>
             <p class="text-slate-400 text-sm mt-2">This may take a moment</p>
-        </div >
-            `;
+        </div>
+    `;
 
     try {
         const response = await fetch('/api/reading/generate?count=10', {
@@ -236,12 +236,12 @@ window.generateReadingTexts = async function () {
     } catch (error) {
         console.error('Error generating texts:', error);
         content.innerHTML = `
-            < div class="bg-red-900/30 border border-red-600 rounded-xl p-6 text-center" >
+            <div class="bg-red-900/30 border border-red-600 rounded-xl p-6 text-center">
                 <i class="fas fa-exclamation-triangle text-red-500 text-4xl mb-3"></i>
                 <p class="text-white mb-2">Failed to generate texts</p>
                 <p class="text-slate-400 text-sm">${error.message}</p>
-            </div >
-            `;
+            </div>
+        `;
     }
 };
 
