@@ -568,8 +568,73 @@ window.showRuleRevealSheet = function (options) {
         badge.textContent = 'Let\'s Review';
     }
 
-    // Analogy
-    if (options.analogyHtml) {
+    // Analogy / Feedback Data
+    if (options.feedbackData) {
+        const fb = options.feedbackData;
+        const vocabHtml = (fb.key_vocab || []).map(v =>
+            `<div class="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 flex items-center gap-2">
+                <span class="text-white font-medium text-sm">${v.german}</span>
+                <span class="text-slate-500 text-xs">${v.english}</span>
+            </div>`
+        ).join('');
+
+        const formulaHtml = (fb.grammar_formula || []).map((item, idx, arr) => {
+            const baseTailwindBlue = `text-blue-400 bg-blue-900/30 border-blue-500/50 shadow-[0_0_10px_rgba(59,130,246,0.2)] text-blue-100`;
+            const mappedColor = item.color || 'blue';
+            // Simple mapping since tailwind classes can't be purely dynamic string concats reliably.
+            let colorClasses = baseTailwindBlue;
+            if (mappedColor === 'green') colorClasses = `text-green-400 bg-green-900/30 border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.2)] text-green-100`;
+            else if (mappedColor === 'slate') colorClasses = `text-slate-400 bg-slate-900/50 border-slate-500/50 shadow-[0_0_10px_rgba(100,116,139,0.2)] text-slate-100`;
+            else if (mappedColor === 'pink') colorClasses = `text-pink-400 bg-pink-900/30 border-pink-500/50 shadow-[0_0_10px_rgba(236,72,153,0.2)] text-pink-100`;
+            else if (mappedColor === 'orange') colorClasses = `text-orange-400 bg-orange-900/30 border-orange-500/50 shadow-[0_0_10px_rgba(249,115,22,0.2)] text-orange-100`;
+            else if (mappedColor === 'purple') colorClasses = `text-purple-400 bg-purple-900/30 border-purple-500/50 shadow-[0_0_10px_rgba(168,85,247,0.2)] text-purple-100`;
+            else if (mappedColor === 'red') colorClasses = `text-red-400 bg-red-900/30 border-red-500/50 shadow-[0_0_10px_rgba(239,68,68,0.2)] text-red-100`;
+            else if (mappedColor === 'yellow') colorClasses = `text-yellow-400 bg-yellow-900/30 border-yellow-500/50 shadow-[0_0_10px_rgba(234,179,8,0.2)] text-yellow-100`;
+
+            const block = `
+            <div class="flex flex-col items-center">
+                <span class="text-[9px] ${colorClasses.split(' ')[0]} font-bold uppercase mb-1">${item.label}</span>
+                <div class="${colorClasses.split(' ').slice(1).join(' ')} px-3 py-1.5 rounded-lg font-mono font-bold text-sm border">${item.value}</div>
+            </div>`;
+            return idx < arr.length - 1 ? block + `<span class="text-slate-500 font-bold text-lg">+</span>` : block;
+        }).join('');
+
+        analogySlot.innerHTML = `
+<div class="flex flex-col gap-4 mt-2 mb-2">
+    <!-- THE GRAMMAR FORMULA SECTION -->
+    <div class="bg-[#0f172a] border border-slate-700/50 rounded-xl p-4 shadow-inner">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="text-indigo-400">🧮</span>
+            <h4 class="text-indigo-300 text-[10px] font-black uppercase tracking-widest" id="formula-title">${fb.rule_title || 'The Formula'}</h4>
+        </div>
+        
+        <!-- Visual Equation Flexbox -->
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-3" id="grammar-formula-container">
+            ${formulaHtml}
+        </div>
+    </div>
+
+    <!-- Section 2: Key Vocab Pills -->
+    <div class="bg-slate-800/40 border border-slate-700/50 rounded-xl p-3 ${vocabHtml ? '' : 'hidden'}">
+        <h4 class="text-slate-400 text-[10px] font-black uppercase tracking-widest mb-2">Key Vocabulary</h4>
+        <div class="flex flex-wrap gap-2">
+            ${vocabHtml}
+        </div>
+    </div>
+
+    <!-- Section 3: A1 Exam Tip -->
+    <div class="bg-orange-900/20 border border-orange-500/30 rounded-xl p-3 ${fb.exam_tip ? '' : 'hidden'}">
+         <div class="flex items-start gap-2">
+            <span class="text-orange-400 mt-0.5"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></span>
+            <div>
+                <h4 class="text-orange-300 text-[10px] font-black uppercase tracking-widest mb-0.5">Goethe A1 Exam Tip</h4>
+                <p class="text-orange-200/80 text-sm leading-snug italic">${fb.exam_tip || ''}</p>
+            </div>
+        </div>
+    </div>
+</div>`;
+        analogySlot.className = "mt-4 transition-all duration-500";
+    } else if (options.analogyHtml) {
         analogySlot.innerHTML = options.analogyHtml;
         analogySlot.className = "mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm";
     } else {
@@ -614,14 +679,18 @@ async function preloadAnalogy(question, ruleName) {
             })
         });
         const data = await res.json();
-        cachedAnalogy = window.cleanNotebookLMResponse(data.analogy) || null;
-        console.log('✅ Analogy preloaded:', cachedAnalogy?.substring(0, 60));
+        cachedAnalogy = data.feedback_data || null;
+        console.log('✅ Analogy preloaded');
 
         // Dynamically inject into DOM if Rule Reveal card is already showing
         const slot = document.getElementById('rule-analogy-slot');
-        if (slot && !slot.classList.contains('hidden') && cachedAnalogy) {
-            slot.innerHTML = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedAnalogy;
-            slot.className = 'mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm transition-all duration-500';
+        if (slot && !slot.classList.contains('hidden') && cachedAnalogy && slot.innerHTML.includes('Loading')) {
+            window.showRuleRevealSheet({
+                title: document.getElementById('rule-title').textContent,
+                logic: document.getElementById('rule-logic-text').innerHTML,
+                correct: document.getElementById('rule-badge').textContent === 'Correct!',
+                feedbackData: cachedAnalogy
+            });
         } else if (slot && !cachedAnalogy) {
             slot.innerHTML = '';
             slot.className = 'hidden';

@@ -100,13 +100,17 @@ function displayReadingText(reading) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: reading.question, wrong_answer: 'N/A', rule_name: 'Context Clues' })
     }).then(r => r.json()).then(d => {
-        cachedReadingAnalogy = window.cleanNotebookLMResponse(d.analogy) || null;
+        cachedReadingAnalogy = d.feedback_data || null;
         console.log('\u2705 Reading analogy preloaded');
         // Dynamically inject if Rule Reveal already showing
         const slot = document.getElementById('rule-analogy-slot');
-        if (slot && !slot.classList.contains('hidden') && cachedReadingAnalogy) {
-            slot.innerHTML = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedReadingAnalogy;
-            slot.className = 'mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm transition-all duration-500';
+        if (slot && !slot.classList.contains('hidden') && cachedReadingAnalogy && slot.innerHTML.includes('Loading')) {
+            window.showRuleRevealSheet({
+                title: document.getElementById('rule-title').textContent,
+                logic: document.getElementById('rule-logic-text').innerHTML,
+                correct: document.getElementById('rule-badge').textContent === 'Correct!',
+                feedbackData: cachedReadingAnalogy
+            });
         } else if (slot && !cachedReadingAnalogy) {
             slot.innerHTML = '';
             slot.className = 'hidden';
@@ -161,13 +165,7 @@ window.checkReadingAnswer = async function (selectedIndex) {
         const checkBtn = document.getElementById('reading-check-btn');
         if (checkBtn) checkBtn.style.display = 'none';
 
-        // Build analogy slot — dynamic fill from preload
-        let analogyHtml = '';
-        if (cachedReadingAnalogy) {
-            analogyHtml = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedReadingAnalogy;
-        } else {
-            analogyHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
-        }
+        let loadingHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
 
         let ruleName = "Context Clues";
         let feedbackLogic = result.feedback;
@@ -179,7 +177,8 @@ window.checkReadingAnswer = async function (selectedIndex) {
             title: result.correct ? 'Correct!' : ruleName,
             logic: feedbackLogic,
             correct: result.correct,
-            analogyHtml: analogyHtml,
+            feedbackData: cachedReadingAnalogy,
+            analogyHtml: cachedReadingAnalogy ? null : loadingHtml,
             vocab: null,
             structure: null,
             onContinue: () => {

@@ -55,9 +55,10 @@ async def ask_notebook(request: AskNotebookRequest):
         
         # Build a versatile prompt that works for Grammar, Reading, and Speaking
         prompt_text = (
-            f"The user is studying German A1 and needs a practical hit of knowledge. "
-            f"The current topic or focus area is: '{request.rule_name}'. "
-            f"You must strictly base your insight, analogy, or memory trick on the following source documents ONLY. Do not invent rules outside of these sources: "
+            f"The user is studying German and needs structured pedagogical feedback geared towards the Goethe A1 Exam. "
+            f"Topic/Rule context: '{request.rule_name}'. "
+            f"Sentence context: '{request.question}'. "
+            f"You must strictly base your insight on the following source documents ONLY. Do not invent grammar rules outside of these sources: "
             f"1. German Language Masterclass Database: Chapters 1-4, Chapters 5-9, and Advanced Grammar and Exam Protocols (Chapters 10-14). "
             f"2. Goethe Zertifikat A1 HÖREN, LESEN, SCHREIBEN, SPRECHEN Guides. "
             f"3. 30 Commonly used Partizip 2 Verbs in German. "
@@ -66,16 +67,28 @@ async def ask_notebook(request: AskNotebookRequest):
             f"6. Commonly Used Trennbare Verben. "
             f"7. List of Verbs with Akkusativ. "
             f"8. List of Verbs with Dativ. "
-            f"Based on these materials ONLY, provide a 1-sentence 'Aha!' insight or trick to master this topic. "
-            f"Keep it extremely brief, encouraging, and highly practical. "
-            f"Do NOT include conversation IDs, references, or citations in your answer."
+            f"9. Learn German Step by Step | Full German A1 Course For Beginners \n"
+            f"CRITICAL INSTRUCTION: NO PARAGRAPHS ALLOWED IN THE GRAMMAR EXPLANATION. "
+            f"You must teach the grammar using a strict structural formula or pattern, breaking it down into visual blocks (like a math equation). "
+            f"Return ONLY a raw, valid JSON object with the exact following structure (do not include markdown codeblocks like ```json): "
+            """{
+  "feedback_data": {
+    "rule_title": "Short title of rule",
+    "grammar_formula": [
+      {"label": "Part of speech / role", "value": "Word in German", "color": "Choose one: blue, green, slate, pink, orange, purple, red, yellow"}
+    ],
+    "key_vocab": [
+      {"german": "word in german", "english": "english translation"}
+    ],
+    "exam_tip": "A practical tip for Goethe A1 Exam related to this"
+  }
+}"""
         )
 
         async with stdio_client(server_params) as (read, write):
             async with ClientSession(read, write) as session:
                 await session.initialize()
                 
-                # Use hardcoded notebook ID — skip list_notebooks entirely
                 ask_result = await session.call_tool(
                     name="notebooklm_ask_notebook",
                     arguments={
@@ -85,8 +98,31 @@ async def ask_notebook(request: AskNotebookRequest):
                 )
                 
                 response_text = ask_result.content[0].text
-                cleaned = clean_nlm_response(response_text)
-                return {"analogy": cleaned}
+                
+                import json
+                # Clean up any potential markdown code blocks returned by LLM
+                clean_json_str = response_text.replace("```json", "").replace("```", "").strip()
+                try:
+                    # Find first { and last }
+                    start_idx = clean_json_str.find('{')
+                    end_idx = clean_json_str.rfind('}')
+                    if start_idx != -1 and end_idx != -1:
+                        clean_json_str = clean_json_str[start_idx:end_idx+1]
+                    data = json.loads(clean_json_str)
+                    return data
+                except Exception as e:
+                    # Fallback if LLM fails to return strict JSON
+                    print(f"JSON Parse Error: {str(e)}\nRaw Response: {response_text}")
+                    return {
+                        "feedback_data": {
+                            "core_grammar": {
+                                "title": "Grammar Note",
+                                "explanation": clean_nlm_response(response_text)
+                            },
+                            "key_vocab": [],
+                            "exam_tip": "Keep practicing for the Goethe A1 exam!"
+                        }
+                    }
                 
     except Exception as e:
         import traceback

@@ -120,13 +120,17 @@ function displaySpeakingPhrase(phrase) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: phrase.target_phrase, wrong_answer: 'N/A', rule_name: 'Pronunciation & Syntax for: ' + topic })
     }).then(r => r.json()).then(d => {
-        cachedSpeakingAnalogy = window.cleanNotebookLMResponse(d.analogy) || null;
+        cachedSpeakingAnalogy = d.feedback_data || null;
         console.log('\u2705 Speaking analogy preloaded');
         // Dynamically inject if Rule Reveal already showing
         const slot = document.getElementById('rule-analogy-slot');
-        if (slot && !slot.classList.contains('hidden') && cachedSpeakingAnalogy) {
-            slot.innerHTML = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedSpeakingAnalogy;
-            slot.className = 'mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm transition-all duration-500';
+        if (slot && !slot.classList.contains('hidden') && cachedSpeakingAnalogy && slot.innerHTML.includes('Loading')) {
+            window.showRuleRevealSheet({
+                title: document.getElementById('rule-title').textContent,
+                logic: document.getElementById('rule-logic-text').innerHTML,
+                correct: document.getElementById('rule-badge').textContent === 'Correct!',
+                feedbackData: cachedSpeakingAnalogy
+            });
         } else if (slot && !cachedSpeakingAnalogy) {
             slot.innerHTML = '';
             slot.className = 'hidden';
@@ -186,7 +190,35 @@ window.toggleRecording = function () {
         status.className = "mt-6 text-accent font-semibold text-sm animate-pulse";
         if (wave) wave.classList.remove('hidden');
 
-        recognition.start();
+        // iOS Safari/WebView Workaround: 
+        // webkitSpeechRecognition will fail with a "network" error if permissions 
+        // haven't been explicitly granted yet. We force the native OS prompt first.
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then((stream) => {
+                // Stop the dummy stream immediately, we just needed the permission prompt
+                stream.getTracks().forEach(track => track.stop());
+
+                try {
+                    recognition.start();
+                } catch (e) {
+                    console.error("Failed to start recognition:", e);
+                    triggerErrorFallback('network');
+                }
+            })
+            .catch((err) => {
+                console.error("Mic permission denied:", err);
+                triggerErrorFallback('not-allowed');
+            });
+
+        function triggerErrorFallback(errType) {
+            isRecording = false;
+            icon.textContent = 'mic';
+            btn.className = "w-24 h-24 bg-slate-800 border-2 border-slate-700 rounded-full flex items-center justify-center hover:border-accent transition-all duration-300 active:scale-95 shadow-xl";
+            status.innerHTML = 'Mic Blocked or Network Error.<br><span class="text-xs text-slate-500 mt-2 block">Use manual input below</span>';
+            status.className = "mt-6 text-red-400 font-semibold text-sm uppercase tracking-widest text-center";
+            if (wave) wave.classList.add('hidden');
+            showManualInput();
+        }
 
         recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript;
@@ -285,12 +317,7 @@ function displaySpeakingFeedback(result) {
     let logicText = result.message || '';
 
     // Build analogy slot — dynamic fill from preload
-    let analogyHtml = '';
-    if (cachedSpeakingAnalogy) {
-        analogyHtml = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedSpeakingAnalogy;
-    } else {
-        analogyHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
-    }
+    let loadingHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
 
     logicText = `
         ${logicText}
@@ -313,7 +340,8 @@ function displaySpeakingFeedback(result) {
         title: passed ? 'Ausgezeichnet!' : ruleName,
         logic: logicText,
         correct: passed,
-        analogyHtml: analogyHtml,
+        feedbackData: cachedSpeakingAnalogy,
+        analogyHtml: cachedSpeakingAnalogy ? null : loadingHtml,
         vocab: null,
         structure: null,
         onContinue: () => {
