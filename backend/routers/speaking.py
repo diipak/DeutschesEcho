@@ -40,7 +40,7 @@ async def get_speaking_phrase(
     
     return {
         "id": phrase.id,
-        "german": data["german"],
+        "target_phrase": data["german"],
         "english": data["english"],
         "context": data.get("context", ""),
         "difficulty": data.get("difficulty", 1)
