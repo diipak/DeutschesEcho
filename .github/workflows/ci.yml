@@ -30,4 +30,4 @@ jobs:
           GEMINI_API_KEY: "dummy"
         run: |
           pip install pytest httpx
-          pytest
+          pytest tests/
