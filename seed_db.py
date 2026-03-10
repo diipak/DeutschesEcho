@@ -10,6 +10,9 @@ import os
 async def seed_goethe_data():
     print("🌱 Seeding database with Goethe A1 word list...")
     
+    # Initialize the database to ensure tables exist
+    await init_db()
+    
     # 1. Extract data
     pdf_path = "backend/data/GoetheA1wordlist.pdf"
     if not os.path.exists(pdf_path):

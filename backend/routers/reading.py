@@ -4,7 +4,7 @@ Reading comprehension API endpoints.
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, and_
+from sqlalchemy import select, and_, func
 import json
 
 from ..database import get_db
@@ -24,7 +24,8 @@ async def get_reading_text(
             ContentCache.content_type == "reading",
             ContentCache.is_used == False
         )
-    ).limit(1)
+    ).order_by(func.random()).limit(1)
+
     
     result = await db.execute(query)
     reading = result.scalar_one_or_none()

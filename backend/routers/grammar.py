@@ -4,7 +4,7 @@ Grammar practice API endpoints (Sentence Builder).
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, and_
+from sqlalchemy import select, and_, func
 from typing import List
 import json
 import random
@@ -24,13 +24,14 @@ async def get_grammar_drill(
     Get a sentence building exercise.
     Scrambles words on each request.
     """
-    # Get unused grammar exercise from cache
+    # Get unused grammar exercise from cache randomly
     query = select(ContentCache).where(
         and_(
             ContentCache.content_type == "grammar",
             ContentCache.is_used == False
         )
-    ).limit(1)
+    ).order_by(func.random()).limit(1)
+
     
     result = await db.execute(query)
     exercise = result.scalar_one_or_none()

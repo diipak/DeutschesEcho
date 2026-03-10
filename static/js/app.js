@@ -9,6 +9,9 @@ const API_BASE = '';
 // Current state
 let currentVocab = null;
 let currentTab = 'home';
+let currentDrill = null;
+let selectedWords = [];
+let cachedAnalogy = null; // Preloaded from NotebookLM
 
 // Initialize app
 window.onload = async function () {
@@ -514,14 +517,173 @@ window.loadGrammarDrill = async function () {
         }
 
         renderGrammarDrill(data);
+
+        // Preload NotebookLM analogy in background
+        const ruleName = (typeof data.rule === 'string') ? data.rule : (data.rule?.rule_name || 'Grammar Rule');
+        preloadAnalogy(data.instruction, ruleName);
     } catch (error) {
         console.error('Error loading grammar:', error);
-        container.innerHTML = '<p class="text-red-400 text-center">Error loading grammar drill</p>';
+        container.innerHTML = '<p class="text-red-400 text-center">Error loading grammar drill: ' + error.message + '</p>';
     }
 }
 
-let currentDrill = null;
-let selectedWords = [];
+// Global Rule Reveal and NotebookLM Cleanup
+window.cleanNotebookLMResponse = function (text) {
+    if (!text) return '';
+    let cleaned = text.replace(/\s*\(Conversation ID:.*?\)/gs, '');
+    cleaned = cleaned.replace(/\s*References:\s*\[.*/gs, '');
+    cleaned = cleaned.replace(/\s*\[\d+(?:,\s*\d+)*\]/g, '');
+    cleaned = cleaned.replace(/Answer:\s*/g, '');
+    return cleaned.trim();
+};
+
+window.showRuleRevealSheet = function (options) {
+    const sheet = document.getElementById('rule-reveal-sheet');
+    if (!sheet) return;
+
+    // Elements
+    const iconBg = document.getElementById('rule-reveal-icon-bg');
+    const icon = document.getElementById('rule-reveal-icon');
+    const title = document.getElementById('rule-title');
+    const badge = document.getElementById('rule-badge');
+    const logicText = document.getElementById('rule-logic-text');
+    const analogySlot = document.getElementById('rule-analogy-slot');
+    const breakdownGrid = document.getElementById('rule-breakdown-grid');
+    const btn = document.getElementById('rule-continue-btn');
+
+    // Content
+    title.textContent = options.title || "Rule Reveal";
+    logicText.innerHTML = formatLogicText(options.logic || "");
+
+    // Status
+    if (options.correct) {
+        iconBg.className = 'w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400';
+        icon.textContent = 'check_circle';
+        badge.className = 'px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-bold border border-green-500/30';
+        badge.textContent = 'Correct!';
+    } else {
+        iconBg.className = 'w-10 h-10 rounded-full bg-[#f59e0b]/20 flex items-center justify-center text-[#f59e0b]';
+        icon.textContent = 'auto_awesome';
+        badge.className = 'px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-bold border border-red-500/30';
+        badge.textContent = 'Let\'s Review';
+    }
+
+    // Analogy
+    if (options.analogyHtml) {
+        analogySlot.innerHTML = options.analogyHtml;
+        analogySlot.className = "mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm";
+    } else {
+        analogySlot.innerHTML = '';
+        analogySlot.className = "hidden";
+    }
+
+    // Breakdown Grid
+    if (options.vocab && options.structure) {
+        breakdownGrid.classList.remove('hidden');
+        document.getElementById('breakdown-value-1').textContent = options.vocab;
+        document.getElementById('breakdown-value-2').textContent = options.structure;
+    } else {
+        breakdownGrid.classList.add('hidden');
+    }
+
+    // Action
+    btn.onclick = () => {
+        sheet.classList.remove('translate-y-0');
+        sheet.classList.add('translate-y-full');
+        if (options.onContinue) options.onContinue();
+    };
+
+    // Show
+    requestAnimationFrame(() => {
+        sheet.classList.remove('translate-y-full');
+        sheet.classList.add('translate-y-0');
+    });
+};
+
+// Preload analogy from NotebookLM in background (fires immediately, doesn't block UI)
+async function preloadAnalogy(question, ruleName) {
+    cachedAnalogy = null; // Reset from previous drill
+    try {
+        const res = await fetch(`${API_BASE}/api/practice/ask-notebook`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                question: question,
+                wrong_answer: 'N/A',
+                rule_name: ruleName
+            })
+        });
+        const data = await res.json();
+        cachedAnalogy = window.cleanNotebookLMResponse(data.analogy) || null;
+        console.log('✅ Analogy preloaded:', cachedAnalogy?.substring(0, 60));
+
+        // Dynamically inject into DOM if Rule Reveal card is already showing
+        const slot = document.getElementById('rule-analogy-slot');
+        if (slot && !slot.classList.contains('hidden') && cachedAnalogy) {
+            slot.innerHTML = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedAnalogy;
+            slot.className = 'mt-4 p-3 bg-slate-800/60 rounded-xl border border-blue-500/20 text-slate-300 text-sm transition-all duration-500';
+        } else if (slot && !cachedAnalogy) {
+            slot.innerHTML = '';
+            slot.className = 'hidden';
+        }
+    } catch (e) {
+        console.warn('⚠️ Analogy preload failed (will still show rule):', e.message);
+        const slot = document.getElementById('rule-analogy-slot');
+        if (slot) {
+            slot.innerHTML = '';
+            slot.className = 'hidden';
+        }
+    }
+}
+// Make preloadAnalogy accessible from modules
+window.preloadAnalogy = preloadAnalogy;
+
+function formatLogicText(text) {
+    if (!text) return '';
+    const triggers = ['haben', 'sein', 'mit', 'den', 'dem', 'das', 'der', 'die', 'ein', 'eine', 'einen', 'einem', 'einer'];
+    let formatted = text;
+    triggers.forEach(word => {
+        const regex = new RegExp(`\\b(${word})\\b`, 'gi');
+        formatted = formatted.replace(regex, '<span class="font-bold text-green-400">$1</span>');
+    });
+    return formatted;
+}
+
+window.askSyllabus = async function (question, wrong_answer, rule_name) {
+    const btn = document.getElementById('deep-dive-btn');
+    if (btn) btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Thinking...';
+
+    // Fallback logic if rule_name missing
+    let ruleName = rule_name || "Grammar Rule";
+
+    try {
+        const res = await fetch(`${API_BASE}/api/practice/ask-notebook`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                question: question,
+                wrong_answer: wrong_answer || "N/A",
+                rule_name: ruleName
+            })
+        });
+        const data = await res.json();
+        const analogy = data.analogy || "No context found.";
+
+        // expanding the card
+        const cardBody = document.getElementById('rule-reveal-body');
+        if (cardBody) {
+            const div = document.createElement('div');
+            div.className = "mt-4 p-3 bg-indigo-950/50 rounded-xl border border-indigo-400/30 text-indigo-200 text-sm";
+            div.innerHTML = `<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ${analogy}`;
+            cardBody.appendChild(div);
+            // Hide button after asking
+            if (btn) btn.style.display = 'none';
+        }
+    } catch (e) {
+        console.error("Deep Dive Error:", e);
+        if (btn) btn.innerHTML = '<i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i> Retry';
+    }
+}
 
 function renderGrammarDrill(drill) {
     currentDrill = drill;
@@ -529,61 +691,76 @@ function renderGrammarDrill(drill) {
     const container = document.getElementById('grammar-container');
 
     container.innerHTML = `
-        <div class="flex flex-col h-full max-w-lg mx-auto p-4">
-            <!-- Instruction -->
-            <div class="mb-6 text-center">
-                <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest">Sentence Builder</span>
-                <h3 class="text-xl text-white mt-2">${drill.instruction}</h3>
-                <p class="text-slate-400 text-sm italic mt-1">${drill.rule || ''}</p>
+        <div class="flex flex-col h-full max-w-md mx-auto relative px-2">
+            <!-- Header -->
+            <header class="flex items-center justify-between py-6 gap-4">
+                <button onclick="backToPracticeHub()" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900/50 hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined text-slate-400">close</span>
+                </button>
+                <div class="flex-1 h-2.5 bg-slate-900 rounded-full overflow-hidden">
+                    <div class="h-full bg-primary w-2/3 rounded-full shadow-[0_0_10px_rgba(255,138,61,0.4)]"></div>
+                </div>
+                <div class="flex items-center gap-1.5 ml-2">
+                    <span class="material-symbols-outlined text-red-500 heart-glow" style="font-variation-settings: 'FILL' 1">favorite</span>
+                </div>
+            </header>
+            
+            <section class="flex-1 flex flex-col pt-4 relative z-10">
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold mb-2 text-white">Translate this sentence</h1>
+                    <p class="text-slate-400 text-lg font-medium italic">"${drill.instruction}"</p>
+                </div>
+                
+                <div id="answer-zone" class="min-h-[160px] w-full rounded-2xl drop-zone-border bg-slate-900/40 flex flex-wrap content-start p-4 gap-3 mb-10">
+                </div>
+                
+                <div id="word-bank" class="flex flex-wrap justify-center gap-3">
+                    ${drill.scrambled.map((word) => `
+                        <button onclick="selectWord('${word.replace(/'/g, "\\'")}', this)" class="glass-card px-6 py-3 rounded-xl text-lg font-semibold text-white hover:bg-white/10 active:scale-95 transition-all">
+                            ${word}
+                        </button>
+                    `).join('')}
+                </div>
+            </section>
+            
+            <div id="grammar-feedback" class="mb-6 absolute bottom-24 left-0 right-0 z-20 mx-2 transition-all duration-500 translate-y-[200%] opacity-0">
+                <!-- Rule Reveal Card -->
             </div>
-
-            <!-- Answer Drop Zone -->
-            <div id="answer-zone" class="bg-slate-800/50 rounded-xl p-4 min-h-[80px] mb-6 flex flex-wrap gap-2 border-2 border-dashed border-slate-700 transition-all">
-                <p class="text-slate-600 w-full text-center py-2 instruction-text">Tap words effectively to build a sentence</p>
-            </div>
-
-            <!-- Validation Message -->
-            <div id="grammar-feedback" class="hidden mb-4 p-3 rounded-lg text-center font-bold"></div>
-
-            <!-- Word Bank -->
-            <div id="word-bank" class="flex flex-wrap gap-2 justify-center mb-auto">
-                ${drill.scrambled.map((word, index) => `
-                    <button onclick="selectWord('${word.replace(/'/g, "\\'")}', this)" class="word-chip bg-slate-700 text-white px-4 py-2 rounded-lg font-medium active:scale-95 transition-transform hover:bg-slate-600">
-                        ${word}
-                    </button>
-                `).join('')}
-            </div>
-
-            <!-- Controls -->
-            <div class="mt-4 grid grid-cols-2 gap-4">
-                <button onclick="resetDrill()" class="bg-slate-700 text-slate-300 py-3 rounded-xl font-bold">Reset</button>
-                <button onclick="checkGrammarAnswer()" class="bg-green-600 text-white py-3 rounded-xl font-bold shadow-lg shadow-green-900/20">Check</button>
-            </div>
+            
+            <footer class="pb-10 pt-2 relative z-10" id="grammar-footer">
+                <button id="check-btn" onclick="checkGrammarAnswer()" class="w-full bg-primary hover:bg-orange-600 transition-all text-white font-extrabold text-lg py-5 rounded-2xl shadow-lg shadow-orange-500/40 active:scale-[0.98] flex items-center justify-center gap-2">
+                    CHECK ANSWER <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                </button>
+            </footer>
         </div>
+        
+        <!-- Background Effects -->
+        <div class="fixed top-[-10%] left-[-20%] w-[80%] h-[50%] bg-indigo-500/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+        <div class="fixed bottom-[-10%] right-[-20%] w-[80%] h-[50%] bg-primary/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
     `;
 }
 
 window.selectWord = function (word, btnElement) {
     const answerZone = document.getElementById('answer-zone');
-    const instruction = answerZone.querySelector('.instruction-text');
-
-    if (instruction) instruction.remove();
 
     // Create new chip in answer zone
-    const chip = document.createElement('button');
-    chip.className = 'bg-yellow-500 text-slate-900 px-4 py-2 rounded-lg font-bold animate-pop';
+    const chip = document.createElement('div');
+    chip.className = 'glass-card h-12 px-6 flex items-center justify-center rounded-xl text-lg font-semibold text-white shadow-xl cursor-pointer hover:bg-white/5';
     chip.textContent = word;
     chip.onclick = function () {
-        // Return to bank (simplified: just remove and unhide original)
         this.remove();
         btnElement.classList.remove('opacity-0', 'pointer-events-none');
-        selectedWords = selectedWords.filter(w => w !== word); // This logic is imperfect for duplicate words, but fine for prototype
+        btnElement.classList.remove('bg-slate-900/40', 'border-slate-800', 'text-slate-600', 'cursor-not-allowed');
+        btnElement.classList.add('glass-card', 'text-white', 'hover:bg-white/10');
+
+        selectedWords = selectedWords.filter(w => w !== word);
     };
 
     answerZone.appendChild(chip);
 
-    // Hide original button
-    btnElement.classList.add('opacity-0', 'pointer-events-none');
+    // Fade out original button to simulate placeholder
+    btnElement.classList.add('pointer-events-none', 'bg-slate-900/40', 'border', 'border-slate-800', 'text-slate-600', 'cursor-not-allowed');
+    btnElement.classList.remove('glass-card', 'text-white', 'hover:bg-white/10');
     selectedWords.push(word);
 };
 
@@ -602,23 +779,45 @@ window.checkGrammarAnswer = async function () {
         });
         const result = await response.json();
 
-        const feedback = document.getElementById('grammar-feedback');
-        feedback.classList.remove('hidden', 'bg-red-500/20', 'text-red-400', 'bg-green-500/20', 'text-green-400');
+        // Hide main check button
+        const checkBtn = document.getElementById('check-btn');
+        if (checkBtn) checkBtn.style.display = 'none';
+
+        // Extract rule info safely
+        let ruleName = (currentDrill.rule && currentDrill.rule.rule_name) ? currentDrill.rule.rule_name : "Grammar Rule";
+        let ruleLogic = (currentDrill.rule && currentDrill.rule.logic) ? currentDrill.rule.logic : (typeof currentDrill.rule === 'string' ? currentDrill.rule : "Pay attention to word order and cases.");
+
+        // Build the analogy slot — either pre-filled (if fast) or placeholder (filled dynamically by preloadAnalogy)
+        let analogyHtml = '';
+        if (cachedAnalogy) {
+            analogyHtml = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedAnalogy;
+        } else {
+            // Placeholder — preloadAnalogy() will fill this when the fetch completes
+            analogyHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
+        }
+
+        // Optional Structure logic (could extract from ruleLogic if patterns exist, else default values)
+        let vocabVal = "Check Word Bank";
+        let structVal = "Check Placements";
 
         if (result.correct) {
-            feedback.classList.add('bg-green-500/20', 'text-green-400');
-            feedback.textContent = result.feedback;
             speakText(result.correct_answer);
-
-            // Award XP for correct answer
             window.profileManager.awardXP(10, 'Grammar +10');
             await loadUserStats();
-
-            setTimeout(loadGrammarDrill, 2000);
-        } else {
-            feedback.classList.add('bg-red-500/20', 'text-red-400');
-            feedback.textContent = result.feedback;
         }
+
+        window.showRuleRevealSheet({
+            title: result.correct ? 'Perfekt! ✓' : ruleName,
+            logic: ruleLogic,
+            correct: result.correct,
+            analogyHtml: analogyHtml,
+            vocab: null, // Hiding the breakdown grid for now since Grammar doesn't strictly pass this
+            structure: null,
+            onContinue: () => {
+                setTimeout(loadGrammarDrill, 300);
+            }
+        });
+
     } catch (error) {
         console.error('Check failed:', error);
     }

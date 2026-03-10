@@ -4,7 +4,7 @@ Speaking practice API endpoints.
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, and_
+from sqlalchemy import select, and_, func
 import json
 
 from ..database import get_db
@@ -25,7 +25,7 @@ async def get_speaking_phrase(
             ContentCache.content_type == "speaking",
             ContentCache.is_used == False
         )
-    ).limit(1)
+    ).order_by(func.random()).limit(1)
     
     result = await db.execute(query)
     phrase = result.scalar_one_or_none()

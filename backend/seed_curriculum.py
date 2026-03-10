@@ -143,6 +143,9 @@ async def main():
     with open(CURRICULUM_FILE, "r", encoding="utf-8") as f:
         chapters_data = json.load(f)
 
+    print("🛠️ Initializing database tables...")
+    await init_db()
+
     await migrate_schema()
     await seed_chapters(chapters_data)
     await seed_vocab_cache(chapters_data)

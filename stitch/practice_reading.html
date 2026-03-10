@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="dark" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Practice - Reading State</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#22c55e", // Brilliant Green
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                        "accent-purple": "#a855f7",
+                        "accent-blue": "#3b82f6",
+                    },
+                    fontFamily: {
+                        display: ["Outfit", "sans-serif"],
+                        serif: ["Lora", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+            border: 2px solid #22c55e;
+        }
+
+        .option-selected {
+            border: 2px solid #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .reveal-card {
+            animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col overflow-hidden">
+    <header class="px-4 pt-6 pb-2 flex items-center justify-between gap-4">
+        <button class="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+            <span class="material-icons-outlined">close</span>
+        </button>
+        <div class="flex-1 h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-primary w-3/4 rounded-full"></div>
+        </div>
+        <div class="flex items-center gap-1 font-bold text-red-500">
+            <span class="material-icons-outlined text-xl">favorite</span>
+            <span>5</span>
+        </div>
+    </header>
+    <main class="flex-1 px-4 py-6 overflow-y-auto space-y-8 pb-32">
+        <div class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-primary">Leseverständnis</h2>
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary shadow-xl">
+                <p class="font-serif text-lg leading-relaxed italic text-slate-800 dark:text-slate-200">
+                    "Hallo! Ich heiße Lukas und ich komme aus Berlin. Ich bin Student und ich <span
+                        class="text-primary font-bold underline decoration-2 underline-offset-4">lerne</span> gerne
+                    Deutsch. Am Wochenende gehe ich oft in den Park."
+                </p>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h3 class="text-xl font-semibold leading-tight">
+                What is Lukas's primary activity according to the text?
+            </h3>
+            <div class="space-y-3">
+                <button
+                    class="w-full p-5 text-left rounded-xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all bg-white dark:bg-slate-900 group">
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 font-bold group-hover:bg-primary/20 transition-colors">A</span>
+                        <span class="font-medium">He lives in Munich</span>
+                    </div>
+                </button>
+                <button
+                    class="w-full p-5 text-left rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 transition-all group">
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold">B</span>
+                        <span class="font-medium">He is a student learning German</span>
+                    </div>
+                </button>
+                <button
+                    class="w-full p-5 text-left rounded-xl border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all bg-white dark:bg-slate-900 group">
+                    <div class="flex items-center gap-4">
+                        <span
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 font-bold group-hover:bg-primary/20 transition-colors">C</span>
+                        <span class="font-medium">He works in a park</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </main>
+    <div
+        class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent pt-12 pointer-events-none">
+        <button
+            class="pointer-events-auto w-full py-4 bg-primary text-white font-bold text-lg rounded-2xl shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all">
+            Check Answer
+        </button>
+    </div>
+    <div class="fixed inset-x-0 bottom-0 z-50 reveal-card">
+        <div
+            class="bg-white dark:bg-slate-900 rounded-t-3xl shadow-[0_-20px_50px_rgba(0,0,0,0.3)] border-t border-slate-200 dark:border-slate-800 p-6 space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                        <span class="material-icons-outlined text-primary">psychology</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Context Clues</h4>
+                        <p class="text-xs text-slate-500 uppercase tracking-tighter">Grammar Rule Reveal</p>
+                    </div>
+                </div>
+                <div
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-sm font-bold rounded-full">
+                    Correct!
+                </div>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl space-y-3">
+                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                    The verb <span class="font-bold text-primary italic">"lerne"</span> comes from <span
+                        class="italic font-medium text-slate-800 dark:text-slate-200">lernen</span> (to learn). In
+                    German, regular verbs ending in <span class="font-mono text-accent-blue">-en</span> change to <span
+                        class="font-mono text-accent-blue">-e</span> when the subject is <span
+                        class="font-bold">"ich"</span> (I).
+                </p>
+                <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
+                    <div class="text-xs">
+                        <span class="text-slate-400">Subject:</span><br />
+                        <span class="font-semibold">Ich (I)</span>
+                    </div>
+                    <div class="text-xs">
+                        <span class="text-slate-400">Ending:</span><br />
+                        <span class="font-semibold text-accent-blue">-e</span>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-lg rounded-2xl transition-all">
+                Continue
+            </button>
+        </div>
+    </div>
+    <div class="h-8 bg-white dark:bg-slate-900"></div>
+
+</body>
+
+</html>
