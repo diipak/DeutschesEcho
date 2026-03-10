@@ -51,6 +51,25 @@ async function fetchReadingText() {
     }
 }
 
+function showNoReadingMessage() {
+    const content = document.getElementById('reading-content');
+    if (!content) return;
+
+    content.innerHTML = `
+        <div class="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-8 text-center mt-12">
+            <div class="w-16 h-16 rounded-full bg-slate-700/50 flex items-center justify-center mx-auto mb-4 border border-slate-600/50">
+                <i class="fas fa-book-open text-orange-400 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">No Texts Available</h3>
+            <p class="text-slate-400 mb-6 max-w-sm mx-auto">You've completed all available reading comprehension exercises. Generate more to continue practicing!</p>
+            <button onclick="generateReadingTexts()" 
+                    class="px-6 py-3 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-orange-500/20 active:translate-y-0.5">
+                <i class="fas fa-plus mr-2"></i>Generate New Exercises
+            </button>
+        </div>
+    `;
+}
+
 window.selectedReadingOption = null;
 
 function displayReadingText(reading) {
