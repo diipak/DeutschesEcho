@@ -777,7 +777,8 @@ async function preloadAnalogy(question, ruleName) {
                 title: document.getElementById('rule-title').textContent,
                 logic: document.getElementById('rule-logic-text').innerHTML,
                 correct: document.getElementById('rule-badge').textContent === 'Correct!',
-                feedbackData: cachedAnalogy
+                feedbackData: cachedAnalogy,
+                analogyHtml: null
             });
         } else if (slot && !cachedAnalogy) {
             slot.innerHTML = '';
@@ -945,17 +946,7 @@ window.checkGrammarAnswer = async function () {
         let ruleLogic = (currentDrill.rule && currentDrill.rule.logic) ? currentDrill.rule.logic : (typeof currentDrill.rule === 'string' ? currentDrill.rule : "Pay attention to word order and cases.");
 
         // Build the analogy slot — either pre-filled (if fast) or placeholder (filled dynamically by preloadAnalogy)
-        let analogyHtml = '';
-        if (cachedAnalogy) {
-            analogyHtml = '<span class="material-symbols-outlined text-amber-400 align-middle text-sm mr-1">lightbulb</span> ' + cachedAnalogy;
-        } else {
-            // Placeholder — preloadAnalogy() will fill this when the fetch completes
-            analogyHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
-        }
-
-        // Optional Structure logic (could extract from ruleLogic if patterns exist, else default values)
-        let vocabVal = "Check Word Bank";
-        let structVal = "Check Placements";
+        let loadingHtml = '<div class="flex items-center gap-2 text-xs text-slate-400/50 italic"><div class="animate-spin rounded-full h-3 w-3 border-b border-slate-400/50"></div> Loading syllabus context...</div>';
 
         if (result.correct) {
             speakText(result.correct_answer);
@@ -967,8 +958,9 @@ window.checkGrammarAnswer = async function () {
             title: result.correct ? 'Perfekt! ✓' : ruleName,
             logic: ruleLogic,
             correct: result.correct,
-            analogyHtml: analogyHtml,
-            vocab: null, // Hiding the breakdown grid for now since Grammar doesn't strictly pass this
+            feedbackData: cachedAnalogy,
+            analogyHtml: cachedAnalogy ? null : loadingHtml,
+            vocab: null,
             structure: null,
             onContinue: () => {
                 setTimeout(loadGrammarDrill, 300);
