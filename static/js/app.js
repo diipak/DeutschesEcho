@@ -676,31 +676,77 @@ window.showRuleRevealSheet = function (options) {
     // Action (Only override if a new callback is provided, to prevent async updates from erasing the navigation)
     if (options.onContinue !== undefined) {
         btn.onclick = () => {
-            sheet.classList.remove('translate-y-0');
+            window.ruleSheetIsPeeking = false;
+            sheet.classList.remove('translate-y-0', 'translate-y-[calc(100%-80px)]');
             sheet.classList.add('translate-y-full');
             if (options.onContinue) options.onContinue();
         };
     }
 
-    // Swipe-to-Dismiss Logic
+    // Swipe-to-Peek Logic
     if (!window.ruleSheetSwipeInitialized) {
         window.ruleSheetSwipeInitialized = true;
+        window.ruleSheetIsPeeking = false;
+
         let startY = 0;
         let currentY = 0;
-        sheet.addEventListener('touchstart', (e) => {
-            startY = e.touches[0].clientY;
-        }, { passive: true });
+        const handleZone = document.getElementById('drag-handle-zone');
 
-        sheet.addEventListener('touchend', (e) => {
-            currentY = e.changedTouches[0].clientY;
-            const deltaY = currentY - startY;
-            if (deltaY > 50 && !sheet.classList.contains('translate-y-full')) {
-                btn.click();
-            }
-        });
+        if (handleZone) {
+            handleZone.addEventListener('touchstart', (e) => {
+                startY = e.touches[0].clientY;
+                sheet.style.transition = 'none'; // Follow finger intuitively
+            }, { passive: true });
+
+            handleZone.addEventListener('touchmove', (e) => {
+                currentY = e.touches[0].clientY;
+                const deltaY = currentY - startY;
+
+                if (!window.ruleSheetIsPeeking && deltaY > 0) {
+                    sheet.style.transform = `translateY(${deltaY}px)`;
+                } else if (window.ruleSheetIsPeeking && deltaY < 0) {
+                    const peekOffset = sheet.offsetHeight - 80;
+                    const newY = Math.max(0, peekOffset + deltaY);
+                    sheet.style.transform = `translateY(${newY}px)`;
+                }
+            }, { passive: true });
+
+            handleZone.addEventListener('touchend', (e) => {
+                sheet.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                sheet.style.transform = ''; // remove inline style
+
+                currentY = e.changedTouches[0].clientY;
+                const deltaY = currentY - startY;
+
+                if (!window.ruleSheetIsPeeking) {
+                    if (deltaY > 50) {
+                        // Snap down to peek
+                        window.ruleSheetIsPeeking = true;
+                        sheet.classList.remove('translate-y-0');
+                        sheet.classList.add('translate-y-[calc(100%-80px)]');
+                    } else {
+                        // Snap back up
+                        sheet.classList.add('translate-y-0');
+                    }
+                } else {
+                    if (deltaY < -50) {
+                        // Snap back up
+                        window.ruleSheetIsPeeking = false;
+                        sheet.classList.add('translate-y-0');
+                        sheet.classList.remove('translate-y-[calc(100%-80px)]');
+                    } else {
+                        // Stay peeking
+                        sheet.classList.add('translate-y-[calc(100%-80px)]');
+                        sheet.classList.remove('translate-y-0');
+                    }
+                }
+            });
+        }
     }
 
     // Show
+    window.ruleSheetIsPeeking = false;
+    sheet.classList.remove('translate-y-[calc(100%-80px)]');
     requestAnimationFrame(() => {
         sheet.classList.remove('translate-y-full');
         sheet.classList.add('translate-y-0');
